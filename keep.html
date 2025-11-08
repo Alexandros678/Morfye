@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Morfye — Shaping Digital Experiences</title>
+
+<!-- GSAP CDN for smooth animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+  :root{
+    --primary-color: #ff922b;
+    --bg: #0f1113;
+    --card-bg: #0f1113;
+    --text: #f6f6f6;
+    --muted: #bdbdbd;
+    --glass: rgba(255,255,255,0.06);
+  }
+  /* light fallback */
+  body.light {
+    --bg: #ffffff;
+    --card-bg: #ffffff;
+    --text: #111111;
+    --muted: #6b6b6b;
+    --glass: rgba(0,0,0,0.04);
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+  body{background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  a{color:inherit;text-decoration:none}
+  header{
+    position:fixed;left:0;right:0;top:0;z-index:40;
+    padding:18px 6%;
+    display:flex;align-items:center;justify-content:space-between;
+    background:transparent;transition:background .35s,backdrop-filter .35s;
+  }
+  header.scrolled{background:rgba(0,0,0,0.55);backdrop-filter: blur(6px);}
+  header .brand{display:flex;gap:12px;align-items:center;font-weight:700;letter-spacing:0.2px}
+  .logo-mark{
+    width:36px;height:36px;border-radius:8px;display:inline-grid;place-items:center;
+    background:linear-gradient(135deg,var(--primary-color),#ffb36b);color:#111;font-weight:800;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);
+  }
+  nav{display:flex;gap:20px;align-items:center}
+  nav a{opacity:.9;padding:6px 8px;border-radius:6px;font-weight:600}
+  nav a:hover{color:var(--primary-color);}
+  .controls{display:flex;gap:10px;align-items:center}
+  .theme-toggle{cursor:pointer;padding:8px;border-radius:10px;background:var(--glass);font-size:18px}
+  .color-btn{cursor:pointer;padding:8px;border-radius:10px;background:var(--glass);display:flex;gap:8px;align-items:center}
+  .color-preview{width:14px;height:14px;border-radius:50%;background:var(--primary-color);border:2px solid rgba(255,255,255,.06)}
+
+  /* hero cinematic */
+  .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;padding:0 6%;overflow:hidden;}
+  /* animated gradient backdrop */
+  .bg-canvas{position:absolute;inset:0;z-index:0}
+  .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(0,0,0,0.2),rgba(0,0,0,0.45));mix-blend-mode:multiply}
+  .hero-inner{position:relative;z-index:2;max-width:1200px;width:100%;display:grid;grid-template-columns:1fr 420px;gap:40px;align-items:center}
+  .hero-copy{padding:120px 0}
+  .eyebrow{display:inline-block;background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:700;margin-bottom:18px}
+  .hero h1{font-size:clamp(28px,5vw,56px);line-height:1.02;margin:0;color:var(--text)}
+  .hero h1 .accent{color:var(--primary-color)}
+  .hero p{color:var(--muted);margin-top:18px;font-size:1.05rem;max-width:56ch}
+  .hero-cta{margin-top:26px;display:flex;gap:14px;align-items:center}
+  .btn{padding:12px 20px;border-radius:14px;border:none;cursor:pointer;font-weight:700;background:var(--primary-color);color:#111}
+  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--text)}
+  /* showcase card / mockup */
+  .hero-card{height:520px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px;box-shadow:0 20px 50px rgba(0,0,0,.5);backdrop-filter: blur(8px);position:relative;overflow:hidden}
+  .mock-phone{flex:1;background:linear-gradient(180deg,#0f1113 0%, #0b0c0d 100%);border-radius:12px;padding:18px;color:var(--text);display:flex;flex-direction:column;gap:10px}
+  .mock-top{display:flex;align-items:center;gap:12px}
+  .mock-title{font-weight:800;font-size:1.05rem}
+  .mock-line{height:8px;border-radius:999px;background:linear-gradient(90deg,var(--primary-color),#ffd7b8);width:40%}
+  .mock-body{flex:1;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.95rem}
+  /* morphing blob (SVG) */
+  .blob-wrap{position:absolute;right:-80px;top:-60px;z-index:0;opacity:.22;filter:blur(18px)}
+  .blob svg{width:520px;height:520px;display:block}
+
+  /* features + estimator */
+  .panel{max-width:1200px;margin:60px auto;padding:40px 6%;display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:start}
+  .features{background:transparent}
+  .features h2{margin:0 0 18px 0;font-size:28px}
+  .feature-list{display:grid;gap:12px}
+  .feature-item{background:var(--card-bg);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:12px;align-items:flex-start}
+  .feature-item .dot{width:12px;height:12px;border-radius:50%;background:var(--primary-color);margin-top:6px}
+  .estimator{background:var(--card-bg);padding:20px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);position:relative}
+  .price{font-size:28px;font-weight:800;color:var(--primary-color)}
+  .range{width:100%;margin:18px 0}
+  .specs{color:var(--muted);margin-top:12px;font-size:.95rem}
+  .specs li{margin:8px 0}
+
+  /* other sections */
+  section{padding:80px 6%}
+  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto}
+  .card{background:var(--card-bg);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+  .testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1200px;margin:0 auto}
+  footer{padding:40px 6%;text-align:center;color:var(--muted)}
+
+  /* responsive */
+  @media (max-width:1000px){
+    .hero-inner{grid-template-columns:1fr;gap:20px;padding-top:60px}
+    .hero-card{height:420px}
+    .panel{grid-template-columns:1fr}
+    .services-grid,.testimonial-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:480px){
+    header{padding:12px 5%}
+    .hero-copy{padding:60px 0}
+    .hero-card{height:360px}
+    .logo-mark{width:32px;height:32px}
+  }
+
+  /* subtle pointer */
+  .hint{font-size:.9rem;color:var(--muted);margin-top:8px}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="brand">
+    <div class="logo-mark">M</div>
+    <div>
+      <div style="font-weight:800">Morfye</div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px">Shaping digital experiences</div>
+    </div>
+  </div>
+
+  <nav id="mainNav">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#works">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="controls">
+    <div class="color-btn" id="colorBtn" title="Change accent">
+      <span style="font-size:14px">🎨</span>
+      <div class="color-preview" id="colorPreview"></div>
+    </div>
+    <div class="theme-toggle" id="themeToggle" title="Toggle theme">🌙</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow">We build & shape</div>
+      <h1>Design that <span class="accent">moves</span> and converts</h1>
+      <p>We create cinematic websites for professionals — interactive, performance-focused and designed to make clients feel the brand before they read a word.</p>
+      <div class="hero-cta">
+        <button class="btn" id="bookBtn">Book a consultation</button>
+        <button class="btn ghost" id="showWork">See demo</button>
+      </div>
+      <div class="hint">Move your mouse — watch the scene react. Try changing the accent color below.</div>
+    </div>
+
+    <div class="hero-card" id="heroCard">
+      <div class="blob-wrap" aria-hidden="true">
+        <!-- soft morphing SVG blob -->
+        <div class="blob">
+          <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice">
+            <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ffb36b"/><stop offset="1" stop-color="#ff922b"/></linearGradient></defs>
+            <path id="blobPath" fill="url(#g1)" d="M407.6,318.6Q389.2,387.3,318,414.3Q246.8,441.3,188.4,403.7Q130,366,98,304.7Q66,243.3,105.6,192.2Q145.3,141.1,210.4,112.3Q275.5,83.4,326.3,120.5Q377,157.6,407.6,218.1Q438.1,278.6,407.6,318.6Z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="mock-phone">
+        <div class="mock-top">
+          <div class="mock-title">Morfye • Demo</div>
+          <div style="flex:1"></div>
+          <div class="mock-line"></div>
+        </div>
+        <div class="mock-body">Interactive homepage preview — animated, responsive, fast.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features + Estimator -->
+<section id="about">
+  <div class="panel">
+    <div class="features">
+      <h2>What we do</h2>
+      <div class="feature-list">
+        <div class="feature-item"><div class="dot"></div><div><strong>Custom design</strong><div style="color:var(--muted);font-size:.95rem">Unique visuals matching your brand</div></div></div>
+        <div class="feature-item"><div class="dot"></div><div><strong>SEO & SEA</strong><div style="color:var(--muted);font-size:.95rem">Organic visibility + optional paid campaigns</div></div></div>
+        <div class="feature-item"><div class="dot"></div><div><strong>Interactive elements</strong><div style="color:var(--muted);font-size:.95rem">Sliders, micro-interactions, animated storytelling</div></div></div>
+        <div class="feature-item"><div class="dot"></div><div><strong>Hosting & maintenance</strong><div style="color:var(--muted);font-size:.95rem">Fast, secure, and backed-up</div></div></div>
+      </div>
+    </div>
+
+    <aside class="estimator" aria-hidden="false">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:13px;color:var(--muted)">Estimate your website</div>
+          <div class="price" id="priceDisplay">€175</div>
+        </div>
+        <div style="text-align:right;color:var(--muted)">One-time + monthly</div>
+      </div>
+
+      <input type="range" id="budgetRange" class="range" min="150" max="2500" step="25" value="175" />
+
+      <div style="display:flex;gap:12px;margin-top:6px;align-items:center">
+        <div style="flex:1;color:var(--muted)">Budget</div>
+        <div style="font-weight:700" id="budgetLabel">€175</div>
+      </div>
+
+      <ul class="specs" id="featuresList">
+        <!-- updated by JS -->
+      </ul>
+      <div style="margin-top:12px">
+        <button class="btn" id="startBtn">Start Project</button>
+        <div style="margin-top:10px;color:var(--muted);font-size:.9rem">Optional SEA and premium visuals available as add-ons.</div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services">
+  <h2 style="text-align:center;margin-bottom:22px">Services</h2>
+  <div class="services-grid">
+    <div class="card"><h3>Custom Website</h3><p style="color:var(--muted)">From a single page to multi-page projects with easy editing.</p></div>
+    <div class="card"><h3>SEO & Content</h3><p style="color:var(--muted)">Keyword strategy, content optimization and analytics.</p></div>
+    <div class="card"><h3>Paid Campaigns (SEA)</h3><p style="color:var(--muted)">Google Ads setup and monthly optimisation.</p></div>
+  </div>
+</section>
+
+<!-- Work -->
+<section id="works">
+  <h2 style="text-align:center;margin-bottom:22px">Recent Work</h2>
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+    <div class="card">Demo Project 1</div>
+    <div class="card">Demo Project 2</div>
+    <div class="card">Demo Project 3</div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials">
+  <h2 style="text-align:center;margin-bottom:22px">Clients</h2>
+  <div class="testimonial-grid">
+    <div class="card">“Great work!” — Iason</div>
+    <div class="card">“Fast and creative” — Maria</div>
+    <div class="card">“Increased my visibility” — George</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
+    <h2>Let's talk</h2>
+    <p style="color:var(--muted)">Book a free 30-minute consultation. We’ll audit your needs and show a tailored starter mockup.</p>
+    <div style="display:flex;gap:12px;justify-content:center;margin-top:18px">
+      <a class="btn" href="mailto:hello@morfye.com">Email Us</a>
+      <button class="btn ghost" id="book2">Schedule</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © <span id="yr"></span> Morfye — Shaping digital experiences • <span style="color:var(--muted)">Privacy</span>
+</footer>
+
+<!-- hidden native color input (triggered by color button) -->
+<input id="colorInput" type="color" value="#ff922b" style="position:fixed;left:-9999px;top:-9999px" aria-hidden="true" />
+
+<script>
+/* ---------- Utilities ---------- */
+const toEur = v => '€' + Math.round(v);
+
+/* ---------- Particles background on canvas (lightweight) ---------- */
+const canvas = document.getElementById('bgCanvas');
+const ctx = canvas.getContext('2d');
+let w=canvas.width=innerWidth, h=canvas.height=innerHeight;
+window.addEventListener('resize',()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight;initParticles();});
+const particles=[];
+function initParticles(){
+  particles.length=0;
+  const count = Math.max(24, Math.floor(w*h/70000));
+  for(let i=0;i<count;i++){
+    particles.push({
+      x: Math.random()*w,
+      y: Math.random()*h,
+      vx: (Math.random()-0.5)*0.2,
+      vy: (Math.random()-0.5)*0.2,
+      r: 10+Math.random()*30*(w/1400),
+      hue: 30 + Math.random()*30
+    });
+  }
+}
+function draw(){
+  ctx.clearRect(0,0,w,h);
+  const grd = ctx.createLinearGradient(0,0,w,h);
+  grd.addColorStop(0, 'rgba(255,160,90,0.06)');
+  grd.addColorStop(1, 'rgba(255,100,40,0.02)');
+  ctx.fillStyle = grd;
+  ctx.fillRect(0,0,w,h);
+  for(const p of particles){
+    p.x += p.vx;
+    p.y += p.vy;
+    if(p.x< -100) p.x=w+100;
+    if(p.x> w+100) p.x=-100;
+    if(p.y< -100) p.y=h+100;
+    if(p.y> h+100) p.y=-100;
+    ctx.beginPath();
+    ctx.fillStyle = `hsla(${p.hue},80%,60%,0.08)`;
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+  }
+  requestAnimationFrame(draw);
+}
+initParticles(); draw();
+
+/* ---------- Mouse parallax for hero elements ---------- */
+const hero = document.querySelector('.hero');
+const blob = document.getElementById('blobPath');
+const heroCard = document.getElementById('heroCard');
+window.addEventListener('mousemove',e=>{
+  const cx = e.clientX - innerWidth/2;
+  const cy = e.clientY - innerHeight/2;
+  // move hero-card subtly
+  gsap.to(heroCard, {duration:0.9, x: cx*0.02, y: cy*0.02, rotation: cx*0.003});
+  // morph-like transform on svg path via small random jitter (not real morph)
+  gsap.to(blob, {duration:1.2, attr:{d: blob.getAttribute('d')}, overwrite:true});
+});
+
+/* tiny breathing animation for blob path (loop) */
+gsap.to("#blobPath", {duration:4, repeat:-1, yoyo:true, attr:{
+  d: "M420,320Q400,410,320,445Q240,480,170,436Q100,392,88,320Q76,248,124,190Q172,132,250,110Q328,88,374,136Q420,184,440,236Q460,288,420,320Z"
+}, ease:"sine.inOut"});
+
+/* ---------- GSAP scroll reveal ---------- */
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.card, .feature-item, .testimonial, .mock-phone, .hero-copy').forEach((el)=>{
+  gsap.from(el, {y:30, opacity:0, duration:0.9, ease:"power3.out", scrollTrigger:{trigger:el, start:"top 85%"}});
+});
+gsap.from('.hero-inner', {opacity:0, y:18, duration:1.1, ease:"power3.out"});
+
+/* ---------- Header scrolled state ---------- */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=> {
+  if(window.scrollY>60) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+});
+
+/* ---------- Budget estimator logic ---------- */
+const budgetRange = document.getElementById('budgetRange');
+const priceDisplay = document.getElementById('priceDisplay');
+const budgetLabel = document.getElementById('budgetLabel');
+const featuresList = document.getElementById('featuresList');
+
+function updateEstimator(v){
+  budgetLabel.textContent = toEur(v);
+  // simple split into tiers
+  const tier = v < 300 ? 1 : v < 700 ? 2 : v < 1400 ? 3 : 4;
+  let price = v; // treat as one-time baseline for demo
+  priceDisplay.textContent = toEur(price);
+  const items = [];
+  if(tier>=1) items.push("Basic 1-page site • responsive • contact form");
+  if(tier>=2) items.push("Multi-page • Basic SEO • Google indexing");
+  if(tier>=3) items.push("Custom visuals • Fast performance • Content guidance");
+  if(tier>=4) items.push("Premium: SEA setup • Advanced interactivity • 3D/motion graphics");
+  // render
+  featuresList.innerHTML = items.map(i=>`<li>• ${i}</li>`).join('');
+}
+budgetRange.addEventListener('input', e=>updateEstimator(+e.target.value));
+updateEstimator(+budgetRange.value);
+
+/* ---------- Accent color picker (button triggers hidden input at cursor) ---------- */
+const colorBtn = document.getElementById('colorBtn');
+const colorInput = document.getElementById('colorInput');
+const colorPreview = document.getElementById('colorPreview');
+
+colorBtn.addEventListener('click', (ev)=>{
+  // position native color input near click (mobile friendly)
+  colorInput.style.left = (ev.clientX - 20) + 'px';
+  colorInput.style.top = (ev.clientY - 20) + 'px';
+  colorInput.click();
+});
+colorInput.addEventListener('input', (e)=>{
+  const c=e.target.value;
+  document.documentElement.style.setProperty('--primary-color', c);
+  colorPreview.style.background = c;
+  // update other elements that used inline styles
+  document.querySelectorAll('.dot').forEach(d=>d.style.background=c);
+  document.querySelectorAll('.btn').forEach(b=>b.style.background=c);
+});
+
+/* ---------- Theme toggle with persistence ---------- */
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+function setTheme(mode){
+  if(mode==='light'){ body.classList.add('light'); themeToggle.textContent='🌙'; localStorage.setItem('morfye_theme','light'); }
+  else { body.classList.remove('light'); themeToggle.textContent='🌞'; localStorage.setItem('morfye_theme','dark'); }
+}
+const saved = localStorage.getItem('morfye_theme') || 'dark';
+setTheme(saved);
+themeToggle.addEventListener('click', ()=> setTheme(body.classList.contains('light') ? 'dark':'light'));
+
+/* ---------- CTA buttons (simple smooth scrolls) ---------- */
+document.getElementById('showWork').addEventListener('click', ()=> document.getElementById('works').scrollIntoView({behavior:'smooth'}));
+document.getElementById('bookBtn').addEventListener('click', ()=> document.getElementById('contact').scrollIntoView({behavior:'smooth'}));
+document.getElementById('startBtn').addEventListener('click', ()=> alert('Great — we will email you a quick onboarding form (demo).'));
+
+/* ---------- small helpers ---------- */
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---------- mobile nav (simple) ---------- */
+const menuToggle = document.createElement('div');
+menuToggle.innerHTML = '&#9776;'; menuToggle.style.cursor='pointer'; menuToggle.style.fontSize='20px';
+menuToggle.style.padding='8px'; menuToggle.style.borderRadius='8px';
+menuToggle.style.background='var(--glass)';
+menuToggle.style.marginLeft='10px';
+document.querySelector('header .controls').prepend(menuToggle);
+
+const mobileNav = document.getElementById('mainNav');
+menuToggle.addEventListener('click', ()=> {
+  if(window.innerWidth < 900){
+    if(mobileNav.style.position!=='fixed'){
+      mobileNav.style.position='fixed'; mobileNav.style.top='70px'; mobileNav.style.right='6%';
+      mobileNav.style.background='var(--card-bg)'; mobileNav.style.flexDirection='column'; mobileNav.style.padding='12px';
+      mobileNav.style.borderRadius='12px'; mobileNav.style.boxShadow='0 10px 30px rgba(0,0,0,.5)'; mobileNav.style.zIndex=9999;
+    } else {
+      mobileNav.style.position=''; mobileNav.style.top=''; mobileNav.style.right=''; mobileNav.style.background='';
+      mobileNav.style.flexDirection=''; mobileNav.style.padding=''; mobileNav.style.borderRadius=''; mobileNav.style.boxShadow=''; mobileNav.style.zIndex='';
+    }
+  } else window.scrollTo({top:0,behavior:'smooth'});
+});
+
+/* ---------- Accessibility tweak: keyboard open color input ---------- */
+colorBtn.addEventListener('keydown', ev => { if(ev.key === 'Enter' || ev.key === ' ') colorInput.click(); });
+
+</script>
+</body>
+</html>
