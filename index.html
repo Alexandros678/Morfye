@@ -57,6 +57,48 @@ header nav a:hover {
   color: var(--primary-color);
 }
 
+/* Learn More Link */
+/* Learn More Link */
+.learn-more-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.learn-more-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: #d97706;
+  transform: translateX(8px);
+}
+
+.learn-more-link:hover::after {
+  width: 100%;
+}
+
+body.dark-mode .learn-more-link {
+  color: var(--primary-color);
+}
+
+body.dark-mode .learn-more-link:hover {
+  color: #ffb84d;
+}
+
 .testimonial span {
   color: var(--primary-color);
 }
@@ -743,6 +785,128 @@ body.dark-mode .mobile-theme-toggle {
       margin-bottom: 15px;
     }
 
+    /* Featured GEO Card - Bigger & Separate */
+.featured-geo-card {
+  background: #fff;
+  border: 3px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 0 auto 50px;
+  max-width: 900px;
+  box-shadow: 0 8px 25px rgba(255, 146, 43, 0.2);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-geo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 146, 43, 0.3);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.geo-card-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.geo-card-content img {
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.geo-text {
+  flex: 1;
+}
+
+.geo-text h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.geo-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.geo-cta {
+  background: var(--primary-color);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.geo-cta:hover {
+  background: #ffb84d;
+  transform: scale(1.05);
+}
+
+/* Dark mode for GEO card */
+body.dark-mode .featured-geo-card {
+  background: #1e1e1e;
+  border-color: var(--primary-color);
+  box-shadow: 0 8px 25px rgba(255, 146, 43, 0.3);
+}
+
+body.dark-mode .geo-text p {
+  color: #ccc;
+}
+
+/* Mobile responsive for GEO card */
+@media (max-width: 768px) {
+  .featured-geo-card {
+    padding: 25px;
+  }
+  
+  .geo-card-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .geo-card-content img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .geo-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .geo-text p {
+    font-size: 0.95rem;
+  }
+  
+  .featured-badge {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
     /* WORK SECTION */
 
  .work-section {
@@ -1170,28 +1334,50 @@ body.dark-mode .testimonial-card img {
   <!-- SERVICES -->
   <section class="services" id="services">
     <h2>What We Offer</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Design">
-        <h3>Custom Website Design</h3>
-        <p>Tailored, mobile-friendly websites built to fit your business.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Hosting">
-        <h3>Hosting & Maintenance</h3>
-        <p>Secure hosting, updates, and ongoing support.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO">
-        <h3>SEO Optimization</h3>
-        <p>We make sure your clients find you on Google with optimized pages and smart content.</p>
-      </div>
-      <div class="service-card">
-        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="SEA">
-        <h3>SEA Campaigns</h3>
-        <p>Optional paid ad setup (Google Ads) to bring instant traffic and visibility.</p>
+    
+    <!-- Featured GEO Card (Separate & Bigger) -->
+    <div class="featured-geo-card">
+      <div class="geo-card-content">
+        <img src="https://images.unsplash.com/photo-1740174459730-33a1983b51af?auto=format&fit=crop&w=900&q=80" alt="GEO">
+        <div class="geo-text">
+          <h3>GEO - Generative Engine Optimization</h3>
+          <p>Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini. We optimize your website so AI chatbots suggest YOUR business when potential clients ask for recommendations. This is the future of online visibility.</p>
+          <a href="geo-optimization.html" class="geo-cta" style="display: inline-block; text-decoration: none;">
+  Learn More About GEO
+</a>
+        </div>
       </div>
     </div>
+    
+    <!-- Other Services -->
+    <div class="service-cards">
+      <div class="service-card">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Design">
+  <h3>Custom Website Design</h3>
+  <p>Tailored, mobile-friendly websites built to fit your business and convert visitors into clients.</p>
+  <a href="website-design.html" class="learn-more-link">Learn More →</a>
+</div>
+
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Hosting">
+  <h3>Hosting & Maintenance</h3>
+  <p>Secure hosting, regular updates, and ongoing technical support to keep your site running smoothly.</p>
+  <a href="hosting-maintenance.html" class="learn-more-link">Learn More →</a>
+</div>
+
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO">
+  <h3>SEO Optimization</h3>
+  <p>Traditional search engine optimization to rank higher on Google and drive organic traffic to your website.</p>
+  <a href="seo-optimization.html" class="learn-more-link">Learn More →</a>
+</div>
+
+<div class="service-card">
+  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="SEA">
+  <h3>SEA Campaigns</h3>
+  <p>Google Ads campaigns designed to bring instant traffic and maximize your online visibility.</p>
+  <a href="sea-campaigns.html" class="learn-more-link">Learn More →</a>
+</div>
   </section>
 
   <section id="work" class="story work-section">
