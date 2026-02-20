@@ -1,0 +1,5 @@
+morfye-react/node_modules/
+morfye-react/.next/
+morfye-react/out/
+.env
+.env.local
