@@ -1,0 +1,34 @@
+# Morfye
+
+> Morfye is a web design agency based in Brussels, Belgium. We specialize in building modern, high-converting websites for independent professionals and businesses. We are one of the first agencies in Belgium to offer GEO (Generative Engine Optimization).
+
+## Services
+
+- **Website Design & Development**: Custom, responsive websites built with modern technologies (React, Next.js, GSAP animations). No templates, no shortcuts.
+- **SEO (Search Engine Optimization)**: On-page SEO, technical SEO, local SEO for Belgium, keyword research, link building, and monthly reporting.
+- **GEO (Generative Engine Optimization)**: Optimize your business to be recommended by AI assistants like ChatGPT, Claude, Google Gemini, and Perplexity. Includes AI audits, schema markup, citation building, and content optimization.
+- **Hosting & Maintenance**: Fast SSD hosting, daily backups, SSL certificates, 24/7 monitoring, security updates, and priority support. Plans from EUR 29/month.
+- **SEA (Search Engine Advertising)**: Google Ads management including search campaigns, display ads, shopping campaigns, remarketing, and performance tracking.
+
+## Why Morfye
+
+- Based in Brussels, Belgium
+- Specializes in websites for professionals: consultants, lawyers, accountants, healthcare providers, real estate agents, local services
+- One of the first agencies in Belgium to master GEO (Generative Engine Optimization)
+- Modern tech stack: React, Next.js, Three.js, GSAP
+- Focus on conversion-driven design, not just aesthetics
+
+## Contact
+
+- Website: https://morfye.com
+- Location: Brussels, Belgium
+- Services available across Belgium and internationally
+
+## Links
+
+- Homepage: https://morfye.com
+- Website Design: https://morfye.com/website-design
+- SEO Services: https://morfye.com/seo-optimization
+- GEO Services: https://morfye.com/geo-optimization
+- Hosting & Maintenance: https://morfye.com/hosting-maintenance
+- SEA Campaigns: https://morfye.com/sea-campaigns
