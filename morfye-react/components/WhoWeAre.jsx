@@ -12,13 +12,16 @@ const stats = [
 
 export default function WhoWeAre() {
   const sectionRef = useRef(null)
+  const imageColRef = useRef(null)
+  const overlayRef = useRef(null)
 
   useEffect(() => {
     const section = sectionRef.current
+    const imageCol = imageColRef.current
+    const overlay = overlayRef.current
     if (!section) return
 
     const ctx = gsap.context(() => {
-      // Entrance: section fades in from black
       gsap.fromTo(section, {
         opacity: 0,
         y: 60
@@ -34,19 +37,6 @@ export default function WhoWeAre() {
         }
       })
 
-      // Left side image - parallax (moves slower than scroll)
-      gsap.to('.wwa-image-wrapper', {
-        yPercent: -20,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true
-        }
-      })
-
-      // Right side text - reveal line by line
       gsap.from('.wwa-label', {
         x: -30,
         opacity: 0,
@@ -83,7 +73,6 @@ export default function WhoWeAre() {
         }
       })
 
-      // Stats - stagger in + count up
       const statEls = section.querySelectorAll('.wwa-stat')
       statEls.forEach((el, i) => {
         const valueEl = el.querySelector('.wwa-stat-value')
@@ -118,7 +107,6 @@ export default function WhoWeAre() {
         })
       })
 
-      // Decorative line draw
       gsap.from('.wwa-line', {
         scaleX: 0,
         duration: 1.2,
@@ -131,20 +119,37 @@ export default function WhoWeAre() {
       })
     }, section)
 
-    return () => ctx.revert()
+    // Hover: overlay fade only, no image movement
+    const onEnter = () => {
+      gsap.to(overlay, { opacity: 1, duration: 0.4, ease: 'power2.out' })
+    }
+    const onLeave = () => {
+      gsap.to(overlay, { opacity: 0, duration: 0.4, ease: 'power2.out' })
+    }
+
+    imageCol.addEventListener('mouseenter', onEnter)
+    imageCol.addEventListener('mouseleave', onLeave)
+
+    return () => {
+      ctx.revert()
+      imageCol.removeEventListener('mouseenter', onEnter)
+      imageCol.removeEventListener('mouseleave', onLeave)
+    }
   }, [])
 
   return (
     <section ref={sectionRef} className="who-we-are" id="about">
       <div className="wwa-grid">
-        {/* Left - Image with parallax */}
-        <div className="wwa-image-col">
+        {/* Left - Image */}
+        <div className="wwa-image-col" ref={imageColRef}>
           <div className="wwa-image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+              src="/about-us.png"
               alt="Morfye team at work"
             />
-            <div className="wwa-image-overlay" />
+            <div className="wwa-image-overlay" ref={overlayRef}>
+              <span className="wwa-overlay-names">Alexandros Gkiorgkinis &amp; Iason Moutevelis</span>
+            </div>
           </div>
         </div>
 
@@ -153,9 +158,9 @@ export default function WhoWeAre() {
           <div className="wwa-label">WHO WE ARE</div>
           <div className="wwa-line" />
           <h2 className="wwa-heading">
-            <span>We craft digital</span>
-            <span>experiences that</span>
-            <span>actually <em>convert.</em></span>
+            <span>Stop chasing</span>
+            <span>clients. Start</span>
+            <span><em>attracting</em> them.</span>
           </h2>
           <p className="wwa-desc">
             We&apos;re not just designers — we&apos;re strategists. Every pixel, every

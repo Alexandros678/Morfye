@@ -1,9 +1,6 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const WebDesignIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,85 +103,81 @@ const services = [
 export default function ServiceShowcase() {
   const containerRef = useRef(null)
   const slidesRef = useRef([])
+  const currentRef = useRef(0)
+  const isAnimating = useRef(false)
+  const timerRef = useRef(null)
+
+  const goTo = useCallback((nextIndex) => {
+    if (isAnimating.current) return
+    const slides = slidesRef.current.filter(Boolean)
+    if (!slides.length || nextIndex === currentRef.current) return
+
+    const prevIndex = currentRef.current
+    const prev = slides[prevIndex]
+    const next = slides[nextIndex]
+    const dots = containerRef.current?.querySelectorAll('.ss-dot')
+
+    isAnimating.current = true
+    currentRef.current = nextIndex
+
+    // Prev exits
+    gsap.to(prev.querySelector('.ss-big-number'), { scale: 1.5, opacity: 0, duration: 0.4, ease: 'power2.in' })
+    gsap.to(prev.querySelector('.ss-slide-content'), { y: -80, opacity: 0, duration: 0.35, ease: 'power2.in' })
+    gsap.to(prev.querySelector('.ss-slide-icon'), { scale: 0.5, opacity: 0, duration: 0.3, ease: 'power2.in' })
+    gsap.to(prev, {
+      opacity: 0, duration: 0.1, delay: 0.35,
+      onComplete: () => {
+        gsap.set(prev, { pointerEvents: 'none' })
+        gsap.set(next, { opacity: 1, pointerEvents: 'auto' })
+
+        gsap.fromTo(next.querySelector('.ss-big-number'),
+          { scale: 0.5, opacity: 0 },
+          { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out', delay: 0.05 }
+        )
+        gsap.fromTo(next.querySelector('.ss-slide-icon'),
+          { scale: 0, opacity: 0, rotation: -20 },
+          { scale: 1, opacity: 1, rotation: 0, duration: 0.5, ease: 'back.out(1.5)', delay: 0.07 }
+        )
+        gsap.fromTo(next.querySelector('.ss-slide-content'),
+          { y: 80, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.45, ease: 'power2.out', delay: 0.1 }
+        )
+        gsap.fromTo(next.querySelector('.ss-accent-line'),
+          { scaleX: 0 },
+          { scaleX: 1, duration: 0.4, ease: 'power2.out', delay: 0.15, onComplete: () => {
+            isAnimating.current = false
+          }}
+        )
+      }
+    })
+
+    if (dots) {
+      gsap.to(dots[prevIndex], { opacity: 0.3, scale: 0.8, duration: 0.2 })
+      gsap.to(dots[nextIndex], { opacity: 1, scale: 1.2, duration: 0.2, delay: 0.4 })
+    }
+  }, [])
+
+  const startTimer = useCallback(() => {
+    clearInterval(timerRef.current)
+    timerRef.current = setInterval(() => {
+      goTo((currentRef.current + 1) % services.length)
+    }, 3500)
+  }, [goTo])
 
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
     const ctx = gsap.context(() => {
+      // Initialize slides and dots
       const slides = slidesRef.current.filter(Boolean)
-      const totalSlides = slides.length
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: 'top top',
-          end: `+=${totalSlides * 100}%`,
-          pin: true,
-          scrub: 1
-        }
-      })
-
       slides.forEach((slide, i) => {
-        if (i === 0) return
-        const prev = slides[i - 1]
-
-        // Previous exits
-        tl.to(prev.querySelector('.ss-big-number'), {
-          scale: 1.5, opacity: 0, duration: 0.4, ease: 'power2.in'
-        }, `slide${i}`)
-        tl.to(prev.querySelector('.ss-slide-content'), {
-          y: -80, opacity: 0, duration: 0.35, ease: 'power2.in'
-        }, `slide${i}`)
-        tl.to(prev.querySelector('.ss-slide-icon'), {
-          scale: 0.5, opacity: 0, duration: 0.3, ease: 'power2.in'
-        }, `slide${i}`)
-        tl.to(prev, { opacity: 0, duration: 0.1 }, `slide${i}+=0.35`)
-        tl.set(prev, { pointerEvents: 'none' }, `slide${i}+=0.36`)
-
-        // Current enters
-        tl.fromTo(slide,
-          { opacity: 0 },
-          { opacity: 1, duration: 0.1 },
-          `slide${i}+=0.35`
-        )
-        tl.set(slide, { pointerEvents: 'auto' }, `slide${i}+=0.46`)
-        tl.fromTo(slide.querySelector('.ss-big-number'),
-          { scale: 0.5, opacity: 0 },
-          { scale: 1, opacity: 1, duration: 0.5, ease: 'power2.out' },
-          `slide${i}+=0.4`
-        )
-        tl.fromTo(slide.querySelector('.ss-slide-icon'),
-          { scale: 0, opacity: 0, rotation: -20 },
-          { scale: 1, opacity: 1, rotation: 0, duration: 0.5, ease: 'back.out(1.5)' },
-          `slide${i}+=0.42`
-        )
-        tl.fromTo(slide.querySelector('.ss-slide-content'),
-          { y: 80, opacity: 0 },
-          { y: 0, opacity: 1, duration: 0.45, ease: 'power2.out' },
-          `slide${i}+=0.45`
-        )
-        tl.fromTo(slide.querySelector('.ss-accent-line'),
-          { scaleX: 0 },
-          { scaleX: 1, duration: 0.4, ease: 'power2.out' },
-          `slide${i}+=0.5`
-        )
+        gsap.set(slide, { opacity: i === 0 ? 1 : 0, pointerEvents: i === 0 ? 'auto' : 'none' })
       })
-
-      // Progress dots
       const dots = container.querySelectorAll('.ss-dot')
-      slides.forEach((_, i) => {
-        if (i === 0) return
-        tl.to(dots[i - 1], { opacity: 0.3, scale: 0.8, duration: 0.2 }, `slide${i}`)
-        tl.to(dots[i], { opacity: 1, scale: 1.2, duration: 0.2 }, `slide${i}+=0.4`)
+      dots.forEach((dot, i) => {
+        gsap.set(dot, { opacity: i === 0 ? 1 : 0.3, scale: i === 0 ? 1.2 : 0.8 })
       })
-
-      // Last slide content fades out naturally
-      const lastSlide = slides[slides.length - 1]
-      if (lastSlide) {
-        tl.to(lastSlide.querySelector('.ss-slide-content'), { opacity: 0, y: -40, duration: 0.3 })
-        tl.to(lastSlide.querySelector('.ss-big-number'), { opacity: 0, scale: 1.5, duration: 0.3 }, '-=0.25')
-      }
 
       // Floating particles
       container.querySelectorAll('.ss-particle').forEach((p) => {
@@ -203,8 +196,47 @@ export default function ServiceShowcase() {
     return () => ctx.revert()
   }, [])
 
+  // Only run timer when section is visible on screen
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTimer()
+        } else {
+          clearInterval(timerRef.current)
+        }
+      },
+      { threshold: 0.4 }
+    )
+
+    observer.observe(container)
+    return () => {
+      observer.disconnect()
+      clearInterval(timerRef.current)
+    }
+  }, [startTimer])
+
+  const handlePrev = () => {
+    goTo((currentRef.current - 1 + services.length) % services.length)
+    startTimer()
+  }
+
+  const handleNext = () => {
+    goTo((currentRef.current + 1) % services.length)
+    startTimer()
+  }
+
   return (
-    <section ref={containerRef} className="ss-cinematic" id="services">
+    <section
+      ref={containerRef}
+      className="ss-cinematic"
+      id="services"
+      onMouseEnter={() => clearInterval(timerRef.current)}
+      onMouseLeave={startTimer}
+    >
       <div className="ss-particles">
         {Array.from({ length: 12 }).map((_, i) => (
           <div
@@ -220,15 +252,25 @@ export default function ServiceShowcase() {
         ))}
       </div>
 
+      <button className="ss-nav ss-nav-prev" onClick={handlePrev} aria-label="Previous service">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 17V5M11 5L5 11M11 5L17 11" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
+      <button className="ss-nav ss-nav-next" onClick={handleNext} aria-label="Next service">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 5v12M11 17l6-6M11 17l-6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
       <div className="ss-progress-dots">
         {services.map((s, i) => (
           <div
             key={s.number}
             className="ss-dot"
-            style={{
-              opacity: i === 0 ? 1 : 0.3,
-              transform: i === 0 ? 'scale(1.2)' : 'scale(0.8)'
-            }}
+            onClick={() => { goTo(i); startTimer() }}
+            style={{ cursor: 'pointer' }}
           />
         ))}
       </div>
@@ -240,7 +282,6 @@ export default function ServiceShowcase() {
             key={s.number}
             ref={(el) => (slidesRef.current[i] = el)}
             className={`ss-slide ${s.featured ? 'ss-slide-featured' : ''}`}
-            style={{ opacity: i === 0 ? 1 : 0, pointerEvents: i === 0 ? 'auto' : 'none' }}
           >
             <div className="ss-big-number">{s.number}</div>
 
@@ -264,11 +305,6 @@ export default function ServiceShowcase() {
           </div>
         )
       })}
-
-      <div className="ss-scroll-hint">
-        <span>Scroll to explore</span>
-        <div className="ss-scroll-line" />
-      </div>
     </section>
   )
 }

@@ -133,29 +133,25 @@ export default function Hero() {
         scrollTrigger: {
           trigger: hero,
           start: 'top top',
-          end: '+=150%',
+          end: '+=50%',
           pin: true,
-          scrub: true
+          scrub: 0.3
         }
       })
 
       // Text fades out
-      scrollTl.to('.hero-scroll-down', { opacity: 0, y: 20, duration: 0.1 }, 0)
-      scrollTl.to('.hero-line-1', { y: -120, opacity: 0, duration: 0.3 }, 0)
-      scrollTl.to('.hero-line-2', { y: -80, opacity: 0, duration: 0.3 }, 0.05)
-      scrollTl.to('.hero-subtitle', { y: -50, opacity: 0, duration: 0.25 }, 0.08)
-      scrollTl.to('.hero-buttons', { y: 60, opacity: 0, duration: 0.25 }, 0.08)
+      scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
+      scrollTl.fromTo('.hero-line-1', { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
+      scrollTl.fromTo('.hero-line-2', { y: 0, opacity: 1 }, { y: -80, opacity: 0, duration: 0.3 }, 0.05)
+      scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50, opacity: 0, duration: 0.25 }, 0.08)
+      scrollTl.fromTo('.hero-buttons', { y: 0, opacity: 1 }, { y: 60, opacity: 0, duration: 0.25 }, 0.08)
 
       // 3D logo scales up as you scroll — becomes the focus
-      scrollTl.to(logoScaleRef, { current: 1.5, duration: 0.6, ease: 'none' }, 0)
+      scrollTl.fromTo(logoScaleRef, { current: 0.75 }, { current: 1.5, duration: 0.6, ease: 'none' }, 0)
 
       // Then fades out
-      scrollTl.to('.logo-3d-container', { opacity: 0, duration: 0.35 }, 0.5)
-      scrollTl.to('.hero-reveal-box', { filter: 'blur(8px)', duration: 0.4 }, 0.6)
-
-      // After load animation finishes, re-record scroll starting values
-      // so they capture opacity:1 instead of the initial opacity:0
-      tl.call(() => scrollTl.invalidate())
+      scrollTl.fromTo('.logo-3d-container', { opacity: 1 }, { opacity: 0, duration: 0.35 }, 0.5)
+      scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
 
     }, hero)
 

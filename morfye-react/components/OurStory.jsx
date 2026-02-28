@@ -1,8 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const scenes = [
   {
@@ -22,52 +19,74 @@ const scenes = [
 export default function OurStory() {
   const containerRef = useRef(null)
   const scenesRef = useRef([])
+  const currentRef = useRef(0)
+  const isAnimating = useRef(false)
+  const timerRef = useRef(null)
+
+  const goTo = useCallback((nextIndex) => {
+    if (isAnimating.current) return
+    const sceneEls = scenesRef.current.filter(Boolean)
+    if (!sceneEls.length || nextIndex === currentRef.current) return
+
+    const prevIndex = currentRef.current
+    const prev = sceneEls[prevIndex]
+    const next = sceneEls[nextIndex]
+
+    isAnimating.current = true
+    currentRef.current = nextIndex
+
+    // Update progress bar
+    const progressFill = containerRef.current?.querySelector('.story-progress-fill')
+    if (progressFill) {
+      gsap.to(progressFill, {
+        scaleY: (nextIndex + 1) / scenes.length,
+        duration: 0.5,
+        ease: 'power2.out'
+      })
+    }
+
+    // Prev exits
+    gsap.to(prev, {
+      opacity: 0, y: -60, duration: 0.4, ease: 'power2.in',
+      onComplete: () => {
+        gsap.set(prev, { y: 80 })
+
+        // Next enters
+        gsap.fromTo(next,
+          { opacity: 0, y: 80 },
+          { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', onComplete: () => {
+            isAnimating.current = false
+          }}
+        )
+      }
+    })
+  }, [])
+
+  const startTimer = useCallback(() => {
+    clearInterval(timerRef.current)
+    timerRef.current = setInterval(() => {
+      goTo((currentRef.current + 1) % scenes.length)
+    }, 3500)
+  }, [goTo])
 
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: 'top top',
-          end: `+=${scenes.length * 100}%`,
-          pin: true,
-          scrub: 1
-        }
+      // Initialize scenes
+      const sceneEls = scenesRef.current.filter(Boolean)
+      sceneEls.forEach((scene, i) => {
+        gsap.set(scene, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 })
       })
 
-      scenesRef.current.forEach((scene, i) => {
-        if (i === 0) return
-        const prev = scenesRef.current[i - 1]
-        tl.to(prev, { opacity: 0, y: -60, duration: 0.4, ease: 'power2.in' })
-        tl.fromTo(scene,
-          { opacity: 0, y: 80 },
-          { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }
-        )
-      })
-
-      // Last scene fades out naturally
-      const lastScene = scenesRef.current[scenes.length - 1]
-      if (lastScene) {
-        tl.to(lastScene, { opacity: 0, y: -40, duration: 0.3, ease: 'power2.in' })
+      // Initialize progress bar to first scene
+      const progressFill = container.querySelector('.story-progress-fill')
+      if (progressFill) {
+        gsap.set(progressFill, { scaleY: 1 / scenes.length })
       }
 
-      const progressBar = container.querySelector('.story-progress-fill')
-      if (progressBar) {
-        gsap.to(progressBar, {
-          scaleY: 1,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: container,
-            start: 'top top',
-            end: `+=${scenes.length * 100}%`,
-            scrub: true
-          }
-        })
-      }
-
+      // Floating particles
       container.querySelectorAll('.story-particle').forEach((p) => {
         gsap.to(p, {
           y: `${-100 - Math.random() * 200}`,
@@ -79,14 +98,52 @@ export default function OurStory() {
           ease: 'power1.out'
         })
       })
-
     }, container)
 
     return () => ctx.revert()
   }, [])
 
+  // Only run timer when section is visible on screen
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          startTimer()
+        } else {
+          clearInterval(timerRef.current)
+        }
+      },
+      { threshold: 0.4 }
+    )
+
+    observer.observe(container)
+    return () => {
+      observer.disconnect()
+      clearInterval(timerRef.current)
+    }
+  }, [startTimer])
+
+  const handlePrev = () => {
+    goTo((currentRef.current - 1 + scenes.length) % scenes.length)
+    startTimer()
+  }
+
+  const handleNext = () => {
+    goTo((currentRef.current + 1) % scenes.length)
+    startTimer()
+  }
+
   return (
-    <section ref={containerRef} className="our-story" id="story">
+    <section
+      ref={containerRef}
+      className="our-story"
+      id="story"
+      onMouseEnter={() => clearInterval(timerRef.current)}
+      onMouseLeave={startTimer}
+    >
       <div className="story-particles">
         {Array.from({ length: 15 }).map((_, i) => (
           <div
@@ -106,23 +163,29 @@ export default function OurStory() {
         <div className="story-progress-fill" />
       </div>
 
+      <button className="story-nav-arrow story-nav-prev" onClick={handlePrev} aria-label="Previous scene">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 17V5M11 5L5 11M11 5L17 11" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
+      <button className="story-nav-arrow story-nav-next" onClick={handleNext} aria-label="Next scene">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path d="M11 5v12M11 17l6-6M11 17l-6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </button>
+
       {scenes.map((scene, i) => (
         <div
           key={i}
           ref={(el) => (scenesRef.current[i] = el)}
           className="story-scene"
-          style={{ opacity: i === 0 ? 1 : 0 }}
         >
           <div className="scene-counter">{String(i + 1).padStart(2, '0')}</div>
           <h2 className="scene-title">{scene.title}</h2>
           <p className="scene-text">{scene.text}</p>
         </div>
       ))}
-
-      <div className="story-scroll-hint">
-        <span>Scroll to explore</span>
-        <div className="scroll-line" />
-      </div>
     </section>
   )
 }

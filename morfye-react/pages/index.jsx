@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Hero from '../components/Hero'
 import OurStory from '../components/OurStory'
 import WhoWeAre from '../components/WhoWeAre'
-import ServiceShowcase from '../components/ServiceShowcase'
+import ServiceCart from '../components/ServiceCart'
 import WorkShowcase from '../components/WorkShowcase'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
@@ -131,7 +131,7 @@ export default function Home() {
       <Hero />
       <OurStory />
       <WhoWeAre />
-      <ServiceShowcase />
+      <ServiceCart />
       <WorkShowcase />
       <Contact />
       <Footer />
