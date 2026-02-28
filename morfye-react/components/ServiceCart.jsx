@@ -22,7 +22,6 @@ export default function ServiceCart() {
 
       {/* Featured GEO Card */}
       <div className="featured-geo-card">
-        <div className="featured-badge">⭐ Most Popular</div>
         <div className="geo-card-content">
           <img
             src="https://images.unsplash.com/photo-1740174459730-33a1983b51af?auto=format&fit=crop&w=900&q=80"
