@@ -30,6 +30,11 @@ export default function CookieBanner() {
     setVisible(false)
   }
 
+  useEffect(() => {
+    document.body.classList.toggle('cookie-banner-open', visible)
+    return () => document.body.classList.remove('cookie-banner-open')
+  }, [visible])
+
   if (!visible) return null
 
   return (

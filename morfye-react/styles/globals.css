@@ -1525,7 +1525,8 @@ footer {
 /* ======= SCROLL TO TOP ======= */
 #scrollTopBtn {
   position: fixed;
-  bottom: 30px; right: 30px;
+  bottom: 30px; right: 48px;
+  transition: bottom 0.3s ease;
   background: var(--primary-color);
   color: #fff;
   width: 52px; height: 52px;
@@ -1723,6 +1724,7 @@ body.light-mode .footer-socials a { border-color: rgba(0,0,0,0.12); color: rgba(
 body.light-mode .footer-divider { background: rgba(0,0,0,0.08); }
 
 /* Scroll to top */
+body.cookie-banner-open #scrollTopBtn { opacity: 0 !important; pointer-events: none !important; }
 body.light-mode #scrollTopBtn { color: #fff; }
 
 /* ======= DARK MODE ======= */
@@ -2967,7 +2969,7 @@ body.light-mode .sc-simple-card p { color: rgba(0, 0, 0, 0.6); }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 
   /* ScrollToTop */
-  #scrollTopBtn { width: 44px; height: 44px; bottom: 20px; right: 20px; }
+  #scrollTopBtn { width: 44px; height: 44px; bottom: 20px; right: 16px; }
 
   /* Service pages (keep existing) */
   .page-hero-title { font-size: 2.2rem; }
