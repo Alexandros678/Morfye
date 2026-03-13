@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
@@ -14,6 +14,15 @@ export default function WhoWeAre() {
   const sectionRef = useRef(null)
   const imageColRef = useRef(null)
   const overlayRef = useRef(null)
+  const particlesRef = useRef(null)
+
+  const [particles] = useState(() =>
+    Array.from({ length: 18 }, () => ({
+      size: Math.random() * 5 + 2,
+      left: Math.random() * 100,
+      top: Math.random() * 100
+    }))
+  )
 
   useEffect(() => {
     const section = sectionRef.current
@@ -130,6 +139,22 @@ export default function WhoWeAre() {
     imageCol.addEventListener('mouseenter', onEnter)
     imageCol.addEventListener('mouseleave', onLeave)
 
+    // Particles
+    const pContainer = particlesRef.current
+    if (pContainer) {
+      pContainer.querySelectorAll('.wwa-particle').forEach((p) => {
+        gsap.to(p, {
+          y: `${-80 - Math.random() * 160}`,
+          x: `${(Math.random() - 0.5) * 80}`,
+          opacity: 0,
+          duration: 3 + Math.random() * 4,
+          repeat: -1,
+          delay: Math.random() * 4,
+          ease: 'power1.out'
+        })
+      })
+    }
+
     return () => {
       ctx.revert()
       imageCol.removeEventListener('mouseenter', onEnter)
@@ -143,8 +168,17 @@ export default function WhoWeAre() {
         {/* Left - Image */}
         <div className="wwa-image-col" ref={imageColRef}>
           <div className="wwa-image-wrapper">
+            <div ref={particlesRef} className="wwa-particles">
+              {particles.map((p, i) => (
+                <div
+                  key={i}
+                  className="wwa-particle"
+                  style={{ width: `${p.size}px`, height: `${p.size}px`, left: `${p.left}%`, top: `${p.top}%` }}
+                />
+              ))}
+            </div>
             <img
-              src="/about-us.png"
+              src="/untitled-8.png"
               alt="Morfye team at work"
             />
             <div className="wwa-image-overlay" ref={overlayRef}>
@@ -158,9 +192,9 @@ export default function WhoWeAre() {
           <div className="wwa-label">WHO WE ARE</div>
           <div className="wwa-line" />
           <h2 className="wwa-heading">
-            <span>Stop chasing</span>
-            <span>clients. Start</span>
-            <span><em>attracting</em> them.</span>
+            <span>We&apos;re not your</span>
+            <span>agency. We&apos;re your</span>
+            <span><em>partner.</em></span>
           </h2>
           <p className="wwa-desc">
             We&apos;re not just designers — we&apos;re strategists. Every pixel, every

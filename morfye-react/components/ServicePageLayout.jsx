@@ -4,8 +4,8 @@ import ServiceHeader from './ServiceHeader'
 import Footer from './Footer'
 import ScrollToTop from './ScrollToTop'
 
-export default function ServicePageLayout({ title, description, keywords, navLinks, slug, faqs, defaultDark = false, children }) {
-  const [darkMode, setDarkMode] = useState(defaultDark)
+export default function ServicePageLayout({ title, description, keywords, navLinks, slug, faqs, children }) {
+  const [darkMode, setDarkMode] = useState(true)
 
   useEffect(() => {
     const stored = localStorage.getItem('theme')
@@ -14,6 +14,7 @@ export default function ServicePageLayout({ title, description, keywords, navLin
 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode)
+    document.body.classList.toggle('light-mode', !darkMode)
     localStorage.setItem('theme', darkMode ? 'dark' : 'light')
   }, [darkMode])
 

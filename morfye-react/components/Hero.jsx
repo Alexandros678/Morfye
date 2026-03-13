@@ -88,9 +88,38 @@ export default function Hero() {
     if (header) gsap.set(header, { opacity: 0, y: -30 })
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.inOut' } })
+      // Ensure text stays hidden until entrance animation reveals it
+      gsap.set(['.hero-line-1', '.hero-line-2', '.hero-subtitle', '.hero-buttons', '.hero-scroll-down'], {
+        opacity: 0, y: 40
+      })
+      gsap.set('.hero-scroll-down', { y: 0 })
 
-      // Phase 1: thin horizontal line appears (0 -> 25vw, 0 -> 5vh)
+      const tl = gsap.timeline({
+        defaults: { ease: 'power3.inOut' },
+        onComplete: () => {
+          // Set up scroll exit AFTER entrance finishes so fromTo doesn't override opacity:0 at load
+          const scrollTl = gsap.timeline({
+            scrollTrigger: {
+              trigger: hero,
+              start: 'top top',
+              end: '+=50%',
+              pin: true,
+              scrub: 0.3
+            }
+          })
+
+          scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
+          scrollTl.fromTo('.hero-line-1',  { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
+          scrollTl.fromTo('.hero-line-2',  { y: 0, opacity: 1 }, { y: -80,  opacity: 0, duration: 0.3 }, 0.05)
+          scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50,  opacity: 0, duration: 0.25 }, 0.08)
+          scrollTl.fromTo('.hero-buttons',  { y: 0, opacity: 1 }, { y: 60,   opacity: 0, duration: 0.25 }, 0.08)
+          scrollTl.fromTo(logoScaleRef, { current: 0.75 }, { current: 1.5, duration: 0.6, ease: 'none' }, 0)
+          scrollTl.fromTo('.logo-3d-container', { opacity: 1 }, { opacity: 0, duration: 0.35 }, 0.5)
+          scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
+        }
+      })
+
+      // Phase 1: thin horizontal line appears
       tl.fromTo(box, {
         width: '0vw',
         height: '0vh',
@@ -103,7 +132,7 @@ export default function Hero() {
         ease: 'power2.out'
       })
 
-      // Phase 2: expand to full screen + 3D logo fades in
+      // Phase 2: expand to full screen
       .to(box, {
         width: '100vw',
         height: '100vh',
@@ -112,46 +141,21 @@ export default function Hero() {
         ease: 'power2.inOut'
       })
 
-      // 3D logo reveals — grows from tiny to full size
+      // 3D logo reveals
       tl.to('.logo-3d-container', { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.8')
       tl.to(logoScaleRef, { current: 0.75, duration: 1.4, ease: 'power2.out' }, '-=0.8')
 
-      // Phase 3: header slides in from top
+      // Phase 3: header slides in
       if (header) {
         tl.to(header, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.5')
       }
 
-      // Phase 4: content fades in staggered
-      tl.to('.hero-line-1', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.35')
-      tl.to('.hero-line-2', { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.35')
-      tl.to('.hero-subtitle', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
-      tl.to('.hero-buttons', { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.25')
-      tl.to('.hero-scroll-down', { opacity: 1, duration: 0.4 }, '-=0.2')
-
-      // SCROLL EXIT: logo grows, text fades, then blur out
-      const scrollTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: hero,
-          start: 'top top',
-          end: '+=50%',
-          pin: true,
-          scrub: 0.3
-        }
-      })
-
-      // Text fades out
-      scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
-      scrollTl.fromTo('.hero-line-1', { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
-      scrollTl.fromTo('.hero-line-2', { y: 0, opacity: 1 }, { y: -80, opacity: 0, duration: 0.3 }, 0.05)
-      scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50, opacity: 0, duration: 0.25 }, 0.08)
-      scrollTl.fromTo('.hero-buttons', { y: 0, opacity: 1 }, { y: 60, opacity: 0, duration: 0.25 }, 0.08)
-
-      // 3D logo scales up as you scroll — becomes the focus
-      scrollTl.fromTo(logoScaleRef, { current: 0.75 }, { current: 1.5, duration: 0.6, ease: 'none' }, 0)
-
-      // Then fades out
-      scrollTl.fromTo('.logo-3d-container', { opacity: 1 }, { opacity: 0, duration: 0.35 }, 0.5)
-      scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
+      // Phase 4: text content fades in staggered
+      tl.to('.hero-line-1',     { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.35')
+      tl.to('.hero-line-2',     { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.35')
+      tl.to('.hero-subtitle',   { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
+      tl.to('.hero-buttons',    { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.25')
+      tl.to('.hero-scroll-down',{ opacity: 1,        duration: 0.4 },                    '-=0.2')
 
     }, hero)
 

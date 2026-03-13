@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
@@ -101,6 +101,9 @@ export default function HostingMaintenance() {
   const featuresRef = useRef(null)
   const processRef = useRef(null)
   const stepsRef = useRef([])
+  const currentRef = useRef(0)
+  const isAnimating = useRef(false)
+  const timerRef = useRef(null)
   const faqRef = useRef(null)
   const ctaRef = useRef(null)
 
@@ -141,31 +144,57 @@ export default function HostingMaintenance() {
     return () => ctx.revert()
   }, [])
 
+  const goTo = useCallback((nextIndex) => {
+    if (isAnimating.current) return
+    const sceneEls = stepsRef.current.filter(Boolean)
+    if (!sceneEls.length || nextIndex === currentRef.current) return
+    const prev = sceneEls[currentRef.current]
+    const next = sceneEls[nextIndex]
+    isAnimating.current = true
+    currentRef.current = nextIndex
+    const progressFill = processRef.current?.querySelector('.geo-process-fill')
+    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / steps.length, duration: 0.5, ease: 'power2.out' })
+    gsap.to(prev, {
+      opacity: 0, y: -60, duration: 0.4, ease: 'power2.in',
+      onComplete: () => {
+        gsap.set(prev, { y: 80 })
+        gsap.fromTo(next, { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out', onComplete: () => { isAnimating.current = false } })
+      }
+    })
+  }, [])
+
+  const startTimer = useCallback(() => {
+    clearInterval(timerRef.current)
+    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % steps.length) }, 3500)
+  }, [goTo])
+
   useEffect(() => {
     const container = processRef.current
     if (!container) return
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({
-        scrollTrigger: { trigger: container, start: 'top top', end: `+=${steps.length * 100}%`, pin: true, scrub: 1 }
-      })
-      stepsRef.current.forEach((step, i) => {
-        if (i === 0) return
-        const prev = stepsRef.current[i - 1]
-        tl.to(prev, { opacity: 0, y: -60, duration: 0.4, ease: 'power2.in' })
-        tl.fromTo(step, { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' })
-      })
-      const lastStep = stepsRef.current[steps.length - 1]
-      if (lastStep) tl.to(lastStep, { opacity: 0, y: -40, duration: 0.3, ease: 'power2.in' })
+      stepsRef.current.filter(Boolean).forEach((s, i) => gsap.set(s, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 }))
       const progressFill = container.querySelector('.geo-process-fill')
-      if (progressFill) {
-        gsap.to(progressFill, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: container, start: 'top top', end: `+=${steps.length * 100}%`, scrub: true } })
-      }
+      if (progressFill) gsap.set(progressFill, { scaleY: 1 / steps.length })
       container.querySelectorAll('.geo-particle').forEach((p) => {
         gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
       })
     }, container)
     return () => ctx.revert()
   }, [])
+
+  useEffect(() => {
+    const container = processRef.current
+    if (!container) return
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) startTimer()
+      else clearInterval(timerRef.current)
+    }, { threshold: 0.4 })
+    observer.observe(container)
+    return () => { observer.disconnect(); clearInterval(timerRef.current) }
+  }, [startTimer])
+
+  const handlePrev = () => { goTo((currentRef.current - 1 + steps.length) % steps.length); startTimer() }
+  const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
 
   useEffect(() => {
     const section = faqRef.current
@@ -258,7 +287,7 @@ export default function HostingMaintenance() {
         </section>
 
         {/* PROCESS */}
-        <section ref={processRef} className="geo-process" id="our-process">
+        <section ref={processRef} className="geo-process" id="our-process" onMouseEnter={() => clearInterval(timerRef.current)} onMouseLeave={startTimer}>
           <div className="geo-process-particles">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
@@ -267,17 +296,19 @@ export default function HostingMaintenance() {
           <div className="geo-process-progress">
             <div className="geo-process-fill" />
           </div>
+          <button className="geo-process-nav-arrow geo-process-nav-prev" onClick={handlePrev} aria-label="Previous step">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 17V5M11 5L5 11M11 5L17 11" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
+          <button className="geo-process-nav-arrow geo-process-nav-next" onClick={handleNext} aria-label="Next step">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 5v12M11 17l6-6M11 17l-6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          </button>
           {steps.map((step, i) => (
-            <div key={i} ref={(el) => (stepsRef.current[i] = el)} className="geo-step" style={{ opacity: i === 0 ? 1 : 0 }}>
+            <div key={i} ref={(el) => (stepsRef.current[i] = el)} className="geo-step">
               <div className="geo-step-counter">{String(i + 1).padStart(2, '0')}</div>
               <h2 className="geo-step-title">{step.title}</h2>
               <p className="geo-step-desc">{step.description}</p>
             </div>
           ))}
-          <div className="geo-process-hint">
-            <span>Scroll to explore</span>
-            <div className="geo-process-scroll-line" />
-          </div>
         </section>
 
         {/* FAQ */}

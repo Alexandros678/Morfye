@@ -41,10 +41,10 @@ const extrudeSettings = {
   bevelEnabled: true,
   bevelThickness: 0.1,
   bevelSize: 0.06,
-  bevelSegments: 4
+  bevelSegments: 2
 }
 
-function LogoMesh({ scaleRef }) {
+function LogoMesh({ scaleRef, lightMode }) {
   const groupRef = useRef()
   const { pointer } = useThree()
   const shapes = useMemo(() => createMShapes(), [])
@@ -52,18 +52,20 @@ function LogoMesh({ scaleRef }) {
   useFrame(() => {
     if (!groupRef.current) return
 
-    // Smoothly lerp toward the target scale from GSAP
     if (scaleRef?.current !== undefined) {
       const s = THREE.MathUtils.lerp(groupRef.current.scale.x, scaleRef.current, 0.08)
       groupRef.current.scale.setScalar(s)
     }
 
-    // Mouse-follow rotation
     const targetX = pointer.y * 0.25
     const targetY = pointer.x * 0.35
     groupRef.current.rotation.x += (targetX - groupRef.current.rotation.x) * 0.04
     groupRef.current.rotation.y += (targetY - groupRef.current.rotation.y) * 0.04
   })
+
+  const color             = lightMode ? '#d85f03' : '#f59e0b'
+  const emissive          = lightMode ? '#d85f03' : '#f59e0b'
+  const emissiveIntensity = lightMode ? 0.6 : 0.25
 
   return (
     <Float speed={1.2} rotationIntensity={0.3} floatIntensity={0.4}>
@@ -71,12 +73,10 @@ function LogoMesh({ scaleRef }) {
         {shapes.map((shape, i) => (
           <mesh key={i}>
             <extrudeGeometry args={[shape, extrudeSettings]} />
-            <meshStandardMaterial
-              color="#f59e0b"
-              emissive="#f59e0b"
-              emissiveIntensity={0.25}
-              metalness={0.5}
-              roughness={0.3}
+            <meshLambertMaterial
+              color={color}
+              emissive={emissive}
+              emissiveIntensity={emissiveIntensity}
               transparent
               opacity={0.9}
             />
@@ -89,9 +89,18 @@ function LogoMesh({ scaleRef }) {
 
 export default function MorfyeLogo3D({ scaleRef }) {
   const [mounted, setMounted] = useState(false)
+  const [lightMode, setLightMode] = useState(false)
 
   useEffect(() => {
     setMounted(true)
+
+    const update = () => setLightMode(document.body.classList.contains('light-mode'))
+    update()
+
+    // Watch for theme changes
+    const observer = new MutationObserver(update)
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+    return () => observer.disconnect()
   }, [])
 
   if (!mounted) return null
@@ -100,13 +109,13 @@ export default function MorfyeLogo3D({ scaleRef }) {
     <Canvas
       camera={{ position: [0, 0, 6], fov: 45 }}
       gl={{ alpha: true, antialias: true }}
+      dpr={[1, 1.5]}
       style={{ background: 'transparent', width: '100%', height: '100%' }}
     >
-      <ambientLight intensity={0.5} />
-      <pointLight position={[5, 5, 5]} intensity={1} color="#f59e0b" />
-      <pointLight position={[-4, -2, 4]} intensity={0.4} color="#ffffff" />
-      <pointLight position={[0, 3, 2]} intensity={0.3} color="#ff922b" />
-      <LogoMesh scaleRef={scaleRef} />
+      <ambientLight intensity={lightMode ? 1.4 : 0.6} />
+      <pointLight position={[5, 5, 5]} intensity={lightMode ? 1.5 : 1} color="#ff922b" />
+      <pointLight position={[-4, -2, 4]} intensity={lightMode ? 0.8 : 0.4} color="#ffffff" />
+      <LogoMesh scaleRef={scaleRef} lightMode={lightMode} />
     </Canvas>
   )
 }
