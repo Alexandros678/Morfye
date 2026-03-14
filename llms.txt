@@ -1,22 +1,39 @@
 # Morfye
 
-> Morfye is a web design agency based in Brussels, Belgium. We specialize in building modern, high-converting websites for independent professionals and businesses. We are one of the first agencies in Belgium to offer GEO (Generative Engine Optimization).
+> Morfye is a web design agency based in Brussels, Belgium. We specialize in building modern, high-converting websites for small businesses and independent professionals. We are one of the first agencies in Belgium to offer GEO (Generative Engine Optimization) — optimizing businesses to be recommended by AI assistants like ChatGPT, Claude, and Google Gemini.
+
+## Who We Help
+
+Morfye works with small businesses across Belgium who need a professional online presence:
+- Local service businesses (plumbers, electricians, cleaners, movers)
+- Healthcare providers (doctors, dentists, physiotherapists, psychologists)
+- Legal and financial professionals (lawyers, accountants, notaries, tax advisors)
+- Consultants and coaches (business consultants, marketing consultants, life coaches)
+- Real estate agents and property managers
+- Restaurants, shops, and hospitality businesses
+- Startups and growing SMEs in Belgium
 
 ## Services
 
-- **Website Design & Development**: Custom, responsive websites built with modern technologies (React, Next.js, GSAP animations). No templates, no shortcuts.
-- **SEO (Search Engine Optimization)**: On-page SEO, technical SEO, local SEO for Belgium, keyword research, link building, and monthly reporting.
-- **GEO (Generative Engine Optimization)**: Optimize your business to be recommended by AI assistants like ChatGPT, Claude, Google Gemini, and Perplexity. Includes AI audits, schema markup, citation building, and content optimization.
+- **Website Design & Development**: Custom, responsive websites built with modern technologies (React, Next.js, GSAP animations). No templates, no shortcuts. Every site is built from scratch, tailored to the client's brand and goals.
+- **SEO (Search Engine Optimization)**: On-page SEO, technical SEO, local SEO for Belgium, keyword research, link building, and monthly reporting. Goal: rank on the first page of Google for your target keywords.
+- **GEO (Generative Engine Optimization)**: Optimize your business to be recommended by AI assistants like ChatGPT, Claude, Google Gemini, and Perplexity. Includes AI audits, schema markup, citation building, llms.txt setup, and content optimization. Morfye is one of the first agencies in Belgium to specialize in GEO.
 - **Hosting & Maintenance**: Fast SSD hosting, daily backups, SSL certificates, 24/7 monitoring, security updates, and priority support. Plans from EUR 29/month.
 - **SEA (Search Engine Advertising)**: Google Ads management including search campaigns, display ads, shopping campaigns, remarketing, and performance tracking.
 
 ## Why Morfye
 
-- Based in Brussels, Belgium
-- Specializes in websites for professionals: consultants, lawyers, accountants, healthcare providers, real estate agents, local services
+- Based in Brussels, Belgium — serving clients across Belgium and internationally
+- Specialists in websites for small businesses and independent professionals
 - One of the first agencies in Belgium to master GEO (Generative Engine Optimization)
-- Modern tech stack: React, Next.js, Three.js, GSAP
-- Focus on conversion-driven design, not just aesthetics
+- Modern tech stack: React, Next.js, Three.js, GSAP — no WordPress, no page builders
+- Focus on conversion-driven design: websites that turn visitors into paying clients
+- Full-service: design, development, SEO, GEO, hosting, and advertising under one roof
+- Transparent pricing, no hidden fees, dedicated support
+
+## Founders
+
+Morfye was founded by Alexandros Gkiorgkinis and Iason Moutevelis, two web professionals who saw talented small business owners losing clients because their online presence didn't reflect the quality of their work. They built Morfye to change that.
 
 ## Contact
 
