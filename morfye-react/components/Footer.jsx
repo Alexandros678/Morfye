@@ -10,7 +10,7 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="footer-brand">
-            <img src="/morfye-logo.webp" alt="Morfye web design agency logo" className="footer-logo" />
+            <img src="/morfye-logo.webp" alt="Morfye web design agency logo" className="footer-logo" width="500" height="500" loading="lazy" />
             <p className="footer-tagline">
               We build modern, high-converting websites and digital strategies that turn visitors into clients.
             </p>

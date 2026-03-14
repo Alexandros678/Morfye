@@ -182,6 +182,7 @@ export default function WhoWeAre() {
             <img
               src="/morfye-team.webp"
               alt="Alexandros Gkiorgkinis and Iason Moutevelis, founders of Morfye web design agency in Brussels"
+              width="800" height="800" loading="lazy"
             />
             <div className="wwa-image-overlay" ref={overlayRef}>
               <span className="wwa-overlay-names">Alexandros Gkiorgkinis &amp; Iason Moutevelis</span>

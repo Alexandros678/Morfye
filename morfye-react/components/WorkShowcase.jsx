@@ -209,7 +209,7 @@ export default function WorkShowcase() {
             <div key={i} className={`ws-card ${p.comingSoon ? 'ws-coming-soon' : ''}`}>
               {p.image && (
                 <div className="ws-card-image">
-                  <img src={p.image} alt={p.title} />
+                  <img src={p.image} alt={p.title} width="1903" height="944" loading="lazy" />
                 </div>
               )}
               {p.comingSoon && (
