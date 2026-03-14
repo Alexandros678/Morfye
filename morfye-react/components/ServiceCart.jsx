@@ -45,7 +45,7 @@ export default function ServiceCart() {
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Custom website design for small businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>Custom Website Design</h3>
-          <p>Tailored, mobile-friendly websites built to fit your business and convert visitors into clients.</p>
+          <p>Professional web design services tailored to your business. Intuitive user experience, responsive design, and custom web design that turns website visitors into clients.</p>
           <Link href="/website-design" className="learn-more-link">Learn More →</Link>
         </div>
 
@@ -59,14 +59,14 @@ export default function ServiceCart() {
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO optimization to rank higher on Google in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEO Optimization</h3>
-          <p>Traditional search engine optimization to rank higher on Google and drive organic traffic to your website.</p>
+          <p>Search engine optimization to rank higher on Google, grow website traffic, and help potential customers find your business online.</p>
           <Link href="/seo-optimization" className="learn-more-link">Learn More →</Link>
         </div>
 
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Google Ads SEA campaigns management for businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEA Campaigns</h3>
-          <p>Google Ads campaigns designed to bring instant traffic and maximize your online visibility.</p>
+          <p>Google Ads marketing campaigns to bring instant website traffic, reach your target audience, and grow your business online fast.</p>
           <Link href="/sea-campaigns" className="learn-more-link">Learn More →</Link>
         </div>
       </div>
