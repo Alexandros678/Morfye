@@ -20,8 +20,8 @@ export default function ServiceCart() {
     <section ref={sectionRef} className="services" id="services">
       <h2>What We Offer</h2>
       <p className="services-subtitle">
-        From custom website design to SEO, GEO, hosting, and Google Ads — we give small businesses
-        in Belgium everything they need to grow online. One agency, all the tools, zero guesswork.
+        From custom web development and responsive design to SEO, GEO, web hosting, and Google Ads — we give small businesses
+        in Belgium everything they need to build their online presence and grow their digital marketing. One agency, all the tools, zero guesswork.
       </p>
 
       {/* Featured GEO Card */}
