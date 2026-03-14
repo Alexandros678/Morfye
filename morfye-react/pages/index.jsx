@@ -41,6 +41,7 @@ export default function Home() {
         <title>Morfye - Modern Websites for Professionals | Web Design Agency Belgium</title>
         <meta name="description" content="Morfye is a web design agency in Brussels, Belgium. We build modern, high-converting websites for professionals. Expert in SEO, GEO (Generative Engine Optimization), and web development." />
         <meta name="keywords" content="web design Belgium, website development Brussels, SEO Belgium, GEO optimization, Generative Engine Optimization, web agency Belgium, modern websites, professional websites" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://morfye.com/" />
 
         {/* Open Graph */}

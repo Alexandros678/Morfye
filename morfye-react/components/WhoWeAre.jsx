@@ -205,6 +205,19 @@ export default function WhoWeAre() {
             into clients. Based in Brussels, Belgium, we combine creativity with
             data-driven thinking.
           </p>
+          <p className="wwa-desc wwa-desc-2">
+            We work with small businesses across Belgium who are tired of blending
+            in. Whether you&apos;re a consultant, a local shop, a healthcare provider,
+            or a service business — you deserve a website that actually works for
+            you. One that ranks on Google, gets recommended by AI like ChatGPT,
+            and converts visitors into paying clients.
+          </p>
+          <p className="wwa-desc wwa-desc-3">
+            No templates. No generic solutions. We build every website from scratch,
+            tailored to your business, your audience, and your goals. From design
+            to development, SEO to GEO, hosting to advertising — we cover
+            everything so you can focus on what you do best: running your business.
+          </p>
 
           <div className="wwa-stats">
             {stats.map((s) => (
