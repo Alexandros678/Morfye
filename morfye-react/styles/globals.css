@@ -2268,49 +2268,69 @@ body.light-mode .home-faq-item[open] .home-faq-question { color: rgba(255, 146, 
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
+/* Remove default browser triangle */
+.faq-item-v2 summary { list-style: none; }
+.faq-item-v2 summary::-webkit-details-marker { display: none; }
+
 .faq-item-v2:hover {
   border-color: rgba(255, 146, 43, 0.3);
 }
 
-.faq-item-v2.open {
+.faq-item-v2[open] {
   box-shadow: 0 4px 20px rgba(255, 146, 43, 0.1);
   border-color: var(--primary-color);
 }
 
 .faq-question {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 22px 28px;
-  background: none;
-  border: none;
-  border-radius: 0;
   cursor: pointer;
-  text-align: left;
   font-size: 1.1rem;
   font-weight: 600;
   color: #1a1a1a;
   transition: color 0.3s ease;
+  user-select: none;
 }
 
 .faq-question:hover {
   color: var(--primary-color);
-  background: none;
-  transform: none;
 }
 
+/* + / × icon — pure CSS, same style as HomeFaq */
 .faq-icon {
-  font-size: 1.5rem;
-  color: var(--primary-color);
   flex-shrink: 0;
   margin-left: 15px;
-  font-weight: 300;
-  line-height: 1;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: relative;
+  transition: border-color 0.2s, transform 0.3s;
 }
 
-.faq-answer {
-  overflow: hidden;
+.faq-icon::before,
+.faq-icon::after {
+  content: '';
+  position: absolute;
+  background: #555;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq-icon::before { width: 11px; height: 1.5px; }
+.faq-icon::after  { width: 1.5px; height: 11px; transition: transform 0.3s, opacity 0.3s; }
+
+.faq-item-v2[open] .faq-icon {
+  border-color: var(--primary-color);
+  transform: rotate(45deg);
+}
+
+.faq-item-v2[open] .faq-question {
+  color: var(--primary-color);
 }
 
 .faq-answer-inner {
@@ -2329,12 +2349,15 @@ body.dark-mode .faq-item-v2 {
   border-color: rgba(255, 255, 255, 0.06);
 }
 
-body.dark-mode .faq-item-v2.open {
+body.dark-mode .faq-item-v2[open] {
   border-color: var(--primary-color);
   box-shadow: 0 4px 20px rgba(255, 146, 43, 0.15);
 }
 
 body.dark-mode .faq-question { color: #f1f1f1; }
+body.dark-mode .faq-icon { border-color: rgba(255, 255, 255, 0.2); }
+body.dark-mode .faq-icon::before,
+body.dark-mode .faq-icon::after { background: #aaa; }
 body.dark-mode .faq-answer-inner p { color: #bbb; }
 
 /* ======= CTA SECTION V2 ======= */
