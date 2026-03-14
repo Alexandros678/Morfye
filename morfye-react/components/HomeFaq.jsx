@@ -1,5 +1,3 @@
-import FaqItem from './FaqItem'
-
 const faqs = [
   {
     question: 'How much does a website cost for a small business in Belgium?',
@@ -11,7 +9,7 @@ const faqs = [
   },
   {
     question: 'What is GEO and why does my business need it?',
-    answer: 'GEO stands for Generative Engine Optimization. It means optimizing your business to be recommended by AI assistants like ChatGPT, Google Gemini, and Claude when people ask for recommendations. As more and more people use AI instead of Google Search, GEO is becoming essential for visibility. Morfye is one of the first agencies in Belgium to offer this service.'
+    answer: 'GEO stands for Generative Engine Optimization. It means optimizing your business to be recommended by AI assistants like ChatGPT, Google Gemini, and Claude when people ask for recommendations. As more people use AI instead of Google Search, GEO is becoming essential for online visibility. Morfye is one of the first agencies in Belgium to offer this service.'
   },
   {
     question: 'Do you only work with businesses in Brussels?',
@@ -19,11 +17,11 @@ const faqs = [
   },
   {
     question: 'Will my website rank on Google?',
-    answer: 'Every website we build is built with SEO best practices from day one — proper structure, fast loading, clean code, and relevant content. We also offer dedicated SEO services if you want to actively grow your rankings over time with keyword targeting, link building, and monthly reporting.'
+    answer: 'Every website we build follows SEO best practices from day one — proper structure, fast loading, clean code, and relevant content. We also offer dedicated SEO services if you want to actively grow your rankings with keyword targeting, link building, and monthly reporting.'
   },
   {
     question: 'What happens after my website is launched?',
-    answer: 'We offer hosting and maintenance plans starting from €29/month that include daily backups, security monitoring, SSL certificates, and priority support. You can also choose to take over the site yourself — we hand over everything cleanly. We\'re here for the long term, not just the launch.'
+    answer: 'We offer hosting and maintenance plans starting from €29/month that include daily backups, security monitoring, SSL certificates, and priority support. You can also choose to manage the site yourself — we hand over everything cleanly. We are here for the long term, not just the launch.'
   }
 ]
 
@@ -38,7 +36,10 @@ export default function HomeFaq() {
         </div>
         <div className="home-faq-list">
           {faqs.map((faq, i) => (
-            <FaqItem key={i} question={faq.question} answer={faq.answer} index={i} />
+            <div key={i} className="home-faq-item">
+              <h3 className="home-faq-question">{faq.question}</h3>
+              <p className="home-faq-answer">{faq.answer}</p>
+            </div>
           ))}
         </div>
       </div>
