@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
   const [dynamicText, setDynamicText] = useState('')
+  const [show3D, setShow3D] = useState(false)
   const words = ['attractive', 'high-converting', 'modern']
   const heroRef = useRef(null)
   const boxRef = useRef(null)
@@ -45,6 +46,12 @@ export default function Hero() {
     // Start typing after the reveal animation (2s)
     timeout = setTimeout(type, 2200)
     return () => clearTimeout(timeout)
+  }, [])
+
+  // Delay Three.js load until after intro animation completes
+  useEffect(() => {
+    const timer = setTimeout(() => setShow3D(true), 2500)
+    return () => clearTimeout(timer)
   }, [])
 
   // Floating particles (animated by GSAP after mount)
@@ -186,7 +193,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="logo-3d-container">
-        <MorfyeLogo3D scaleRef={logoScaleRef} />
+        {show3D && <MorfyeLogo3D scaleRef={logoScaleRef} />}
       </div>
 
       {/* Content — starts hidden, GSAP reveals after box expand */}
