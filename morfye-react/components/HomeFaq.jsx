@@ -36,10 +36,13 @@ export default function HomeFaq() {
         </div>
         <div className="home-faq-list">
           {faqs.map((faq, i) => (
-            <div key={i} className="home-faq-item">
-              <h3 className="home-faq-question">{faq.question}</h3>
+            <details key={i} className="home-faq-item">
+              <summary className="home-faq-question">
+                <span>{faq.question}</span>
+                <span className="home-faq-icon" aria-hidden="true" />
+              </summary>
               <p className="home-faq-answer">{faq.answer}</p>
-            </div>
+            </details>
           ))}
         </div>
       </div>
