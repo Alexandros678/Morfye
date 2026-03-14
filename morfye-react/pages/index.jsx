@@ -49,15 +49,17 @@ export default function Home() {
         <meta property="og:title" content="Morfye - Modern Websites for Professionals" />
         <meta property="og:description" content="Web design agency in Brussels, Belgium. We build modern, high-converting websites for professionals. Expert in SEO and GEO." />
         <meta property="og:url" content="https://morfye.com/" />
-        <meta property="og:image" content="https://morfye.com/Untitled-3.png" />
+        <meta property="og:image" content="https://morfye.com/morfye-logo.webp" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Morfye - Modern Websites for Professionals" />
         <meta name="twitter:description" content="Web design agency in Brussels, Belgium. Modern, high-converting websites for professionals." />
-        <meta name="twitter:image" content="https://morfye.com/Untitled-3.png" />
+        <meta name="twitter:image" content="https://morfye.com/morfye-logo.webp" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
 
@@ -70,7 +72,7 @@ export default function Home() {
               "@type": "Organization",
               "name": "Morfye",
               "url": "https://morfye.com",
-              "logo": "https://morfye.com/Untitled-3.png",
+              "logo": "https://morfye.com/morfye-logo.webp",
               "description": "Morfye is a web design agency in Brussels, Belgium specializing in modern, high-converting websites for professionals. Services include web design, SEO, GEO (Generative Engine Optimization), hosting, and SEA campaigns.",
               "address": {
                 "@type": "PostalAddress",

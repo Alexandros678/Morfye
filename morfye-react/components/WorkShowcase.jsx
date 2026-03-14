@@ -6,14 +6,14 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
-    image: '/image.png',
+    image: '/morfye-project-1.webp',
     title: 'Personal Portfolio',
     category: 'Web Design',
     description: 'Creative showcase of technical skills with modern animations and smooth interactions.',
     link: 'https://alexandrosgkiorgkinis.com'
   },
   {
-    image: '/avsd.png',
+    image: '/morfye-project-2.webp',
     title: 'AV Signature Detailing',
     category: 'Business Website',
     description: 'Professional car detailing site with online booking system for a Belgian company.',

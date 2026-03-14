@@ -34,7 +34,7 @@ export default function ServicePageLayout({ title, description, keywords, navLin
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:image" content="https://morfye.com/Untitled-3.png" />
+        <meta property="og:image" content="https://morfye.com/morfye-logo.webp" />
         <meta property="og:locale" content="en_US" />
 
         {/* Twitter Card */}
@@ -42,6 +42,8 @@ export default function ServicePageLayout({ title, description, keywords, navLin
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />

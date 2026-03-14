@@ -164,22 +164,24 @@ export default function WhoWeAre() {
 
   return (
     <section ref={sectionRef} className="who-we-are" id="about">
+      {/* Section-wide particles */}
+      <div ref={particlesRef} className="wwa-particles">
+        {particles.map((p, i) => (
+          <div
+            key={i}
+            className="wwa-particle"
+            style={{ width: `${p.size}px`, height: `${p.size}px`, left: `${p.left}%`, top: `${p.top}%` }}
+          />
+        ))}
+      </div>
+
       <div className="wwa-grid">
         {/* Left - Image */}
         <div className="wwa-image-col" ref={imageColRef}>
           <div className="wwa-image-wrapper">
-            <div ref={particlesRef} className="wwa-particles">
-              {particles.map((p, i) => (
-                <div
-                  key={i}
-                  className="wwa-particle"
-                  style={{ width: `${p.size}px`, height: `${p.size}px`, left: `${p.left}%`, top: `${p.top}%` }}
-                />
-              ))}
-            </div>
             <img
-              src="/untitled-8.png"
-              alt="Morfye team at work"
+              src="/morfye-team.webp"
+              alt="Alexandros Gkiorgkinis and Iason Moutevelis, founders of Morfye web design agency in Brussels"
             />
             <div className="wwa-image-overlay" ref={overlayRef}>
               <span className="wwa-overlay-names">Alexandros Gkiorgkinis &amp; Iason Moutevelis</span>
