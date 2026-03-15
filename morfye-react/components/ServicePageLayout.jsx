@@ -26,6 +26,7 @@ export default function ServicePageLayout({ title, description, keywords, navLin
         <title>{title}</title>
         <meta name="description" content={description} />
         {keywords && <meta name="keywords" content={keywords} />}
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
 
         {/* Open Graph */}
