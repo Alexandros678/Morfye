@@ -698,6 +698,33 @@ body.dark-mode .our-story {
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
 }
 
+.wwa-image-caption {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.wwa-image-caption span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+}
+
+.wwa-caption-divider {
+  color: rgba(255, 146, 43, 0.9) !important;
+  font-size: 0.75rem !important;
+  letter-spacing: 0 !important;
+}
+
 .wwa-text-col {
   padding: 20px 0;
 }

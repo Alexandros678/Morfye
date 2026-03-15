@@ -187,6 +187,11 @@ export default function WhoWeAre() {
             <div className="wwa-image-overlay" ref={overlayRef}>
               <span className="wwa-overlay-names">Alexandros Gkiorgkinis &amp; Iason Moutevelis</span>
             </div>
+            <div className="wwa-image-caption">
+              <span>Alex</span>
+              <span className="wwa-caption-divider">&amp;</span>
+              <span>Iason</span>
+            </div>
           </div>
         </div>
 
