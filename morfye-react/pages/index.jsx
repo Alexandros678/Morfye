@@ -7,7 +7,7 @@ import WhoWeAre from '../components/WhoWeAre'
 import ServiceCart from '../components/ServiceCart'
 import WorkShowcase from '../components/WorkShowcase'
 import HomeFaq from '../components/HomeFaq'
-import BlogPreview from '../components/BlogPreview'
+import Manifesto from '../components/Manifesto'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
@@ -156,7 +156,7 @@ export default function Home() {
       <WhoWeAre />
       <ServiceCart />
       <WorkShowcase />
-      <BlogPreview />
+      <Manifesto />
       <HomeFaq />
       <Contact />
       <Footer />

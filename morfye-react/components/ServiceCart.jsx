@@ -19,11 +19,6 @@ export default function ServiceCart() {
   return (
     <section ref={sectionRef} className="services" id="services">
       <h2>What We Offer</h2>
-      <p className="services-subtitle">
-        From custom web development and responsive design to SEO, GEO, web hosting, and Google Ads — we give small businesses
-        in Belgium everything they need to build their online presence and grow their digital marketing. One agency, all the tools, zero guesswork.
-      </p>
-
       {/* Featured GEO Card */}
       <div className="featured-geo-card">
         <div className="geo-card-content">
@@ -34,7 +29,7 @@ export default function ServiceCart() {
           />
           <div className="geo-text">
             <h3>GEO - Generative Engine Optimization</h3>
-            <p>Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini. We optimize your website so AI chatbots suggest YOUR business when potential clients ask for recommendations. This is the future of online visibility.</p>
+            <p>Get recommended by ChatGPT, Google Gemini, and Claude. The future of online visibility is here — and we are one of the first agencies in Belgium offering it.</p>
             <Link href="/geo-optimization" className="geo-cta">Learn More About GEO</Link>
           </div>
         </div>
@@ -45,7 +40,7 @@ export default function ServiceCart() {
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Custom website design for small businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>Custom Website Design</h3>
-          <p>Tailored, mobile-friendly websites built to convert visitors into clients. Custom design, fast code, and built for growth.</p>
+          <p>Tailored, mobile-friendly websites built to fit your business and convert visitors into clients.</p>
           <Link href="/website-design" className="learn-more-link">Learn More →</Link>
         </div>
 
@@ -59,14 +54,14 @@ export default function ServiceCart() {
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO optimization to rank higher on Google in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEO Optimization</h3>
-          <p>Rank higher on Google and bring more potential customers to your website through organic search.</p>
+          <p>Traditional search engine optimization to rank higher on Google and drive organic traffic to your website.</p>
           <Link href="/seo-optimization" className="learn-more-link">Learn More →</Link>
         </div>
 
         <div className="service-card">
           <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Google Ads SEA campaigns management for businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEA Campaigns</h3>
-          <p>Google Ads campaigns to drive instant, targeted traffic to your business and maximize your ad budget.</p>
+          <p>Google Ads campaigns designed to bring instant traffic and maximize your online visibility.</p>
           <Link href="/sea-campaigns" className="learn-more-link">Learn More →</Link>
         </div>
       </div>

@@ -207,9 +207,9 @@ export default function WhoWeAre() {
             data-driven thinking.
           </p>
           <p className="wwa-desc wwa-desc-2">
-            We are a web design company working with small businesses across Belgium — consultants,
-            local shops, healthcare providers, and service businesses — who need professional web design
-            services: a website that ranks on Google, gets found by AI, and converts visitors into paying clients.
+            We work with small businesses across Belgium — consultants, local shops,
+            healthcare providers, and service businesses — who deserve a website
+            that ranks on Google, gets found by AI, and converts visitors into paying clients.
           </p>
 
           <div className="wwa-stats">

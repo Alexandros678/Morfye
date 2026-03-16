@@ -200,7 +200,7 @@ export default function WorkShowcase() {
         <h2 className="ws-title">
           <span>Our </span><span>Work</span>
         </h2>
-        <p>Creativity meets code. Here are some of the websites we&apos;ve built for small businesses and professionals in Belgium — each one custom, fast, and built to convert.</p>
+        <p>Creativity meets code. Explore what we&apos;ve built.</p>
       </div>
 
       <div className="ws-overflow">
