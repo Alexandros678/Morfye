@@ -7,35 +7,34 @@ export default function Manifesto() {
         <div className="manifesto-block">
           <h3>Design that works.</h3>
           <p>
-            Whether you want to create a new website from scratch, make your own website more
-            effective, or do a full redesign — professional website design that is responsive,
-            intuitive, and optimized for search engines is the foundation. Good website design
-            and development combines usability, user experience, and custom web design unique to
-            your brand. The best web design is not just beautiful — it builds your web presence,
-            drives website visitors, and converts them from day one.
+            Whether you need to make your website more effective, do a full website redesign,
+            or build a great website from scratch — professional web design and responsive web
+            design are the foundation. Good web design and development delivers design solutions
+            that are visually strong and functional: a responsive website that loads on every
+            device, reflects your brand identity, and gets your business up and running online.
           </p>
         </div>
 
         <div className="manifesto-block">
           <h3>From domain to launch.</h3>
           <p>
-            As a website design company and web design firm, we handle the complete website design
-            and development process — from domain name to launch. Our design team of web designers
-            and developers covers every stage: responsive design, front-end development, custom web
-            design, and content management systems like WordPress, Joomla, Drupal, and Magento.
-            Every web solution is built around your brand identity, your logo design, and your
-            specific business needs — no templates, no shortcuts.
+            As a web design company, web development company, and digital agency, we handle the
+            complete website development and design process. Unlike many web design companies and
+            design companies, we work closely with you at every stage — from site design and
+            design portfolio to copywriting and launch. Our web designers, website designers,
+            and developers cover every step: inbound strategy, web solutions, and website design
+            built around your specific business needs.
           </p>
         </div>
 
         <div className="manifesto-block">
           <h3>Built to grow.</h3>
           <p>
-            Beyond design, we are a digital marketing agency covering SEO services, search engine
-            optimization, internet marketing, digital marketing campaigns, and GEO. We help
-            businesses go from invisible to optimized: ranking on search engines, recommended by
-            AI, and reaching the right audience. Every project is professionally delivered —
-            because your online business deserves more than a generic design firm.
+            Beyond design, we are a digital marketing agency covering search engine optimization
+            (SEO), online marketing, web marketing, and GEO. We run marketing campaigns that drive
+            targeted traffic and help your business reach the right audience. From inbound strategies
+            to paid search, our goal is simple: turn your website into your best sales tool and grow
+            your web presence consistently.
           </p>
         </div>
 
@@ -43,11 +42,11 @@ export default function Manifesto() {
           <h3>What we cover.</h3>
           <p>
             Our web design services and web development services span everything a growing business
-            needs online: custom web design, ecommerce website design, graphic design, branding,
-            responsive design, and mobile website optimization. Whether you need a simple new
-            website or a full ecommerce website with product catalogues and secure payments —
-            our design services deliver. We also offer digital marketing, marketing campaigns,
-            and long-term SEO to keep growing your web presence.
+            needs: ecommerce website design, graphic design, branding, logo design, responsive design,
+            mobile website optimization, website maintenance, and copywriting. Whether you need a
+            new website, a website redesign, or ongoing design projects — we handle web design and
+            development, digital marketing, and long-term SEO services under one roof. Our web designs
+            and design solutions are built to grow your online business and deliver results.
           </p>
         </div>
 
