@@ -209,7 +209,7 @@ export default function WorkShowcase() {
             <div key={i} className={`ws-card ${p.comingSoon ? 'ws-coming-soon' : ''}`}>
               {p.image && (
                 <div className="ws-card-image">
-                  <img src={p.image} alt={p.title} width="1903" height="944" loading="lazy" />
+                  <img src={p.image} alt={p.title} title={p.title} width="1903" height="944" loading="lazy" />
                 </div>
               )}
               {p.comingSoon && (
@@ -222,7 +222,7 @@ export default function WorkShowcase() {
                 <h3>{p.title}</h3>
                 <p>{p.description}</p>
                 {p.link && (
-                  <a href={p.link} target="_blank" rel="noopener noreferrer" className="ws-visit">
+                  <a href={p.link} title={`Visit ${p.title}`} target="_blank" rel="noopener noreferrer" className="ws-visit">
                     Visit Site →
                   </a>
                 )}

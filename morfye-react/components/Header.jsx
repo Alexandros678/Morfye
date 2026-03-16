@@ -18,7 +18,7 @@ export default function Header({ darkMode, toggleTheme }) {
     <>
       <header className="site-header">
         <div className="logo-container" onClick={scrollToTop}>
-          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" className="logo-img" width="500" height="500" />
+          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="500" height="500" />
           <div className="logo">
             {'orfye'.split('').map((letter, i) => (
               <span key={i} style={{ animationDelay: `${(i + 1) * 0.1}s` }}>
@@ -29,10 +29,10 @@ export default function Header({ darkMode, toggleTheme }) {
         </div>
 
         <nav>
-          <a onClick={() => scrollTo('about')}>About</a>
-          <a onClick={() => scrollTo('services')}>Services</a>
-          <a onClick={() => scrollTo('work')}>Our Work</a>
-          <a onClick={() => scrollTo('contact')}>Contact</a>
+          <a onClick={() => scrollTo('about')} title="About Morfye web design agency">About</a>
+          <a onClick={() => scrollTo('services')} title="Our web design and digital marketing services">Services</a>
+          <a onClick={() => scrollTo('work')} title="Our web design portfolio">Our Work</a>
+          <a onClick={() => scrollTo('contact')} title="Contact Morfye">Contact</a>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
         </nav>
 
@@ -48,10 +48,10 @@ export default function Header({ darkMode, toggleTheme }) {
 
       {/* Mobile Nav */}
       <div className={`mobile-nav ${menuOpen ? 'show' : ''}`}>
-        <a onClick={() => scrollTo('about')}>About</a>
-        <a onClick={() => scrollTo('services')}>Services</a>
-        <a onClick={() => scrollTo('work')}>Our Work</a>
-        <a onClick={() => scrollTo('contact')}>Contact</a>
+        <a onClick={() => scrollTo('about')} title="About Morfye web design agency">About</a>
+        <a onClick={() => scrollTo('services')} title="Our web design and digital marketing services">Services</a>
+        <a onClick={() => scrollTo('work')} title="Our web design portfolio">Our Work</a>
+        <a onClick={() => scrollTo('contact')} title="Contact Morfye">Contact</a>
         <div className="mobile-theme-toggle" onClick={toggleTheme}>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} mobile />
         </div>

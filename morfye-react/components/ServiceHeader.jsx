@@ -21,7 +21,7 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
     <>
       <header ref={headerRef} className="service-header">
         <div className="logo-container" onClick={() => router.push('/')}>
-          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" className="logo-img" width="500" height="500" />
+          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="500" height="500" />
           <div className="logo">
             {'orfye'.split('').map((letter, i) => (
               <span key={i} style={{ animationDelay: `${(i + 1) * 0.1}s` }}>
@@ -33,9 +33,9 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
 
         <nav>
           {navLinks.map((link) => (
-            <a key={link.id} href={`#${link.id}`}>{link.label}</a>
+            <a key={link.id} href={`#${link.id}`} title={link.label}>{link.label}</a>
           ))}
-          <a href="/#contact">Contact</a>
+          <a href="/#contact" title="Contact Morfye web design agency">Contact</a>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
         </nav>
 
@@ -51,9 +51,9 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
 
       <div className={`mobile-nav ${menuOpen ? 'show' : ''}`}>
         {navLinks.map((link) => (
-          <a key={link.id} href={`#${link.id}`} onClick={() => setMenuOpen(false)}>{link.label}</a>
+          <a key={link.id} href={`#${link.id}`} title={link.label} onClick={() => setMenuOpen(false)}>{link.label}</a>
         ))}
-        <a href="/#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/#contact" title="Contact Morfye web design agency" onClick={() => setMenuOpen(false)}>Contact</a>
         <div className="mobile-theme-toggle" onClick={toggleTheme}>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} mobile />
         </div>

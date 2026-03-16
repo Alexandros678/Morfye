@@ -25,12 +25,13 @@ export default function ServiceCart() {
           <img
             src="https://images.unsplash.com/photo-1740174459730-33a1983b51af?auto=format&fit=crop&w=900&q=80"
             alt="GEO - Generative Engine Optimization illustration showing AI assistants recommending businesses"
+            title="GEO - Generative Engine Optimization illustration showing AI assistants recommending businesses"
             width="900" height="600" loading="lazy"
           />
           <div className="geo-text">
             <h3>GEO - Generative Engine Optimization</h3>
             <p>Get recommended by ChatGPT, Google Gemini, and Claude. The future of online visibility is here — and we are one of the first agencies in Belgium offering it.</p>
-            <Link href="/geo-optimization" className="geo-cta">Learn More About GEO</Link>
+            <Link href="/geo-optimization" title="Learn more about GEO - Generative Engine Optimization" className="geo-cta">Learn More About GEO</Link>
           </div>
         </div>
       </div>
@@ -38,31 +39,31 @@ export default function ServiceCart() {
       {/* 4 Service Cards */}
       <div className="service-cards">
         <div className="service-card">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Custom website design for small businesses in Belgium" width="900" height="600" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Custom website design for small businesses in Belgium" title="Custom website design for small businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>Custom Website Design</h3>
           <p>Tailored, mobile-friendly websites built to fit your business and convert visitors into clients.</p>
-          <Link href="/website-design" className="learn-more-link">Learn More →</Link>
+          <Link href="/website-design" title="Custom website design services in Belgium" className="learn-more-link">Learn More →</Link>
         </div>
 
         <div className="service-card">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Website hosting and maintenance service for Belgian businesses" width="900" height="600" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Website hosting and maintenance service for Belgian businesses" title="Website hosting and maintenance service for Belgian businesses" width="900" height="600" loading="lazy" />
           <h3>Hosting &amp; Maintenance</h3>
           <p>Secure hosting, regular updates, and ongoing technical support to keep your site running smoothly.</p>
-          <Link href="/hosting-maintenance" className="learn-more-link">Learn More →</Link>
+          <Link href="/hosting-maintenance" title="Website hosting and maintenance services" className="learn-more-link">Learn More →</Link>
         </div>
 
         <div className="service-card">
-          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO optimization to rank higher on Google in Belgium" width="900" height="600" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="SEO optimization to rank higher on Google in Belgium" title="SEO optimization to rank higher on Google in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEO Optimization</h3>
           <p>Traditional search engine optimization to rank higher on Google and drive organic traffic to your website.</p>
-          <Link href="/seo-optimization" className="learn-more-link">Learn More →</Link>
+          <Link href="/seo-optimization" title="SEO optimization services in Belgium" className="learn-more-link">Learn More →</Link>
         </div>
 
         <div className="service-card">
-          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Google Ads SEA campaigns management for businesses in Belgium" width="900" height="600" loading="lazy" />
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="Google Ads SEA campaigns management for businesses in Belgium" title="Google Ads SEA campaigns management for businesses in Belgium" width="900" height="600" loading="lazy" />
           <h3>SEA Campaigns</h3>
           <p>Google Ads campaigns designed to bring instant traffic and maximize your online visibility.</p>
-          <Link href="/sea-campaigns" className="learn-more-link">Learn More →</Link>
+          <Link href="/sea-campaigns" title="Google Ads SEA campaign management in Belgium" className="learn-more-link">Learn More →</Link>
         </div>
       </div>
     </section>
