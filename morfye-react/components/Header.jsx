@@ -18,7 +18,7 @@ export default function Header({ darkMode, toggleTheme }) {
     <>
       <header className="site-header">
         <div className="logo-container" onClick={scrollToTop}>
-          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="500" height="500" />
+          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="61" height="61" />
           <div className="logo">
             {'orfye'.split('').map((letter, i) => (
               <span key={i} style={{ animationDelay: `${(i + 1) * 0.1}s` }}>

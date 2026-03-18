@@ -21,7 +21,7 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
     <>
       <header ref={headerRef} className="service-header">
         <div className="logo-container" onClick={() => router.push('/')}>
-          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="500" height="500" />
+          <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="logo-img" width="61" height="61" />
           <div className="logo">
             {'orfye'.split('').map((letter, i) => (
               <span key={i} style={{ animationDelay: `${(i + 1) * 0.1}s` }}>
