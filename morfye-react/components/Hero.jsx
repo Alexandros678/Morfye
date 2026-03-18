@@ -199,13 +199,13 @@ export default function Hero() {
       {/* Content — starts hidden, GSAP reveals after box expand */}
       <div className="hero-content">
         <h1 className="hero-line-1" style={{ opacity: 0, transform: 'translateY(40px)' }}>
-          We create <span>{dynamicText}</span>
-          <span className="cursor">|</span>
+          We create <span style={{ color: 'var(--primary-color)' }}>{dynamicText}</span>
+          <span className="cursor" style={{ color: 'var(--primary-color)' }}>|</span>
         </h1>
 
-        <h1 className="hero-line-2" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+        <div className="hero-line-2" style={{ opacity: 0, transform: 'translateY(40px)' }}>
           websites for professionals
-        </h1>
+        </div>
 
         <p className="hero-subtitle" style={{ opacity: 0, transform: 'translateY(30px)' }}>
           Modern, high-converting websites designed to attract, engage, and convert clients.

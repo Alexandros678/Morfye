@@ -335,7 +335,7 @@ header.scrolled .menu-toggle .bar {
   padding-top: 80px;
 }
 
-.hero h1 { font-size: 2.8rem; margin-bottom: 20px; }
+.hero h1, .hero-line-2 { font-size: 2.8rem; margin-bottom: 20px; font-weight: 700; color: #fff; }
 .hero p { font-size: 1.1rem; margin-bottom: 30px; opacity: 0.95; }
 .hero-buttons { display: flex; gap: 20px; justify-content: center; position: relative; z-index: 2; }
 .hero-buttons button { margin: 10px; }
@@ -1672,7 +1672,7 @@ body.light-mode .mobile-nav a:hover { background: #fff6ef; color: var(--primary-
 /* Hero */
 body.light-mode .hero { background: #fafafa; color: #1a1a1a; }
 body.light-mode .hero-reveal-box { background: #fafafa; }
-body.light-mode .hero h1 { color: #1a1a1a; }
+body.light-mode .hero h1, body.light-mode .hero-line-2 { color: #1a1a1a; }
 body.light-mode .hero-subtitle { color: rgba(0, 0, 0, 0.85); }
 body.light-mode .hero-scroll-down span { color: rgba(0, 0, 0, 0.35); }
 body.light-mode .hero-scroll-line { background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
@@ -2255,6 +2255,15 @@ body.light-mode .home-faq-icon::before,
 body.light-mode .home-faq-icon::after { background: rgba(0, 0, 0, 0.5); }
 body.light-mode .home-faq-answer { color: rgba(0, 0, 0, 0.55); }
 body.light-mode .home-faq-item[open] .home-faq-question { color: rgba(255, 146, 43, 0.85); }
+
+/* Manifesto light mode */
+body.light-mode .manifesto { background: #f5f5f5; border-color: rgba(0,0,0,0.07); }
+body.light-mode .manifesto-title { color: #1a1a1a; }
+body.light-mode .manifesto-content p { color: rgba(0,0,0,0.55); }
+body.light-mode .manifesto-block h3 { color: var(--primary-color); }
+body.light-mode .manifesto-toggle { border-color: rgba(255, 146, 43, 0.5); }
+body.light-mode .manifesto-toggle:hover,
+body.light-mode .manifesto-details[open] .manifesto-toggle { background: rgba(255, 146, 43, 0.1); border-color: rgba(255, 146, 43, 0.9); }
 
 /* ======= FAQ V2 (ACCORDION) ======= */
 .faq-container { max-width: 900px; margin: 50px auto; }
@@ -3109,7 +3118,7 @@ body.light-mode .sc-simple-card p { color: rgba(0, 0, 0, 0.6); }
   /* Hero */
   .about { flex-direction: column; text-align: center; }
   .about img { width: 90%; }
-  .hero h1 { font-size: 2rem; }
+  .hero h1, .hero-line-2 { font-size: 2rem; }
   .hero-buttons { flex-wrap: wrap; }
   .hero-content { padding-top: 60px; }
 
@@ -3210,7 +3219,7 @@ body.light-mode .sc-simple-card p { color: rgba(0, 0, 0, 0.6); }
 
 @media (max-width: 480px) {
   /* Hero */
-  .hero h1 { font-size: 1.8rem; }
+  .hero h1, .hero-line-2 { font-size: 1.8rem; }
   .hero p { font-size: 1rem; }
   .hero-buttons { gap: 12px; }
   .hero-buttons button { width: 100%; }
@@ -3411,22 +3420,21 @@ body.light-mode .cookie-btn-decline:hover {
 .manifesto-details summary { list-style: none; }
 .manifesto-details summary::-webkit-details-marker { display: none; }
 
-.manifesto-summary {
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  outline: none;
-}
-.manifesto-summary h2 {
+.manifesto-title {
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 700;
   color: #fff;
   line-height: 1.25;
-  margin: 0;
+  margin: 0 0 24px;
   text-align: center;
+}
+.manifesto-summary {
+  cursor: pointer;
+  user-select: none;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  outline: none;
 }
 .manifesto-toggle {
   display: inline-flex;
@@ -3437,7 +3445,7 @@ body.light-mode .cookie-btn-decline:hover {
   border-radius: 100px;
   transition: border-color 0.25s, background 0.25s;
 }
-.manifesto-summary:hover .manifesto-toggle,
+.manifesto-toggle:hover,
 .manifesto-details[open] .manifesto-toggle {
   border-color: rgba(255, 146, 43, 0.8);
   background: rgba(255, 146, 43, 0.07);
@@ -3462,11 +3470,6 @@ body.light-mode .cookie-btn-decline:hover {
 }
 .manifesto-content {
   margin-top: 48px;
-  animation: manifestoFadeIn 0.4s ease;
-}
-@keyframes manifestoFadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
 .manifesto-content p {
   font-size: 1rem;
@@ -3476,6 +3479,16 @@ body.light-mode .cookie-btn-decline:hover {
 }
 .manifesto-block {
   margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.manifesto-block:nth-child(2) { transition-delay: 0.12s; }
+.manifesto-block:nth-child(3) { transition-delay: 0.24s; }
+.manifesto-block:nth-child(4) { transition-delay: 0.36s; }
+.manifesto-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .manifesto-block:last-child {
   margin-bottom: 0;

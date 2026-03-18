@@ -1,17 +1,41 @@
+import { useEffect, useRef } from 'react'
+
 export default function Manifesto() {
+  const contentRef = useRef(null)
+
+  useEffect(() => {
+    const blocks = contentRef.current?.querySelectorAll('.manifesto-block')
+    if (!blocks) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+
+    blocks.forEach((block) => observer.observe(block))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section className="manifesto">
       <div className="manifesto-inner">
+        <h2 className="manifesto-title">The right website changes everything.</h2>
         <details className="manifesto-details">
           <summary className="manifesto-summary">
-            <h2>The right website changes everything.</h2>
             <span className="manifesto-toggle">
               <span className="manifesto-toggle-label">Our approach</span>
               <span className="manifesto-toggle-icon" aria-hidden="true" />
             </span>
           </summary>
 
-          <div className="manifesto-content">
+          <div className="manifesto-content" ref={contentRef}>
             <div className="manifesto-block">
               <h3>Design that works.</h3>
               <p>
