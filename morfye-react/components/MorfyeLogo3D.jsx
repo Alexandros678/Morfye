@@ -90,9 +90,11 @@ function LogoMesh({ scaleRef, lightMode }) {
 export default function MorfyeLogo3D({ scaleRef }) {
   const [mounted, setMounted] = useState(false)
   const [lightMode, setLightMode] = useState(false)
+  const [cameraZ, setCameraZ] = useState(6)
 
   useEffect(() => {
     setMounted(true)
+    setCameraZ(window.innerWidth < 768 ? 10 : 6)
 
     const update = () => setLightMode(document.body.classList.contains('light-mode'))
     update()
@@ -107,9 +109,9 @@ export default function MorfyeLogo3D({ scaleRef }) {
 
   return (
     <Canvas
-      camera={{ position: [0, 0, 6], fov: 45 }}
-      gl={{ alpha: true, antialias: true }}
-      dpr={[1, 1.5]}
+      camera={{ position: [0, 0, cameraZ], fov: 45 }}
+      gl={{ alpha: true, antialias: false, powerPreference: 'high-performance' }}
+      dpr={[1, 1]}
       style={{ background: 'transparent', width: '100%', height: '100%' }}
     >
       <ambientLight intensity={lightMode ? 1.4 : 0.6} />

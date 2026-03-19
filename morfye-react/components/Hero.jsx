@@ -94,6 +94,10 @@ export default function Hero() {
     const header = document.querySelector('.site-header')
     if (header) gsap.set(header, { opacity: 0, y: -30 })
 
+    const isMobile = window.innerWidth < 768
+    const logoFinalScale = isMobile ? 0.5 : 0.75
+    const logoScrollPeak = isMobile ? 1.0 : 1.5
+
     const ctx = gsap.context(() => {
       // Ensure text stays hidden until entrance animation reveals it
       gsap.set(['.hero-line-1', '.hero-line-2', '.hero-subtitle', '.hero-buttons', '.hero-scroll-down'], {
@@ -120,7 +124,7 @@ export default function Hero() {
           scrollTl.fromTo('.hero-line-2',  { y: 0, opacity: 1 }, { y: -80,  opacity: 0, duration: 0.3 }, 0.05)
           scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50,  opacity: 0, duration: 0.25 }, 0.08)
           scrollTl.fromTo('.hero-buttons',  { y: 0, opacity: 1 }, { y: 60,   opacity: 0, duration: 0.25 }, 0.08)
-          scrollTl.fromTo(logoScaleRef, { current: 0.75 }, { current: 1.5, duration: 0.6, ease: 'none' }, 0)
+          scrollTl.fromTo(logoScaleRef, { current: logoFinalScale }, { current: logoScrollPeak, duration: 0.6, ease: 'none' }, 0)
           scrollTl.fromTo('.logo-3d-container', { opacity: 1 }, { opacity: 0, duration: 0.35 }, 0.5)
           scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
         }
@@ -150,7 +154,7 @@ export default function Hero() {
 
       // 3D logo reveals
       tl.to('.logo-3d-container', { opacity: 1, duration: 0.8, ease: 'power2.out' }, '-=0.8')
-      tl.to(logoScaleRef, { current: 0.75, duration: 1.4, ease: 'power2.out' }, '-=0.8')
+      tl.to(logoScaleRef, { current: logoFinalScale, duration: 1.4, ease: 'power2.out' }, '-=0.8')
 
       // Phase 3: header slides in
       if (header) {

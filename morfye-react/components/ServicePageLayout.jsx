@@ -43,9 +43,6 @@ export default function ServicePageLayout({ title, description, keywords, navLin
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-<link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-
         {/* Service Schema */}
         <script
           type="application/ld+json"

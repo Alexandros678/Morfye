@@ -66,13 +66,13 @@ export default function WorkShowcase() {
         let x             = 0
         let isUser        = false
         let userTimer     = null
-        let skipThumb     = 0   // frames to skip thumb update during reset transition
+        let resetEndTime  = 0   // timestamp when reset transition finishes
         let resetTimer    = null
-        const SPEED       = 0.9
+        const SPEED       = Math.min(window.innerWidth, window.innerHeight) < 768 ? 0.45 : 0.9
         const RESET_MS    = 500 // duration of smooth reset animation
 
         const updateThumb = () => {
-          if (skipThumb > 0) { skipThumb--; return }
+          if (performance.now() < resetEndTime) return // still in reset transition
           const progress = (x % halfWidth) / halfWidth
           const left = Math.round(Math.min(Math.max(0, progress * MAX_THUMB_LEFT), MAX_THUMB_LEFT))
           thumb.style.left = `${left}px`
@@ -82,7 +82,7 @@ export default function WorkShowcase() {
           // Animate thumb smoothly back to left
           thumb.style.transition = `left ${RESET_MS}ms ease-in-out`
           thumb.style.left = '0px'
-          skipThumb = Math.ceil((RESET_MS / 1000) * 60) // skip ~frames for that duration
+          resetEndTime = performance.now() + RESET_MS
           clearTimeout(resetTimer)
           resetTimer = setTimeout(() => { thumb.style.transition = '' }, RESET_MS)
         }
@@ -104,6 +104,10 @@ export default function WorkShowcase() {
           isUser = true
           clearTimeout(userTimer)
           userTimer = setTimeout(() => { isUser = false }, 2000)
+          // Cancel any in-progress thumb reset so user drag updates work immediately
+          resetEndTime = 0
+          clearTimeout(resetTimer)
+          thumb.style.transition = ''
         }
 
         // Thumb drag
@@ -130,6 +134,23 @@ export default function WorkShowcase() {
         }
 
         const onMouseUp = () => { isDragging = false }
+
+        // Thumb touch drag (mobile scrollbar)
+        const onThumbTouchStart = (e) => {
+          isDragging  = true
+          dragStartMX = e.touches[0].clientX
+          dragStartX  = x
+          pauseAuto()
+        }
+        const onThumbTouchMove = (e) => {
+          if (!isDragging) return
+          const delta = e.touches[0].clientX - dragStartMX
+          const ratio = delta / MAX_THUMB_LEFT
+          x = Math.min(Math.max(0, dragStartX + ratio * halfWidth), halfWidth - 1)
+          gsap.set(track, { x: -x })
+          updateThumb()
+        }
+        const onThumbTouchEnd = () => { isDragging = false }
 
         // Click on track to jump
         const onSbClick = (e) => {
@@ -166,6 +187,9 @@ export default function WorkShowcase() {
         })
 
         thumb.addEventListener('mousedown', onThumbDown)
+        thumb.addEventListener('touchstart', onThumbTouchStart, { passive: true })
+        thumb.addEventListener('touchmove',  onThumbTouchMove,  { passive: true })
+        thumb.addEventListener('touchend',   onThumbTouchEnd,   { passive: true })
         sbTrack.addEventListener('click', onSbClick)
         window.addEventListener('mousemove', onMouseMove)
         window.addEventListener('mouseup', onMouseUp)
@@ -178,6 +202,9 @@ export default function WorkShowcase() {
           clearTimeout(resetTimer)
           ScrollTrigger.getAll().forEach(st => st.kill())
           thumb.removeEventListener('mousedown', onThumbDown)
+          thumb.removeEventListener('touchstart', onThumbTouchStart)
+          thumb.removeEventListener('touchmove',  onThumbTouchMove)
+          thumb.removeEventListener('touchend',   onThumbTouchEnd)
           sbTrack.removeEventListener('click', onSbClick)
           window.removeEventListener('mousemove', onMouseMove)
           window.removeEventListener('mouseup', onMouseUp)

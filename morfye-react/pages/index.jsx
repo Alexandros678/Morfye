@@ -61,9 +61,6 @@ export default function Home() {
         <meta name="twitter:description" content="Web design agency in Brussels, Belgium. Modern, high-converting websites for professionals." />
         <meta name="twitter:image" content="https://morfye.com/morfye-logo.webp" />
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
-        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-
         {/* Structured Data */}
         <script
           type="application/ld+json"

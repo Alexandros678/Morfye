@@ -1324,6 +1324,8 @@ body.light-mode .ws-sb-track { background: rgba(0, 0, 0, 0.1); }
   .ws-card { width: 300px; }
   .ws-card-image { height: 180px; }
   .ws-card-info { padding: 18px; }
+  .ws-sb-track { height: 8px; }
+  .ws-sb-thumb { border-radius: 8px; }
 }
 
 /* ======= CONTACT ======= */
