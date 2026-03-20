@@ -63,24 +63,24 @@ const navLinks = [
 ]
 
 const features = [
-  { icon: <CursorIcon />, title: 'Search Campaigns', description: 'Text ads that appear when people search for keywords related to your business on Google. Perfect for capturing high-intent customers.' },
-  { icon: <MegaphoneIcon />, title: 'Display Campaigns', description: 'Visual banner ads shown across millions of websites in the Google Display Network to build brand awareness.' },
-  { icon: <ShoppingIcon />, title: 'Shopping Campaigns', description: 'Product ads with images and prices, perfect for e-commerce stores looking to drive online sales directly from search results.' },
+  { icon: <CursorIcon />, title: 'Search Campaigns', description: 'Text search ads that appear when people search for keywords related to your business on Google. Pay-per-click advertising at its most direct — capturing high-intent customers the moment they search. The backbone of any effective search marketing strategy.' },
+  { icon: <MegaphoneIcon />, title: 'Display Campaigns', description: 'Visual banner ads shown across millions of websites in the Google Display Network. A key form of online advertising and internet marketing to build brand awareness and reach new audiences at scale.' },
+  { icon: <ShoppingIcon />, title: 'Shopping Campaigns', description: 'Product ads with images and prices, perfect for ecommerce stores looking to drive online sales directly from search results. Some of the highest-performing ad campaigns for online retailers.' },
   { icon: <LocalIcon />, title: 'Local Campaigns', description: 'Geo-targeted ads that bring customers to your physical location or service area in Belgium.' },
-  { icon: <LoopIcon />, title: 'Remarketing', description: "Re-engage visitors who left your site without converting. Show them ads across the web to bring them back." },
-  { icon: <PieIcon />, title: 'Performance Tracking', description: "Detailed analytics showing exactly what's working: clicks, conversions, cost-per-lead, and ROI." }
+  { icon: <LoopIcon />, title: 'Remarketing & Retargeting', description: "Re-engage visitors who left your site without converting. Show them targeted retargeting ads across the web — a proven marketing campaign tactic to bring back potential buyers and improve conversion rates." },
+  { icon: <PieIcon />, title: 'Performance Tracking', description: "Detailed analytics showing every key metric: clicks, conversion rates, cost-per-lead, and return on investment. See exactly how each stage of your sales funnel performs and where to optimize." }
 ]
 
 const steps = [
-  { title: 'Strategy & Goal Setting', description: 'We start by understanding your business goals, target audience, and budget. Are you looking for more leads, sales, or brand awareness? We build a strategy around that.' },
-  { title: 'Keyword Research & Targeting', description: 'We identify the most profitable keywords your customers are searching for, analyze competition, and determine optimal bid strategies.' },
-  { title: 'Ad Creation & Landing Pages', description: 'We write compelling ad copy that gets clicks and create or optimize landing pages that convert visitors into customers.' },
-  { title: 'Campaign Launch & Monitoring', description: 'We launch your campaigns with proper tracking (conversion tracking, call tracking, etc.) and monitor performance daily to catch issues early.' },
-  { title: 'Optimization & Reporting', description: 'We continuously test ad copy, adjust bids, refine targeting, and eliminate wasted spend. You get monthly reports showing clear ROI.' }
+  { title: 'Strategy & Goal Setting', description: 'We start by understanding your business goals, target audience, and budget. Are you looking for more leads, sales, or brand awareness? We define your marketing campaign objectives, plan your advertising campaign structure, and outline the ad campaigns to run — setting up everything for measurable results from day one.' },
+  { title: 'Keyword Research & Targeting', description: 'We use the Google Keyword Planner and competitive analysis tools to build a comprehensive keyword list — including profitable long-tail keywords your customers search for. We analyze competitor bids and strategies, review search volume, and define a bid management approach to maximize every euro of your budget.' },
+  { title: 'Ad Creation & Landing Pages', description: 'We write compelling ad copy for every PPC ad and ad group — crafting pay-per-click ads designed to get clicked. We also create or optimize landing pages that turn visitors into customers, making your advertising campaign spend work harder.' },
+  { title: 'Campaign Launch & Monitoring', description: 'We launch your campaigns with full tracking in place (conversion tracking, call tracking, etc.) and monitor performance daily. We track every time an ad is clicked, measure per click advertising costs against returns, and catch issues before they waste budget.' },
+  { title: 'Optimization & Reporting', description: 'We continuously test ad copy, improve bid management, refine targeting, and eliminate wasted spend. PPC management is ongoing — we run tests to lower CPC, raise Quality Score, and maximize ROI. Monthly reports cover every key metric so you always know your return on investment.' }
 ]
 
 const faqs = [
-  { question: 'What is Google AdWords and how does it differ from Google Ads?', answer: 'Google AdWords was the original name for Google\'s paid search advertising platform — it was rebranded to Google Ads in 2018. The platform is the same: advertisers bid on keywords, and ads appear at the top of search engine results when searchers use matching search queries. It\'s the foundation of all paid search and search engine marketing (SEM). Whether you call it AdWords, Google Ads, SEA, or PPC — it\'s the same powerful online marketing tool.' },
+  { question: 'What is Google AdWords and how does it differ from Google Ads?', answer: 'Google AdWords was the original name for Google\'s paid search advertising platform — it was rebranded to Google Ads in 2018. The platform is the same: advertisers bid on keywords, and ads appear at the top of search engine results when searchers use matching search queries. It\'s the foundation of all paid search and search engine marketing (SEM). An AdWords account lets you create AdWords campaigns targeting specific keywords, locations, devices, and audiences. Whether you call it AdWords, Google Ads, SEA, or PPC — it\'s the same powerful online marketing tool.' },
   { question: 'What is cost-per-click (CPC) and how does bidding work?', answer: 'Cost-per-click (CPC) is the amount an advertiser pays each time someone clicks their ad. Google Ads uses an auction system: advertisers set a maximum bid on keywords, and Google assigns a Quality Score based on ad relevance, landing page quality, and expected click-through rate (CTR). Advertisers with a high Quality Score can win top positions at a lower CPC than competitors who bid higher but have poor relevance. Understanding bidding, CPC, and Quality Score is critical to running profitable PPC campaigns.' },
   { question: 'What is a landing page and why does it matter for PPC?', answer: 'A landing page is the web page searchers arrive at after clicking your ad. A great landing page directly matches what the ad promised, loads fast, has a clear call to action, and is optimized for conversion rate. Poor landing pages kill PPC campaigns — you can pay for clicks but lose customers because the page doesn\'t convert. We create and optimize landing pages as part of every AdWords campaign we manage.' },
   { question: 'Do you manage Bing Ads and display ads too?', answer: 'Yes. Beyond Google Ads, we also manage Microsoft/Bing Ads campaigns for advertisers who want broader search advertising coverage. We also run Google Display Ads campaigns to advertise across millions of websites, and remarketing campaigns to re-engage searchers who visited your site but didn\'t convert. A multi-channel approach to online marketing maximizes your reach.' },
@@ -89,7 +89,8 @@ const faqs = [
   { question: "What's the difference between SEO and SEA?", answer: 'SEO (organic search) is free per click but takes 3–6 months to see results in search engine results pages (SERPs). SEA/PPC is paid search — you pay per click but get instant visibility. Ideally, use SEA for immediate results while SEO builds your long-term digital marketing foundation. Together, they dominate both paid and organic search engine results.' },
   { question: 'What are negative keywords and why do they matter?', answer: 'Negative keywords tell Google Ads NOT to show your ads for certain search queries. For example, if you sell premium web design services, you might add "free" as a negative keyword to avoid paying for clicks from searchers who only want free tools. Proper negative keyword management is one of the most important PPC campaign tactics for reducing wasted ad spend.' },
   { question: 'Do I need to sign a long-term contract?', answer: 'No. We offer month-to-month contracts with no lock-in. However, we recommend at least 3 months for a PPC campaign to gather enough data to properly optimize bidding, ad copy, and landing pages for maximum ROI.' },
-  { question: "What's your management fee?", answer: 'Our management fee is typically 15–20% of your monthly ad spend, with a minimum of €299/month. This covers strategy, setup, ad campaign creation, optimizing bids and copy, reporting, and ongoing support.' }
+  { question: "What's your management fee?", answer: 'Our management fee is typically 15–20% of your monthly ad spend, with a minimum of €299/month. This covers strategy, setup, ad campaign creation, optimizing bids and copy, reporting, and ongoing support.' },
+  { question: 'What types of PPC ads and search ads can I run on Google?', answer: 'Google Ads supports several formats. Search ads are the text ads that appear in Google results when a searcher types a relevant query — these pay-per-click ads are the most common form of PPC advertising and sit at the bottom of the sales funnel where intent is highest. Display ads appear across websites. Shopping ads show product images for ecommerce. Video ads run on YouTube. For most businesses, search ads are the starting point of any paid search marketing strategy, often combined with retargeting and remarketing to guide searchers through the full conversion funnel.' }
 ]
 
 export default function SeaCampaigns() {
@@ -124,6 +125,7 @@ export default function SeaCampaigns() {
   }, [])
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = explainerRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -136,6 +138,7 @@ export default function SeaCampaigns() {
   }, [])
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = featuresRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -200,6 +203,7 @@ export default function SeaCampaigns() {
   const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = faqRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -211,6 +215,7 @@ export default function SeaCampaigns() {
   useEffect(() => {
     const section = ctaRef.current
     if (!section) return
+    if (window.innerWidth < 768) return
     const ctx = gsap.context(() => {
       gsap.from('.geo-cta-content', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
       if (window.innerWidth >= 768) {
@@ -235,9 +240,9 @@ export default function SeaCampaigns() {
 
         {/* HERO */}
         <section ref={heroRef} className="geo-hero">
-          <div className="geo-hero-particles">
+          <div className="geo-hero-particles" suppressHydrationWarning>
             {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
           <div className="geo-hero-content">
@@ -262,10 +267,10 @@ export default function SeaCampaigns() {
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
               <h2 className="geo-explainer-heading">What is SEA?</h2>
-              <p><strong>SEA (Search Engine Advertising)</strong>, also known as <strong>PPC (Pay-Per-Click)</strong> or <strong>Google Ads</strong>, is paid advertising on search engines. When someone searches for keywords related to your business, your ad appears at the top of Google — above all organic results.</p>
-              <p>Unlike SEO, which takes months to build momentum, SEA delivers <strong>instant visibility</strong>. Turn on a campaign today, and you can start getting clicks, calls, and customers within hours.</p>
-              <p>The catch? Running successful Google Ads campaigns requires expertise. Poorly managed campaigns waste money on irrelevant clicks. That&apos;s where we come in.</p>
-              <p>At Morfye, we design, launch, and optimize Google Ads campaigns that maximize your ROI. Whether you want more website traffic, phone calls, form submissions, or online sales — we create campaigns engineered to deliver results.</p>
+              <p><strong>SEA (Search Engine Advertising)</strong> — also called <strong>PPC (pay-per-click) advertising</strong>, PPC marketing, or Google Ads — is paid search marketing on search engines. When someone searches for keywords related to your business, your pay-per-click ads appear at the top of Google, above all organic results.</p>
+              <p>Unlike SEO, pay per click marketing delivers <strong>instant visibility</strong>. Launch an online advertising campaign today and start getting clicks, calls, and customers within hours — without waiting months for engine optimization results to build up.</p>
+              <p>The catch? Successful ad campaigns require real expertise. Poorly managed PPC advertising wastes money on irrelevant clicks. Every experienced marketer knows that click advertising without proper ad group structure, negative keywords, and conversion tracking burns budget fast. That&apos;s where we come in.</p>
+              <p>At Morfye, we design, launch, and optimize Google Ads campaigns for businesses across Belgium. Whether you want more website traffic, phone calls, form submissions, or ecommerce sales — our paid search marketing and internet marketing expertise delivers campaigns engineered to maximize your return on investment.</p>
             </div>
           </div>
         </section>
@@ -294,9 +299,9 @@ export default function SeaCampaigns() {
 
         {/* PROCESS */}
         <section ref={processRef} className="geo-process" id="our-process" onMouseEnter={() => clearInterval(timerRef.current)} onMouseLeave={startTimer}>
-          <div className="geo-process-particles">
+          <div className="geo-process-particles" suppressHydrationWarning>
             {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
           <div className="geo-process-progress">
@@ -329,9 +334,9 @@ export default function SeaCampaigns() {
 
         {/* CTA */}
         <section ref={ctaRef} className="geo-cta-section">
-          <div className="geo-cta-particles">
+          <div className="geo-cta-particles" suppressHydrationWarning>
             {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 5 + 2}px`, height: `${Math.random() * 5 + 2}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 5 + 2}px`, height: `${Math.random() * 5 + 2}px` }} />
             ))}
           </div>
           <div className="geo-cta-content">
