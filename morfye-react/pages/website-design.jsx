@@ -117,12 +117,15 @@ export default function WebsiteDesign() {
   useEffect(() => {
     const hero = heroRef.current
     if (!hero) return
+    const mobile = window.innerWidth < 768
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-      tl.from('.geo-hero-label', { opacity: 0, y: 20, duration: 0.6 })
-      tl.from('.geo-hero-title', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
-      tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
-      tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
+      if (!mobile) {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+        tl.from('.geo-hero-label', { opacity: 0, y: 20, duration: 0.6 })
+        tl.from('.geo-hero-title', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
+        tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
+        tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
+      }
       hero.querySelectorAll('.geo-particle').forEach((p) => {
         gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 3 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
       })

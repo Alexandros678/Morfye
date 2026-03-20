@@ -132,12 +132,15 @@ export default function GeoOptimization() {
   useEffect(() => {
     const hero = heroRef.current
     if (!hero) return
+    const mobile = window.innerWidth < 768
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
-      tl.from('.geo-hero-label', { opacity: 0, y: 20, duration: 0.6 })
-      tl.from('.geo-hero-title', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
-      tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
-      tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
+      if (!mobile) {
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+        tl.from('.geo-hero-label', { opacity: 0, y: 20, duration: 0.6 })
+        tl.from('.geo-hero-title', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
+        tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
+        tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
+      }
 
       hero.querySelectorAll('.geo-particle').forEach((p) => {
         gsap.to(p, {
