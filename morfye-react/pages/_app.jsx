@@ -2,10 +2,18 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Head from 'next/head'
 import Script from 'next/script'
+import { Poppins } from 'next/font/google'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import '../styles/globals.css'
 import CookieBanner from '../components/CookieBanner'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-poppins',
+})
 
 const GA_ID = 'G-K07QYXSML5'
 
@@ -26,7 +34,7 @@ export default function App({ Component, pageProps }) {
   }, [router.events])
 
   return (
-    <>
+    <div className={poppins.variable}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0a0a0f" />
@@ -51,6 +59,6 @@ export default function App({ Component, pageProps }) {
 
       <Component {...pageProps} />
       <CookieBanner />
-    </>
+    </div>
   )
 }
