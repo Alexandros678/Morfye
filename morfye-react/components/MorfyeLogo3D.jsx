@@ -44,7 +44,7 @@ const extrudeSettings = {
   bevelSegments: 2
 }
 
-function LogoMesh({ scaleRef, lightMode }) {
+function LogoMesh({ scaleRef, lightMode, orientRef }) {
   const groupRef = useRef()
   const { pointer } = useThree()
   const shapes = useMemo(() => createMShapes(), [])
@@ -57,8 +57,10 @@ function LogoMesh({ scaleRef, lightMode }) {
       groupRef.current.scale.setScalar(s)
     }
 
-    const targetX = pointer.y * 0.25
-    const targetY = pointer.x * 0.35
+    // Use gyroscope on mobile if available, otherwise mouse pointer
+    const orient = orientRef?.current
+    const targetX = orient ? orient.x * 0.4  : pointer.y * 0.25
+    const targetY = orient ? orient.y * 0.5  : pointer.x * 0.35
     groupRef.current.rotation.x += (targetX - groupRef.current.rotation.x) * 0.04
     groupRef.current.rotation.y += (targetY - groupRef.current.rotation.y) * 0.04
   })
@@ -91,17 +93,51 @@ export default function MorfyeLogo3D({ scaleRef }) {
   const [mounted, setMounted] = useState(false)
   const [lightMode, setLightMode] = useState(false)
   const [cameraZ, setCameraZ] = useState(6)
+  const orientRef = useRef(null) // { x, y } normalized gyroscope values
 
   useEffect(() => {
     setMounted(true)
-    setCameraZ(window.innerWidth < 768 ? 10 : 6)
+    const mobile = window.innerWidth < 768
+    setCameraZ(mobile ? 10 : 6)
 
     const update = () => setLightMode(document.body.classList.contains('light-mode'))
     update()
-
-    // Watch for theme changes
     const observer = new MutationObserver(update)
     observer.observe(document.body, { attributes: true, attributeFilter: ['class'] })
+
+    // Gyroscope — mobile only
+    if (mobile && typeof DeviceOrientationEvent !== 'undefined') {
+      const onOrientation = (e) => {
+        const beta  = e.beta  ?? 0  // pitch: ~90 when phone upright
+        const gamma = e.gamma ?? 0  // roll:  ~0 when phone upright
+        orientRef.current = {
+          x: Math.max(-1, Math.min(1, (beta  - 90) / 45)),
+          y: Math.max(-1, Math.min(1,  gamma       / 45))
+        }
+      }
+
+      const addListener = () =>
+        window.addEventListener('deviceorientation', onOrientation, true)
+
+      // iOS 13+ requires explicit permission from a user gesture
+      if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+        const onFirstTouch = () => {
+          DeviceOrientationEvent.requestPermission()
+            .then(res => { if (res === 'granted') addListener() })
+            .catch(() => {})
+          document.removeEventListener('touchstart', onFirstTouch)
+        }
+        document.addEventListener('touchstart', onFirstTouch, { once: true })
+      } else {
+        addListener()
+      }
+
+      return () => {
+        window.removeEventListener('deviceorientation', onOrientation, true)
+        observer.disconnect()
+      }
+    }
+
     return () => observer.disconnect()
   }, [])
 
@@ -117,7 +153,7 @@ export default function MorfyeLogo3D({ scaleRef }) {
       <ambientLight intensity={lightMode ? 1.4 : 0.6} />
       <pointLight position={[5, 5, 5]} intensity={lightMode ? 1.5 : 1} color="#ff922b" />
       <pointLight position={[-4, -2, 4]} intensity={lightMode ? 0.8 : 0.4} color="#ffffff" />
-      <LogoMesh scaleRef={scaleRef} lightMode={lightMode} />
+      <LogoMesh scaleRef={scaleRef} lightMode={lightMode} orientRef={orientRef} />
     </Canvas>
   )
 }
