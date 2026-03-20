@@ -69,17 +69,17 @@ const navLinks = [
 ]
 
 const features = [
-  { icon: <ServerIcon />, title: 'Lightning-Fast Performance', description: 'We use premium servers with SSD storage and CDN integration to ensure your site loads in under 2 seconds.' },
-  { icon: <ShieldIcon />, title: 'Maximum Security', description: 'Free SSL certificates, firewall protection, malware scanning, and automatic security updates keep hackers out.' },
-  { icon: <DatabaseIcon />, title: 'Daily Automatic Backups', description: 'Your site is backed up every day. If anything goes wrong, we can restore it in minutes.' },
-  { icon: <WrenchIcon />, title: 'Regular Updates', description: 'We keep your CMS, plugins, and themes up to date, so your site stays secure and compatible.' },
-  { icon: <EyeIcon />, title: '24/7 Monitoring', description: "We monitor your site around the clock. If it goes down, we're notified instantly and fix it immediately." },
-  { icon: <ChatIcon />, title: 'Priority Support', description: "Need help? Our team responds quickly to fix issues, make updates, or answer your questions." }
+  { icon: <ServerIcon />, title: 'Lightning-Fast Performance', description: 'We use optimized cloud servers with SSD storage, CDN integration, and unlimited bandwidth to ensure your website hosting loads in under 2 seconds — every time.' },
+  { icon: <ShieldIcon />, title: 'Maximum Security', description: 'Free SSL certificates, firewall protection, spam filtering, malware scanning, and automatic security updates keep hackers out. Root access and SSH access to server infrastructure are locked down and managed by our team.' },
+  { icon: <DatabaseIcon />, title: 'Daily Automatic Backups', description: 'Your site is backed up every day to redundant storage across our data-center infrastructure. If anything goes wrong, we can restore it in minutes.' },
+  { icon: <WrenchIcon />, title: 'Regular Updates', description: 'We keep your CMS, plugins, and themes up to date — whether you run WordPress, Joomla, Drupal, or any PHP-based platform, with every installer kept current. Your site stays secure and compatible.' },
+  { icon: <EyeIcon />, title: '24/7 Monitoring', description: "We monitor your site around the clock. If it goes down, we're notified instantly and fix it immediately — no relying on unreliable web hosts or slow ticket systems." },
+  { icon: <ChatIcon />, title: 'Priority Support', description: "Whether you're on a personal or business hosting plan, our team responds quickly to fix issues, make updates, or answer your questions." }
 ]
 
 const steps = [
-  { title: 'Easy Migration', description: "Already have a website? We'll migrate it to our secure hosting platform with zero downtime. You won't even notice the switch." },
-  { title: 'Secure Setup', description: 'We configure your hosting environment with SSL certificates, firewalls, and performance optimization from day one.' },
+  { title: 'Easy Migration', description: "Already with another hosting provider or hosting company? We'll migrate your hosting web infrastructure using FTP transfer or automated migration tools — with zero downtime. You won't even notice the switch." },
+  { title: 'Secure Setup', description: 'We configure your linux hosting environment with SSL certificates, firewalls, and performance optimization from day one.' },
   { title: 'Proactive Monitoring', description: 'Our systems monitor your website 24/7. If we detect downtime, security threats, or performance issues, we act immediately.' },
   { title: 'Regular Maintenance', description: 'Every week, we check for updates, run security scans, optimize databases, and ensure everything runs smoothly.' },
   { title: 'Ongoing Support', description: "Need a content update, new feature, or technical help? Just reach out. We're here to support you whenever you need us." }
@@ -88,14 +88,15 @@ const steps = [
 const faqs = [
   { question: 'What types of web hosting do you offer?', answer: 'We offer managed web hosting services tailored to small and medium businesses. Unlike generic hosting companies (Bluehost, shared hosting providers, cPanel-based reseller packages), our hosting plans are fully managed — meaning we handle server configuration, security, and maintenance for you. We use cloud hosting infrastructure with SSD storage, scalable bandwidth, and high uptime guarantees. We do not offer unmanaged VPS hosting, dedicated server plans, or reseller hosting — we focus on managed hosting solutions where we take care of everything.' },
   { question: 'What is the difference between shared hosting, VPS, and cloud hosting?', answer: 'Shared hosting is the cheapest option — your website shares server resources with many others, which can hurt performance and uptime. VPS hosting (Virtual Private Server) gives you a dedicated slice of a server with more control, disk space, and bandwidth. Cloud hosting distributes your site across multiple servers for maximum uptime and scalability. Dedicated server hosting means you own the entire physical server. We use cloud hosting infrastructure because it combines the performance of a dedicated server with the scalability and uptime of modern hosting services — without the high cost.' },
-  { question: 'Do you support WordPress websites and plugins?', answer: 'Yes — WordPress hosting is one of our specialties. We manage WordPress updates, plugin updates, theme updates, and security patches as part of our maintenance plans. WordPress sites need regular maintenance because outdated plugins are the number one cause of security breaches. Our managed WordPress hosting keeps your site secure, fast, and up-and-running with one-click restore from daily backups if anything goes wrong.' },
+  { question: 'Do you support WordPress, Joomla, and other CMS platforms?', answer: 'Yes — WordPress hosting is one of our specialties. We also fully support Joomla, Drupal, and any PHP-based CMS or ecommerce platform (WooCommerce, Magento, PrestaShop). Whether your site was installed via a one-click installer or configured manually, we manage updates, plugin updates, theme updates, and security patches as part of our maintenance plans. Outdated CMS installs and plugins are the number one cause of security breaches. Our managed hosting keeps your site secure, fast, and up-and-running with daily backups and one-click restore.' },
   { question: 'What uptime guarantee do you offer?', answer: 'We target 99.9% uptime for all hosting plans. Our 24/7 monitoring system alerts us the moment your site goes down, and we act immediately. Uptime is critical — every minute of downtime costs you potential customers and damages your search engine rankings.' },
   { question: "What's the difference between hosting and maintenance?", answer: 'Web hosting is the server where your website files live — it\'s the foundation that keeps your site online. Maintenance covers everything else: plugin and CMS updates, security scans, daily backups, performance optimization, SSL certificate renewal, and technical support. Think of hosting as the building and maintenance as the property management. Our hosting packages include both.' },
   { question: 'What is cPanel and do you use it?', answer: 'cPanel is a popular web hosting control panel used by many hosting companies and resellers that gives you direct access to your server files, MySQL databases, email accounts, and bandwidth stats. We don\'t use traditional cPanel-based hosting — instead, we use a managed cloud hosting environment where we handle all the technical configuration for you. You don\'t need to manage disk space, MySQL, or server settings — we do it all.' },
-  { question: 'Can I bring my own domain name?', answer: 'Absolutely. You can keep your existing domain name and point it to our hosting, or we can help you register a free domain name with certain hosting packages. We handle all DNS configuration to get your site up-and-running quickly.' },
+  { question: 'Can I bring my own domain name?', answer: 'Absolutely. You can keep your existing domain names and point them to our hosting. Domain registration is simple — we can register new domains for you, or transfer your existing domain. Some hosting packages include a free domain name. We handle all DNS configuration to get your site up-and-running quickly.' },
   { question: 'Do you offer email hosting too?', answer: 'Yes — we can set up professional business email addresses (like you@yourbusiness.be) connected to your domain as part of our hosting services.' },
   { question: 'Can I cancel anytime?', answer: "Yes. We offer flexible month-to-month hosting plans with no long-term contracts. Cancel anytime with 30 days' notice. No lock-in, no hidden fees." },
-  { question: 'How much do your hosting plans cost?', answer: 'Hosting plans start at €29/month for our standard managed hosting package, which includes SSL, daily backups, 24/7 monitoring, and basic maintenance. Higher-tier hosting packages with more disk space, bandwidth, and priority support are available. Contact us for a custom hosting solution quote.' }
+  { question: 'How much do your hosting plans cost?', answer: 'Hosting plans start at €29/month for our standard managed hosting package, which includes SSL, daily backups, 24/7 monitoring, and basic maintenance. Higher-tier hosting packages with more disk space, bandwidth, and priority support are available. Contact us for a custom hosting solution quote.' },
+  { question: 'Do you offer webmail, FTP access, and developer tools?', answer: 'Yes. All hosting plans include professional webmail so you can access your business email from any browser or email client. FTP access is available for file transfers and content management. We also provide SSH access for technical users who need command-line tools — root access is managed by our team to keep server infrastructure secure. If you are currently using a website builder or site builder (Wix, Squarespace, GoDaddy) and want to switch to proper managed hosting, we handle the full migration. When comparing web hosts for Belgian businesses, we consistently deliver the best web hosting combination of performance, security, and local support.' }
 ]
 
 export default function HostingMaintenance() {
@@ -130,6 +131,7 @@ export default function HostingMaintenance() {
   }, [])
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = explainerRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -142,6 +144,7 @@ export default function HostingMaintenance() {
   }, [])
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = featuresRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -206,6 +209,7 @@ export default function HostingMaintenance() {
   const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
 
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = faqRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -217,6 +221,7 @@ export default function HostingMaintenance() {
   useEffect(() => {
     const section = ctaRef.current
     if (!section) return
+    if (window.innerWidth < 768) return
     const ctx = gsap.context(() => {
       gsap.from('.geo-cta-content', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
       if (window.innerWidth >= 768) {
@@ -241,9 +246,9 @@ export default function HostingMaintenance() {
 
         {/* HERO */}
         <section ref={heroRef} className="geo-hero">
-          <div className="geo-hero-particles">
+          <div className="geo-hero-particles" suppressHydrationWarning>
             {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
           <div className="geo-hero-content">
@@ -268,9 +273,9 @@ export default function HostingMaintenance() {
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
               <h2 className="geo-explainer-heading">Why Professional Hosting & Maintenance Matter</h2>
-              <p>Building a website is just the beginning. To stay online, perform well, and remain secure, your website needs <strong>reliable hosting</strong> and <strong>ongoing maintenance</strong>. Think of hosting as the land your digital house sits on — if it&apos;s unstable or unsafe, everything falls apart.</p>
-              <p>Many businesses make the mistake of choosing the cheapest hosting option, only to face slow load times, frequent downtime, security breaches, and no support when things go wrong. At Morfye, we provide enterprise-grade hosting combined with proactive maintenance.</p>
-              <p>Whether you&apos;re launching a new site or need to migrate from an unreliable host, we&apos;ve got you covered with hosting solutions tailored to your needs.</p>
+              <p>Building a website is just the beginning. To stay online, perform well, and remain secure, your website hosting needs a <strong>reliable foundation</strong> and <strong>ongoing maintenance</strong>. Think of hosting as the land your digital house sits on — if it&apos;s unstable or unsafe, everything falls apart.</p>
+              <p>Many businesses make the mistake of choosing the cheapest option from generic web hosting companies — only to find that shared web hosting or entry-level dedicated hosting plans can&apos;t keep up with real business demands. Slow load times, frequent downtime, security breaches, and no support. At Morfye, we provide enterprise-grade hosting combined with proactive maintenance.</p>
+              <p>Whether you&apos;re launching a new ecommerce store, migrating away from a website builder or site builder, or switching from an unreliable host — we offer the best web hosting solutions for Belgian businesses. From domain registration and domain names to free hosting trials on select packages, we handle everything.</p>
             </div>
           </div>
         </section>
@@ -299,9 +304,9 @@ export default function HostingMaintenance() {
 
         {/* PROCESS */}
         <section ref={processRef} className="geo-process" id="our-process" onMouseEnter={() => clearInterval(timerRef.current)} onMouseLeave={startTimer}>
-          <div className="geo-process-particles">
+          <div className="geo-process-particles" suppressHydrationWarning>
             {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
           <div className="geo-process-progress">
@@ -334,9 +339,9 @@ export default function HostingMaintenance() {
 
         {/* CTA */}
         <section ref={ctaRef} className="geo-cta-section">
-          <div className="geo-cta-particles">
+          <div className="geo-cta-particles" suppressHydrationWarning>
             {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 5 + 2}px`, height: `${Math.random() * 5 + 2}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 5 + 2}px`, height: `${Math.random() * 5 + 2}px` }} />
             ))}
           </div>
           <div className="geo-cta-content">
