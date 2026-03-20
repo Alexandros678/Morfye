@@ -11,7 +11,7 @@ import CookieBanner from '../components/CookieBanner'
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
+  display: 'optional',
   variable: '--font-poppins',
 })
 
