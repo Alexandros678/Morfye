@@ -2466,6 +2466,10 @@ body.dark-mode .faq-answer-inner p { color: #bbb; }
   opacity: 0.8;
 }
 
+@media (max-width: 767px) {
+  .geo-particle { display: none; }
+}
+
 /* GEO Hero */
 .geo-hero {
   min-height: 100vh;

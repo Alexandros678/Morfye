@@ -159,6 +159,7 @@ export default function GeoOptimization() {
 
   // Explainer entrance
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = explainerRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -184,6 +185,7 @@ export default function GeoOptimization() {
 
   // Features heading entrance
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = featuresRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -252,6 +254,7 @@ export default function GeoOptimization() {
 
   // FAQ heading entrance
   useEffect(() => {
+    if (window.innerWidth < 768) return
     const section = faqRef.current
     if (!section) return
     const ctx = gsap.context(() => {
@@ -268,6 +271,7 @@ export default function GeoOptimization() {
     const section = ctaRef.current
     if (!section) return
     const mobile = window.innerWidth < 768
+    if (mobile) return
     const ctx = gsap.context(() => {
       gsap.from('.geo-cta-content', {
         y: 50, opacity: 0, duration: 0.8,
@@ -300,9 +304,9 @@ export default function GeoOptimization() {
       <div className="geo-page">
         {/* === HERO === */}
         <section ref={heroRef} className="geo-hero">
-          <div className="geo-hero-particles">
+          <div className="geo-hero-particles" suppressHydrationWarning>
             {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 width: `${Math.random() * 4 + 1}px`,
@@ -370,9 +374,9 @@ export default function GeoOptimization() {
 
         {/* === HOW IT WORKS === */}
         <section ref={processRef} className="geo-process" id="how-it-works" onMouseEnter={() => clearInterval(timerRef.current)} onMouseLeave={startTimer}>
-          <div className="geo-process-particles">
+          <div className="geo-process-particles" suppressHydrationWarning>
             {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
           <div className="geo-process-progress">
@@ -405,9 +409,9 @@ export default function GeoOptimization() {
 
         {/* === CTA === */}
         <section ref={ctaRef} className="geo-cta-section">
-          <div className="geo-cta-particles">
+          <div className="geo-cta-particles" suppressHydrationWarning>
             {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="geo-particle" style={{
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 width: `${Math.random() * 5 + 2}px`,
