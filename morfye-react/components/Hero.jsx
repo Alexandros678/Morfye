@@ -49,8 +49,7 @@ export default function Hero() {
       timeout = setTimeout(type, isDeleting ? 80 : 120)
     }
 
-    // Start typing after the (now faster) reveal animation ~0.9s
-    timeout = setTimeout(type, 900)
+    timeout = setTimeout(type, window.innerWidth < 768 ? 200 : 900)
     return () => clearTimeout(timeout)
   }, [])
 
@@ -62,7 +61,7 @@ export default function Hero() {
     }
   }, [])
 
-  // Floating particles (animated by GSAP after mount)
+  // Floating particles
   const [particles] = useState(() =>
     Array.from({ length: 20 }, () => ({
       size: Math.random() * 6 + 2,
@@ -92,13 +91,12 @@ export default function Hero() {
     return () => ctx.revert()
   }, [])
 
-  // LOAD ANIMATION: box grows from small to fullscreen
+  // LOAD ANIMATION
   useEffect(() => {
     const hero = heroRef.current
     const box = boxRef.current
     if (!hero || !box) return
 
-    // Grab header element directly (it's outside the hero scope)
     const header = document.querySelector('.site-header')
     if (header) gsap.set(header, { opacity: 0, y: -30 })
 
@@ -107,73 +105,90 @@ export default function Hero() {
     const logoScrollPeak = isMobile ? 1.0 : 1.5
 
     const ctx = gsap.context(() => {
-      // Ensure text stays hidden until entrance animation reveals it
-      gsap.set(['.hero-line-1', '.hero-line-2', '.hero-subtitle', '.hero-buttons', '.hero-scroll-down'], {
-        opacity: 0, y: 40
-      })
-      gsap.set('.hero-scroll-down', { y: 0 })
 
-      const tl = gsap.timeline({
-        defaults: { ease: 'power3.inOut' },
-        onComplete: () => {
-          // Set up scroll exit AFTER entrance finishes
-          const scrollTl = gsap.timeline({
-            scrollTrigger: {
-              trigger: hero,
-              start: 'top top',
-              end: '+=50%',
-              pin: true,
-              scrub: 0.3
-            }
-          })
+      if (isMobile) {
+        // ── MOBILE: text already visible in HTML, just animate the box + header ──
+        const tl = gsap.timeline({
+          defaults: { ease: 'power2.inOut' },
+          onComplete: () => {
+            const scrollTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: hero,
+                start: 'top top',
+                end: '+=50%',
+                pin: true,
+                scrub: 0.3
+              }
+            })
+            scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
+            scrollTl.fromTo('.hero-line-1',   { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
+            scrollTl.fromTo('.hero-line-2',   { y: 0, opacity: 1 }, { y: -80,  opacity: 0, duration: 0.3 }, 0.05)
+            scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50,  opacity: 0, duration: 0.25 }, 0.08)
+            scrollTl.fromTo('.hero-buttons',  { y: 0, opacity: 1 }, { y: 60,   opacity: 0, duration: 0.25 }, 0.08)
+            scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
+          }
+        })
 
-          scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
-          scrollTl.fromTo('.hero-line-1',  { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
-          scrollTl.fromTo('.hero-line-2',  { y: 0, opacity: 1 }, { y: -80,  opacity: 0, duration: 0.3 }, 0.05)
-          scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50,  opacity: 0, duration: 0.25 }, 0.08)
-          scrollTl.fromTo('.hero-buttons',  { y: 0, opacity: 1 }, { y: 60,   opacity: 0, duration: 0.25 }, 0.08)
-          if (!isMobile) {
+        tl.fromTo(box,
+          { clipPath: 'inset(50% 50% round 12px)', opacity: 1 },
+          { clipPath: 'inset(0% 0% round 0px)', duration: 0.5 }
+        )
+        if (header) {
+          tl.to(header, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, '-=0.2')
+        }
+
+      } else {
+        // ── DESKTOP: full cinematic entrance, text starts hidden ──
+        gsap.set(['.hero-line-1', '.hero-line-2', '.hero-subtitle', '.hero-buttons', '.hero-scroll-down'], {
+          opacity: 0, y: 40
+        })
+        gsap.set('.hero-scroll-down', { y: 0 })
+
+        const tl = gsap.timeline({
+          defaults: { ease: 'power3.inOut' },
+          onComplete: () => {
+            const scrollTl = gsap.timeline({
+              scrollTrigger: {
+                trigger: hero,
+                start: 'top top',
+                end: '+=50%',
+                pin: true,
+                scrub: 0.3
+              }
+            })
+            scrollTl.fromTo('.hero-scroll-down', { opacity: 1, y: 0 }, { opacity: 0, y: 20, duration: 0.1 }, 0)
+            scrollTl.fromTo('.hero-line-1',   { y: 0, opacity: 1 }, { y: -120, opacity: 0, duration: 0.3 }, 0)
+            scrollTl.fromTo('.hero-line-2',   { y: 0, opacity: 1 }, { y: -80,  opacity: 0, duration: 0.3 }, 0.05)
+            scrollTl.fromTo('.hero-subtitle', { y: 0, opacity: 1 }, { y: -50,  opacity: 0, duration: 0.25 }, 0.08)
+            scrollTl.fromTo('.hero-buttons',  { y: 0, opacity: 1 }, { y: 60,   opacity: 0, duration: 0.25 }, 0.08)
             scrollTl.fromTo(logoScaleRef, { current: logoFinalScale }, { current: logoScrollPeak, duration: 0.6, ease: 'none' }, 0)
             scrollTl.fromTo('.logo-3d-container', { opacity: 1 }, { opacity: 0, duration: 0.35 }, 0.5)
+            scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
           }
-          scrollTl.fromTo('.hero-reveal-box', { filter: 'blur(0px)' }, { filter: 'blur(8px)', duration: 0.4 }, 0.6)
-        }
-      })
+        })
 
-      // Phase 1: thin horizontal pill appears in center
-      tl.fromTo(box, {
-        clipPath: 'inset(50% 50% round 12px)',
-        opacity: 1
-      }, {
-        clipPath: 'inset(47.5% 37.5% round 12px)',
-        duration: 0.3,
-        ease: 'power2.out'
-      })
+        tl.fromTo(box, {
+          clipPath: 'inset(50% 50% round 12px)', opacity: 1
+        }, {
+          clipPath: 'inset(47.5% 37.5% round 12px)', duration: 0.3, ease: 'power2.out'
+        })
+        .to(box, {
+          clipPath: 'inset(0% 0% round 0px)', duration: 0.5, ease: 'power2.inOut'
+        })
 
-      // Phase 2: expand to full screen
-      .to(box, {
-        clipPath: 'inset(0% 0% round 0px)',
-        duration: 0.5,
-        ease: 'power2.inOut'
-      })
-
-      // 3D logo reveals (desktop only)
-      if (!isMobile) {
         tl.to('.logo-3d-container', { opacity: 1, duration: 0.4, ease: 'power2.out' }, '-=0.5')
         tl.to(logoScaleRef, { current: logoFinalScale, duration: 0.6, ease: 'power2.out' }, '-=0.5')
-      }
 
-      // Phase 3: header slides in
-      if (header) {
-        tl.to(header, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, '-=0.4')
-      }
+        if (header) {
+          tl.to(header, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, '-=0.4')
+        }
 
-      // Phase 4: text content fades in staggered
-      tl.to('.hero-line-1',     { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2')
-      tl.to('.hero-line-2',     { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2')
-      tl.to('.hero-subtitle',   { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.2')
-      tl.to('.hero-buttons',    { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.15')
-      tl.to('.hero-scroll-down',{ opacity: 1,        duration: 0.3 },                     '-=0.1')
+        tl.to('.hero-line-1',      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2')
+        tl.to('.hero-line-2',      { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, '-=0.2')
+        tl.to('.hero-subtitle',    { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.2')
+        tl.to('.hero-buttons',     { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.15')
+        tl.to('.hero-scroll-down', { opacity: 1,        duration: 0.3 },                     '-=0.1')
+      }
 
     }, hero)
 
@@ -211,22 +226,22 @@ export default function Hero() {
         </div>
       )}
 
-      {/* Content — starts hidden, GSAP reveals after box expand */}
+      {/* Content — no inline opacity on mobile so text is visible from first paint */}
       <div className="hero-content">
-        <h1 className="hero-line-1" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+        <h1 className="hero-line-1">
           We create <span style={{ color: 'var(--primary-color)' }}>{dynamicText}</span>
           <span className="cursor" style={{ color: 'var(--primary-color)' }}>|</span>
         </h1>
 
-        <div className="hero-line-2" style={{ opacity: 0, transform: 'translateY(40px)' }}>
+        <div className="hero-line-2">
           websites for professionals
         </div>
 
-        <p className="hero-subtitle" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+        <p className="hero-subtitle">
           Modern, high-converting websites designed to attract, engage, and convert clients.
         </p>
 
-        <div className="hero-buttons" style={{ opacity: 0, transform: 'translateY(30px)' }}>
+        <div className="hero-buttons">
           <motion.button
             className="primary-btn"
             onClick={() => scrollTo('contact')}
@@ -246,7 +261,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll-down" style={{ opacity: 0 }}>
+      <div className="hero-scroll-down">
         <span>Scroll</span>
         <div className="hero-scroll-line" />
       </div>
