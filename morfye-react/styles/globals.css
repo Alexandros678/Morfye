@@ -301,10 +301,9 @@ header.scrolled .menu-toggle .bar {
 .hero-reveal-box {
   position: absolute;
   inset: 0;
-  margin: auto;
   overflow: hidden;
   z-index: 0;
-  will-change: width, height, border-radius;
+  will-change: clip-path;
   background: #0a0a0f;
 }
 
@@ -1306,6 +1305,7 @@ body.dark-mode .work-showcase { background: #0a0a0f; }
   border-radius: 4px;
   cursor: grab;
   transition: opacity 0.2s ease;
+  will-change: transform;
 }
 
 .ws-sb-thumb:hover { opacity: 0.8; }

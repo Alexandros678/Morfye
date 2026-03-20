@@ -75,13 +75,13 @@ export default function WorkShowcase() {
           if (performance.now() < resetEndTime) return // still in reset transition
           const progress = (x % halfWidth) / halfWidth
           const left = Math.round(Math.min(Math.max(0, progress * MAX_THUMB_LEFT), MAX_THUMB_LEFT))
-          thumb.style.left = `${left}px`
+          thumb.style.transform = `translateX(${left}px)`
         }
 
         const triggerThumbReset = () => {
           // Animate thumb smoothly back to left
-          thumb.style.transition = `left ${RESET_MS}ms ease-in-out`
-          thumb.style.left = '0px'
+          thumb.style.transition = `transform ${RESET_MS}ms ease-in-out`
+          thumb.style.transform = 'translateX(0px)'
           resetEndTime = performance.now() + RESET_MS
           clearTimeout(resetTimer)
           resetTimer = setTimeout(() => { thumb.style.transition = '' }, RESET_MS)

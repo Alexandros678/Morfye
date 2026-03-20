@@ -130,24 +130,19 @@ export default function Hero() {
         }
       })
 
-      // Phase 1: thin horizontal line appears
+      // Phase 1: thin horizontal pill appears in center
       tl.fromTo(box, {
-        width: '0vw',
-        height: '0vh',
-        borderRadius: '12px',
+        clipPath: 'inset(50% 50% round 12px)',
         opacity: 1
       }, {
-        width: '25vw',
-        height: '5vh',
+        clipPath: 'inset(47.5% 37.5% round 12px)',
         duration: 0.7,
         ease: 'power2.out'
       })
 
       // Phase 2: expand to full screen
       .to(box, {
-        width: '100vw',
-        height: '100vh',
-        borderRadius: '0px',
+        clipPath: 'inset(0% 0% round 0px)',
         duration: 1,
         ease: 'power2.inOut'
       })
