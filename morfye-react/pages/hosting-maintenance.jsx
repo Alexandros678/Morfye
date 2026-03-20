@@ -121,10 +121,10 @@ export default function HostingMaintenance() {
         tl.from('.geo-hero-title', { opacity: 0, y: 40, duration: 0.8 }, '-=0.3')
         tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
         tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
+        hero.querySelectorAll('.geo-particle').forEach((p) => {
+          gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 3 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
+        })
       }
-      hero.querySelectorAll('.geo-particle').forEach((p) => {
-        gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 3 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
-      })
     }, hero)
     return () => ctx.revert()
   }, [])
@@ -177,13 +177,16 @@ export default function HostingMaintenance() {
   useEffect(() => {
     const container = processRef.current
     if (!container) return
+    const mobile = window.innerWidth < 768
     const ctx = gsap.context(() => {
       stepsRef.current.filter(Boolean).forEach((s, i) => gsap.set(s, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 }))
       const progressFill = container.querySelector('.geo-process-fill')
       if (progressFill) gsap.set(progressFill, { scaleY: 1 / steps.length })
-      container.querySelectorAll('.geo-particle').forEach((p) => {
-        gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
-      })
+      if (!mobile) {
+        container.querySelectorAll('.geo-particle').forEach((p) => {
+          gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
+        })
+      }
     }, container)
     return () => ctx.revert()
   }, [])
@@ -216,9 +219,11 @@ export default function HostingMaintenance() {
     if (!section) return
     const ctx = gsap.context(() => {
       gsap.from('.geo-cta-content', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
-      section.querySelectorAll('.geo-particle').forEach((p) => {
-        gsap.to(p, { y: `${-60 - Math.random() * 100}`, x: `${(Math.random() - 0.5) * 60}`, opacity: 0, duration: 2 + Math.random() * 3, repeat: -1, delay: Math.random() * 2, ease: 'power1.out' })
-      })
+      if (window.innerWidth >= 768) {
+        section.querySelectorAll('.geo-particle').forEach((p) => {
+          gsap.to(p, { y: `${-60 - Math.random() * 100}`, x: `${(Math.random() - 0.5) * 60}`, opacity: 0, duration: 2 + Math.random() * 3, repeat: -1, delay: Math.random() * 2, ease: 'power1.out' })
+        })
+      }
     }, section)
     return () => ctx.revert()
   }, [])
