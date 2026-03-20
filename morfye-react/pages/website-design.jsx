@@ -73,12 +73,12 @@ const navLinks = [
 ]
 
 const features = [
-  { icon: <MonitorIcon />, title: 'Stunning Visual Design', description: "We create custom, modern designs that capture your brand's unique identity and impress visitors from the first second." },
+  { icon: <MonitorIcon />, title: 'Stunning Visual Design', description: "We design your beautiful website with fully customizable visuals that capture your brand's unique identity and impress visitors from the first second." },
   { icon: <PhoneIcon />, title: 'Fully Responsive', description: 'Your site will look and work perfectly on all devices — desktops, tablets, and smartphones.' },
   { icon: <CodeIcon />, title: 'SEO-Optimized', description: 'Built from the ground up with SEO best practices to rank high on Google and attract organic traffic.' },
   { icon: <GeoReadyIcon />, title: 'GEO Ready', description: "We optimize your site for AI, ensuring you're recommended by ChatGPT, Gemini, and Claude." },
   { icon: <CartIcon />, title: 'E-Commerce Solutions', description: 'Ready to sell online? We build secure, easy-to-manage online stores that drive sales.' },
-  { icon: <GearIcon />, title: 'Easy to Manage', description: 'We provide user-friendly Content Management Systems (CMS) so you can update your site yourself.' }
+  { icon: <GearIcon />, title: 'Easy to Manage', description: 'We provide intuitive, user-friendly CMS platforms with drag-and-drop editing, widgets, and sidebar management — no coding needed.' }
 ]
 
 const steps = [
@@ -90,14 +90,15 @@ const steps = [
 ]
 
 const faqs = [
-  { question: 'How much does a new website cost?', answer: 'It depends on scope. A simple one-page website costs less than a full e-commerce website or online store. We provide a custom, no-obligation quote after a discovery call. Unlike website builders like Squarespace, Wix, or a free website template, we build professional custom web design from scratch.' },
-  { question: 'Should I use WordPress, Shopify, Squarespace, or a custom solution?', answer: 'It depends on your goals. WordPress is the most popular content management system (CMS) and is ideal for most business websites — it has thousands of plugins, themes, and fonts. Shopify is best for ecommerce and online stores. Squarespace and Joomla are simpler but more limited. Drupal suits enterprise. For small businesses that want a unique online presence and branding, we recommend a custom web design or a well-configured WordPress website rather than generic website builders, because custom solutions rank better on search engines and are easier to optimize.' },
+  { question: 'How much does a new website cost?', answer: 'It depends on scope. Building a website ranges from a simple personal website or one-page business website to a full e-commerce platform. Creating a website with a professional agency is an investment — but it delivers the best website for your goals. To create a website that truly converts, you need more than a generic website template. We build your website from scratch and provide a custom, no-obligation quote after a discovery call.' },
+  { question: 'Should I use WordPress, Shopify, Squarespace, or a custom solution?', answer: 'It depends on your goals. WordPress is the most popular CMS and is ideal for most business websites — it is highly customizable with thousands of plugins, widgets, themes, and fonts, and supports blogging, ecommerce, and more. Shopify is best for online stores. Website builders like Squarespace, Wix, and Weebly are intuitive drag and drop site builders — good for a personal website or anyone who wants to make a website quickly using pre-built website templates. Hosting providers like Bluehost offer one-click WordPress installation and often include a free domain. For a business that needs a truly unique online presence, we recommend custom web design over a free website builder. Custom solutions offer real customization beyond preset templates and rank significantly better on search engines.' },
   { question: 'What is the difference between a web designer and a web developer?', answer: 'A web designer focuses on the visual and user-experience (UX) side — layout, branding, fonts, colors, call-to-action placement, and how web pages feel. A web developer writes the code that makes it all work. At Morfye, our team covers both: we design and develop your own website end-to-end, from concept to live, mobile-friendly, responsive design.' },
   { question: 'How do I make my website show up on Google?', answer: 'Every website we build includes search engine optimization (SEO) from day one — clean URLs, proper title tags, meta descriptions, fast load times, and mobile-friendly responsive design for all devices. We also help with ongoing SEO services so your web pages rank in search engine results and attract organic traffic without needing to advertise.' },
-  { question: 'Will I be able to update the website myself?', answer: 'Yes. We build on easy-to-use platforms with a content management system (CMS) and provide full training so you can manage web pages, add posts, and update content yourself — no web developer needed for day-to-day changes.' },
+  { question: 'Will I be able to update the website myself?', answer: 'Yes. We build on intuitive platforms with a user-friendly CMS and provide full training so you can manage web pages, add blog posts, update your sidebar, manage widgets, and make your website content changes yourself — no web developer needed for day-to-day updates.' },
   { question: 'Do you build ecommerce websites and online stores?', answer: 'Yes — we build ecommerce websites that sell products, services, and digital downloads. Whether you prefer Shopify or a custom solution, we design the online store, set up payments, and optimize it for mobile devices and search engines. Your ecommerce website will be your best sales tool.' },
-  { question: 'What is web hosting and do I need a domain name?', answer: 'Web hosting is the server where your website files live. A domain name is your web address (like yourbusiness.be). Every website needs both to go live. We offer managed web hosting plans from €29/month with SSL, daily backups, and 24/7 monitoring, and we can help you register your domain name and get everything up and running.' },
+  { question: 'What is web hosting and do I need a domain name?', answer: 'Web hosting is the server where your website files live — your web host determines your site\'s speed, uptime, and bandwidth. A domain name is your own domain (like yourbusiness.be). Every website needs both to go live. Hosting services like Bluehost offer one click WordPress installation and often include a free domain for the first year. We offer managed hosting plans from €29/month with SSL, generous bandwidth, daily backups, and 24/7 monitoring. We handle setting up your hosting and can help you register your domain — everything ready from day one.' },
   { question: 'Do you provide website hosting and maintenance?', answer: 'Yes. We offer monthly hosting and maintenance plans from €29/month that include secure hosting, daily backups, security updates, plugin management, and technical support. We keep your website running so you can focus on your business.' },
+  { question: 'Do I need to know HTML and CSS to get a website built?', answer: 'Not at all. You do not need to know HTML and CSS to create a website with us or to manage it after launch. We handle everything — from how to create your site structure to setting up your hosting and writing all the code. After launch, your CMS will be intuitive enough that you can create your own content updates without any technical knowledge. HTML and CSS are the building blocks of every web page, but day-to-day website building and content management requires no coding on your part.' },
   { question: 'What is the difference between SEO and GEO?', answer: 'SEO (search engine optimization) helps you rank on Google and other search engines. GEO (Generative Engine Optimization) helps you get recommended by AI assistants like ChatGPT and Google Gemini. We build every website to be optimized for both.' }
 ]
 
@@ -263,8 +264,8 @@ export default function WebsiteDesign() {
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
               <h2 className="geo-explainer-heading">More Than Just a Pretty Website</h2>
-              <p>In today&apos;s digital world, your website is your <strong>most important employee</strong>. It works 24/7, greeting every visitor. But is it doing a good job? A slow, confusing, or outdated website doesn&apos;t just look bad — it actively loses you customers.</p>
-              <p>At Morfye, we build websites that are more than just digital brochures. We create strategic assets designed to attract, engage, and convert. From sleek one-page sites to complex e-commerce platforms, we build experiences that are fast, beautiful, and responsive.</p>
+              <p>In today&apos;s digital world, your website is your <strong>most important employee</strong>. It works 24/7, greeting every visitor. But is it doing a good job? Building a website that actually converts takes expertise. A slow, confusing, or outdated website doesn&apos;t just look bad — it actively loses you customers.</p>
+              <p>At Morfye, our web designers build websites that are more than just digital brochures. We make your website a beautiful, fully customizable strategic asset designed to attract, engage, and convert. From sleek one-page sites to complex e-commerce platforms, we deliver experiences that are fast, responsive, and built to rank.</p>
               <p>Crucially, our websites are optimized from day one for both traditional <strong>SEO</strong> and the new <strong>GEO (Generative Engine Optimization)</strong>, ensuring you&apos;re recommended by AI assistants like ChatGPT and Gemini.</p>
             </div>
           </div>
@@ -336,7 +337,7 @@ export default function WebsiteDesign() {
           </div>
           <div className="geo-cta-content">
             <h2>Ready to Build Your New Website?</h2>
-            <p>Let&apos;s create a website that works as hard as you do. Contact us for a free, no-obligation consultation.</p>
+            <p>Ready to build a website that converts? Let&apos;s create something that works as hard as you do. Contact us for a free, no-obligation consultation.</p>
             <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}>
               <Link href="/#contact" className="geo-cta-btn">Get Your Free Quote</Link>
             </motion.div>
