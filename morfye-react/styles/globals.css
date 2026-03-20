@@ -3112,7 +3112,7 @@ body.light-mode .sc-simple-card p { color: rgba(0, 0, 0, 0.6); }
   header { padding: 10px 8%; }
   header.scrolled { padding: 8px 4%; }
   .mobile-nav { top: 58px !important; }
-  .logo-img { height: 2rem !important; width: 2rem !important; margin-right: -8px; }
+  .logo-img { height: 2.8rem !important; width: 2.8rem !important; margin-right: -10px; }
   .logo { font-size: 1.6rem; }
   nav { display: none; }
   .menu-toggle { display: flex; }
