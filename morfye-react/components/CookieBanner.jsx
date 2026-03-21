@@ -54,7 +54,7 @@ export default function CookieBanner() {
           <p className="cookie-banner-desc">
             We use cookies to enhance your experience, analyse site traffic, and personalise content.
             By clicking <strong>Accept</strong>, you consent to our use of cookies.{' '}
-            <a href="/privacy-policy" className="cookie-banner-link">Privacy Policy</a>
+            <a href="/privacy-policy" className="cookie-banner-link" title="Morfye Privacy Policy">Privacy Policy</a>
           </p>
         </div>
 
