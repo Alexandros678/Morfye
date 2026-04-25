@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 import ThemeToggle from './ThemeToggle'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const headerRef = useRef(null)
   const router = useRouter()
+  const { t } = useLanguage()
 
   useEffect(() => {
     const header = headerRef.current
@@ -35,7 +38,8 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
           {navLinks.map((link) => (
             <a key={link.id} href={`#${link.id}`} title={link.label}>{link.label}</a>
           ))}
-          <a href="/#contact" title="Contact Morfye web design agency">Contact</a>
+          <a href="/#contact" title="Contact Morfye web design agency">{t('nav.contact')}</a>
+          <LanguageSwitcher />
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
         </nav>
 
@@ -53,7 +57,8 @@ export default function ServiceHeader({ darkMode, toggleTheme, navLinks = [] }) 
         {navLinks.map((link) => (
           <a key={link.id} href={`#${link.id}`} title={link.label} onClick={() => setMenuOpen(false)}>{link.label}</a>
         ))}
-        <a href="/#contact" title="Contact Morfye web design agency" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a href="/#contact" title="Contact Morfye web design agency" onClick={() => setMenuOpen(false)}>{t('nav.contact')}</a>
+        <LanguageSwitcher />
         <div className="mobile-theme-toggle" onClick={toggleTheme}>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} mobile />
         </div>

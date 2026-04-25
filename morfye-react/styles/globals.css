@@ -1634,6 +1634,12 @@ footer {
 
 .mobile-nav.show { display: flex; }
 
+.mobile-nav .lang-switcher {
+  justify-content: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
 .mobile-theme-toggle {
   padding: 15px;
   cursor: pointer;
@@ -2724,9 +2730,9 @@ body.dark-mode .faq-answer-inner p { color: #bbb; }
 
 .geo-step {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  margin: auto;
+  height: fit-content;
   text-align: center;
   max-width: 700px;
   width: 90%;
@@ -3681,4 +3687,41 @@ body.light-mode .cookie-btn-decline:hover {
 @media (max-width: 640px) {
   .blog-article { padding: 60px 24px 80px; }
   .blog-cta { padding: 32px 24px; }
+}
+
+/* ======= LANGUAGE SWITCHER ======= */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 4px 6px;
+  transition: color 0.2s ease;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.lang-btn.lang-active {
+  color: #ff922b;
+  font-weight: 700;
+}
+
+.lang-divider {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.75rem;
+  line-height: 1;
+  user-select: none;
 }

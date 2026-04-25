@@ -1,22 +1,11 @@
 import { useEffect, useRef, useCallback } from 'react'
 import gsap from 'gsap'
+import { useLanguage } from '../contexts/LanguageContext'
 
-const scenes = [
-  {
-    title: 'We saw a problem.',
-    text: "Talented professionals with terrible websites. Losing clients — not because they weren't good, but because their online presence didn't show it.",
-  },
-  {
-    title: 'So we built Morfye.',
-    text: "A studio in Brussels, Belgium. One mission: make independent professionals look as good online as they are in person. No templates. No shortcuts.",
-  },
-  {
-    title: 'Then AI changed everything.',
-    text: "People stopped Googling. They started asking ChatGPT. We became one of the first in Belgium to master GEO — Generative Engine Optimization.",
-  }
-]
+const SCENE_COUNT = 3
 
 export default function OurStory() {
+  const { t } = useLanguage()
   const containerRef = useRef(null)
   const scenesRef = useRef([])
   const currentRef = useRef(0)
@@ -39,7 +28,7 @@ export default function OurStory() {
     const progressFill = containerRef.current?.querySelector('.story-progress-fill')
     if (progressFill) {
       gsap.to(progressFill, {
-        scaleY: (nextIndex + 1) / scenes.length,
+        scaleY: (nextIndex + 1) / SCENE_COUNT,
         duration: 0.5,
         ease: 'power2.out'
       })
@@ -65,7 +54,7 @@ export default function OurStory() {
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current)
     timerRef.current = setInterval(() => {
-      goTo((currentRef.current + 1) % scenes.length)
+      goTo((currentRef.current + 1) % SCENE_COUNT)
     }, 3500)
   }, [goTo])
 
@@ -83,7 +72,7 @@ export default function OurStory() {
       // Initialize progress bar to first scene
       const progressFill = container.querySelector('.story-progress-fill')
       if (progressFill) {
-        gsap.set(progressFill, { scaleY: 1 / scenes.length })
+        gsap.set(progressFill, { scaleY: 1 / SCENE_COUNT })
       }
 
       // Floating particles
@@ -127,14 +116,16 @@ export default function OurStory() {
   }, [startTimer])
 
   const handlePrev = () => {
-    goTo((currentRef.current - 1 + scenes.length) % scenes.length)
+    goTo((currentRef.current - 1 + SCENE_COUNT) % SCENE_COUNT)
     startTimer()
   }
 
   const handleNext = () => {
-    goTo((currentRef.current + 1) % scenes.length)
+    goTo((currentRef.current + 1) % SCENE_COUNT)
     startTimer()
   }
+
+  const scenes = t('ourStory.scenes')
 
   return (
     <section

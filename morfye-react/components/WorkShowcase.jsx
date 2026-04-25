@@ -1,35 +1,26 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const projects = [
-  {
-    image: '/morfye-project-1.webp',
-    title: 'Personal Portfolio',
-    category: 'Web Design',
-    description: 'Creative showcase of technical skills with modern animations and smooth interactions.',
-    link: 'https://alexandrosgkiorgkinis.com'
-  },
-  {
-    image: '/morfye-project-2.webp',
-    title: 'AV Signature Detailing',
-    category: 'Business Website',
-    description: 'Professional car detailing site with online booking system for a Belgian company.',
-    link: 'https://avsignaturedetailing.be/'
-  },
-  {
-    title: 'Your Project?',
-    category: 'Coming Next',
-    description: "We're ready to build something amazing for you. Let's talk.",
-    comingSoon: true
-  }
+const PROJECT_COUNT = 3
+
+const projectLinks = [
+  'https://alexandrosgkiorgkinis.com',
+  'https://avsignaturedetailing.be/',
+  null
 ]
 
-const loopedProjects = [...projects, ...projects]
+const projectImages = [
+  '/morfye-project-1.webp',
+  '/morfye-project-2.webp',
+  null
+]
 
 export default function WorkShowcase() {
+  const { t } = useLanguage()
   const sectionRef = useRef(null)
   const trackRef   = useRef(null)
   const thumbRef   = useRef(null)
@@ -47,11 +38,11 @@ export default function WorkShowcase() {
     const raf1 = requestAnimationFrame(() => {
       const raf2 = requestAnimationFrame(() => {
         const allCards = Array.from(track.children)
-        if (allCards.length < projects.length + 1) return
+        if (allCards.length < PROJECT_COUNT + 1) return
 
         // Exact loop width = distance between card[0] and card[N] (its duplicate)
         const r0 = allCards[0].getBoundingClientRect()
-        const rN = allCards[projects.length].getBoundingClientRect()
+        const rN = allCards[PROJECT_COUNT].getBoundingClientRect()
         const halfWidth = rN.left - r0.left
 
         const sbWidth = sbTrack.getBoundingClientRect().width
@@ -221,25 +212,31 @@ export default function WorkShowcase() {
     }
   }, [])
 
+  const projects = t('workShowcase.projects')
+  const visitSite = t('workShowcase.visitSite')
+  const loopedProjects = [...projects, ...projects]
+
   return (
     <section ref={sectionRef} className="work-showcase" id="work">
       <div className="ws-header">
         <h2 className="ws-title">
-          <span>Our </span><span>Work</span>
+          {t('workShowcase.title').split(' ').map((word, i) => (
+            <span key={i}>{i > 0 ? ' ' : ''}{word}</span>
+          ))}
         </h2>
-        <p>Creativity meets code. Explore what we&apos;ve built.</p>
+        <p>{t('workShowcase.subtitle')}</p>
       </div>
 
       <div className="ws-overflow">
         <div ref={trackRef} className="ws-track">
           {loopedProjects.map((p, i) => (
             <div key={i} className={`ws-card ${p.comingSoon ? 'ws-coming-soon' : ''}`}>
-              {p.image && (
+              {projectImages[i % PROJECT_COUNT] && (
                 <div className="ws-card-image">
-                  <img src={p.image} alt={p.title} title={p.title} width="1903" height="944" loading="lazy" />
+                  <img src={projectImages[i % PROJECT_COUNT]} alt={p.title} title={p.title} width="1903" height="944" loading="lazy" />
                 </div>
               )}
-              {p.comingSoon && (
+              {!projectImages[i % PROJECT_COUNT] && (
                 <div className="ws-card-image ws-placeholder">
                   <span>?</span>
                 </div>
@@ -248,9 +245,9 @@ export default function WorkShowcase() {
                 <span className="ws-category">{p.category}</span>
                 <h3>{p.title}</h3>
                 <p>{p.description}</p>
-                {p.link && (
-                  <a href={p.link} title={`Visit ${p.title}`} target="_blank" rel="noopener noreferrer" className="ws-visit">
-                    Visit Site →
+                {projectLinks[i % PROJECT_COUNT] && (
+                  <a href={projectLinks[i % PROJECT_COUNT]} title={`Visit ${p.title}`} target="_blank" rel="noopener noreferrer" className="ws-visit">
+                    {visitSite}
                   </a>
                 )}
               </div>

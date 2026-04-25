@@ -5,8 +5,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ServicePageLayout from '../components/ServicePageLayout'
 import FaqItem from '../components/FaqItem'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const STEP_COUNT = 5
 
 const SearchIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,44 +63,10 @@ const BarChartIcon = () => (
   </svg>
 )
 
-const navLinks = [
-  { id: 'what-is-seo', label: 'What is SEO' },
-  { id: 'our-services', label: 'Our Services' },
-  { id: 'our-process', label: 'Our Process' },
-  { id: 'faq', label: 'FAQ' }
-]
-
-const features = [
-  { icon: <SearchIcon />, title: 'Keyword Research', description: 'We identify the exact terms your customers are searching for and target keywords with high traffic and low competition.' },
-  { icon: <PenIcon />, title: 'On-Page SEO', description: 'We optimize your content, meta tags, headers, images, and internal links to make your site irresistible to Google.' },
-  { icon: <CogIcon />, title: 'Technical SEO', description: 'We fix site speed, mobile responsiveness, crawling and indexing errors, robots.txt configuration, XML sitemaps, duplicate content issues, and structured data to ensure search engines can properly index your site.' },
-  { icon: <PinIcon />, title: 'Local SEO', description: 'Perfect for businesses in Belgium. We optimize your Google Business Profile, local citations, and business directories to dominate local search results.' },
-  { icon: <LinkIcon />, title: 'Link Building', description: 'We conduct outreach to webmasters of authoritative websites to build high-quality backlinks that boost your domain authority and search rankings.' },
-  { icon: <BarChartIcon />, title: 'SEO Analytics & Reporting', description: "Monthly reports show your ranking improvements, traffic growth, and ROI so you always know what's working." }
-]
-
-const steps = [
-  { title: 'SEO Audit', description: "We analyze your current website to identify technical issues, content gaps, and opportunities. You'll get a detailed report showing exactly what needs to be fixed." },
-  { title: 'Competitor Analysis', description: 'We research your top competitors to see what keywords they rank for, what backlinks they have, and where you can beat them.' },
-  { title: 'Strategy Development', description: 'Based on our research, we create a custom SEO strategy with clear goals, target keywords, and an action plan.' },
-  { title: 'Implementation', description: "We optimize your website's technical foundation, content, and off-page factors. This includes keyword optimization, speed improvements, and link building." },
-  { title: 'Monitoring & Optimization', description: 'SEO is ongoing. We continuously monitor rankings, analyze performance, and make adjustments to keep you ahead of the competition.' }
-]
-
-const faqs = [
-  { question: 'How long does SEO take to show results?', answer: 'SEO is a long-term strategy. You\'ll typically see initial improvements in 3–6 months, with significant search engine ranking gains after 6–12 months. Unlike PPC (pay-per-click) or Google AdWords, organic search results from SEO compound over time — you\'re not paying for every click.' },
-  { question: 'What are the most important SEO tactics and techniques?', answer: 'An effective set of SEO strategies uses a combination of tactics: keyword research to find what queries searchers use; on-page SEO including title tags, meta descriptions, and optimized URLs; technical SEO to ensure your web pages are indexed correctly; link building to earn backlinks and inbound links with strong anchor text; content marketing and blogging to target long-tail keyword phrases; ecommerce SEO for online stores; and local SEO for geographic niche targeting. Relevance and relevancy are at the heart of strong SEO strategies — we use professional SEO tools to track rankings and refine every tactic.' },
-  { question: 'What is the difference between on-page and off-page SEO?', answer: 'On-page SEO covers what\'s on your web pages — title tags, headings, URLs, meta tags, keyword phrases, internal linking, and content quality. Off-page SEO is about your authority across the web — backlinks, inbound links, anchor text from external sites, and digital marketing mentions. Both are essential for strong search engine rankings in SERPs.' },
-  { question: 'What SEO tools do you use?', answer: 'We use industry-standard SEO tools including Google webmaster tools (Google Search Console), Google Analytics, SEMrush, and Ahrefs to track search queries, monitor backlinks, analyze competitors, find long-tail keyword opportunities, and measure your SEO campaign performance. These tools give webmasters key insights into crawl status, indexing, click through rate, and organic performance data. As an SEO company, we provide monthly reports so you always know where you rank.' },
-  { question: "What's the difference between SEO and paid ads (Google Ads)?", answer: 'Paid search (Google Ads, AdWords, PPC) gives instant visibility — you pay per click and appear at the top of search engine results immediately. Organic search from SEO takes longer but delivers lasting, cost-effective results without paying per click. Inbound traffic from SEO is also more trusted by searchers. Ideally, use paid search for quick wins while SEO builds your long-term search marketing foundation.' },
-  { question: 'Do you guarantee #1 rankings on Google?', answer: 'No ethical SEO company can guarantee specific rankings — Google\'s algorithm and SERPs are too complex. We focus on data-driven SEO techniques that consistently improve search engine rankings, grow organic search traffic, and deliver measurable ROI. We track and report every improvement.' },
-  { question: 'What is the difference between white-hat and black-hat SEO?', answer: 'White-hat SEO follows search engine guidelines — quality content creation, legitimate link building, proper technical optimisation, relevant keyword use, and earning backlinks naturally. Black-hat SEO uses manipulative tactics like keyword stuffing, hidden text, link schemes, and scraping content from directories. While black-hat tactics can show short-term gains, they risk Google penalties or complete de-indexing. We exclusively use white-hat SEO techniques that build sustainable, long-term search rankings.' },
-  { question: 'Is local SEO different from regular SEO?', answer: 'Yes. Local SEO focuses on ranking in specific geographic areas (like Brussels or Belgium) for location-based search queries. It includes optimizing your Google Business Profile (formerly Google My Business), building local citations, targeting location-specific keyword phrases, and earning backlinks from local sources. It\'s one of the most cost-effective digital marketing strategies for small businesses.' },
-  { question: 'How much does SEO cost?', answer: 'It varies based on competition, your niche, and scope. Basic local SEO starts around €299/month, while a comprehensive national SEO campaign or SEO for a competitive niche can be €1,000+/month. We provide custom quotes after an SEO audit.' },
-  { question: 'What happens if I stop SEO services?', answer: 'Your search engine rankings won\'t disappear overnight, but competitors who keep optimizing will eventually outrank you. SEO requires ongoing content marketing, link building, and technical maintenance to stay ahead as algorithms evolve.' }
-]
+const featureIcons = [<SearchIcon />, <PenIcon />, <CogIcon />, <PinIcon />, <LinkIcon />, <BarChartIcon />]
 
 export default function SeoOptimization() {
+  const { t } = useLanguage()
   const heroRef = useRef(null)
   const explainerRef = useRef(null)
   const featuresRef = useRef(null)
@@ -158,7 +127,7 @@ export default function SeoOptimization() {
     isAnimating.current = true
     currentRef.current = nextIndex
     const progressFill = processRef.current?.querySelector('.geo-process-fill')
-    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / steps.length, duration: 0.5, ease: 'power2.out' })
+    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / STEP_COUNT, duration: 0.5, ease: 'power2.out' })
     gsap.to(prev, {
       opacity: 0, y: -60, duration: 0.4, ease: 'power2.in',
       onComplete: () => {
@@ -170,7 +139,7 @@ export default function SeoOptimization() {
 
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current)
-    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % steps.length) }, 3500)
+    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % STEP_COUNT) }, 3500)
   }, [goTo])
 
   useEffect(() => {
@@ -180,7 +149,7 @@ export default function SeoOptimization() {
     const ctx = gsap.context(() => {
       stepsRef.current.filter(Boolean).forEach((s, i) => gsap.set(s, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 }))
       const progressFill = container.querySelector('.geo-process-fill')
-      if (progressFill) gsap.set(progressFill, { scaleY: 1 / steps.length })
+      if (progressFill) gsap.set(progressFill, { scaleY: 1 / STEP_COUNT })
       if (!mobile) {
         container.querySelectorAll('.geo-particle').forEach((p) => {
           gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
@@ -201,8 +170,8 @@ export default function SeoOptimization() {
     return () => { observer.disconnect(); clearInterval(timerRef.current) }
   }, [startTimer])
 
-  const handlePrev = () => { goTo((currentRef.current - 1 + steps.length) % steps.length); startTimer() }
-  const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
+  const handlePrev = () => { goTo((currentRef.current - 1 + STEP_COUNT) % STEP_COUNT); startTimer() }
+  const handleNext = () => { goTo((currentRef.current + 1) % STEP_COUNT); startTimer() }
 
   useEffect(() => {
     const section = faqRef.current
@@ -227,12 +196,18 @@ export default function SeoOptimization() {
     return () => ctx.revert()
   }, [])
 
+  const hero = t('seo.hero')
+  const whatIsSeo = t('seo.whatIsSeo')
+  const features = t('seo.features')
+  const steps = t('seo.steps')
+  const faqs = t('seo.faqs')
+  const cta = t('seo.cta')
+
   return (
     <ServicePageLayout
-      title="SEO Optimization Services | Morfye - Rank Higher on Google"
-      description="Professional SEO services in Brussels, Belgium. Increase organic traffic, rank higher on Google, and get found by customers."
-      keywords="SEO optimization, search engine optimization, Google ranking, local SEO Belgium"
-      navLinks={navLinks}
+      title={t('seo.meta.title')}
+      description={t('seo.meta.description')}
+      navLinks={t('seo.navLinks')}
       slug="seo-optimization"
       faqs={faqs}
       defaultDark
@@ -247,13 +222,13 @@ export default function SeoOptimization() {
             ))}
           </div>
           <div className="geo-hero-content">
-            <div className="geo-hero-label">THE SCIENCE OF GOOGLE RANKINGS</div>
-            <h1 className="geo-hero-title">SEO</h1>
-            <p className="geo-hero-subtitle-line">Search Engine Optimization</p>
-            <p className="geo-hero-subtitle-line geo-hero-desc">Rank higher on Google, drive more organic traffic, and grow your business.</p>
+            <div className="geo-hero-label">{hero.label}</div>
+            <h1 className="geo-hero-title">{hero.title}</h1>
+            <p className="geo-hero-subtitle-line">{hero.subtitle}</p>
+            <p className="geo-hero-subtitle-line geo-hero-desc">{hero.desc}</p>
           </div>
           <div className="geo-hero-scroll">
-            <span>Scroll</span>
+            <span>{hero.scroll}</span>
             <div className="geo-hero-scroll-line" />
           </div>
         </section>
@@ -267,22 +242,22 @@ export default function SeoOptimization() {
             </div>
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
-              <h2 className="geo-explainer-heading">What is SEO and Why Does It Matter?</h2>
-              <p><strong>Search Engine Optimization (SEO)</strong>, also known as search engine optimisation, is the practice of optimizing your website to rank higher in results across Google, Bing, and other search engines. When people use search engines to search for services you offer, your SEO search ranking determines whether you appear on page 1 or buried on page 10.</p>
-              <p>Here&apos;s the harsh truth: <strong>75% of people never scroll past the first page of Google results.</strong> If your website isn&apos;t ranking well, you&apos;re invisible to potential customers actively searching for what you offer.</p>
-              <p>Good SEO doesn&apos;t just bring more traffic — it increases your organic search engine traffic and improves your conversion rate by attracting targeted visitors ready to buy. It&apos;s one of the most cost-effective internet marketing and online marketing strategies available, because unlike paid ads you&apos;re not paying for every click. Every digital marketer knows that website traffic from organic SEO compounds over time.</p>
-              <p>At Morfye, we combine traditional SEO with modern <strong>GEO (Generative Engine Optimization)</strong> to ensure you&apos;re visible everywhere your customers are looking.</p>
+              <h2 className="geo-explainer-heading">{whatIsSeo.heading}</h2>
+              <p dangerouslySetInnerHTML={{ __html: whatIsSeo.p1 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsSeo.p2 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsSeo.p3 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsSeo.p4 }} />
             </div>
           </div>
         </section>
 
         {/* OUR SERVICES */}
         <section ref={featuresRef} className="geo-features" id="our-services">
-          <h2 className="geo-features-heading">Our SEO Services</h2>
+          <h2 className="geo-features-heading">{t('seo.featuresHeading')}</h2>
           <div className="geo-features-grid">
             {features.map((f, i) => (
               <motion.div
-                key={f.title}
+                key={i}
                 className="geo-feature-card"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -290,7 +265,7 @@ export default function SeoOptimization() {
                 transition={{ duration: 0.6, delay: i * 0.1, ease: 'easeOut' }}
                 whileHover={{ y: -8 }}
               >
-                <div className="geo-feature-icon">{f.icon}</div>
+                <div className="geo-feature-icon">{featureIcons[i]}</div>
                 <h3>{f.title}</h3>
                 <p>{f.description}</p>
               </motion.div>
@@ -325,10 +300,10 @@ export default function SeoOptimization() {
 
         {/* FAQ */}
         <section ref={faqRef} className="geo-faq" id="faq">
-          <h2 className="geo-faq-heading">Frequently Asked Questions</h2>
+          <h2 className="geo-faq-heading">{t('seo.faqHeading')}</h2>
           <div className="geo-faq-container">
             {faqs.map((f, i) => (
-              <FaqItem key={f.question} index={i} {...f} />
+              <FaqItem key={i} index={i} {...f} />
             ))}
           </div>
         </section>
@@ -341,10 +316,10 @@ export default function SeoOptimization() {
             ))}
           </div>
           <div className="geo-cta-content">
-            <h2>Ready to Rank #1 on Google?</h2>
-            <p>Stop losing customers to your competitors. Let&apos;s get your website the visibility it deserves.</p>
+            <h2>{cta.heading}</h2>
+            <p>{cta.text}</p>
             <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/#contact" className="geo-cta-btn">Get Your Free SEO Audit</Link>
+              <Link href="/#contact" className="geo-cta-btn">{cta.btn}</Link>
             </motion.div>
           </div>
         </section>

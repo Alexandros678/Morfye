@@ -1,0 +1,499 @@
+{
+  "nav": {
+    "about": "Over ons",
+    "services": "Diensten",
+    "ourWork": "Ons werk",
+    "contact": "Contact"
+  },
+  "hero": {
+    "words": ["aantrekkelijke", "converterende", "moderne"],
+    "line1": "Wij maken",
+    "line2": "websites voor professionals",
+    "subtitle": "Moderne, converterende websites ontworpen om bezoekers aan te trekken, te boeien en te converteren.",
+    "bookBtn": "Consultatie Boeken",
+    "seeWorkBtn": "Bekijk Ons Werk",
+    "scroll": "Scrollen"
+  },
+  "ourStory": {
+    "scenes": [
+      {
+        "title": "We zagen een probleem.",
+        "text": "Getalenteerde professionals met afschuwelijke websites. Ze verloren klanten — niet omdat ze niet goed waren, maar omdat hun online aanwezigheid dat niet liet zien."
+      },
+      {
+        "title": "Dus bouwden we Morfye.",
+        "text": "Een studio in Brussel, België. Één missie: onafhankelijke professionals er online net zo goed uit laten zien als ze in het echt zijn. Geen sjablonen. Geen shortcuts."
+      },
+      {
+        "title": "Toen veranderde AI alles.",
+        "text": "Mensen stopten met Googlen. Ze begonnen ChatGPT te vragen. We werden een van de eersten in België die GEO — Generative Engine Optimization — beheersten."
+      }
+    ]
+  },
+  "whoWeAre": {
+    "label": "WIE WIJ ZIJN",
+    "heading": ["Wij zijn niet uw", "bureau. Wij zijn uw", "partner."],
+    "desc1": "Wij zijn niet zomaar designers — wij zijn strategen. Elke pixel, elke animatie, elke regel code dient één doel: bezoekers omzetten in klanten. Gevestigd in Brussel, België, combineren we creativiteit met data-gedreven denken.",
+    "desc2": "Wij werken met kleine bedrijven in heel België — consultants, lokale winkels, zorgverleners en dienstenbedrijven — die een website verdienen die scoort op Google, gevonden wordt door AI en bezoekers omzet in betalende klanten.",
+    "stats": [
+      { "label": "Opgeleverde Projecten" },
+      { "label": "Klanttevredenheid" },
+      { "label": "Support Beschikbaar" }
+    ]
+  },
+  "serviceCart": {
+    "sectionTitle": "Wat Wij Aanbieden",
+    "geo": {
+      "title": "GEO - Generative Engine Optimization",
+      "text": "Word aanbevolen door ChatGPT, Google Gemini en Claude. De toekomst van online zichtbaarheid is hier — en wij zijn een van de eerste bureaus in België die dit aanbieden.",
+      "cta": "Meer over GEO"
+    },
+    "cards": [
+      { "title": "Websiteontwerp op Maat", "text": "Maatwerkwebsites die passen bij uw bedrijf en bezoekers omzetten in klanten.", "cta": "Meer info →" },
+      { "title": "Hosting & Onderhoud", "text": "Veilige hosting, regelmatige updates en doorlopende technische ondersteuning.", "cta": "Meer info →" },
+      { "title": "SEO Optimalisatie", "text": "Zoekmachineoptimalisatie om hoger te scoren op Google en organisch verkeer te genereren.", "cta": "Meer info →" },
+      { "title": "SEA Campagnes", "text": "Google Ads-campagnes om direct verkeer te genereren en uw online zichtbaarheid te maximaliseren.", "cta": "Meer info →" }
+    ]
+  },
+  "workShowcase": {
+    "title": "Ons Werk",
+    "subtitle": "Creativiteit ontmoet code. Ontdek wat we hebben gebouwd.",
+    "visitSite": "Bezoek Site →",
+    "projects": [
+      { "title": "Persoonlijk Portfolio", "category": "Webdesign", "description": "Creatieve showcase van technische vaardigheden met moderne animaties en vloeiende interacties." },
+      { "title": "AV Signature Detailing", "category": "Bedrijfswebsite", "description": "Professionele autodetaillingsite met online boekingssysteem voor een Belgisch bedrijf." },
+      { "title": "Uw Project?", "category": "Volgende", "description": "We zijn klaar om iets geweldigs voor u te bouwen. Laten we praten." }
+    ]
+  },
+  "manifesto": {
+    "title": "De juiste website verandert alles.",
+    "approachLabel": "Onze aanpak",
+    "blocks": [
+      {
+        "title": "Design dat werkt.",
+        "text": "Of u nu een website wilt maken, uw bestaande website wilt verbeteren of een volledig herontwerp wilt — professioneel webdesign en responsive webdesign zijn de basis. Goed webdesign en -ontwikkeling levert de beste resultaten: visueel sterk, intuïtief, gebouwd voor gebruiksgemak en gebruikerservaring. Een responsieve, mobielvriendelijke website laat uw bedrijf groeien en trekt bezoekers aan vanaf dag één."
+      },
+      {
+        "title": "Van domein tot lancering.",
+        "text": "Als webdesignbureau en digitaal bureau verzorgen wij het volledige webdesignproces en de websiteontwikkeling — van merkidentiteit tot lancering. Ons ontwerpteam van webdesigners behandelt siteontwerp, copywriting, front-end ontwikkeling en content management systemen waaronder WordPress, WooCommerce, Joomla, Drupal en Magento. Of u nu e-commerce webdesign, een webapplicatie of betaalbaar websiteontwerp nodig heeft — wij leveren weboplossingen voor elke zakelijke behoefte."
+      },
+      {
+        "title": "Gebouwd om te groeien.",
+        "text": "Naast design zijn wij een digitaal marketingbureau dat zoekmachineoptimalisatie (SEO), SEO-diensten, internetmarketing, online marketing en GEO aanbiedt. We bouwen marketingstrategieën en voeren elke marketingcampagne uit om uw concurrenten te overtreffen en uw doelgroep te bereiken op zoekmachines. Van inbound marketing tot betaald zoeken — wij helpen uw online bedrijf consistent groeien."
+      },
+      {
+        "title": "Wat wij doen.",
+        "text": "Onze webdesign- en webontwikkelingsdiensten omvatten alles: maatwerk webdesign, e-commerce webdesign, grafisch ontwerp, huisstijl, logo's, logodesign, responsive design, mobiele website, websiteonderhoud en copywriting. Onze webdesigns zijn gebouwd voor elke branche — met klantgetuigenissen die voor zichzelf spreken. Of het nu WordPress, WooCommerce, webapplicatieontwikkeling of doorlopende designprojecten betreft — wij leveren professioneel webdesign & -ontwikkeling die uw bedrijf online laat groeien."
+      }
+    ]
+  },
+  "homeFaq": {
+    "label": "FAQ",
+    "title": "Veelgestelde Vragen",
+    "subtitle": "Alles wat kleine bedrijven in België willen weten voordat ze beginnen.",
+    "items": [
+      { "question": "Wat kost een professionele website voor een klein bedrijf in België?", "answer": "Elk project is anders, maar een professionele website begint doorgaans vanaf enkele honderden euro's. De prijs hangt af van het aantal pagina's, functies zoals boekingssystemen of e-commerce en het niveau van webontwikkeling. We geven altijd een duidelijke offerte vooraf — geen verborgen kosten." },
+      { "question": "Hoe lang duurt het om een website te bouwen?", "answer": "Een standaardwebsite duurt 2 tot 4 weken van start tot lancering. Complexere projecten met e-commerce, een content management systeem (CMS) of aangepaste functies kunnen 4 tot 8 weken duren. We houden u gedurende het hele proces op de hoogte." },
+      { "question": "Kunnen jullie een e-commercewebsite of webshop bouwen?", "answer": "Ja — wij bouwen aangepaste e-commercewebsites voor bedrijven die online willen verkopen. Of u nu een eenvoudige winkel of een volledig productcatalogus met veilige betalingen nodig heeft, wij verzorgen de webontwikkeling van begin tot eind — inclusief Shopify en maatwerkoplossingen." },
+      { "question": "Wat is het verschil tussen SEO en Google Ads?", "answer": "SEO vergroot uw organische zichtbaarheid in zoekmachines over tijd — het helpt potentiële klanten u te vinden op Google zonder per klik te betalen. Google Ads (pay-per-click / PPC) geeft u directe zichtbaarheid voor een budget. Beide zijn geldige strategieën en wij bieden beide aan. We adviseren welke het beste bij uw doelen past." },
+      { "question": "Heb ik webhosting en een domeinnaam nodig?", "answer": "Ja — elke website heeft webhosting en een domeinnaam nodig. Wij bieden beheerde hostingplannen vanaf €29/maand inclusief dagelijkse back-ups, SSL en 24/7 monitoring. We kunnen u ook helpen uw domein te registreren en alles in te stellen." },
+      { "question": "Wat is GEO en waarom zou mijn bedrijf dit serieus nemen?", "answer": "GEO staat voor Generative Engine Optimization — het betekent uw bedrijf optimaliseren om aanbevolen te worden door AI-assistenten zoals ChatGPT, Google Gemini en Claude. Naarmate meer mensen via AI zoeken in plaats van via Google, wordt GEO even belangrijk als SEO. Morfye is een van de eerste bureaus in België die deze dienst aanbiedt." }
+    ]
+  },
+  "contact": {
+    "title": "Laten we samen iets geweldigs bouwen",
+    "subtitle": "Vertel ons over uw project. We bekijken het en nemen binnen 24 uur contact op.",
+    "nameLbl": "Uw Naam",
+    "emailLbl": "Uw E-mail",
+    "messageLbl": "Projectbeschrijving / Bericht",
+    "namePlaceholder": "Jan Janssen",
+    "emailPlaceholder": "jan@voorbeeld.com",
+    "messagePlaceholder": "Vertel ons wat u zoekt...",
+    "submitBtn": "Gratis Afspraak Boeken",
+    "successMsg": "Bedankt! Uw bericht is verzonden.",
+    "errorMsg": "Oeps! Er is iets misgegaan. Probeer het opnieuw."
+  },
+  "cookie": {
+    "title": "Wij gebruiken cookies",
+    "desc": "Wij gebruiken cookies om uw ervaring te verbeteren, het siteverkeer te analyseren en inhoud te personaliseren. Door op",
+    "strong": "Accepteren",
+    "desc2": "te klikken, stemt u in met ons gebruik van cookies.",
+    "privacyLink": "Privacybeleid",
+    "declineBtn": "Weigeren",
+    "acceptBtn": "Alles Accepteren"
+  },
+  "footer": {
+    "tagline": "Wij bouwen moderne, converterende websites en digitale strategieën die bezoekers omzetten in klanten.",
+    "services": "Diensten",
+    "company": "Bedrijf",
+    "contact": "Contact",
+    "home": "Home",
+    "whoWeAre": "Wie Wij Zijn",
+    "ourWork": "Ons Werk",
+    "rights": "Alle rechten voorbehouden.",
+    "privacyPolicy": "Privacybeleid",
+    "termsOfService": "Gebruiksvoorwaarden"
+  },
+  "webDesign": {
+    "meta": {
+      "title": "Professioneel Websiteontwerp | Morfye",
+      "description": "Mooie, responsieve en AI-geoptimaliseerde websites die uw bedrijf laten groeien. Gevestigd in Brussel, België."
+    },
+    "navLinks": [
+      { "id": "what-we-do", "label": "Wat Wij Doen" },
+      { "id": "our-features", "label": "Functies" },
+      { "id": "our-process", "label": "Ons Proces" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "UW DIGITALE FUNDAMENT",
+      "title": "WEB",
+      "subtitle": "Professioneel Websiteontwerp",
+      "desc": "Mooie, responsieve en AI-geoptimaliseerde websites die uw bedrijf laten groeien.",
+      "scroll": "Scrollen"
+    },
+    "whatWeDo": {
+      "heading": "Meer Dan Alleen Een Mooie Website",
+      "p1": "In de digitale wereld van vandaag is uw website uw <strong>belangrijkste medewerker</strong> — 24/7 aan het werk zodat klanten u online kunnen vinden. Of u nu wilt weten hoe u een website maakt, hoe u er een bouwt of hoe u er een maakt die opvalt — het antwoord begint met strategie. Een trage, verwarrende of verouderde website ziet er niet alleen slecht uit — het kost u actief klanten.",
+      "p2": "Bij Morfye ontwerpen onze webdesigners uw website als een mooi, volledig aanpasbaar strategisch instrument dat is ontworpen om aan te trekken, te boeien en te converteren. Van strakke one-page sites tot complexe e-commerceplatforms — wij leveren ervaringen die snel, responsief en gebouwd zijn om te scoren.",
+      "p3": "Cruciaal is dat onze websites vanaf dag één geoptimaliseerd zijn voor zowel traditionele <strong>SEO</strong> als de nieuwe <strong>GEO (Generative Engine Optimization)</strong>, zodat u aanbevolen wordt door AI-assistenten zoals ChatGPT en Gemini."
+    },
+    "featuresHeading": "Onze Websiteontwerp Functies",
+    "features": [
+      { "title": "Prachtig Visueel Ontwerp", "description": "We ontwerpen uw website met volledig aanpasbare visuals die de unieke identiteit van uw merk vastleggen en bezoekers vanaf de eerste seconde imponeren." },
+      { "title": "Volledig Responsief", "description": "Uw site ziet er perfect uit en werkt perfect op alle apparaten — desktops, tablets en smartphones." },
+      { "title": "SEO-Geoptimaliseerd", "description": "Gebouwd met SEO best practices om hoog te scoren op Google en organisch verkeer aan te trekken." },
+      { "title": "GEO Klaar", "description": "We optimaliseren uw site voor AI, zodat u aanbevolen wordt door ChatGPT, Gemini en Claude." },
+      { "title": "E-Commerce Oplossingen", "description": "Klaar om online te verkopen? We bouwen veilige, eenvoudig te beheren webshops die omzet genereren." },
+      { "title": "Eenvoudig te Beheren", "description": "We bieden intuïtieve, gebruiksvriendelijke CMS-platforms met drag-and-drop bewerking — geen programmeerkennis nodig." }
+    ],
+    "steps": [
+      { "title": "Ontdekking & Strategie", "description": "We beginnen met het leren over uw bedrijf, doelen en doelgroep. We definiëren de projectscope en maken een strategisch plan voor uw website." },
+      { "title": "Ontwerp & Prototyping", "description": "Ons team maakt wireframes en visuele mockups. U ziet precies hoe uw site eruit ziet en aanvoelt voordat we een enkele regel code schrijven." },
+      { "title": "Ontwikkeling", "description": "Hier gebeurt de magie. We bouwen uw website met schone, moderne code en zorgen ervoor dat deze snel, veilig en perfect responsief is." },
+      { "title": "Review & Lancering", "description": "We testen alles grondig op alle browsers en apparaten. Na uw definitieve goedkeuring zetten we de site live." },
+      { "title": "Training & Support", "description": "We laten u zien hoe u uw nieuwe site beheert en bieden doorlopende ondersteuning om alles soepel te laten verlopen." }
+    ],
+    "faqHeading": "Veelgestelde Vragen",
+    "faqs": [
+      { "question": "Wat kost een nieuwe website?", "answer": "Het hangt af van de omvang. Een website bouwen varieert van een eenvoudige persoonlijke website tot een volledig e-commerceplatform. We bieden een offerte op maat aan na een kennismakingsgesprek — zonder verplichtingen." },
+      { "question": "Moet ik WordPress, Shopify, Squarespace of een maatwerkoplossing gebruiken?", "answer": "Het hangt af van uw doelen. WordPress is het populairste content management systeem (CMS) en ideaal voor de meeste zakelijke websites. Sitebuilders zoals Squarespace, Wix en Weebly zijn eenvoudig te gebruiken maar hebben beperkingen. Voor een echt unieke website raden wij maatwerk webdesign aan — oplossingen die veel beter scoren op zoekmachines." },
+      { "question": "Wat is het verschil tussen een webdesigner en een webontwikkelaar?", "answer": "Een webdesigner richt zich op de visuele en gebruikerservaringszijde — lay-out, huisstijl, lettertypen, kleuren en hoe webpagina's aanvoelen. Een webontwikkelaar schrijft de code die het allemaal laat werken. Bij Morfye dekt ons team beide: we ontwerpen en ontwikkelen uw website van begin tot eind." },
+      { "question": "Hoe zorg ik dat mijn website verschijnt op Google?", "answer": "Elke website die we bouwen bevat zoekmachineoptimalisatie (SEO) vanaf dag één — schone URL's, correcte titeltags, metabeschrijvingen, snelle laadtijden en mobielvriendelijk responsive design. We helpen ook met doorlopende SEO-diensten zodat uw webpagina's organisch verkeer aantrekken." },
+      { "question": "Kan ik de website zelf bijwerken?", "answer": "Ja. We bouwen op intuïtieve platforms met een gebruiksvriendelijk CMS en bieden volledige training, videotutorials en documentatie zodat u zelf wijzigingen kunt aanbrengen — geen webontwikkelaar nodig voor dagelijkse updates." },
+      { "question": "Bouwen jullie e-commercewebsites en webshops?", "answer": "Ja — we bouwen e-commercewebsites die producten, diensten en digitale downloads verkopen. Of u nu de voorkeur geeft aan Shopify of een maatwerkoplossing, we ontwerpen de webshop, stellen betalingen in en optimaliseren voor mobiele apparaten en zoekmachines." },
+      { "question": "Wat is webhosting en heb ik een domeinnaam nodig?", "answer": "Webhosting is de server waar uw websitebestanden op staan. Domeinnamen en een hostingdienst zijn de twee essentials die u nodig heeft om uw website live te zetten. Wij bieden beheerde hostingplannen vanaf €29/maand — elk plan omvat SSL, dagelijkse back-ups en 24/7 monitoring." },
+      { "question": "Bieden jullie websitehosting en onderhoud aan?", "answer": "Ja. We bieden maandelijkse hosting- en onderhoudsplannen vanaf €29/maand die veilige hosting, dagelijkse back-ups, beveiligingsupdates, pluginbeheer en technische ondersteuning omvatten." },
+      { "question": "Moet ik HTML en CSS kennen om een website te laten bouwen?", "answer": "Helemaal niet. U hoeft geen HTML en CSS te kennen om een website bij ons te laten bouwen of om deze na de lancering te beheren. Wij regelen alles — van de structuur van uw site tot het instellen van uw hosting en het schrijven van alle code." },
+      { "question": "Wat is het verschil tussen SEO en GEO?", "answer": "SEO (zoekmachineoptimalisatie) helpt u hoger te scoren op Google en andere zoekmachines. GEO (Generative Engine Optimization) zorgt ervoor dat u aanbevolen wordt door AI-assistenten zoals ChatGPT en Google Gemini. We bouwen elke website geoptimaliseerd voor beide." }
+    ],
+    "cta": {
+      "heading": "Klaar om Uw Nieuwe Website te Bouwen?",
+      "text": "Klaar om een website te bouwen die converteert? Laten we samen iets maken dat net zo hard werkt als u. Neem contact op voor een gratis, vrijblijvende consultatie.",
+      "btn": "Vraag Uw Gratis Offerte Aan"
+    }
+  },
+  "seo": {
+    "meta": {
+      "title": "SEO Optimalisatie Diensten | Morfye - Hoger Scoren op Google",
+      "description": "Professionele SEO-diensten in Brussel, België. Vergroot organisch verkeer, scoor hoger op Google en word gevonden door klanten."
+    },
+    "navLinks": [
+      { "id": "what-is-seo", "label": "Wat is SEO" },
+      { "id": "our-services", "label": "Onze Diensten" },
+      { "id": "our-process", "label": "Ons Proces" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "DE WETENSCHAP VAN GOOGLE RANKINGS",
+      "title": "SEO",
+      "subtitle": "Zoekmachineoptimalisatie",
+      "desc": "Scoor hoger op Google, genereer meer organisch verkeer en laat uw bedrijf groeien.",
+      "scroll": "Scrollen"
+    },
+    "whatIsSeo": {
+      "heading": "Wat is SEO en Waarom Is Het Belangrijk?",
+      "p1": "<strong>Zoekmachineoptimalisatie (SEO)</strong> is het optimaliseren van uw website om hoger te scoren in de resultaten van Google, Bing en andere zoekmachines. Wanneer mensen zoeken naar diensten die u aanbiedt, bepaalt uw SEO-ranking of u op pagina 1 verschijnt of begraven op pagina 10.",
+      "p2": "De harde waarheid: <strong>75% van de mensen scrolt nooit voorbij de eerste pagina van Google-resultaten.</strong> Als uw website niet goed scoort, bent u onzichtbaar voor potentiële klanten die actief zoeken naar wat u aanbiedt.",
+      "p3": "Goede SEO brengt niet alleen meer verkeer — het verbetert uw conversiepercentage door gerichte bezoekers aan te trekken die klaar zijn om te kopen. Het is een van de meest kosteneffectieve marketingstrategieën, omdat u in tegenstelling tot betaalde advertenties niet per klik betaalt.",
+      "p4": "Bij Morfye combineren we traditionele SEO met moderne <strong>GEO (Generative Engine Optimization)</strong> om ervoor te zorgen dat u overal zichtbaar bent waar uw klanten zoeken."
+    },
+    "featuresHeading": "Onze SEO Diensten",
+    "features": [
+      { "title": "Zoekwoordenonderzoek", "description": "We identificeren de exacte termen die uw klanten zoeken en richten ons op zoekwoorden met veel verkeer en weinig concurrentie." },
+      { "title": "On-Page SEO", "description": "We optimaliseren uw content, metatags, headers, afbeeldingen en interne links om uw site onweerstaanbaar te maken voor Google." },
+      { "title": "Technische SEO", "description": "We lossen sitesnelheid, mobiele responsiviteit, crawl- en indexeringsfouten, robots.txt-configuratie, XML-sitemaps en structured data op zodat zoekmachines uw site correct kunnen indexeren." },
+      { "title": "Lokale SEO", "description": "Perfect voor bedrijven in België. We optimaliseren uw Google Bedrijfsprofiel, lokale vermeldingen en bedrijfsgidsen om lokale zoekresultaten te domineren." },
+      { "title": "Linkbuilding", "description": "We benaderen webmasters van gezaghebbende websites om hoogwaardige backlinks te bouwen die uw domeinautoriteit en zoekrankings verbeteren." },
+      { "title": "SEO Analytics & Rapportage", "description": "Maandelijkse rapporten tonen uw rankingverbeteringen, verkeersgroei en ROI zodat u altijd weet wat werkt." }
+    ],
+    "steps": [
+      { "title": "SEO Audit", "description": "We analyseren uw huidige website om technische problemen, contenttekorten en kansen te identificeren. U krijgt een gedetailleerd rapport met wat er precies moet worden opgelost." },
+      { "title": "Concurrentieanalyse", "description": "We onderzoeken uw topcompetitoren om te zien op welke zoekwoorden zij scoren, welke backlinks zij hebben en waar u hen kunt verslaan." },
+      { "title": "Strategieontwikkeling", "description": "Op basis van ons onderzoek maken we een aangepaste SEO-strategie met duidelijke doelen, doelzoekwoorden en een actieplan." },
+      { "title": "Implementatie", "description": "We optimaliseren de technische basis, content en off-page factoren van uw website. Dit omvat zoekwoordoptimalisatie, snelheidsverbeteringen en linkbuilding." },
+      { "title": "Monitoring & Optimalisatie", "description": "SEO is doorlopend. We monitoren voortdurend rankings, analyseren prestaties en passen aan om u voor te blijven op de concurrentie." }
+    ],
+    "faqHeading": "Veelgestelde Vragen",
+    "faqs": [
+      { "question": "Hoe lang duurt het voordat SEO resultaten oplevert?", "answer": "SEO is een langetermijnstrategie. U ziet doorgaans initiële verbeteringen na 3–6 maanden, met significante rankingwinsten na 6–12 maanden. In tegenstelling tot PPC (pay-per-click) nemen organische resultaten van SEO toe in de tijd — u betaalt niet per klik." },
+      { "question": "Wat zijn de belangrijkste SEO-tactieken?", "answer": "Een effectieve SEO-strategie gebruikt: zoekwoordenonderzoek om te vinden wat uw klanten zoeken; on-page SEO (titeltags, metabeschrijvingen, URL's); technische SEO om ervoor te zorgen dat uw pagina's correct worden geïndexeerd; linkbuilding voor hoogwaardige backlinks; contentmarketing voor long-tail zoekwoorden; en lokale SEO voor geografische targeting." },
+      { "question": "Wat is het verschil tussen on-page en off-page SEO?", "answer": "On-page SEO behandelt wat er op uw webpagina's staat — titeltags, headers, URL's, metatags, zoekwoordzinnen, interne linking en contentkwaliteit. Off-page SEO gaat over uw autoriteit op het web — backlinks, inkomende links en externe vermeldingen. Beide zijn essentieel voor sterke zoekrankings." },
+      { "question": "Welke SEO-tools gebruiken jullie?", "answer": "We gebruiken Google Search Console, Google Analytics, SEMrush en Ahrefs om zoekopdrachten bij te houden, backlinks te monitoren, concurrenten te analyseren en uw SEO-prestaties te meten. We leveren maandelijkse rapporten zodat u altijd weet waar u staat." },
+      { "question": "Wat is het verschil tussen SEO en betaalde advertenties (Google Ads)?", "answer": "Betaald zoeken (Google Ads, PPC) geeft directe zichtbaarheid — u betaalt per klik en verschijnt direct bovenaan de resultaten. Organisch zoeken via SEO duurt langer maar levert blijvende, kosteneffectieve resultaten op zonder per klik te betalen. Ideaal gezien gebruikt u betaald zoeken voor snelle winsten terwijl SEO uw langetermijnfundament opbouwt." },
+      { "question": "Garanderen jullie een #1-ranking op Google?", "answer": "Geen enkel serieus SEO-bureau kan specifieke rankings garanderen — het algoritme van Google is te complex. We richten ons op data-gedreven technieken die consequent zoekrankings verbeteren, organisch verkeer laten groeien en meetbare ROI opleveren." },
+      { "question": "Wat is het verschil tussen white-hat en black-hat SEO?", "answer": "White-hat SEO volgt de richtlijnen van zoekmachines — kwaliteitscontent, legitieme linkbuilding, correcte technische optimalisatie. Black-hat SEO gebruikt manipulatieve tactieken. We gebruiken uitsluitend white-hat technieken." },
+      { "question": "Is lokale SEO anders dan gewone SEO?", "answer": "Ja. Lokale SEO richt zich op scoren in specifieke geografische gebieden (zoals Brussel of België) voor locatiegebaseerde zoekopdrachten. Het omvat het optimaliseren van uw Google Bedrijfsprofiel, het opbouwen van lokale vermeldingen en het targeten van locatiespecifieke zoekwoorden." },
+      { "question": "Hoeveel kost SEO?", "answer": "Dit varieert op basis van concurrentie, uw niche en omvang. Basis lokale SEO begint rond €299/maand, terwijl een uitgebreide nationale campagne €1.000+/maand kan zijn. We bieden aangepaste offertes na een SEO-audit." },
+      { "question": "Wat gebeurt er als ik stop met SEO-diensten?", "answer": "Uw rankings verdwijnen niet van de ene op de andere dag, maar concurrenten die blijven optimaliseren zullen u uiteindelijk inhalen. SEO vereist doorlopende contentmarketing, linkbuilding en technisch onderhoud." }
+    ],
+    "cta": {
+      "heading": "Klaar om #1 te Scoren op Google?",
+      "text": "Stop met klanten verliezen aan uw concurrenten. Laten we uw website de zichtbaarheid geven die het verdient.",
+      "btn": "Vraag Uw Gratis SEO Audit Aan"
+    }
+  },
+  "geo": {
+    "meta": {
+      "title": "GEO - Generative Engine Optimization | Morfye",
+      "description": "Laat uw bedrijf aanbevelen door AI-assistenten zoals ChatGPT, Claude en Google Gemini. Professionele GEO-diensten in België."
+    },
+    "navLinks": [
+      { "id": "what-is-geo", "label": "Wat is GEO" },
+      { "id": "why-geo", "label": "Waarom GEO" },
+      { "id": "how-it-works", "label": "Hoe Het Werkt" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "DE TOEKOMST VAN ONLINE ZICHTBAARHEID",
+      "title": "GEO",
+      "subtitle": "Generative Engine Optimization",
+      "desc": "Laat uw bedrijf aanbevelen door AI-assistenten zoals ChatGPT, Claude en Google Gemini.",
+      "scroll": "Scrollen"
+    },
+    "whatIsGeo": {
+      "heading": "Wat is GEO?",
+      "p1": "Online zichtbaarheid is drastisch veranderd — organisch zoekverkeer is gedaald doordat traditionele klikken van zoekmachineresultaten met meer dan <strong>55% zijn gedaald sinds 2022</strong>. Zoekers stellen vragen aan AI-assistenten in plaats van door zoekresultaten te klikken. Bedrijven die alleen vertrouwen op Google-rankings verliezen klanten zonder het te beseffen.",
+      "p2": "GEO is de evolutie van optimaliseren voor zoeken in het AI-tijdperk. Terwijl SEO zich richt op rankingfactoren zoals titeltags, metabeschrijvingen, zoekwoorden en backlinks — zorgt GEO ervoor dat AI-chatbots zoals ChatGPT, Claude, Perplexity en Google Gemini UW bedrijf aanbevelen wanneer mensen om hulp vragen.",
+      "p3": "Meer mensen vragen nu AI-assistenten in plaats van Google. Als uw content niet geoptimaliseerd is voor AI-indexering, bent u onzichtbaar voor dit groeiende publiek — zelfs als uw SEO-ranking en organisch verkeer sterk zijn.",
+      "p4": "Verbeter nu uw concurrentiepositie — GEO is niet alleen de toekomst, het is al gaande vandaag. Bedrijven die vroeg aanpassen zien meer conversies terwijl concurrenten zich afvragen waar hun klanten naartoe zijn."
+    },
+    "featuresHeading": "Waarom Uw Bedrijf GEO Nodig Heeft",
+    "features": [
+      { "title": "Gevonden Worden door AI", "description": "Wanneer potentiële klanten ChatGPT of Claude om aanbevelingen vragen, verschijnt uw bedrijf als eerste." },
+      { "title": "Blijf Voor op Concurrentie", "description": "De meeste bedrijven weten nog niet van GEO. Kom nu vooruit terwijl het nog vroeg is." },
+      { "title": "Toekomstbestendig Uw Bedrijf", "description": "AI-zoeken groeit 10x sneller dan traditioneel zoeken. Wees klaar voor morgen, vandaag." },
+      { "title": "Vergroot Vertrouwen & Autoriteit", "description": "AI-aanbevelingen wegen zwaar. Aanbevolen worden door AI bouwt direct geloofwaardigheid op." },
+      { "title": "Lokaal & Globaal Bereik", "description": "Optimaliseer voor lokale AI-zoekopdrachten in België terwijl u internationale doelgroepen bereikt." },
+      { "title": "Betere Kwaliteit Leads", "description": "Mensen die AI-aanbevelingen krijgen zijn klaar om te kopen — ze zijn niet alleen aan het browsen." }
+    ],
+    "steps": [
+      { "title": "AI Audit & Analyse", "description": "We testen hoe AI-engines uw bedrijf nu zien. We vragen ChatGPT, Claude en Perplexity naar uw branche en kijken of u vermeld wordt. De meeste bedrijven? Niet eens op de radar." },
+      { "title": "Contentoptimalisatie", "description": "We herschrijven uw websitecontent op een manier die AI begrijpt. Dit omvat natuurlijke taal, duidelijke bedrijfsinformatie, FAQ-secties en gestructureerde data die AI-engines waarderen — terwijl het ook echte waarde levert aan menselijke bezoekers." },
+      { "title": "Schema & Technische Opzet", "description": "We voegen speciale code (schema-markup) toe die AI precies vertelt wie u bent, wat u doet, waar u gevestigd bent en waarom u de beste keuze bent. Beschouw het als een cv voor AI-engines." },
+      { "title": "Citaatopbouw", "description": "We zorgen dat uw bedrijf vermeld wordt op gezaghebbende websites, gidsen en platforms die AI-engines vertrouwen. Hoe meer geloofwaardige bronnen u vermelden, hoe meer AI u aanbeveelt." },
+      { "title": "Monitoring & Verbetering", "description": "GEO is niet 'instellen en vergeten.' We monitoren voortdurend hoe AI-engines reageren op zoekopdrachten over uw branche en passen uw strategie aan om bovenaan te blijven." }
+    ],
+    "faqHeading": "Veelgestelde Vragen",
+    "faqs": [
+      { "question": "Hoe lang duurt het voordat GEO resultaten oplevert?", "answer": "Initiële verbeteringen kunnen worden gezien in 2–4 weken. Volledige optimalisatie duurt doorgaans 2–3 maanden terwijl AI-engines uw bijgewerkte content, gestructureerde data en inkomende autoriteitssignalen indexeren en begrijpen." },
+      { "question": "Hoe verschilt GEO van traditionele SEO?", "answer": "Traditionele SEO helpt uw webpagina's te scoren in organische resultaten op Google via on-page SEO (titeltags, metabeschrijvingen, headers), technisch werk en off-page signalen (backlinks). GEO richt zich rechtstreeks op AI-assistenten — ChatGPT, Gemini, Perplexity — die niet dezelfde rankingfactoren gebruiken als Google." },
+      { "question": "Helpt GEO bij lokaal zoeken?", "answer": "Ja — lokale GEO is een van de krachtigste tactieken voor lokale bedrijven. Wanneer zoekers aan AI vragen om 'beste webdesigner bij mij in de buurt' of 'accountant in Brussel,' wilt u het antwoord zijn. We optimaliseren uw lokale aanwezigheid zodat AI-engines uw niche, locatie en diensten kennen." },
+      { "question": "Wat is de rol van contentmarketing in GEO?", "answer": "Contentmarketing is de ruggengraat van GEO. AI-engines worden getraind op tekst — hoe meer kwalitatieve, relevante content uw webpagina's hebben, hoe beter AI u begrijpt en aanbeveelt. We richten ons op content die long-tail zoekopdrachten target en correcte metabeschrijvingen en titeltags gebruikt." },
+      { "question": "Bouwen jullie backlinks voor GEO?", "answer": "Ja — citaatopbouw, backlinks en inkomende links van gezaghebbende websites zijn centraal in ons GEO-proces. AI-engines leren van het web — wanneer vertrouwde bronnen uw bedrijf vermelden, wordt u geloofwaardiger voor AI." },
+      { "question": "Vervangt GEO mijn huidige SEO-inspanningen?", "answer": "Nee. GEO vormt een aanvulling op uw SEO-strategie — u heeft nog steeds traditionele SEO nodig voor Google-rankings. GEO voegt een nieuwe laag van zichtbaarheid toe zodat wanneer AI-assistenten worden gevraagd naar uw niche, uw bedrijf wordt aanbevolen." },
+      { "question": "Voor welke AI-engines optimaliseren jullie?", "answer": "We optimaliseren voor ChatGPT (OpenAI), Claude (Anthropic), Perplexity, Google Gemini en Microsoft Copilot. Elk heeft verschillende signalen, dus onze tactieken zijn per platform afgestemd." },
+      { "question": "Is GEO de moeite waard voor lokale bedrijven?", "answer": "Absoluut. Lokale GEO is ongelooflijk krachtig voor kleine bedrijven. Wanneer iemand in uw niche een AI-assistent om een aanbeveling vraagt, wilt u het antwoord zijn voor uw stad of regio — of dat nu Brussel, Gent, Antwerpen of elders is." },
+      { "question": "Hoeveel kost GEO?", "answer": "We bieden eenmalige GEO-opzet vanaf €499, of maandelijks GEO-beheer vanaf €199/maand. Aangepaste pakketten beschikbaar voor grotere bedrijven of concurrerende niches." },
+      { "question": "Welke sectoren profiteren het meest van GEO?", "answer": "Alle sectoren met zoekopdrachten profiteren, maar vooral: consultants, advocaten, accountants, zorgverleners, makelaars, lokale diensten en B2B-bedrijven waarbij potentiële klanten AI gebruiken om opties te evalueren voordat ze contact opnemen." }
+    ],
+    "cta": {
+      "heading": "Klaar om AI-Zoeken te Domineren?",
+      "text": "Wacht niet tot uw concurrenten GEO ontdekken. Kom nu vooruit en domineer uw markt.",
+      "btn": "Plan een Consultatie"
+    }
+  },
+  "sea": {
+    "meta": {
+      "title": "SEA Campagnes & Google Ads | Morfye",
+      "description": "Genereer direct verkeer en leads met expert Google Ads-beheer. Resultaten vandaag, niet pas over maanden."
+    },
+    "navLinks": [
+      { "id": "what-is-sea", "label": "Wat is SEA" },
+      { "id": "our-services", "label": "Onze Diensten" },
+      { "id": "our-process", "label": "Hoe Wij Werken" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "DIRECTE RESULTATEN, MAXIMALE ROI",
+      "title": "ADS",
+      "subtitle": "SEA & Google Ads Campagnes",
+      "desc": "Genereer direct verkeer en leads met expert Google Ads-beheer.",
+      "scroll": "Scrollen"
+    },
+    "whatIsSea": {
+      "heading": "Wat is SEA?",
+      "p1": "<strong>SEA (Search Engine Advertising)</strong> — ook wel <strong>PPC (pay-per-click) adverteren</strong> of Google Ads genoemd — is betaald zoekmarketing op zoekmachines. Wanneer iemand zoekt op zoekwoorden die gerelateerd zijn aan uw bedrijf, verschijnen uw advertenties bovenaan Google, boven alle organische resultaten.",
+      "p2": "In tegenstelling tot SEO levert pay-per-click <strong>directe zichtbaarheid</strong>. Start vandaag een campagne en begin binnen enkele uren klikken, oproepen en klanten te ontvangen — zonder maanden te wachten op SEO-resultaten.",
+      "p3": "Het addertje onder het gras? Succesvolle advertentiecampagnes vereisen echte expertise. Slecht beheerde PPC verspilt geld aan irrelevante klikken. Elke ervaren marketeer weet dat klikadvertentiëren zonder correcte advertentiegroepstructuur, negatieve zoekwoorden en conversietracking het budget snel verbrandt. Dat is waar wij binnenkomen.",
+      "p4": "Bij Morfye ontwerpen, lanceren en optimaliseren we Google Ads-campagnes voor bedrijven in heel België. Of u nu meer websiteverkeer, telefoontjes, formulierinzendingen of e-commerceverkopen wilt — onze expertise in betaald zoeken levert campagnes die uw return on investment maximaliseren."
+    },
+    "featuresHeading": "Onze SEA Diensten",
+    "features": [
+      { "title": "Zoekcampagnes", "description": "Tekstadvertenties die verschijnen wanneer mensen zoeken op zoekwoorden gerelateerd aan uw bedrijf op Google. Pay-per-click adverteren op zijn meest direct — het vastleggen van klanten met hoge intentie op het moment dat ze zoeken." },
+      { "title": "Displaycampagnes", "description": "Visuele banneradvertenties op miljoenen websites in het Google Display Netwerk. Een sleutelvorm van online adverteren om merkbekendheid op te bouwen en nieuwe doelgroepen op schaal te bereiken." },
+      { "title": "Shoppingcampagnes", "description": "Productadvertenties met afbeeldingen en prijzen, perfect voor e-commercestores die online verkopen willen genereren direct vanuit zoekresultaten." },
+      { "title": "Lokale Campagnes", "description": "Geografisch gerichte advertenties die klanten naar uw fysieke locatie of servicegebied in België brengen." },
+      { "title": "Remarketing & Retargeting", "description": "Herverbind bezoekers die uw site hebben verlaten zonder te converteren. Toon hen gerichte retargetingadvertenties op het web — een bewezen tactiek om potentiële kopers terug te brengen en conversiepercentages te verbeteren." },
+      { "title": "Prestatietracking", "description": "Gedetailleerde analyses met elke sleutelmetriek: klikken, conversiepercentages, kosten per lead en return on investment. Zie precies hoe elke fase van uw verkooptrechter presteert." }
+    ],
+    "steps": [
+      { "title": "Strategie & Doelstelling", "description": "We beginnen met het begrijpen van uw zakelijke doelen, doelgroep en budget. We definiëren uw campagnedoelstellingen, plannen uw advertentiestructuur en beschrijven de advertentiecampagnes — alles instellen voor meetbare resultaten vanaf dag één." },
+      { "title": "Zoekwoordenonderzoek & Targeting", "description": "We gebruiken de Google Keyword Planner en competitieve analysetools om een uitgebreide zoekwoordenlijst te bouwen — inclusief winstgevende long-tail zoekwoorden die uw klanten zoeken. We analyseren concurrentbiedingen en definiëren een biedbeheerbenadering om elke euro van uw budget te maximaliseren." },
+      { "title": "Advertentiecreatie & Landingspagina's", "description": "We schrijven overtuigende advertentietekst voor elke PPC-advertentie en advertentiegroep — ontworpen om geklikt te worden. We maken ook landingspagina's die bezoekers omzetten in klanten, waardoor uw advertentie-uitgaven harder werken." },
+      { "title": "Campagnelancering & Monitoring", "description": "We lanceren uw campagnes met volledige tracking (conversietracking, oproepentracking, enz.) en monitoren de prestaties dagelijks. We volgen elke klik, meten kosten ten opzichte van rendementen en signaleren problemen voordat ze budget verspillen." },
+      { "title": "Optimalisatie & Rapportage", "description": "We testen voortdurend advertentietekst, verbeteren biedbeheer, verfijnen targeting en elimineren verspilde uitgaven. Maandelijkse rapporten behandelen elke sleutelmetriek zodat u altijd uw return on investment kent." }
+    ],
+    "faqHeading": "Veelgestelde Vragen",
+    "faqs": [
+      { "question": "Wat is Google AdWords en hoe verschilt het van Google Ads?", "answer": "Google AdWords was de oorspronkelijke naam voor het betaalde zoekplatform van Google — het werd in 2018 omgedoopt tot Google Ads. Het platform is hetzelfde: adverteerders bieden op zoekwoorden en advertenties verschijnen bovenaan de zoekresultaten." },
+      { "question": "Wat is cost-per-click (CPC) en hoe werkt bieden?", "answer": "Cost-per-click (CPC) is het bedrag dat een adverteerder betaalt elke keer dat iemand op hun advertentie klikt. Google Ads gebruikt een veilingsysteem: adverteerders stellen een maximumbod in op zoekwoorden en Google kent een kwaliteitsscore toe op basis van advertentierelevantie, kwaliteit van de landingspagina en verwachte doorklikratio (CTR)." },
+      { "question": "Wat is een landingspagina en waarom is het belangrijk voor PPC?", "answer": "Een landingspagina is de webpagina waarop zoekers terechtkomen na het klikken op uw advertentie. Een goede landingspagina komt direct overeen met wat de advertentie beloofde, laadt snel, heeft een duidelijke call to action en is geoptimaliseerd voor conversiepercentage." },
+      { "question": "Beheren jullie ook Bing Ads en display-advertenties?", "answer": "Ja. Naast Google Ads beheren we ook Microsoft/Bing Ads-campagnes. We voeren ook Google Display Ads-campagnes en remarketingcampagnes uit om bezoekers die uw site hebben bezocht maar niet hebben geconverteerd opnieuw te betrekken." },
+      { "question": "Hoeveel budget heb ik nodig voor Google Ads?", "answer": "We raden doorgaans aan te beginnen met minimaal €500–1.000/maand aan advertentiebudget voor een PPC-campagne, plus onze beheervergoeding. In concurrerende niches kan uw cost-per-click hoger zijn, dus een groter budget is nodig om voldoende gegevens te verzamelen voor optimalisatie." },
+      { "question": "Hoe snel zie ik resultaten?", "answer": "In tegenstelling tot SEO leveren Google Ads direct verkeer op. U kunt binnen enkele uren na lancering klikken en leads beginnen te ontvangen. Het optimaliseren voor het beste conversiepercentage, laagste CPC en hoogste kwaliteitsscore duurt echter 1–2 maanden van doorlopend testen." },
+      { "question": "Wat is het verschil tussen SEO en SEA?", "answer": "SEO (organisch zoeken) is gratis per klik maar duurt 3–6 maanden om resultaten te zien. SEA/PPC is betaald zoeken — u betaalt per klik maar krijgt directe zichtbaarheid. Ideaal gezien gebruikt u SEA voor directe resultaten terwijl SEO uw langetermijnfundament opbouwt." },
+      { "question": "Wat zijn negatieve zoekwoorden en waarom zijn ze belangrijk?", "answer": "Negatieve zoekwoorden vertellen Google Ads om uw advertenties NIET te tonen voor bepaalde zoekopdrachten. Correct beheer van negatieve zoekwoorden is cruciaal voor het verminderen van verspilde advertentie-uitgaven." },
+      { "question": "Moet ik een langetermijncontract ondertekenen?", "answer": "Nee. We bieden maand-tot-maand contracten zonder binding. We raden echter aan minimaal 3 maanden een PPC-campagne te voeren om voldoende gegevens te verzamelen voor correcte optimalisatie." },
+      { "question": "Wat is uw beheervergoeding?", "answer": "Onze beheervergoeding is doorgaans 15–20% van uw maandelijkse advertentiebudget, met een minimum van €299/maand. Dit omvat strategie, opzet, advertentiecampagnecreatie, bied- en tekstoptimalisatie, rapportage en doorlopende ondersteuning." }
+    ],
+    "cta": {
+      "heading": "Klaar om Direct Verkeer te Ontvangen?",
+      "text": "Stop met wachten op SEO. Begin vandaag klanten te ontvangen met expert beheerde Google Ads-campagnes.",
+      "btn": "Start Uw Campagne"
+    }
+  },
+  "hosting": {
+    "meta": {
+      "title": "Website Hosting & Onderhoud | Morfye",
+      "description": "Betrouwbare, veilige en snelle hosting met expert onderhoud. Houd uw website 24/7 online."
+    },
+    "navLinks": [
+      { "id": "why-hosting", "label": "Waarom Hosting Belangrijk Is" },
+      { "id": "what-we-offer", "label": "Wat Wij Bieden" },
+      { "id": "our-process", "label": "Hoe Het Werkt" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "ALTIJD AAN, ALTIJD VEILIG",
+      "title": "HOST",
+      "subtitle": "Hosting & Onderhoud",
+      "desc": "Betrouwbare, veilige en snelle hosting met expert onderhoud. Nul downtime.",
+      "scroll": "Scrollen"
+    },
+    "whyHosting": {
+      "heading": "Waarom Professionele Hosting & Onderhoud Belangrijk Zijn",
+      "p1": "Een website bouwen is slechts het begin. Om online te blijven, goed te presteren en veilig te blijven, heeft uw website een <strong>betrouwbaar fundament</strong> en <strong>doorlopend onderhoud</strong> nodig. Beschouw hosting als de grond waarop uw digitale huis staat — als het onstabiel of onveilig is, valt alles uit elkaar.",
+      "p2": "Veel bedrijven maken de fout de goedkoopste optie te kiezen van generieke webhostingbedrijven — alleen om te ontdekken dat shared hostingplannen niet kunnen voldoen aan echte zakelijke eisen. Trage laadtijden, frequente downtime, beveiligingsinbreuken en geen ondersteuning. Bij Morfye bieden we enterprise-grade hosting gecombineerd met proactief onderhoud.",
+      "p3": "Of u nu een nieuwe e-commercewinkel lanceert, migreert van een sitebuilder, of overstapt van een onbetrouwbare host — wij bieden de beste webhostingoplossingen voor Belgische bedrijven. Van domeinregistratie tot alles instellen, wij regelen het."
+    },
+    "featuresHeading": "Wat Is Inbegrepen in Onze Hosting & Onderhoud",
+    "features": [
+      { "title": "Bliksemsnelle Prestaties", "description": "We gebruiken geoptimaliseerde cloudservers met SSD-opslag, CDN-integratie en onbeperkte bandbreedte om ervoor te zorgen dat uw website altijd in minder dan 2 seconden laadt." },
+      { "title": "Maximale Beveiliging", "description": "Gratis SSL-certificaten, firewallbescherming, spamfiltering, malwarescanning en automatische beveiligingsupdates houden hackers buiten. De serverinfrastructuur is beveiligd en beheerd door ons team." },
+      { "title": "Dagelijkse Automatische Back-ups", "description": "Uw site wordt dagelijks geback-upt naar redundante opslag. Als er iets misgaat, kunnen we het binnen minuten herstellen." },
+      { "title": "Regelmatige Updates", "description": "We houden uw CMS, plugins en thema's up-to-date — of u nu WordPress, Joomla, Drupal of een ander PHP-gebaseerd platform gebruikt. Uw site blijft veilig en compatibel." },
+      { "title": "24/7 Monitoring", "description": "We monitoren uw site de klok rond. Als het uitvalt, worden we direct gewaarschuwd en lossen we het onmiddellijk op — geen trage ticketsystemen." },
+      { "title": "Prioriteitsondersteuning", "description": "Ons team reageert snel om problemen op te lossen, updates door te voeren of uw vragen te beantwoorden — of u nu een persoonlijk of zakelijk hostingplan heeft." }
+    ],
+    "steps": [
+      { "title": "Eenvoudige Migratie", "description": "Al bij een andere hostingprovider? We migreren uw hostinginfrastructuur met nul downtime. U merkt de overstap niet eens." },
+      { "title": "Veilige Installatie", "description": "We configureren uw hostingomgeving met SSL-certificaten, firewalls en prestatieoptimalisatie vanaf dag één." },
+      { "title": "Proactieve Monitoring", "description": "Onze systemen monitoren uw website 24/7. Als we downtime, beveiligingsdreigingen of prestatieproblemen detecteren, handelen we direct." },
+      { "title": "Regelmatig Onderhoud", "description": "Elke week controleren we op updates, voeren we beveiligingsscans uit, optimaliseren we databases en zorgen we ervoor dat alles soepel verloopt." },
+      { "title": "Doorlopende Ondersteuning", "description": "Heeft u een contentupdate, nieuwe functie of technische hulp nodig? Neem gewoon contact op. We zijn er om u te ondersteunen wanneer u ons nodig heeft." }
+    ],
+    "faqHeading": "Veelgestelde Vragen",
+    "faqs": [
+      { "question": "Welke soorten webhosting bieden jullie aan?", "answer": "We bieden beheerde webhostingdiensten op maat van kleine en middelgrote bedrijven. In tegenstelling tot generieke hostingbedrijven zijn onze hostingplannen volledig beheerd — wat betekent dat wij serverconfiguratie, beveiliging en onderhoud voor u afhandelen." },
+      { "question": "Wat is het verschil tussen shared hosting, VPS en cloud hosting?", "answer": "Shared hosting is de goedkoopste optie — uw website deelt serverresources met vele anderen, wat de prestaties en uptime kan schaden. VPS-hosting geeft u een toegewezen deel van een server. Cloud hosting verdeelt uw site over meerdere servers voor maximale uptime en schaalbaarheid. We gebruiken cloud hosting vanwege de prestaties gecombineerd met schaalbaarheid." },
+      { "question": "Ondersteunen jullie WordPress, Joomla en andere CMS-platforms?", "answer": "Ja — WordPress-hosting is een van onze specialiteiten. We ondersteunen ook volledig Joomla, Drupal en elk PHP-gebaseerd CMS of e-commerceplatform (WooCommerce, Magento, PrestaShop). We beheren updates, pluginupdates, thema-updates en beveiligingspatches als onderdeel van onze onderhoudsplannen." },
+      { "question": "Welke uptime-garantie bieden jullie?", "answer": "We streven naar 99,9% uptime voor alle hostingplannen. Ons 24/7 monitoringsysteem waarschuwt ons zodra uw site uitvalt en we handelen onmiddellijk. Uptime is cruciaal — elke minuut downtime kost u potentiële klanten." },
+      { "question": "Wat is het verschil tussen hosting en onderhoud?", "answer": "Webhosting is de server waar uw websitebestanden op staan — het is het fundament dat uw site online houdt. Onderhoud omvat al het andere: plugin- en CMS-updates, beveiligingsscans, dagelijkse back-ups, prestatieoptimalisatie, SSL-vernieuwing en technische ondersteuning. Onze hostingpakketten omvatten beide." },
+      { "question": "Kan ik mijn eigen domeinnaam meenemen?", "answer": "Absoluut. U kunt uw bestaande domeinnamen bewaren en naar onze hosting laten verwijzen. We kunnen ook nieuwe domeinen voor u registreren, of uw bestaand domein overdragen. We regelen alle DNS-configuratie." },
+      { "question": "Bieden jullie ook e-mailhosting aan?", "answer": "Ja — we kunnen professionele zakelijke e-mailadressen (zoals u@uwbedrijf.be) instellen verbonden aan uw domein als onderdeel van onze hostingdiensten." },
+      { "question": "Kan ik op elk moment annuleren?", "answer": "Ja. We bieden flexibele maand-tot-maand hostingplannen zonder langetermijncontracten. Annuleer op elk moment met 30 dagen opzegtermijn. Geen binding, geen verborgen kosten." },
+      { "question": "Hoeveel kosten jullie hostingplannen?", "answer": "Hostingplannen beginnen vanaf €29/maand voor ons standaard beheerd hostingpakket, inclusief SSL, dagelijkse back-ups, 24/7 monitoring en basisonderhoud. Neem contact op voor een aangepaste offerte." },
+      { "question": "Bieden jullie webmail en FTP-toegang aan?", "answer": "Ja. Alle hostingplannen omvatten professionele webmail zodat u toegang heeft tot uw zakelijke e-mail vanuit elke browser. FTP-toegang is beschikbaar voor bestandsoverdrachten." }
+    ],
+    "cta": {
+      "heading": "Laat Ons De Technische Zaken Afhandelen",
+      "text": "Focus op uw bedrijf terwijl wij uw website snel, veilig en altijd online houden.",
+      "btn": "Vraag Hosting Offerte Aan"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacybeleid — Morfye Webdesignbureau",
+      "description": "Lees het privacybeleid van Morfye. Ontdek hoe we uw persoonsgegevens verzamelen, gebruiken en beschermen conform de AVG en Belgische wetgeving."
+    },
+    "pageTitle": "Privacybeleid",
+    "updated": "Laatste update: maart 2026",
+    "sections": [
+      {
+        "heading": "1. Wie wij zijn",
+        "content": "Morfye is een webdesign- en digitaal marketingbureau gevestigd in België. We bouwen professionele websites, SEO-strategieën en online marketingoplossingen voor kleine bedrijven. U kunt contact met ons opnemen via hello@morfye.com."
+      },
+      {
+        "heading": "2. Welke gegevens we verzamelen",
+        "intro": "We kunnen de volgende persoonsgegevens verzamelen wanneer u onze website gebruikt of contact met ons opneemt:",
+        "items": [
+          "Naam en e-mailadres (via contactformulier)",
+          "Gebruiksgegevens en analytics (via Google Analytics, alleen met uw toestemming)",
+          "IP-adres en browserinformatie (automatisch verzameld)"
+        ]
+      },
+      {
+        "heading": "3. Hoe we uw gegevens gebruiken",
+        "intro": "We gebruiken uw gegevens om:",
+        "items": [
+          "Te reageren op uw verzoeken en onze diensten te verlenen",
+          "Onze website en gebruikerservaring te verbeteren",
+          "Siteverkeer te analyseren (alleen met cookie-toestemming)"
+        ],
+        "outro": "We verkopen, verhuren of delen uw persoonsgegevens niet met derden voor marketingdoeleinden."
+      },
+      {
+        "heading": "4. Cookies",
+        "content": "Onze website gebruikt cookies om uw ervaring te verbeteren en verkeer te analyseren. We gebruiken Google Analytics alleen nadat u expliciete toestemming heeft gegeven via onze cookiebanner. U kunt uw toestemming op elk moment intrekken door uw browsercookies te wissen."
+      },
+      {
+        "heading": "5. Uw rechten (AVG)",
+        "intro": "Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u het recht om:",
+        "items": [
+          "Toegang te krijgen tot de persoonsgegevens die we over u bewaren",
+          "Correctie of verwijdering van uw gegevens te verzoeken",
+          "Bezwaar te maken tegen de verwerking van uw gegevens",
+          "Uw toestemming op elk moment in te trekken"
+        ],
+        "outro": "Om een van deze rechten uit te oefenen, neem contact met ons op via hello@morfye.com."
+      },
+      {
+        "heading": "6. Bewaartermijn",
+        "content": "We bewaren contactformulierinzendingen maximaal 12 maanden. Analytische gegevens worden bewaard conform de standaardinstellingen van Google Analytics (26 maanden)."
+      },
+      {
+        "heading": "7. Beveiliging",
+        "content": "We nemen redelijke technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen ongeoorloofde toegang, verlies of misbruik."
+      },
+      {
+        "heading": "8. Wijzigingen in dit beleid",
+        "content": "We kunnen dit privacybeleid van tijd tot tijd bijwerken. De meest recente versie is altijd beschikbaar op deze pagina."
+      },
+      {
+        "heading": "9. Contact",
+        "content": "Voor vragen over privacy kunt u contact met ons opnemen via hello@morfye.com."
+      }
+    ]
+  }
+}

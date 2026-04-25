@@ -5,10 +5,12 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ServicePageLayout from '../components/ServicePageLayout'
 import FaqItem from '../components/FaqItem'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// SVG Icons (professional, no emoji)
+const STEP_COUNT = 5
+
 const TargetIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="2" />
@@ -79,45 +81,10 @@ const DiamondIcon = () => (
   </svg>
 )
 
-const navLinks = [
-  { id: 'what-is-geo', label: 'What is GEO' },
-  { id: 'why-geo', label: 'Why GEO' },
-  { id: 'how-it-works', label: 'How It Works' },
-  { id: 'faq', label: 'FAQ' }
-]
-
-const features = [
-  { icon: <TargetIcon />, title: 'Be Found by AI', description: 'When potential clients ask ChatGPT or Claude for recommendations, your business appears first.' },
-  { icon: <RocketIcon />, title: 'Stay Ahead of Competition', description: "Most businesses don't know about GEO yet. Get ahead while it's still early." },
-  { icon: <LightbulbIcon />, title: 'Future-Proof Your Business', description: 'AI search is growing 10x faster than traditional search. Be ready for tomorrow, today.' },
-  { icon: <ChartIcon />, title: 'Increase Trust & Authority', description: 'AI recommendations carry immense weight. Being suggested by AI builds instant credibility.' },
-  { icon: <GlobeIcon />, title: 'Local & Global Reach', description: 'Optimize for local AI searches in Belgium while reaching international audiences.' },
-  { icon: <DiamondIcon />, title: 'Higher Quality Leads', description: "People who get AI recommendations are ready to buy\u2014they're not just browsing." }
-]
-
-const steps = [
-  { title: 'AI Audit & Analysis', description: "We test how AI engines currently see your business. We ask ChatGPT, Claude, and Perplexity about your industry and see if you're mentioned. Most businesses? Not even on the radar." },
-  { title: 'Content Optimization', description: 'We rewrite your website content in a way AI understands. This includes natural language, clear business information, FAQ sections, and structured data that AI engines love — all while keeping bounce rate low by delivering genuine value to human visitors.' },
-  { title: 'Schema & Technical Setup', description: "We add special code (schema markup) that tells AI exactly who you are, what you do, where you're located, and why you're the best choice. Think of it as a resume for AI engines." },
-  { title: 'Citation Building', description: 'We get your business mentioned on authoritative websites, directories, and platforms that AI engines trust. The more credible sources mention you, the more AI recommends you.' },
-  { title: 'Monitoring & Improvement', description: "GEO isn't \"set and forget.\" We continuously monitor how AI engines respond to queries about your industry and adjust your strategy to stay on top." }
-]
-
-const faqs = [
-  { question: 'How long does GEO take to show results?', answer: 'Initial improvements can be seen in 2–4 weeks. Full optimization typically takes 2–3 months as AI engines index and understand your updated content, structured data, and inbound authority signals.' },
-  { question: 'How is GEO different from traditional SEO?', answer: 'Traditional search engine optimization (SEO) helps your web pages rank in organic results on Google and other search engines through on-page SEO (title tags, meta descriptions, URLs, headers), technical work (crawl optimization, indexing, mobile-friendly design, user-experience), and off-page signals (backlinks, inbound links, linking authority). Google Analytics and search rankings data guide the strategy. GEO targets AI assistants directly — ChatGPT, Gemini, Perplexity — which don\'t use the same ranking factors as Google. A complete digital marketing strategy needs both: SEO for organic traffic and click-through rate from search results, GEO for AI recommendations. We combine both.' },
-  { question: 'Does GEO help with local search and local SEO?', answer: 'Yes — local GEO is one of the most powerful tactics for local businesses. When searchers ask AI "best web designer near me" or "accountant in Brussels," you want to be the answer. We optimize your local search presence so AI engines know your niche, location, and services — just like local SEO improves your search rankings on Google for location-based search queries.' },
-  { question: 'What is the role of content marketing in GEO?', answer: 'Content marketing is the backbone of GEO. AI engines are trained on text — the more high-quality, relevant, and keyword-rich content your web pages have, the better AI understands and recommends you. We focus on content that avoids duplicate text, targets long-tail search queries, maintains topical relevance and relevancy, and uses proper meta descriptions and title tags. This boosts both your SEO ranking and your GEO visibility. Good content also improves click-through rate from organic results by answering exactly what a searcher is looking for.' },
-  { question: 'Do you build backlinks and do link building for GEO?', answer: 'Yes — citation building, backlinks, and inbound links from authoritative websites are central to our GEO process. AI engines learn from the web — when trusted sources (directories, ecommerce platforms, industry websites, search marketing publications) mention your business, you become more credible to AI. This linking work overlaps with traditional SEO and improves both your search rankings and your AI recommendations simultaneously. We also analyze competitor backlink profiles to find linking opportunities you\'re missing.' },
-  { question: 'Will GEO replace my current SEO efforts?', answer: 'No. GEO complements your SEO strategy — you still need traditional SEO for Google rankings, PPC/AdWords for paid search, and content marketing for inbound traffic. GEO adds a new layer of visibility so that when AI assistants are asked about your niche or industry, your business is on the first page of their recommendations.' },
-  { question: 'Which AI engines do you optimize for?', answer: 'We optimize for ChatGPT (OpenAI), Claude (Anthropic), Perplexity, Google Gemini, and Microsoft Copilot. Each has different signals — some rely on web crawling, others on their training data — so our tactics are tailored per platform.' },
-  { question: 'Is GEO worth it for local businesses?', answer: 'Absolutely. Local GEO is incredibly powerful for small businesses. When someone in your niche asks an AI assistant for a recommendation, you want to be the answer for your city or region — whether that\'s Brussels, Ghent, Antwerp, or beyond.' },
-  { question: 'How much does GEO cost?', answer: 'We offer one-time GEO setup starting at €499, or monthly GEO management from €199/month. Custom packages available for larger businesses or competitive niches.' },
-  { question: 'What SEO techniques and tools support GEO?', answer: 'Many traditional SEO techniques and SEO tools directly complement GEO. Key overlapping techniques include: proper anchor text in link building; ensuring pages are correctly indexed with no duplicate content or spam; using Google webmaster tools (Search Console) to monitor crawl issues that webmasters need to fix; avoiding black-hat tactics that harm your PageRank; and building internet marketing and online marketing authority through search engine marketing campaigns. Pay-per-click (PPC) keeps your brand visible across search engine results while your organic GEO presence builds — combining both gives you full-funnel coverage.' },
-  { question: 'What industries benefit most from GEO?', answer: 'All industries with search queries benefit, but especially: consultants, lawyers, accountants, healthcare providers, real estate agents, local services, and B2B businesses where potential clients use AI to search for and evaluate options before contacting a webmaster or service provider.' }
-]
+const featureIcons = [<TargetIcon />, <RocketIcon />, <LightbulbIcon />, <ChartIcon />, <GlobeIcon />, <DiamondIcon />]
 
 export default function GeoOptimization() {
+  const { t } = useLanguage()
   const heroRef = useRef(null)
   const explainerRef = useRef(null)
   const featuresRef = useRef(null)
@@ -129,7 +96,6 @@ export default function GeoOptimization() {
   const faqRef = useRef(null)
   const ctaRef = useRef(null)
 
-  // Hero entrance animation
   useEffect(() => {
     const hero = heroRef.current
     if (!hero) return
@@ -142,57 +108,32 @@ export default function GeoOptimization() {
         tl.from('.geo-hero-subtitle-line', { opacity: 0, y: 30, duration: 0.7, stagger: 0.15 }, '-=0.4')
         tl.from('.geo-hero-scroll', { opacity: 0, duration: 0.5 }, '-=0.2')
         hero.querySelectorAll('.geo-particle').forEach((p) => {
-          gsap.to(p, {
-            y: `${-100 - Math.random() * 200}`,
-            x: `${(Math.random() - 0.5) * 100}`,
-            opacity: 0,
-            duration: 3 + Math.random() * 4,
-            repeat: -1,
-            delay: Math.random() * 3,
-            ease: 'power1.out'
-          })
+          gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 3 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
         })
       }
     }, hero)
     return () => ctx.revert()
   }, [])
 
-  // Explainer entrance
   useEffect(() => {
     if (window.innerWidth < 768) return
     const section = explainerRef.current
     if (!section) return
     const ctx = gsap.context(() => {
-      gsap.from('.geo-explainer-number', {
-        scale: 0.5, opacity: 0, duration: 1, ease: 'power3.out',
-        scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' }
-      })
-      gsap.from('.geo-explainer-line', {
-        scaleX: 0, duration: 1, ease: 'power2.out',
-        scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' }
-      })
-      gsap.from('.geo-explainer-heading', {
-        y: 40, opacity: 0, duration: 0.8,
-        scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' }
-      })
-      gsap.from('.geo-explainer-text p', {
-        y: 30, opacity: 0, duration: 0.6, stagger: 0.15,
-        scrollTrigger: { trigger: section, start: 'top 70%', toggleActions: 'play none none none' }
-      })
+      gsap.from('.geo-explainer-number', { scale: 0.5, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' } })
+      gsap.from('.geo-explainer-line', { scaleX: 0, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' } })
+      gsap.from('.geo-explainer-heading', { y: 40, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 75%', toggleActions: 'play none none none' } })
+      gsap.from('.geo-explainer-text p', { y: 30, opacity: 0, duration: 0.6, stagger: 0.15, scrollTrigger: { trigger: section, start: 'top 70%', toggleActions: 'play none none none' } })
     }, section)
     return () => ctx.revert()
   }, [])
 
-  // Features heading entrance
   useEffect(() => {
     if (window.innerWidth < 768) return
     const section = featuresRef.current
     if (!section) return
     const ctx = gsap.context(() => {
-      gsap.from('.geo-features-heading', {
-        y: 50, opacity: 0, duration: 0.8,
-        scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' }
-      })
+      gsap.from('.geo-features-heading', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
     }, section)
     return () => ctx.revert()
   }, [])
@@ -206,7 +147,7 @@ export default function GeoOptimization() {
     isAnimating.current = true
     currentRef.current = nextIndex
     const progressFill = processRef.current?.querySelector('.geo-process-fill')
-    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / steps.length, duration: 0.5, ease: 'power2.out' })
+    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / STEP_COUNT, duration: 0.5, ease: 'power2.out' })
     gsap.to(prev, {
       opacity: 0, y: -60, duration: 0.4, ease: 'power2.in',
       onComplete: () => {
@@ -218,7 +159,7 @@ export default function GeoOptimization() {
 
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current)
-    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % steps.length) }, 3500)
+    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % STEP_COUNT) }, 3500)
   }, [goTo])
 
   useEffect(() => {
@@ -228,7 +169,7 @@ export default function GeoOptimization() {
     const ctx = gsap.context(() => {
       stepsRef.current.filter(Boolean).forEach((s, i) => gsap.set(s, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 }))
       const progressFill = container.querySelector('.geo-process-fill')
-      if (progressFill) gsap.set(progressFill, { scaleY: 1 / steps.length })
+      if (progressFill) gsap.set(progressFill, { scaleY: 1 / STEP_COUNT })
       if (!mobile) {
         container.querySelectorAll('.geo-particle').forEach((p) => {
           gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
@@ -249,90 +190,70 @@ export default function GeoOptimization() {
     return () => { observer.disconnect(); clearInterval(timerRef.current) }
   }, [startTimer])
 
-  const handlePrev = () => { goTo((currentRef.current - 1 + steps.length) % steps.length); startTimer() }
-  const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
+  const handlePrev = () => { goTo((currentRef.current - 1 + STEP_COUNT) % STEP_COUNT); startTimer() }
+  const handleNext = () => { goTo((currentRef.current + 1) % STEP_COUNT); startTimer() }
 
-  // FAQ heading entrance
   useEffect(() => {
     if (window.innerWidth < 768) return
     const section = faqRef.current
     if (!section) return
     const ctx = gsap.context(() => {
-      gsap.from('.geo-faq-heading', {
-        y: 40, opacity: 0, duration: 0.8,
-        scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' }
-      })
+      gsap.from('.geo-faq-heading', { y: 40, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
     }, section)
     return () => ctx.revert()
   }, [])
 
-  // CTA entrance
   useEffect(() => {
     const section = ctaRef.current
     if (!section) return
-    const mobile = window.innerWidth < 768
-    if (mobile) return
+    if (window.innerWidth < 768) return
     const ctx = gsap.context(() => {
-      gsap.from('.geo-cta-content', {
-        y: 50, opacity: 0, duration: 0.8,
-        scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' }
+      gsap.from('.geo-cta-content', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
+      section.querySelectorAll('.geo-particle').forEach((p) => {
+        gsap.to(p, { y: `${-60 - Math.random() * 100}`, x: `${(Math.random() - 0.5) * 60}`, opacity: 0, duration: 2 + Math.random() * 3, repeat: -1, delay: Math.random() * 2, ease: 'power1.out' })
       })
-      if (!mobile) {
-        section.querySelectorAll('.geo-particle').forEach((p) => {
-          gsap.to(p, {
-            y: `${-60 - Math.random() * 100}`,
-            x: `${(Math.random() - 0.5) * 60}`,
-            opacity: 0, duration: 2 + Math.random() * 3,
-            repeat: -1, delay: Math.random() * 2, ease: 'power1.out'
-          })
-        })
-      }
     }, section)
     return () => ctx.revert()
   }, [])
 
+  const hero = t('geo.hero')
+  const whatIsGeo = t('geo.whatIsGeo')
+  const features = t('geo.features')
+  const steps = t('geo.steps')
+  const faqs = t('geo.faqs')
+  const cta = t('geo.cta')
+
   return (
     <ServicePageLayout
-      title="GEO - Generative Engine Optimization | Morfye"
-      description="Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini. Professional GEO services in Belgium."
-      keywords="GEO, Generative Engine Optimization, AI optimization, ChatGPT optimization, Claude AI, Google Gemini"
-      navLinks={navLinks}
+      title={t('geo.meta.title')}
+      description={t('geo.meta.description')}
+      navLinks={t('geo.navLinks')}
       slug="geo-optimization"
       faqs={faqs}
       defaultDark
     >
       <div className="geo-page">
-        {/* === HERO === */}
+
+        {/* HERO */}
         <section ref={heroRef} className="geo-hero">
           <div className="geo-hero-particles" suppressHydrationWarning>
             {Array.from({ length: 20 }).map((_, i) => (
-              <div key={i} className="geo-particle" suppressHydrationWarning style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 4 + 1}px`,
-                height: `${Math.random() * 4 + 1}px`
-              }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 4 + 1}px`, height: `${Math.random() * 4 + 1}px` }} />
             ))}
           </div>
-
           <div className="geo-hero-content">
-            <div className="geo-hero-label">THE FUTURE OF ONLINE VISIBILITY</div>
-            <h1 className="geo-hero-title">GEO</h1>
-            <p className="geo-hero-subtitle-line">
-              Generative Engine Optimization
-            </p>
-            <p className="geo-hero-subtitle-line geo-hero-desc">
-              Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini.
-            </p>
+            <div className="geo-hero-label">{hero.label}</div>
+            <h1 className="geo-hero-title">{hero.title}</h1>
+            <p className="geo-hero-subtitle-line">{hero.subtitle}</p>
+            <p className="geo-hero-subtitle-line geo-hero-desc">{hero.desc}</p>
           </div>
-
           <div className="geo-hero-scroll">
-            <span>Scroll</span>
+            <span>{hero.scroll}</span>
             <div className="geo-hero-scroll-line" />
           </div>
         </section>
 
-        {/* === WHAT IS GEO === */}
+        {/* WHAT IS GEO */}
         <section ref={explainerRef} className="geo-explainer" id="what-is-geo">
           <div className="geo-explainer-grid">
             <div className="geo-explainer-side">
@@ -341,22 +262,22 @@ export default function GeoOptimization() {
             </div>
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
-              <h2 className="geo-explainer-heading">What is GEO?</h2>
-              <p>Online visibility has changed dramatically — organic search traffic from SERPs (search engine results pages) has shifted as traditional clicks from search engine results have fallen by over <strong>55% since 2022</strong>. Searchers now ask AI assistants instead of clicking through search engine rankings. Businesses relying only on Google search rankings are losing clients without even realizing it.</p>
-              <p>GEO is the evolution of optimizing for search in the AI era. While SEO focuses on ranking factors like title tags, meta descriptions, keywords, sitemaps, mobile-friendly design, and backlinks to improve your search engine ranking in Google — GEO ensures AI chatbots like ChatGPT, Claude, Perplexity, and Google Gemini recommend YOUR business when people ask for help.</p>
-              <p>More people are now using search terms like &quot;best tax consultant in Brussels&quot; or &quot;web designer in Belgium&quot; — but asking AI assistants instead of Google. If your content isn&apos;t optimized for AI indexing, you&apos;re invisible to this growing audience — even if your SEO ranking and organic traffic are strong.</p>
-              <p>Improve your competitive position now — GEO is not just the future, it&apos;s happening today. Businesses that adapt early with proper keyword research, relevance, inbound links, and structured content see more conversions while competitors wonder where their clients went.</p>
+              <h2 className="geo-explainer-heading">{whatIsGeo.heading}</h2>
+              <p dangerouslySetInnerHTML={{ __html: whatIsGeo.p1 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsGeo.p2 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsGeo.p3 }} />
+              <p dangerouslySetInnerHTML={{ __html: whatIsGeo.p4 }} />
             </div>
           </div>
         </section>
 
-        {/* === WHY GEO === */}
+        {/* WHY GEO */}
         <section ref={featuresRef} className="geo-features" id="why-geo">
-          <h2 className="geo-features-heading">Why Your Business Needs GEO</h2>
+          <h2 className="geo-features-heading">{t('geo.featuresHeading')}</h2>
           <div className="geo-features-grid">
             {features.map((f, i) => (
               <motion.div
-                key={f.title}
+                key={i}
                 className="geo-feature-card"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -364,7 +285,7 @@ export default function GeoOptimization() {
                 transition={{ duration: 0.6, delay: i * 0.1, ease: 'easeOut' }}
                 whileHover={{ y: -8 }}
               >
-                <div className="geo-feature-icon">{f.icon}</div>
+                <div className="geo-feature-icon">{featureIcons[i]}</div>
                 <h3>{f.title}</h3>
                 <p>{f.description}</p>
               </motion.div>
@@ -372,7 +293,7 @@ export default function GeoOptimization() {
           </div>
         </section>
 
-        {/* === HOW IT WORKS === */}
+        {/* HOW IT WORKS */}
         <section ref={processRef} className="geo-process" id="how-it-works" onMouseEnter={() => clearInterval(timerRef.current)} onMouseLeave={startTimer}>
           <div className="geo-process-particles" suppressHydrationWarning>
             {Array.from({ length: 12 }).map((_, i) => (
@@ -397,38 +318,32 @@ export default function GeoOptimization() {
           ))}
         </section>
 
-        {/* === FAQ === */}
+        {/* FAQ */}
         <section ref={faqRef} className="geo-faq" id="faq">
-          <h2 className="geo-faq-heading">Frequently Asked Questions</h2>
+          <h2 className="geo-faq-heading">{t('geo.faqHeading')}</h2>
           <div className="geo-faq-container">
             {faqs.map((f, i) => (
-              <FaqItem key={f.question} index={i} {...f} />
+              <FaqItem key={i} index={i} {...f} />
             ))}
           </div>
         </section>
 
-        {/* === CTA === */}
+        {/* CTA */}
         <section ref={ctaRef} className="geo-cta-section">
           <div className="geo-cta-particles" suppressHydrationWarning>
             {Array.from({ length: 10 }).map((_, i) => (
-              <div key={i} className="geo-particle" suppressHydrationWarning style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                width: `${Math.random() * 5 + 2}px`,
-                height: `${Math.random() * 5 + 2}px`
-              }} />
+              <div key={i} className="geo-particle" suppressHydrationWarning style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, width: `${Math.random() * 5 + 2}px`, height: `${Math.random() * 5 + 2}px` }} />
             ))}
           </div>
           <div className="geo-cta-content">
-            <h2>Ready to Dominate AI Search?</h2>
-            <p>Don&apos;t wait until your competitors figure out GEO. Get ahead now and own your market.</p>
+            <h2>{cta.heading}</h2>
+            <p>{cta.text}</p>
             <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/#contact" className="geo-cta-btn">
-                Schedule a Consultation
-              </Link>
+              <Link href="/#contact" className="geo-cta-btn">{cta.btn}</Link>
             </motion.div>
           </div>
         </section>
+
       </div>
     </ServicePageLayout>
   )

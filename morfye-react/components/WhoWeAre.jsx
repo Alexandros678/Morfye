@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const stats = [
-  { end: 50, suffix: '+', label: 'Projects Delivered' },  
-  { end: 98, suffix: '%', label: 'Client Satisfaction' },
-  { end: 24, suffix: '/7', label: 'Support Available' }
+  { end: 50, suffix: '+' },
+  { end: 98, suffix: '%' },
+  { end: 24, suffix: '/7' }
 ]
 
 export default function WhoWeAre() {
+  const { t } = useLanguage()
   const sectionRef = useRef(null)
   const imageColRef = useRef(null)
   const overlayRef = useRef(null)
@@ -31,21 +33,6 @@ export default function WhoWeAre() {
     if (!section) return
 
     const ctx = gsap.context(() => {
-      gsap.fromTo(section, {
-        opacity: 0,
-        y: 60
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          toggleActions: 'play none none none'
-        }
-      })
-
       gsap.from('.wwa-label', {
         x: -30,
         opacity: 0,
@@ -162,6 +149,9 @@ export default function WhoWeAre() {
     }
   }, [])
 
+  const statLabels = t('whoWeAre.stats')
+  const headingSpans = t('whoWeAre.heading')
+
   return (
     <section ref={sectionRef} className="who-we-are" id="about">
       {/* Section-wide particles */}
@@ -193,30 +183,23 @@ export default function WhoWeAre() {
 
         {/* Right - Text content */}
         <div className="wwa-text-col">
-          <div className="wwa-label">WHO WE ARE</div>
+          <div className="wwa-label">{t('whoWeAre.label')}</div>
           <div className="wwa-line" />
           <h2 className="wwa-heading">
-            <span>We&apos;re not your</span>
-            <span>agency. We&apos;re your</span>
-            <span><em>partner.</em></span>
+            {headingSpans.map((span, i) => (
+              i === headingSpans.length - 1
+                ? <span key={i}><em>{span}</em></span>
+                : <span key={i}>{span}</span>
+            ))}
           </h2>
-          <p className="wwa-desc">
-            We&apos;re not just designers — we&apos;re strategists. Every pixel, every
-            animation, every line of code serves one purpose: turning visitors
-            into clients. Based in Brussels, Belgium, we combine creativity with
-            data-driven thinking.
-          </p>
-          <p className="wwa-desc wwa-desc-2">
-            We work with small businesses across Belgium — consultants, local shops,
-            healthcare providers, and service businesses — who deserve a website
-            that ranks on Google, gets found by AI, and converts visitors into paying clients.
-          </p>
+          <p className="wwa-desc">{t('whoWeAre.desc1')}</p>
+          <p className="wwa-desc wwa-desc-2">{t('whoWeAre.desc2')}</p>
 
           <div className="wwa-stats">
-            {stats.map((s) => (
-              <div key={s.label} className="wwa-stat">
+            {stats.map((s, i) => (
+              <div key={i} className="wwa-stat">
                 <span className="wwa-stat-value">{s.end}{s.suffix}</span>
-                <span className="wwa-stat-label">{s.label}</span>
+                <span className="wwa-stat-label">{statLabels[i]?.label}</span>
               </div>
             ))}
           </div>

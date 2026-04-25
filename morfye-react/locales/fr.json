@@ -1,0 +1,499 @@
+{
+  "nav": {
+    "about": "À propos",
+    "services": "Services",
+    "ourWork": "Notre travail",
+    "contact": "Contact"
+  },
+  "hero": {
+    "words": ["attrayants", "performants", "modernes"],
+    "line1": "Nous créons des sites web",
+    "line2": "pour les professionnels",
+    "subtitle": "Des sites web modernes et performants, conçus pour attirer, engager et convertir vos clients.",
+    "bookBtn": "Réserver une consultation",
+    "seeWorkBtn": "Voir nos réalisations",
+    "scroll": "Défiler"
+  },
+  "ourStory": {
+    "scenes": [
+      {
+        "title": "Nous avons constaté un problème.",
+        "text": "Des professionnels talentueux avec des sites web médiocres. Perdant des clients — non pas parce qu'ils n'étaient pas compétents, mais parce que leur présence en ligne ne le montrait pas."
+      },
+      {
+        "title": "Alors nous avons créé Morfye.",
+        "text": "Un studio à Bruxelles, en Belgique. Une seule mission : faire paraître les professionnels indépendants aussi bons en ligne qu'ils le sont en personne. Aucun template. Aucun raccourci."
+      },
+      {
+        "title": "Puis l'IA a tout changé.",
+        "text": "Les gens ont arrêté de googler. Ils ont commencé à demander à ChatGPT. Nous sommes devenus l'une des premières agences en Belgique à maîtriser le GEO — l'Optimisation pour les Moteurs Génératifs."
+      }
+    ]
+  },
+  "whoWeAre": {
+    "label": "QUI NOUS SOMMES",
+    "heading": ["Nous ne sommes pas votre", "agence. Nous sommes votre", "partenaire."],
+    "desc1": "Nous ne sommes pas seulement des designers — nous sommes des stratèges. Chaque pixel, chaque animation, chaque ligne de code sert un seul objectif : transformer les visiteurs en clients. Basés à Bruxelles, en Belgique, nous combinons créativité et approche data-driven.",
+    "desc2": "Nous travaillons avec des petites entreprises à travers la Belgique — consultants, commerces locaux, prestataires de soins de santé et entreprises de services — qui méritent un site web bien référencé sur Google, trouvable par l'IA, et qui convertit les visiteurs en clients payants.",
+    "stats": [
+      { "label": "Projets livrés" },
+      { "label": "Satisfaction client" },
+      { "label": "Support disponible" }
+    ]
+  },
+  "serviceCart": {
+    "sectionTitle": "Nos services",
+    "geo": {
+      "title": "GEO - Optimisation pour les Moteurs Génératifs",
+      "text": "Faites-vous recommander par ChatGPT, Google Gemini et Claude. Le futur de la visibilité en ligne est arrivé — et nous sommes l'une des premières agences en Belgique à l'offrir.",
+      "cta": "En savoir plus sur le GEO"
+    },
+    "cards": [
+      { "title": "Création de site web sur mesure", "text": "Des sites web adaptés et mobiles, conçus pour votre entreprise et qui convertissent les visiteurs en clients.", "cta": "En savoir plus →" },
+      { "title": "Hébergement & Maintenance", "text": "Hébergement sécurisé, mises à jour régulières et support technique continu pour maintenir votre site en parfait état.", "cta": "En savoir plus →" },
+      { "title": "Optimisation SEO", "text": "Référencement naturel pour mieux se positionner sur Google et générer du trafic organique vers votre site.", "cta": "En savoir plus →" },
+      { "title": "Campagnes SEA", "text": "Des campagnes Google Ads conçues pour générer du trafic instantané et maximiser votre visibilité en ligne.", "cta": "En savoir plus →" }
+    ]
+  },
+  "workShowcase": {
+    "title": "Notre travail",
+    "subtitle": "La créativité rencontre le code. Découvrez ce que nous avons créé.",
+    "visitSite": "Visiter le site →",
+    "projects": [
+      { "title": "Portfolio personnel", "category": "Web Design", "description": "Vitrine créative de compétences techniques avec des animations modernes et des interactions fluides." },
+      { "title": "AV Signature Detailing", "category": "Site d'entreprise", "description": "Site professionnel de detailing automobile avec système de réservation en ligne pour une entreprise belge." },
+      { "title": "Votre projet ?", "category": "À venir", "description": "Nous sommes prêts à créer quelque chose d'exceptionnel pour vous. Parlons-en." }
+    ]
+  },
+  "manifesto": {
+    "title": "Le bon site web change tout.",
+    "approachLabel": "Notre approche",
+    "blocks": [
+      {
+        "title": "Un design qui fonctionne.",
+        "text": "Que vous ayez besoin de créer un site web, de le rendre plus efficace ou de le repenser entièrement — le web design professionnel et le design responsive en sont la base. Un bon design web alliant développement et expérience utilisateur est la clé : visuellement puissant, intuitif, conçu pour l'utilisabilité. Un site web responsive et mobile-friendly permet à votre entreprise de démarrer, d'attirer du trafic et des visiteurs dès le premier jour."
+      },
+      {
+        "title": "Du nom de domaine au lancement.",
+        "text": "En tant qu'agence web et agence digitale, nous gérons l'ensemble du processus de création de site web — de l'identité de marque au lancement. Notre équipe couvre le design, la rédaction, le développement front-end et les systèmes de gestion de contenu incluant WordPress, WooCommerce, Joomla, Drupal et Magento. Que vous ayez besoin d'un site e-commerce, d'une application web ou d'un design web accessible — nous livrons des solutions pour chaque besoin."
+      },
+      {
+        "title": "Conçu pour évoluer.",
+        "text": "Au-delà du design, nous sommes une agence de marketing digital couvrant le SEO, les services SEO, le marketing internet, le marketing en ligne et le GEO. Nous construisons des stratégies marketing et gérons chaque campagne pour surpasser vos concurrents et atteindre votre audience cible sur les moteurs de recherche. Du marketing entrant au référencement payant, nous aidons votre activité en ligne à développer sa présence web de manière constante."
+      },
+      {
+        "title": "Ce que nous proposons.",
+        "text": "Nos services web couvrent tout : design web sur mesure, e-commerce, design graphique, branding, logos, design responsive, maintenance de site web et rédaction de contenu. Nos réalisations incluent des solutions pour chaque secteur — avec des témoignages clients qui parlent d'eux-mêmes. Que ce soit WordPress, WooCommerce, le développement d'applications web ou des projets de design continus — nous livrons du web design et développement professionnel qui fait croître votre activité en ligne."
+      }
+    ]
+  },
+  "homeFaq": {
+    "label": "FAQ",
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que les petites entreprises en Belgique veulent savoir avant de se lancer.",
+    "items": [
+      { "question": "Combien coûte un site web professionnel pour une petite entreprise en Belgique ?", "answer": "Chaque projet est différent, mais un site web professionnel commence généralement à quelques centaines d'euros. Le prix dépend du nombre de pages, des fonctionnalités comme les systèmes de réservation ou l'e-commerce, et du niveau de développement requis. Nous fournissons toujours un devis clair avant de commencer — sans frais cachés." },
+      { "question": "Combien de temps faut-il pour créer un site web ?", "answer": "Un site web standard prend 2 à 4 semaines du début au lancement. Des projets plus complexes avec de l'e-commerce, un CMS ou des fonctionnalités personnalisées peuvent prendre 4 à 8 semaines. Nous vous tenons informé tout au long du processus." },
+      { "question": "Pouvez-vous créer un site e-commerce ou une boutique en ligne ?", "answer": "Oui — nous créons des sites e-commerce sur mesure pour les entreprises qui souhaitent vendre en ligne. Que vous ayez besoin d'une boutique simple ou d'un catalogue complet avec paiements sécurisés, nous gérons le développement de bout en bout — y compris Shopify et les solutions personnalisées." },
+      { "question": "Quelle est la différence entre le SEO et Google Ads ?", "answer": "Le SEO développe votre visibilité organique dans le temps — il aide les clients potentiels à vous trouver sur Google sans payer par clic. Google Ads (pay-per-click / PPC) vous donne une visibilité instantanée pour un budget donné. Les deux sont des stratégies valables et nous proposons les deux. Nous vous conseillerons sur ce qui correspond le mieux à vos objectifs." },
+      { "question": "Ai-je besoin d'un hébergement web et d'un nom de domaine ?", "answer": "Oui — tout site web a besoin d'un hébergement web et d'un nom de domaine. Nous proposons des plans d'hébergement gérés à partir de 29€/mois incluant des sauvegardes quotidiennes, SSL et une surveillance 24h/24. Nous pouvons également vous aider à enregistrer votre domaine et tout configurer." },
+      { "question": "Qu'est-ce que le GEO et pourquoi mon entreprise devrait-elle s'en préoccuper ?", "answer": "GEO signifie Optimisation pour les Moteurs Génératifs — cela signifie optimiser votre entreprise pour être recommandée par des assistants IA comme ChatGPT, Google Gemini et Claude. À mesure que de plus en plus de personnes cherchent via l'IA plutôt que sur Google, le GEO devient aussi important que le SEO. Morfye est l'une des premières agences en Belgique à offrir ce service." }
+    ]
+  },
+  "contact": {
+    "title": "Construisons quelque chose d'exceptionnel ensemble",
+    "subtitle": "Parlez-nous de votre projet. Nous l'examinerons et vous répondrons dans les 24 heures.",
+    "nameLbl": "Votre nom",
+    "emailLbl": "Votre e-mail",
+    "messageLbl": "Description du projet / Message",
+    "namePlaceholder": "Jean Dupont",
+    "emailPlaceholder": "jean@exemple.com",
+    "messagePlaceholder": "Dites-nous ce que vous recherchez...",
+    "submitBtn": "Réserver une réunion gratuite",
+    "successMsg": "Merci ! Votre message a été envoyé.",
+    "errorMsg": "Oups ! Une erreur s'est produite. Veuillez réessayer."
+  },
+  "cookie": {
+    "title": "Nous utilisons des cookies",
+    "desc": "Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic du site et personnaliser le contenu. En cliquant sur",
+    "strong": "Accepter",
+    "desc2": ", vous consentez à notre utilisation des cookies.",
+    "privacyLink": "Politique de confidentialité",
+    "declineBtn": "Refuser",
+    "acceptBtn": "Tout accepter"
+  },
+  "footer": {
+    "tagline": "Nous créons des sites web modernes et performants ainsi que des stratégies digitales qui transforment les visiteurs en clients.",
+    "services": "Services",
+    "company": "Entreprise",
+    "contact": "Contact",
+    "home": "Accueil",
+    "whoWeAre": "Qui nous sommes",
+    "ourWork": "Notre travail",
+    "rights": "Tous droits réservés.",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions générales"
+  },
+  "webDesign": {
+    "meta": {
+      "title": "Création de site web professionnel | Morfye",
+      "description": "Des sites web beaux, responsives et optimisés pour l'IA qui font croître votre activité. Basés à Bruxelles, Belgique."
+    },
+    "navLinks": [
+      { "id": "what-we-do", "label": "Ce que nous faisons" },
+      { "id": "our-features", "label": "Fonctionnalités" },
+      { "id": "our-process", "label": "Notre processus" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "VOTRE FONDATION DIGITALE",
+      "title": "WEB",
+      "subtitle": "Création de site web professionnel",
+      "desc": "Des sites web beaux, responsives et optimisés pour l'IA qui font croître votre activité.",
+      "scroll": "Défiler"
+    },
+    "whatWeDo": {
+      "heading": "Bien plus qu'un beau site web",
+      "p1": "Dans le monde digital d'aujourd'hui, votre site web est votre <strong>employé le plus important</strong> — travaillant 24h/24 pour que les clients vous trouvent en ligne. Que vous vous demandiez comment créer un site web ou comment le distinguer de la concurrence, la réponse commence par la stratégie. Un site lent, confus ou obsolète ne fait pas que mal paraître — il vous fait activement perdre des clients.",
+      "p2": "Chez Morfye, nos designers créent votre site web comme un actif stratégique magnifique et entièrement personnalisable, conçu pour attirer, engager et convertir. Des sites one-page élégants aux plateformes e-commerce complexes, nous livrons des expériences rapides, responsives et optimisées pour le référencement.",
+      "p3": "Surtout, nos sites web sont optimisés dès le premier jour pour le <strong>SEO</strong> traditionnel et le nouveau <strong>GEO (Optimisation pour les Moteurs Génératifs)</strong>, vous assurant d'être recommandé par des assistants IA comme ChatGPT et Gemini."
+    },
+    "featuresHeading": "Nos fonctionnalités de création web",
+    "features": [
+      { "title": "Design visuel remarquable", "description": "Nous concevons votre site avec des visuels entièrement personnalisables qui capturent l'identité unique de votre marque et impressionnent les visiteurs dès la première seconde." },
+      { "title": "Entièrement responsive", "description": "Votre site sera parfaitement beau et fonctionnel sur tous les appareils — ordinateurs, tablettes et smartphones." },
+      { "title": "Optimisé SEO", "description": "Construit dès le départ avec les meilleures pratiques SEO pour se positionner en haut sur Google et attirer du trafic organique." },
+      { "title": "Prêt pour le GEO", "description": "Nous optimisons votre site pour l'IA, vous assurant d'être recommandé par ChatGPT, Gemini et Claude." },
+      { "title": "Solutions e-commerce", "description": "Prêt à vendre en ligne ? Nous construisons des boutiques en ligne sécurisées et faciles à gérer qui stimulent les ventes." },
+      { "title": "Facile à gérer", "description": "Nous fournissons des plateformes CMS intuitives avec édition par glisser-déposer et gestion de contenu — aucune connaissance technique requise." }
+    ],
+    "steps": [
+      { "title": "Découverte & Stratégie", "description": "Nous commençons par comprendre votre entreprise, vos objectifs et votre audience cible. Nous définissons le périmètre du projet et créons un plan stratégique pour votre site web." },
+      { "title": "Design & Prototypage", "description": "Notre équipe crée des wireframes et des maquettes visuelles. Vous verrez exactement à quoi ressemblera votre site avant que nous écrivions une seule ligne de code." },
+      { "title": "Développement", "description": "C'est là que la magie opère. Nous construisons votre site web avec un code propre et moderne, en garantissant qu'il est rapide, sécurisé et parfaitement responsive." },
+      { "title": "Révision & Lancement", "description": "Nous testons tout sur tous les navigateurs et appareils. Après votre approbation finale, nous mettons le site en ligne." },
+      { "title": "Formation & Support", "description": "Nous vous montrons comment gérer votre nouveau site et fournissons un support continu pour le maintenir en parfait état de fonctionnement." }
+    ],
+    "faqHeading": "Questions fréquemment posées",
+    "faqs": [
+      { "question": "Combien coûte un nouveau site web ?", "answer": "Cela dépend du périmètre. La création d'un site web va d'un simple site personnel à une plateforme e-commerce complète. Travailler avec une agence professionnelle est un investissement — mais il livre le meilleur site web pour vos objectifs. Nous construisons votre site de zéro et fournissons un devis personnalisé sans engagement après un appel de découverte." },
+      { "question": "Dois-je utiliser WordPress, Shopify, Squarespace ou une solution personnalisée ?", "answer": "Cela dépend de vos objectifs. WordPress est le CMS le plus populaire et idéal pour la plupart des sites d'entreprise. Des constructeurs de sites comme Squarespace, Wix et Weebly sont faciles à utiliser mais ont des limites réelles. Pour un site vraiment unique, nous recommandons un design web sur mesure — des solutions qui se classent bien mieux sur les moteurs de recherche et offrent un avantage concurrentiel durable." },
+      { "question": "Quelle est la différence entre un web designer et un développeur web ?", "answer": "Un web designer se concentre sur le côté visuel et UX — mise en page, branding, typographie, couleurs et ressenti des pages. Un développeur web écrit le code qui fait fonctionner le tout. Chez Morfye, notre équipe couvre les deux : nous designons et développons votre site de bout en bout, du concept au lancement." },
+      { "question": "Comment faire apparaître mon site sur Google ?", "answer": "Chaque site que nous construisons inclut le SEO dès le premier jour — URLs propres, balises title, méta-descriptions, chargement rapide et design responsive. Nous proposons également des services SEO continus pour que vos pages se positionnent dans les résultats de recherche et attirent du trafic organique sans publicité." },
+      { "question": "Pourrai-je mettre à jour le site moi-même ?", "answer": "Oui. Nous construisons sur des plateformes intuitives avec un CMS convivial et fournissons une formation complète, des tutoriels vidéo et de la documentation pour que vous puissiez gérer vos pages, ajouter des articles de blog et modifier le contenu — sans développeur web pour les mises à jour quotidiennes." },
+      { "question": "Créez-vous des sites e-commerce et des boutiques en ligne ?", "answer": "Oui — nous créons des sites e-commerce qui vendent des produits, services et téléchargements numériques. Que vous préfériez Shopify ou une solution personnalisée, nous concevons la boutique, configurons les paiements et l'optimisons pour les appareils mobiles et les moteurs de recherche." },
+      { "question": "Qu'est-ce que l'hébergement web et ai-je besoin d'un nom de domaine ?", "answer": "L'hébergement web est le serveur où se trouvent les fichiers de votre site. Les noms de domaine et l'hébergement sont les deux éléments essentiels pour mettre un site en ligne. Nous proposons des plans d'hébergement gérés à partir de 29€/mois — chaque plan inclut SSL, sauvegardes quotidiennes et surveillance 24h/24." },
+      { "question": "Proposez-vous l'hébergement et la maintenance du site web ?", "answer": "Oui. Nous proposons des plans mensuels d'hébergement et de maintenance à partir de 29€/mois incluant l'hébergement sécurisé, les sauvegardes quotidiennes, les mises à jour de sécurité, la gestion des plugins et le support technique." },
+      { "question": "Dois-je connaître HTML et CSS pour faire créer un site web ?", "answer": "Pas du tout. Vous n'avez pas besoin de connaître HTML et CSS pour créer un site web avec nous ni pour le gérer après le lancement. Nous gérons tout — de la structure du site à la configuration de l'hébergement et l'écriture de tout le code." },
+      { "question": "Quelle est la différence entre SEO et GEO ?", "answer": "Le SEO (optimisation pour les moteurs de recherche) vous aide à vous positionner sur Google. Le GEO (Optimisation pour les Moteurs Génératifs) vous aide à être recommandé par des assistants IA comme ChatGPT et Google Gemini. Nous construisons chaque site pour être optimisé pour les deux." }
+    ],
+    "cta": {
+      "heading": "Prêt à créer votre nouveau site web ?",
+      "text": "Prêt à construire un site web qui convertit ? Créons quelque chose qui travaille aussi dur que vous. Contactez-nous pour une consultation gratuite et sans engagement.",
+      "btn": "Obtenir votre devis gratuit"
+    }
+  },
+  "seo": {
+    "meta": {
+      "title": "Services SEO | Morfye - Mieux se positionner sur Google",
+      "description": "Services SEO professionnels à Bruxelles, Belgique. Augmentez votre trafic organique, positionnez-vous mieux sur Google et soyez trouvé par vos clients."
+    },
+    "navLinks": [
+      { "id": "what-is-seo", "label": "C'est quoi le SEO" },
+      { "id": "our-services", "label": "Nos services" },
+      { "id": "our-process", "label": "Notre processus" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "LA SCIENCE DU RÉFÉRENCEMENT GOOGLE",
+      "title": "SEO",
+      "subtitle": "Optimisation pour les moteurs de recherche",
+      "desc": "Mieux vous positionner sur Google, générer plus de trafic organique et développer votre activité.",
+      "scroll": "Défiler"
+    },
+    "whatIsSeo": {
+      "heading": "C'est quoi le SEO et pourquoi est-ce important ?",
+      "p1": "<strong>L'optimisation pour les moteurs de recherche (SEO)</strong> est la pratique d'optimiser votre site web pour se positionner plus haut dans les résultats sur Google, Bing et d'autres moteurs de recherche. Lorsque les gens cherchent les services que vous proposez, votre position SEO détermine si vous apparaissez en page 1 ou enfoui en page 10.",
+      "p2": "Voici la dure réalité : <strong>75% des internautes ne vont jamais au-delà de la première page des résultats Google.</strong> Si votre site n'est pas bien positionné, vous êtes invisible pour les clients potentiels qui cherchent activement ce que vous proposez.",
+      "p3": "Un bon SEO n'apporte pas seulement plus de trafic — il améliore votre taux de conversion en attirant des visiteurs ciblés prêts à acheter. C'est l'une des stratégies marketing les plus rentables, car contrairement aux publicités payantes, vous ne payez pas par clic. Le trafic issu du SEO organique se capitalise dans le temps.",
+      "p4": "Chez Morfye, nous combinons le SEO traditionnel avec le moderne <strong>GEO (Optimisation pour les Moteurs Génératifs)</strong> pour assurer votre visibilité partout où vos clients vous cherchent."
+    },
+    "featuresHeading": "Nos services SEO",
+    "features": [
+      { "title": "Recherche de mots-clés", "description": "Nous identifions les termes exacts que vos clients recherchent et ciblons les mots-clés à fort trafic et faible concurrence." },
+      { "title": "SEO on-page", "description": "Nous optimisons votre contenu, balises meta, titres, images et liens internes pour rendre votre site irrésistible à Google." },
+      { "title": "SEO technique", "description": "Nous corrigeons la vitesse du site, la responsivité mobile, les erreurs d'exploration et d'indexation, la configuration robots.txt, les sitemaps XML, les problèmes de contenu dupliqué et les données structurées." },
+      { "title": "SEO local", "description": "Parfait pour les entreprises en Belgique. Nous optimisons votre Profil d'Entreprise Google, les citations locales et les annuaires professionnels pour dominer les résultats de recherche locaux." },
+      { "title": "Création de liens", "description": "Nous contactons les webmasters de sites autoritaires pour créer des backlinks de haute qualité qui renforcent l'autorité de votre domaine et vos classements de recherche." },
+      { "title": "Analytics & Reporting SEO", "description": "Des rapports mensuels montrent vos améliorations de classement, la croissance du trafic et le ROI pour que vous sachiez toujours ce qui fonctionne." }
+    ],
+    "steps": [
+      { "title": "Audit SEO", "description": "Nous analysons votre site actuel pour identifier les problèmes techniques, les lacunes de contenu et les opportunités. Vous recevrez un rapport détaillé montrant exactement ce qui doit être corrigé." },
+      { "title": "Analyse de la concurrence", "description": "Nous étudions vos principaux concurrents pour voir sur quels mots-clés ils se positionnent, quels backlinks ils possèdent et où vous pouvez les surpasser." },
+      { "title": "Développement de la stratégie", "description": "Sur la base de nos recherches, nous créons une stratégie SEO personnalisée avec des objectifs clairs, des mots-clés cibles et un plan d'action." },
+      { "title": "Mise en œuvre", "description": "Nous optimisons les fondations techniques de votre site, le contenu et les facteurs hors-page. Cela inclut l'optimisation des mots-clés, l'amélioration de la vitesse et la création de liens." },
+      { "title": "Suivi & Optimisation", "description": "Le SEO est un processus continu. Nous surveillons constamment les classements, analysons les performances et effectuons des ajustements pour vous maintenir en tête de la concurrence." }
+    ],
+    "faqHeading": "Questions fréquemment posées",
+    "faqs": [
+      { "question": "Combien de temps faut-il pour voir des résultats SEO ?", "answer": "Le SEO est une stratégie à long terme. Vous verrez généralement des améliorations initiales en 3 à 6 mois, avec des gains de classement significatifs après 6 à 12 mois. Contrairement au PPC (pay-per-click), les résultats de recherche organiques issus du SEO se capitalisent dans le temps — vous ne payez pas pour chaque clic." },
+      { "question": "Quelles sont les tactiques SEO les plus importantes ?", "answer": "Une stratégie SEO efficace utilise : la recherche de mots-clés pour trouver ce que vos clients cherchent ; le SEO on-page (balises title, méta-descriptions, URLs) ; le SEO technique pour s'assurer que vos pages sont correctement indexées ; la création de liens pour obtenir des backlinks de qualité ; le marketing de contenu pour cibler des mots-clés longue traîne ; et le SEO local pour le ciblage géographique." },
+      { "question": "Quelle est la différence entre le SEO on-page et off-page ?", "answer": "Le SEO on-page couvre ce qui se trouve sur vos pages web — balises title, titres, URLs, balises meta, phrases-clés, liens internes et qualité du contenu. Le SEO off-page concerne votre autorité sur le web — backlinks, liens entrants et mentions externes. Les deux sont essentiels pour des classements solides dans les moteurs de recherche." },
+      { "question": "Quels outils SEO utilisez-vous ?", "answer": "Nous utilisons Google Search Console, Google Analytics, SEMrush et Ahrefs pour suivre les requêtes de recherche, surveiller les backlinks, analyser les concurrents et mesurer vos performances SEO. Nous fournissons des rapports mensuels pour que vous sachiez toujours où vous vous positionnez." },
+      { "question": "Quelle est la différence entre SEO et Google Ads ?", "answer": "La recherche payante (Google Ads, PPC) offre une visibilité instantanée — vous payez par clic et apparaissez immédiatement en haut des résultats. La recherche organique via SEO prend plus de temps mais offre des résultats durables et rentables sans payer par clic. Idéalement, utilisez la recherche payante pour des résultats rapides pendant que le SEO construit votre fondation long terme." },
+      { "question": "Garantissez-vous la première position sur Google ?", "answer": "Aucune agence SEO éthique ne peut garantir des classements spécifiques — l'algorithme de Google est trop complexe. Nous nous concentrons sur des techniques basées sur les données qui améliorent constamment les classements, développent le trafic organique et génèrent un ROI mesurable. Nous suivons et rapportons chaque amélioration." },
+      { "question": "Quelle est la différence entre le SEO white-hat et black-hat ?", "answer": "Le SEO white-hat suit les directives des moteurs de recherche — contenu de qualité, création de liens légitime, optimisation technique appropriée. Le SEO black-hat utilise des tactiques manipulatrices comme le bourrage de mots-clés et les schémas de liens. Bien que les tactiques black-hat puissent montrer des gains à court terme, elles risquent des pénalités Google. Nous utilisons exclusivement des techniques white-hat." },
+      { "question": "Le SEO local est-il différent du SEO classique ?", "answer": "Oui. Le SEO local se concentre sur le classement dans des zones géographiques spécifiques (comme Bruxelles ou la Belgique) pour des requêtes basées sur la localisation. Il inclut l'optimisation de votre Profil d'Entreprise Google, la création de citations locales et le ciblage de mots-clés spécifiques à la localisation. C'est l'une des stratégies les plus rentables pour les petites entreprises." },
+      { "question": "Combien coûte le SEO ?", "answer": "Cela varie selon la concurrence, votre secteur et le périmètre. Le SEO local de base commence à environ 299€/mois, tandis qu'une campagne SEO nationale complète peut être de 1 000€+/mois. Nous fournissons des devis personnalisés après un audit SEO." },
+      { "question": "Que se passe-t-il si j'arrête les services SEO ?", "answer": "Vos classements ne disparaîtront pas du jour au lendemain, mais les concurrents qui continuent à optimiser vous surpasseront éventuellement. Le SEO nécessite un marketing de contenu, une création de liens et une maintenance technique continus pour rester en tête à mesure que les algorithmes évoluent." }
+    ],
+    "cta": {
+      "heading": "Prêt à vous positionner n°1 sur Google ?",
+      "text": "Arrêtez de perdre des clients au profit de vos concurrents. Donnons à votre site la visibilité qu'il mérite.",
+      "btn": "Obtenir votre audit SEO gratuit"
+    }
+  },
+  "geo": {
+    "meta": {
+      "title": "GEO - Optimisation pour les Moteurs Génératifs | Morfye",
+      "description": "Faites recommander votre entreprise par des assistants IA comme ChatGPT, Claude et Google Gemini. Services GEO professionnels en Belgique."
+    },
+    "navLinks": [
+      { "id": "what-is-geo", "label": "C'est quoi le GEO" },
+      { "id": "why-geo", "label": "Pourquoi le GEO" },
+      { "id": "how-it-works", "label": "Comment ça marche" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "L'AVENIR DE LA VISIBILITÉ EN LIGNE",
+      "title": "GEO",
+      "subtitle": "Optimisation pour les Moteurs Génératifs",
+      "desc": "Faites recommander votre entreprise par des assistants IA comme ChatGPT, Claude et Google Gemini.",
+      "scroll": "Défiler"
+    },
+    "whatIsGeo": {
+      "heading": "C'est quoi le GEO ?",
+      "p1": "La visibilité en ligne a considérablement évolué — le trafic de recherche organique a chuté de plus de <strong>55% depuis 2022</strong>. Les internautes demandent désormais à des assistants IA plutôt que de cliquer sur les résultats des moteurs de recherche. Les entreprises qui comptent uniquement sur leur classement Google perdent des clients sans même s'en rendre compte.",
+      "p2": "Le GEO est l'évolution de l'optimisation pour la recherche à l'ère de l'IA. Tandis que le SEO se concentre sur les facteurs de classement comme les balises title, méta-descriptions, mots-clés et backlinks — le GEO garantit que les chatbots IA comme ChatGPT, Claude, Perplexity et Google Gemini recommandent VOTRE entreprise lorsque les gens cherchent de l'aide.",
+      "p3": "De plus en plus de personnes posent des questions à des assistants IA plutôt qu'à Google. Si votre contenu n'est pas optimisé pour l'indexation IA, vous êtes invisible pour cette audience croissante — même si votre classement SEO et votre trafic organique sont solides.",
+      "p4": "Améliorez votre positionnement concurrentiel maintenant — le GEO n'est pas seulement le futur, c'est le présent. Les entreprises qui s'adaptent tôt voient plus de conversions pendant que leurs concurrents se demandent où sont passés leurs clients."
+    },
+    "featuresHeading": "Pourquoi votre entreprise a besoin du GEO",
+    "features": [
+      { "title": "Être trouvé par l'IA", "description": "Lorsque des clients potentiels demandent à ChatGPT ou Claude des recommandations, votre entreprise apparaît en premier." },
+      { "title": "Prendre de l'avance sur la concurrence", "description": "La plupart des entreprises ne connaissent pas encore le GEO. Prenez de l'avance tant qu'il est encore tôt." },
+      { "title": "Pérenniser votre activité", "description": "La recherche IA croît 10x plus vite que la recherche traditionnelle. Soyez prêt pour demain, aujourd'hui." },
+      { "title": "Renforcer la confiance & l'autorité", "description": "Les recommandations IA ont un poids considérable. Être suggéré par l'IA génère une crédibilité instantanée." },
+      { "title": "Portée locale & internationale", "description": "Optimisez pour les recherches IA locales en Belgique tout en atteignant des audiences internationales." },
+      { "title": "Des leads de meilleure qualité", "description": "Les personnes qui reçoivent des recommandations IA sont prêtes à acheter — elles ne font pas que naviguer." }
+    ],
+    "steps": [
+      { "title": "Audit & Analyse IA", "description": "Nous testons comment les moteurs IA voient actuellement votre entreprise. Nous interrogeons ChatGPT, Claude et Perplexity sur votre secteur pour voir si vous êtes mentionné. La plupart des entreprises ? Pas même sur le radar." },
+      { "title": "Optimisation du contenu", "description": "Nous réécrivons le contenu de votre site d'une manière que l'IA comprend. Cela inclut le langage naturel, des informations claires sur votre entreprise, des sections FAQ et des données structurées que les moteurs IA apprécient — tout en apportant une valeur réelle aux visiteurs humains." },
+      { "title": "Configuration Schema & Technique", "description": "Nous ajoutons un code spécial (balisage schema) qui indique à l'IA exactement qui vous êtes, ce que vous faites, où vous êtes situé et pourquoi vous êtes le meilleur choix. Considérez-le comme un CV pour les moteurs IA." },
+      { "title": "Construction de citations", "description": "Nous faisons mentionner votre entreprise sur des sites web autoritaires, des annuaires et des plateformes que les moteurs IA font confiance. Plus des sources crédibles vous mentionnent, plus l'IA vous recommande." },
+      { "title": "Suivi & Amélioration", "description": "Le GEO n'est pas 'set and forget'. Nous surveillons continuellement comment les moteurs IA répondent aux requêtes sur votre secteur et ajustons votre stratégie pour rester en tête." }
+    ],
+    "faqHeading": "Questions fréquemment posées",
+    "faqs": [
+      { "question": "Combien de temps faut-il pour voir des résultats GEO ?", "answer": "Des améliorations initiales peuvent être observées en 2 à 4 semaines. L'optimisation complète prend généralement 2 à 3 mois, le temps que les moteurs IA indexent et comprennent votre contenu mis à jour, vos données structurées et vos signaux d'autorité entrants." },
+      { "question": "En quoi le GEO diffère-t-il du SEO traditionnel ?", "answer": "Le SEO traditionnel aide vos pages web à se classer dans les résultats organiques sur Google via le SEO on-page (balises title, méta-descriptions, titres), le travail technique (optimisation du crawl, design mobile) et les signaux off-page (backlinks). Le GEO cible directement les assistants IA — ChatGPT, Gemini, Perplexity — qui n'utilisent pas les mêmes facteurs de classement que Google. Une stratégie digitale complète nécessite les deux." },
+      { "question": "Le GEO aide-t-il avec la recherche locale ?", "answer": "Oui — le GEO local est l'une des tactiques les plus puissantes pour les entreprises locales. Lorsque des internautes demandent à l'IA 'meilleur designer web près de chez moi' ou 'comptable à Bruxelles', vous voulez être la réponse. Nous optimisons votre présence locale pour que les moteurs IA connaissent votre secteur, votre localisation et vos services." },
+      { "question": "Quel est le rôle du marketing de contenu dans le GEO ?", "answer": "Le marketing de contenu est l'épine dorsale du GEO. Les moteurs IA sont entraînés sur du texte — plus votre site a de contenu pertinent et de haute qualité, mieux l'IA vous comprend et vous recommande. Nous nous concentrons sur du contenu qui évite les doublons, cible des requêtes longue traîne et utilise des méta-descriptions et balises title appropriées." },
+      { "question": "Créez-vous des backlinks pour le GEO ?", "answer": "Oui — la construction de citations, les backlinks et les liens entrants depuis des sites web autoritaires sont au cœur de notre processus GEO. Les moteurs IA apprennent depuis le web — lorsque des sources de confiance mentionnent votre entreprise, vous devenez plus crédible pour l'IA. Ce travail chevauche le SEO traditionnel et améliore à la fois vos classements de recherche et vos recommandations IA." },
+      { "question": "Le GEO remplacera-t-il mes efforts SEO actuels ?", "answer": "Non. Le GEO complète votre stratégie SEO — vous avez toujours besoin du SEO traditionnel pour les classements Google, du PPC pour la recherche payante et du marketing de contenu pour le trafic entrant. Le GEO ajoute une nouvelle couche de visibilité pour que lorsque des assistants IA sont interrogés sur votre secteur, votre entreprise soit recommandée." },
+      { "question": "Pour quels moteurs IA optimisez-vous ?", "answer": "Nous optimisons pour ChatGPT (OpenAI), Claude (Anthropic), Perplexity, Google Gemini et Microsoft Copilot. Chacun a des signaux différents — certains s'appuient sur le crawl web, d'autres sur leurs données d'entraînement — donc nos tactiques sont adaptées par plateforme." },
+      { "question": "Le GEO vaut-il la peine pour les entreprises locales ?", "answer": "Absolument. Le GEO local est incroyablement puissant pour les petites entreprises. Lorsque quelqu'un dans votre secteur demande à un assistant IA une recommandation, vous voulez être la réponse pour votre ville ou région — que ce soit Bruxelles, Gand, Anvers ou ailleurs." },
+      { "question": "Combien coûte le GEO ?", "answer": "Nous proposons une mise en place GEO unique à partir de 499€, ou une gestion GEO mensuelle à partir de 199€/mois. Des packages personnalisés sont disponibles pour les grandes entreprises ou les secteurs concurrentiels." },
+      { "question": "Quels secteurs bénéficient le plus du GEO ?", "answer": "Tous les secteurs avec des requêtes de recherche en bénéficient, mais surtout : consultants, avocats, comptables, prestataires de soins de santé, agents immobiliers, services locaux et entreprises B2B où les clients potentiels utilisent l'IA pour chercher et évaluer des options avant de contacter un prestataire." }
+    ],
+    "cta": {
+      "heading": "Prêt à dominer la recherche IA ?",
+      "text": "N'attendez pas que vos concurrents découvrent le GEO. Prenez de l'avance maintenant et devenez la référence de votre marché.",
+      "btn": "Planifier une consultation"
+    }
+  },
+  "sea": {
+    "meta": {
+      "title": "Campagnes SEA & Google Ads | Morfye",
+      "description": "Générez du trafic instantané et des leads avec une gestion experte de Google Ads. Des résultats aujourd'hui, pas dans des mois."
+    },
+    "navLinks": [
+      { "id": "what-is-sea", "label": "C'est quoi le SEA" },
+      { "id": "our-services", "label": "Nos services" },
+      { "id": "our-process", "label": "Notre méthode" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "RÉSULTATS IMMÉDIATS, ROI MAXIMAL",
+      "title": "ADS",
+      "subtitle": "Campagnes SEA & Google Ads",
+      "desc": "Générez du trafic instantané et des leads avec une gestion experte de Google Ads.",
+      "scroll": "Défiler"
+    },
+    "whatIsSea": {
+      "heading": "C'est quoi le SEA ?",
+      "p1": "<strong>Le SEA (Search Engine Advertising)</strong> — également appelé <strong>publicité PPC (pay-per-click)</strong> ou Google Ads — est le marketing de recherche payant sur les moteurs de recherche. Lorsque quelqu'un cherche des mots-clés liés à votre entreprise, vos annonces apparaissent en haut de Google, au-dessus de tous les résultats organiques.",
+      "p2": "Contrairement au SEO, le pay-per-click offre une <strong>visibilité instantanée</strong>. Lancez une campagne aujourd'hui et commencez à obtenir des clics, des appels et des clients en quelques heures — sans attendre des mois de résultats SEO.",
+      "p3": "Le problème ? Des campagnes publicitaires réussies nécessitent une vraie expertise. Un PPC mal géré gaspille de l'argent sur des clics non pertinents. C'est là que nous intervenons.",
+      "p4": "Chez Morfye, nous concevons, lançons et optimisons des campagnes Google Ads pour les entreprises à travers la Belgique. Que vous souhaitiez plus de trafic web, d'appels téléphoniques, de soumissions de formulaires ou de ventes e-commerce — notre expertise en recherche payante livre des campagnes conçues pour maximiser votre retour sur investissement."
+    },
+    "featuresHeading": "Nos services SEA",
+    "features": [
+      { "title": "Campagnes de recherche", "description": "Des annonces textuelles qui apparaissent lorsque des internautes recherchent des mots-clés liés à votre entreprise sur Google. La publicité pay-per-click à son plus direct — capturer des clients à haute intention au moment où ils cherchent." },
+      { "title": "Campagnes Display", "description": "Des bannières publicitaires visuelles affichées sur des millions de sites web dans le Réseau Display de Google. Une forme clé de publicité en ligne pour renforcer la notoriété de marque et atteindre de nouvelles audiences à grande échelle." },
+      { "title": "Campagnes Shopping", "description": "Des annonces produit avec images et prix, parfaites pour les boutiques e-commerce qui souhaitent générer des ventes en ligne directement depuis les résultats de recherche." },
+      { "title": "Campagnes locales", "description": "Des annonces géo-ciblées qui attirent des clients vers votre emplacement physique ou votre zone de service en Belgique." },
+      { "title": "Remarketing & Retargeting", "description": "Réengagez les visiteurs qui ont quitté votre site sans convertir. Montrez-leur des annonces de retargeting ciblées à travers le web — une tactique éprouvée pour ramener des acheteurs potentiels et améliorer les taux de conversion." },
+      { "title": "Suivi des performances", "description": "Des analyses détaillées montrant chaque indicateur clé : clics, taux de conversion, coût par lead et retour sur investissement. Voyez exactement comment chaque étape de votre entonnoir de vente performe." }
+    ],
+    "steps": [
+      { "title": "Stratégie & objectifs", "description": "Nous commençons par comprendre vos objectifs commerciaux, votre audience cible et votre budget. Nous définissons vos objectifs de campagne, planifions votre structure publicitaire et décrivons les campagnes à lancer — configurant tout pour des résultats mesurables dès le premier jour." },
+      { "title": "Recherche de mots-clés & ciblage", "description": "Nous utilisons le Planificateur de mots-clés Google et des outils d'analyse concurrentielle pour construire une liste de mots-clés complète — incluant des mots-clés longue traîne rentables que vos clients recherchent. Nous analysons les enchères des concurrents et définissons une approche de gestion des enchères pour maximiser chaque euro de votre budget." },
+      { "title": "Création des annonces & pages de destination", "description": "Nous rédigeons des textes publicitaires convaincants pour chaque annonce et groupe d'annonces. Nous créons ou optimisons également des pages de destination qui transforment les visiteurs en clients, faisant travailler plus dur vos dépenses publicitaires." },
+      { "title": "Lancement & suivi", "description": "Nous lançons vos campagnes avec un suivi complet en place (suivi des conversions, suivi des appels, etc.) et surveillons les performances quotidiennement. Nous suivons chaque clic et corrigeons les problèmes avant qu'ils ne gaspillent le budget." },
+      { "title": "Optimisation & reporting", "description": "Nous testons continuellement les textes publicitaires, améliorons la gestion des enchères, affinons le ciblage et éliminons les dépenses inutiles. Des rapports mensuels couvrent chaque indicateur clé pour que vous connaissiez toujours votre retour sur investissement." }
+    ],
+    "faqHeading": "Questions fréquemment posées",
+    "faqs": [
+      { "question": "Qu'est-ce que Google AdWords et en quoi diffère-t-il de Google Ads ?", "answer": "Google AdWords était le nom original de la plateforme de recherche payante de Google — elle a été rebaptisée Google Ads en 2018. La plateforme est la même : les annonceurs enchérissent sur des mots-clés, et les annonces apparaissent en haut des résultats de recherche lorsque des internautes utilisent des requêtes correspondantes. C'est la base de tout référencement payant et marketing de moteur de recherche (SEM)." },
+      { "question": "Qu'est-ce que le coût par clic (CPC) et comment fonctionnent les enchères ?", "answer": "Le coût par clic (CPC) est le montant qu'un annonceur paie chaque fois que quelqu'un clique sur son annonce. Google Ads utilise un système d'enchères : les annonceurs fixent une enchère maximale sur les mots-clés, et Google attribue un Score de qualité basé sur la pertinence de l'annonce, la qualité de la page de destination et le taux de clics (CTR) attendu. Les annonceurs avec un Score de qualité élevé peuvent obtenir des positions de premier plan à un CPC inférieur." },
+      { "question": "Qu'est-ce qu'une page de destination et pourquoi est-elle importante pour le PPC ?", "answer": "Une page de destination est la page web que les internautes atteignent après avoir cliqué sur votre annonce. Une excellente page de destination correspond directement à ce que l'annonce promettait, se charge rapidement, possède un appel à l'action clair et est optimisée pour le taux de conversion. Des pages de destination médiocres tuent les campagnes PPC. Nous créons et optimisons des pages de destination dans le cadre de chaque campagne que nous gérons." },
+      { "question": "Gérez-vous aussi les Bing Ads et les annonces display ?", "answer": "Oui. Au-delà de Google Ads, nous gérons également les campagnes Microsoft/Bing Ads. Nous gérons aussi des campagnes Google Display Ads et des campagnes de remarketing pour réengager les visiteurs qui ont visité votre site sans convertir." },
+      { "question": "Quel budget dois-je prévoir pour Google Ads ?", "answer": "Nous recommandons généralement de commencer avec au moins 500 à 1 000€/mois en dépenses publicitaires, plus nos frais de gestion. Dans les secteurs concurrentiels, votre coût par clic peut être plus élevé, donc un budget plus important est nécessaire pour collecter suffisamment de données pour optimiser." },
+      { "question": "À quelle vitesse verrai-je des résultats ?", "answer": "Contrairement au SEO, Google Ads génère du trafic instantané. Vous pouvez commencer à obtenir des clics et des leads dans les heures suivant le lancement. Cependant, l'optimisation pour le meilleur taux de conversion, le CPC le plus bas et le Score de qualité le plus élevé prend 1 à 2 mois de tests continus." },
+      { "question": "Quelle est la différence entre SEO et SEA ?", "answer": "Le SEO (recherche organique) est gratuit par clic mais prend 3 à 6 mois pour voir des résultats. Le SEA/PPC est de la recherche payante — vous payez par clic mais obtenez une visibilité instantanée. Idéalement, utilisez le SEA pour des résultats immédiats pendant que le SEO construit votre fondation de marketing digital à long terme." },
+      { "question": "Que sont les mots-clés négatifs et pourquoi sont-ils importants ?", "answer": "Les mots-clés négatifs indiquent à Google Ads de NE PAS afficher vos annonces pour certaines requêtes de recherche. Par exemple, si vous vendez des services de web design premium, vous pourriez ajouter 'gratuit' comme mot-clé négatif pour éviter de payer pour des clics d'internautes qui ne veulent que des outils gratuits. Une bonne gestion des mots-clés négatifs est essentielle pour réduire les dépenses publicitaires gaspillées." },
+      { "question": "Dois-je signer un contrat à long terme ?", "answer": "Non. Nous proposons des contrats mensuels sans engagement. Cependant, nous recommandons au moins 3 mois pour une campagne PPC afin de collecter suffisamment de données pour optimiser correctement les enchères, les textes publicitaires et les pages de destination pour un ROI maximal." },
+      { "question": "Quels sont vos frais de gestion ?", "answer": "Nos frais de gestion représentent généralement 15 à 20% de vos dépenses publicitaires mensuelles, avec un minimum de 299€/mois. Cela couvre la stratégie, la mise en place, la création de campagnes, l'optimisation des enchères et des textes, le reporting et le support continu." }
+    ],
+    "cta": {
+      "heading": "Prêt à obtenir du trafic instantané ?",
+      "text": "Arrêtez d'attendre le SEO. Commencez à obtenir des clients aujourd'hui avec des campagnes Google Ads expertement gérées.",
+      "btn": "Lancer votre campagne"
+    }
+  },
+  "hosting": {
+    "meta": {
+      "title": "Hébergement & Maintenance de site web | Morfye",
+      "description": "Hébergement fiable, sécurisé et rapide avec une maintenance experte. Gardez votre site en ligne 24h/24."
+    },
+    "navLinks": [
+      { "id": "why-hosting", "label": "Pourquoi l'hébergement" },
+      { "id": "what-we-offer", "label": "Ce que nous offrons" },
+      { "id": "our-process", "label": "Comment ça marche" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "TOUJOURS EN LIGNE, TOUJOURS SÉCURISÉ",
+      "title": "HOST",
+      "subtitle": "Hébergement & Maintenance",
+      "desc": "Hébergement fiable, sécurisé et rapide avec une maintenance experte. Zéro temps d'arrêt.",
+      "scroll": "Défiler"
+    },
+    "whyHosting": {
+      "heading": "Pourquoi l'hébergement & la maintenance professionnels sont essentiels",
+      "p1": "Créer un site web n'est que le début. Pour rester en ligne, performer correctement et rester sécurisé, votre site web a besoin d'une <strong>base fiable</strong> et d'une <strong>maintenance continue</strong>. Pensez à l'hébergement comme le terrain sur lequel repose votre maison digitale — s'il est instable ou peu sûr, tout s'effondre.",
+      "p2": "De nombreuses entreprises font l'erreur de choisir l'option la moins chère chez des hébergeurs génériques — pour découvrir que les plans d'hébergement mutualisé ne peuvent pas répondre aux exigences réelles d'une entreprise. Temps de chargement lents, pannes fréquentes, failles de sécurité et aucun support. Chez Morfye, nous fournissons un hébergement de qualité entreprise combiné à une maintenance proactive.",
+      "p3": "Que vous lanciez une nouvelle boutique e-commerce, migriez depuis un constructeur de site, ou changiez d'hébergeur peu fiable — nous offrons les meilleures solutions d'hébergement web pour les entreprises belges. De l'enregistrement de domaine aux essais d'hébergement gratuits sur certains packages, nous gérons tout."
+    },
+    "featuresHeading": "Ce qu'inclut notre hébergement & maintenance",
+    "features": [
+      { "title": "Performances ultra-rapides", "description": "Nous utilisons des serveurs cloud optimisés avec stockage SSD, intégration CDN et bande passante illimitée pour garantir que votre site se charge en moins de 2 secondes — à chaque fois." },
+      { "title": "Sécurité maximale", "description": "Certificats SSL gratuits, protection pare-feu, filtrage anti-spam, scan antimalware et mises à jour de sécurité automatiques pour tenir les hackers à l'écart. L'infrastructure serveur est verrouillée et gérée par notre équipe." },
+      { "title": "Sauvegardes automatiques quotidiennes", "description": "Votre site est sauvegardé chaque jour sur un stockage redondant. En cas de problème, nous pouvons le restaurer en quelques minutes." },
+      { "title": "Mises à jour régulières", "description": "Nous maintenir votre CMS, vos plugins et vos thèmes à jour — que vous utilisiez WordPress, Joomla, Drupal ou toute plateforme PHP. Votre site reste sécurisé et compatible." },
+      { "title": "Surveillance 24h/24", "description": "Nous surveillons votre site en permanence. S'il tombe en panne, nous sommes alertés instantanément et le corrigeons immédiatement — sans dépendre de systèmes de tickets lents." },
+      { "title": "Support prioritaire", "description": "Notre équipe répond rapidement pour corriger les problèmes, effectuer des mises à jour ou répondre à vos questions — que vous soyez sur un plan d'hébergement personnel ou professionnel." }
+    ],
+    "steps": [
+      { "title": "Migration facile", "description": "Déjà chez un autre hébergeur ? Nous migrerons votre infrastructure d'hébergement sans aucune interruption de service. Vous ne remarquerez même pas le changement." },
+      { "title": "Configuration sécurisée", "description": "Nous configurons votre environnement d'hébergement avec des certificats SSL, des pare-feux et une optimisation des performances dès le premier jour." },
+      { "title": "Surveillance proactive", "description": "Nos systèmes surveillent votre site 24h/24. Si nous détectons une panne, des menaces de sécurité ou des problèmes de performances, nous agissons immédiatement." },
+      { "title": "Maintenance régulière", "description": "Chaque semaine, nous vérifions les mises à jour, exécutons des scans de sécurité, optimisons les bases de données et veillons à ce que tout fonctionne correctement." },
+      { "title": "Support continu", "description": "Besoin d'une mise à jour de contenu, d'une nouvelle fonctionnalité ou d'une aide technique ? Contactez-nous simplement. Nous sommes là pour vous soutenir quand vous en avez besoin." }
+    ],
+    "faqHeading": "Questions fréquemment posées",
+    "faqs": [
+      { "question": "Quels types d'hébergement web proposez-vous ?", "answer": "Nous proposons des services d'hébergement web géré adaptés aux petites et moyennes entreprises. Contrairement aux hébergeurs génériques, nos plans d'hébergement sont entièrement gérés — ce qui signifie que nous gérons la configuration du serveur, la sécurité et la maintenance à votre place. Nous utilisons une infrastructure d'hébergement cloud avec stockage SSD, bande passante évolutive et garanties de disponibilité élevées." },
+      { "question": "Quelle est la différence entre hébergement mutualisé, VPS et cloud ?", "answer": "L'hébergement mutualisé est l'option la moins chère — votre site partage les ressources serveur avec de nombreux autres, ce qui peut nuire aux performances et à la disponibilité. Le VPS donne une tranche dédiée d'un serveur avec plus de contrôle. L'hébergement cloud distribue votre site sur plusieurs serveurs pour une disponibilité et une évolutivité maximales. Nous utilisons l'hébergement cloud car il combine performances et évolutivité — sans le coût élevé des serveurs dédiés." },
+      { "question": "Supportez-vous WordPress, Joomla et d'autres plateformes CMS ?", "answer": "Oui — l'hébergement WordPress est l'une de nos spécialités. Nous supportons également entièrement Joomla, Drupal et toute plateforme CMS ou e-commerce PHP (WooCommerce, Magento, PrestaShop). Nous gérons les mises à jour, les mises à jour de plugins, les mises à jour de thèmes et les correctifs de sécurité dans le cadre de nos plans de maintenance." },
+      { "question": "Quelle garantie de disponibilité offrez-vous ?", "answer": "Nous visons une disponibilité de 99,9% pour tous les plans d'hébergement. Notre système de surveillance 24h/24 nous alerte dès que votre site tombe, et nous agissons immédiatement. La disponibilité est critique — chaque minute d'indisponibilité vous coûte des clients potentiels." },
+      { "question": "Quelle est la différence entre hébergement et maintenance ?", "answer": "L'hébergement web est le serveur où se trouvent les fichiers de votre site — c'est la fondation qui maintient votre site en ligne. La maintenance couvre tout le reste : mises à jour des plugins et du CMS, scans de sécurité, sauvegardes quotidiennes, optimisation des performances, renouvellement SSL et support technique. Nos packages d'hébergement incluent les deux." },
+      { "question": "Puis-je apporter mon propre nom de domaine ?", "answer": "Absolument. Vous pouvez conserver vos noms de domaine existants et les pointer vers notre hébergement. Nous pouvons également enregistrer de nouveaux domaines pour vous, ou transférer votre domaine existant. Certains packages d'hébergement incluent un nom de domaine gratuit. Nous gérons toute la configuration DNS pour mettre votre site en ligne rapidement." },
+      { "question": "Proposez-vous aussi l'hébergement d'e-mails ?", "answer": "Oui — nous pouvons configurer des adresses e-mail professionnelles (comme vous@votreentreprise.be) connectées à votre domaine dans le cadre de nos services d'hébergement." },
+      { "question": "Puis-je annuler à tout moment ?", "answer": "Oui. Nous proposons des plans d'hébergement flexibles mois par mois sans contrats à long terme. Annulez à tout moment avec 30 jours de préavis. Aucun engagement, aucun frais cachés." },
+      { "question": "Combien coûtent vos plans d'hébergement ?", "answer": "Les plans d'hébergement commencent à 29€/mois pour notre package d'hébergement géré standard, qui inclut SSL, sauvegardes quotidiennes, surveillance 24h/24 et maintenance de base. Des packages de niveau supérieur avec plus de ressources et un support prioritaire sont disponibles. Contactez-nous pour un devis personnalisé." },
+      { "question": "Proposez-vous le webmail et l'accès FTP ?", "answer": "Oui. Tous les plans d'hébergement incluent un webmail professionnel pour accéder à votre e-mail d'entreprise depuis n'importe quel navigateur. L'accès FTP est disponible pour les transferts de fichiers. Nous fournissons également un accès SSH pour les utilisateurs techniques — l'accès root est géré par notre équipe pour maintenir l'infrastructure sécurisée." }
+    ],
+    "cta": {
+      "heading": "Laissez-nous gérer les aspects techniques",
+      "text": "Concentrez-vous sur votre activité pendant que nous maintenons votre site rapide, sécurisé et toujours en ligne.",
+      "btn": "Obtenir un devis d'hébergement"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Politique de confidentialité — Morfye Agence Web",
+      "description": "Lisez la politique de confidentialité de Morfye. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles conformément au RGPD et au droit belge."
+    },
+    "pageTitle": "Politique de confidentialité",
+    "updated": "Dernière mise à jour : mars 2026",
+    "sections": [
+      {
+        "heading": "1. Qui nous sommes",
+        "content": "Morfye est une agence de création de sites web et de marketing digital basée en Belgique. Nous créons des sites web professionnels, des stratégies SEO et des solutions de marketing en ligne pour les petites entreprises. Vous pouvez nous contacter à hello@morfye.com."
+      },
+      {
+        "heading": "2. Les données que nous collectons",
+        "intro": "Nous pouvons collecter les données personnelles suivantes lorsque vous utilisez notre site web ou nous contactez :",
+        "items": [
+          "Nom et adresse e-mail (via le formulaire de contact)",
+          "Données d'utilisation et analytiques (via Google Analytics, uniquement avec votre consentement)",
+          "Adresse IP et informations sur le navigateur (collectées automatiquement)"
+        ]
+      },
+      {
+        "heading": "3. Comment nous utilisons vos données",
+        "intro": "Nous utilisons vos données pour :",
+        "items": [
+          "Répondre à vos demandes et fournir nos services",
+          "Améliorer notre site web et l'expérience utilisateur",
+          "Analyser le trafic du site (uniquement avec consentement aux cookies)"
+        ],
+        "outro": "Nous ne vendons, ne louons ni ne partageons vos données personnelles avec des tiers à des fins marketing."
+      },
+      {
+        "heading": "4. Cookies",
+        "content": "Notre site web utilise des cookies pour améliorer votre expérience et analyser le trafic. Nous utilisons Google Analytics uniquement après que vous ayez donné votre consentement explicite via notre bannière de cookies. Vous pouvez retirer votre consentement à tout moment en effaçant les cookies de votre navigateur."
+      },
+      {
+        "heading": "5. Vos droits (RGPD)",
+        "intro": "En vertu du Règlement Général sur la Protection des Données (RGPD), vous avez le droit de :",
+        "items": [
+          "Accéder aux données personnelles que nous détenons à votre sujet",
+          "Demander la correction ou la suppression de vos données",
+          "Vous opposer au traitement de vos données",
+          "Retirer votre consentement à tout moment"
+        ],
+        "outro": "Pour exercer l'un de ces droits, contactez-nous à hello@morfye.com."
+      },
+      {
+        "heading": "6. Conservation des données",
+        "content": "Nous conservons les soumissions de formulaires de contact pendant 12 mois maximum. Les données analytiques sont conservées selon les paramètres par défaut de Google Analytics (26 mois)."
+      },
+      {
+        "heading": "7. Sécurité",
+        "content": "Nous prenons des mesures techniques et organisationnelles raisonnables pour protéger vos données personnelles contre tout accès non autorisé, perte ou utilisation abusive."
+      },
+      {
+        "heading": "8. Modifications de cette politique",
+        "content": "Nous pouvons mettre à jour cette politique de confidentialité de temps en temps. La version la plus récente est toujours disponible sur cette page."
+      },
+      {
+        "heading": "9. Contact",
+        "content": "Pour toute question relative à la confidentialité, contactez-nous à hello@morfye.com."
+      }
+    ]
+  }
+}

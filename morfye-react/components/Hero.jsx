@@ -3,16 +3,17 @@ import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const MorfyeLogo3D = dynamic(() => import('./MorfyeLogo3D'), { ssr: false })
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Hero() {
+  const { t, lang } = useLanguage()
   const [dynamicText, setDynamicText] = useState('')
   const [show3D, setShow3D] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
-  const words = ['attractive', 'high-converting', 'modern']
   const heroRef = useRef(null)
   const boxRef = useRef(null)
   const particlesRef = useRef(null)
@@ -23,8 +24,9 @@ export default function Hero() {
     setIsMobile(window.innerWidth < 768)
   }, [])
 
-  // Typing effect — starts after reveal completes
+  // Typing effect — restarts when language changes
   useEffect(() => {
+    const words = t('hero.words')
     let timeout
     let i = 0, j = 0, isDeleting = false
 
@@ -51,7 +53,7 @@ export default function Hero() {
 
     timeout = setTimeout(type, window.innerWidth < 768 ? 200 : 900)
     return () => clearTimeout(timeout)
-  }, [])
+  }, [lang, t])
 
   // Delay Three.js load — desktop only, after animation completes
   useEffect(() => {
@@ -229,16 +231,16 @@ export default function Hero() {
       {/* Content — no inline opacity on mobile so text is visible from first paint */}
       <div className="hero-content">
         <h1 className="hero-line-1">
-          We create <span style={{ color: 'var(--primary-color)' }}>{dynamicText}</span>
+          {t('hero.line1')} <span style={{ color: 'var(--primary-color)' }}>{dynamicText}</span>
           <span className="cursor" style={{ color: 'var(--primary-color)' }}>|</span>
         </h1>
 
         <div className="hero-line-2">
-          websites for professionals
+          {t('hero.line2')}
         </div>
 
         <p className="hero-subtitle">
-          Modern, high-converting websites designed to attract, engage, and convert clients.
+          {t('hero.subtitle')}
         </p>
 
         <div className="hero-buttons">
@@ -248,7 +250,7 @@ export default function Hero() {
             whileHover={{ scale: 1.08, boxShadow: '0 8px 25px rgba(255, 146, 43, 0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
-            Book Consultation
+            {t('hero.bookBtn')}
           </motion.button>
           <motion.button
             className="secondary-btn black"
@@ -256,13 +258,13 @@ export default function Hero() {
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
           >
-            See Our Work
+            {t('hero.seeWorkBtn')}
           </motion.button>
         </div>
       </div>
 
       <div className="hero-scroll-down">
-        <span>Scroll</span>
+        <span>{t('hero.scroll')}</span>
         <div className="hero-scroll-line" />
       </div>
     </section>

@@ -2,10 +2,12 @@ import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Contact() {
+  const { t } = useLanguage()
   const sectionRef = useRef(null)
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 
@@ -22,10 +24,10 @@ export default function Contact() {
     })
 
     if (response.ok) {
-      alert('Thank you! Your message has been sent.')
+      alert(t('contact.successMsg'))
       setFormData({ name: '', email: '', message: '' })
     } else {
-      alert('Oops! Something went wrong. Please try again.')
+      alert(t('contact.errorMsg'))
     }
   }
 
@@ -62,7 +64,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Let&apos;s build something great together
+          {t('contact.title')}
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -70,7 +72,7 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          Tell us about your project. We&apos;ll review it and get back to you within 24 hours.
+          {t('contact.subtitle')}
         </motion.p>
 
         <motion.form
@@ -81,18 +83,18 @@ export default function Contact() {
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <div className="form-group">
-            <label htmlFor="cf-name">Your Name</label>
-            <input type="text" id="cf-name" name="name" placeholder="John Doe" value={formData.name} onChange={handleChange} required />
+            <label htmlFor="cf-name">{t('contact.nameLbl')}</label>
+            <input type="text" id="cf-name" name="name" placeholder={t('contact.namePlaceholder')} value={formData.name} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="cf-email">Your Email</label>
-            <input type="email" id="cf-email" name="email" placeholder="john@example.com" value={formData.email} onChange={handleChange} required />
+            <label htmlFor="cf-email">{t('contact.emailLbl')}</label>
+            <input type="email" id="cf-email" name="email" placeholder={t('contact.emailPlaceholder')} value={formData.email} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="cf-message">Project Brief / Message</label>
-            <textarea id="cf-message" name="message" rows="4" placeholder="Tell us what you're looking for..." value={formData.message} onChange={handleChange} required />
+            <label htmlFor="cf-message">{t('contact.messageLbl')}</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder={t('contact.messagePlaceholder')} value={formData.message} onChange={handleChange} required />
           </div>
 
           <motion.button
@@ -101,7 +103,7 @@ export default function Contact() {
             whileHover={{ scale: 1.08, boxShadow: '0 8px 25px rgba(255, 146, 43, 0.4)' }}
             whileTap={{ scale: 0.95 }}
           >
-            Book Free Meeting
+            {t('contact.submitBtn')}
           </motion.button>
         </motion.form>
       </div>

@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import ThemeToggle from './ThemeToggle'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Header({ darkMode, toggleTheme }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
@@ -29,10 +32,11 @@ export default function Header({ darkMode, toggleTheme }) {
         </div>
 
         <nav>
-          <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">About</a>
-          <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">Services</a>
-          <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">Our Work</a>
-          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">Contact</a>
+          <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">{t('nav.about')}</a>
+          <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">{t('nav.services')}</a>
+          <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">{t('nav.ourWork')}</a>
+          <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">{t('nav.contact')}</a>
+          <LanguageSwitcher />
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
         </nav>
 
@@ -48,10 +52,11 @@ export default function Header({ darkMode, toggleTheme }) {
 
       {/* Mobile Nav */}
       <div className={`mobile-nav ${menuOpen ? 'show' : ''}`}>
-        <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">About</a>
-        <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">Services</a>
-        <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">Our Work</a>
-        <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">Contact</a>
+        <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">{t('nav.about')}</a>
+        <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">{t('nav.services')}</a>
+        <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">{t('nav.ourWork')}</a>
+        <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">{t('nav.contact')}</a>
+        <LanguageSwitcher />
         <div className="mobile-theme-toggle" onClick={toggleTheme}>
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} mobile />
         </div>

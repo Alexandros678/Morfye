@@ -1,6 +1,9 @@
 import Link from 'next/link'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Footer() {
+  const { t } = useLanguage()
+
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -11,9 +14,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="footer-brand">
             <img src="/morfye-logo.webp" alt="Morfye web design agency logo" title="Morfye web design agency logo" className="footer-logo" width="61" height="61" loading="lazy" />
-            <p className="footer-tagline">
-              We build modern, high-converting websites and digital strategies that turn visitors into clients.
-            </p>
+            <p className="footer-tagline">{t('footer.tagline')}</p>
             <div className="footer-socials">
               <a href="https://www.linkedin.com/company/morfye" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="Morfye on LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -35,7 +36,7 @@ export default function Footer() {
 
           {/* Services */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Services</h4>
+            <h4 className="footer-col-title">{t('footer.services')}</h4>
             <ul className="footer-links">
               <li><Link href="/website-design" title="Website design services in Belgium">Website Design</Link></li>
               <li><Link href="/seo-optimization" title="SEO optimization services in Belgium">SEO Optimization</Link></li>
@@ -47,18 +48,18 @@ export default function Footer() {
 
           {/* Company */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Company</h4>
+            <h4 className="footer-col-title">{t('footer.company')}</h4>
             <ul className="footer-links">
-              <li><Link href="/#home" title="Morfye - Web design agency Belgium">Home</Link></li>
-              <li><Link href="/#about" title="About Morfye web design team">Who We Are</Link></li>
-              <li><Link href="/#work" title="Morfye web design portfolio">Our Work</Link></li>
-              <li><Link href="/#contact" title="Contact Morfye web design agency">Contact</Link></li>
+              <li><Link href="/#home" title="Morfye - Web design agency Belgium">{t('footer.home')}</Link></li>
+              <li><Link href="/#about" title="About Morfye web design team">{t('footer.whoWeAre')}</Link></li>
+              <li><Link href="/#work" title="Morfye web design portfolio">{t('footer.ourWork')}</Link></li>
+              <li><Link href="/#contact" title="Contact Morfye web design agency">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div className="footer-col">
-            <h4 className="footer-col-title">Contact</h4>
+            <h4 className="footer-col-title">{t('footer.contact')}</h4>
             <ul className="footer-contact-list">
               <li>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -88,10 +89,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Morfye. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Morfye. {t('footer.rights')}</p>
           <div className="footer-bottom-links">
-            <a href="/privacy-policy" title="Morfye Privacy Policy">Privacy Policy</a>
-            <a href="#" title="Morfye Terms of Service">Terms of Service</a>
+            <a href="/privacy-policy" title="Morfye Privacy Policy">{t('footer.privacyPolicy')}</a>
+            <a href="#" title="Morfye Terms of Service">{t('footer.termsOfService')}</a>
           </div>
         </div>
 

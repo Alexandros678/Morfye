@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function CookieBanner() {
+  const { t } = useLanguage()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -50,17 +52,16 @@ export default function CookieBanner() {
         </div>
 
         <div className="cookie-banner-text">
-          <p className="cookie-banner-title">We use cookies</p>
+          <p className="cookie-banner-title">{t('cookie.title')}</p>
           <p className="cookie-banner-desc">
-            We use cookies to enhance your experience, analyse site traffic, and personalise content.
-            By clicking <strong>Accept</strong>, you consent to our use of cookies.{' '}
-            <a href="/privacy-policy" className="cookie-banner-link" title="Morfye Privacy Policy">Privacy Policy</a>
+            {t('cookie.desc')} <strong>{t('cookie.strong')}</strong>{t('cookie.desc2')}{' '}
+            <a href="/privacy-policy" className="cookie-banner-link" title="Morfye Privacy Policy">{t('cookie.privacyLink')}</a>
           </p>
         </div>
 
         <div className="cookie-banner-actions">
-          <button className="cookie-btn cookie-btn-decline" onClick={decline}>Decline</button>
-          <button className="cookie-btn cookie-btn-accept" onClick={accept}>Accept All</button>
+          <button className="cookie-btn cookie-btn-decline" onClick={decline}>{t('cookie.declineBtn')}</button>
+          <button className="cookie-btn cookie-btn-accept" onClick={accept}>{t('cookie.acceptBtn')}</button>
         </div>
       </div>
     </div>

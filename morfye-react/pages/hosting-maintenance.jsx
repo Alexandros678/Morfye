@@ -5,8 +5,11 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import ServicePageLayout from '../components/ServicePageLayout'
 import FaqItem from '../components/FaqItem'
+import { useLanguage } from '../contexts/LanguageContext'
 
 gsap.registerPlugin(ScrollTrigger)
+
+const STEP_COUNT = 5
 
 const ServerIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,52 +57,16 @@ const EyeIcon = () => (
 
 const ChatIcon = () => (
   <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6 8H34C36.2 8 38 9.8 38 12V28C38 30.2 36.2 32 34 32H16L6 40V12C6 9.8 7.8 8 6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
     <path d="M6 8C6 8 7.8 8 10 8H34C36.2 8 38 9.8 38 12V28C38 30.2 36.2 32 34 32H16L6 40V12C6 9.8 7.8 8 6 8Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
     <line x1="14" y1="18" x2="30" y2="18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
     <line x1="14" y1="24" x2="24" y2="24" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
   </svg>
 )
 
-const navLinks = [
-  { id: 'why-hosting', label: 'Why Hosting Matters' },
-  { id: 'what-we-offer', label: 'What We Offer' },
-  { id: 'our-process', label: 'How It Works' },
-  { id: 'faq', label: 'FAQ' }
-]
-
-const features = [
-  { icon: <ServerIcon />, title: 'Lightning-Fast Performance', description: 'We use optimized cloud servers with SSD storage, CDN integration, and unlimited bandwidth to ensure your website hosting loads in under 2 seconds — every time.' },
-  { icon: <ShieldIcon />, title: 'Maximum Security', description: 'Free SSL certificates, firewall protection, spam filtering, malware scanning, and automatic security updates keep hackers out. Root access and SSH access to server infrastructure are locked down and managed by our team.' },
-  { icon: <DatabaseIcon />, title: 'Daily Automatic Backups', description: 'Your site is backed up every day to redundant storage across our data-center infrastructure. If anything goes wrong, we can restore it in minutes.' },
-  { icon: <WrenchIcon />, title: 'Regular Updates', description: 'We keep your CMS, plugins, and themes up to date — whether you run WordPress, Joomla, Drupal, or any PHP-based platform, with every installer kept current. Your site stays secure and compatible.' },
-  { icon: <EyeIcon />, title: '24/7 Monitoring', description: "We monitor your site around the clock. If it goes down, we're notified instantly and fix it immediately — no relying on unreliable web hosts or slow ticket systems." },
-  { icon: <ChatIcon />, title: 'Priority Support', description: "Whether you're on a personal or business hosting plan, our team responds quickly to fix issues, make updates, or answer your questions." }
-]
-
-const steps = [
-  { title: 'Easy Migration', description: "Already with another hosting provider or hosting company? We'll migrate your hosting web infrastructure using FTP transfer or automated migration tools — with zero downtime. You won't even notice the switch." },
-  { title: 'Secure Setup', description: 'We configure your linux hosting environment with SSL certificates, firewalls, and performance optimization from day one.' },
-  { title: 'Proactive Monitoring', description: 'Our systems monitor your website 24/7. If we detect downtime, security threats, or performance issues, we act immediately.' },
-  { title: 'Regular Maintenance', description: 'Every week, we check for updates, run security scans, optimize databases, and ensure everything runs smoothly.' },
-  { title: 'Ongoing Support', description: "Need a content update, new feature, or technical help? Just reach out. We're here to support you whenever you need us." }
-]
-
-const faqs = [
-  { question: 'What types of web hosting do you offer?', answer: 'We offer managed web hosting services tailored to small and medium businesses. Unlike generic hosting companies (Bluehost, shared hosting providers, cPanel-based reseller packages), our hosting plans are fully managed — meaning we handle server configuration, security, and maintenance for you. We use cloud hosting infrastructure with SSD storage, scalable bandwidth, and high uptime guarantees. We do not offer unmanaged VPS hosting, dedicated server plans, or reseller hosting — we focus on managed hosting solutions where we take care of everything.' },
-  { question: 'What is the difference between shared hosting, VPS, and cloud hosting?', answer: 'Shared hosting is the cheapest option — your website shares server resources with many others, which can hurt performance and uptime. VPS hosting (Virtual Private Server) gives you a dedicated slice of a server with more control, disk space, and bandwidth. Cloud hosting distributes your site across multiple servers for maximum uptime and scalability. Dedicated server hosting means you own the entire physical server. We use cloud hosting infrastructure because it combines the performance of a dedicated server with the scalability and uptime of modern hosting services — without the high cost.' },
-  { question: 'Do you support WordPress, Joomla, and other CMS platforms?', answer: 'Yes — WordPress hosting is one of our specialties. We also fully support Joomla, Drupal, and any PHP-based CMS or ecommerce platform (WooCommerce, Magento, PrestaShop). Whether your site was installed via a one-click installer or configured manually, we manage updates, plugin updates, theme updates, and security patches as part of our maintenance plans. Outdated CMS installs and plugins are the number one cause of security breaches. Our managed hosting keeps your site secure, fast, and up-and-running with daily backups and one-click restore.' },
-  { question: 'What uptime guarantee do you offer?', answer: 'We target 99.9% uptime for all hosting plans. Our 24/7 monitoring system alerts us the moment your site goes down, and we act immediately. Uptime is critical — every minute of downtime costs you potential customers and damages your search engine rankings.' },
-  { question: "What's the difference between hosting and maintenance?", answer: 'Web hosting is the server where your website files live — it\'s the foundation that keeps your site online. Maintenance covers everything else: plugin and CMS updates, security scans, daily backups, performance optimization, SSL certificate renewal, and technical support. Think of hosting as the building and maintenance as the property management. Our hosting packages include both.' },
-  { question: 'What is cPanel and do you use it?', answer: 'cPanel is a popular web hosting control panel used by many hosting companies and resellers that gives you direct access to your server files, MySQL databases, email accounts, and bandwidth stats. We don\'t use traditional cPanel-based hosting — instead, we use a managed cloud hosting environment where we handle all the technical configuration for you. You don\'t need to manage disk space, MySQL, or server settings — we do it all.' },
-  { question: 'Can I bring my own domain name?', answer: 'Absolutely. You can keep your existing domain names and point them to our hosting. Domain registration is simple — we can register new domains for you, or transfer your existing domain. Some hosting packages include a free domain name. We handle all DNS configuration to get your site up-and-running quickly.' },
-  { question: 'Do you offer email hosting too?', answer: 'Yes — we can set up professional business email addresses (like you@yourbusiness.be) connected to your domain as part of our hosting services.' },
-  { question: 'Can I cancel anytime?', answer: "Yes. We offer flexible month-to-month hosting plans with no long-term contracts. Cancel anytime with 30 days' notice. No lock-in, no hidden fees." },
-  { question: 'How much do your hosting plans cost?', answer: 'Hosting plans start at €29/month for our standard managed hosting package, which includes SSL, daily backups, 24/7 monitoring, and basic maintenance. Higher-tier hosting packages with more disk space, bandwidth, and priority support are available. Contact us for a custom hosting solution quote.' },
-  { question: 'Do you offer webmail, FTP access, and developer tools?', answer: 'Yes. All hosting plans include professional webmail so you can access your business email from any browser or email client. FTP access is available for file transfers and content management. We also provide SSH access for technical users who need command-line tools — root access is managed by our team to keep server infrastructure secure. If you are currently using a website builder or site builder (Wix, Squarespace, GoDaddy) and want to switch to proper managed hosting, we handle the full migration. When comparing web hosts for Belgian businesses, we consistently deliver the best web hosting combination of performance, security, and local support.' }
-]
+const featureIcons = [<ServerIcon />, <ShieldIcon />, <DatabaseIcon />, <WrenchIcon />, <EyeIcon />, <ChatIcon />]
 
 export default function HostingMaintenance() {
+  const { t } = useLanguage()
   const heroRef = useRef(null)
   const explainerRef = useRef(null)
   const featuresRef = useRef(null)
@@ -162,7 +129,7 @@ export default function HostingMaintenance() {
     isAnimating.current = true
     currentRef.current = nextIndex
     const progressFill = processRef.current?.querySelector('.geo-process-fill')
-    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / steps.length, duration: 0.5, ease: 'power2.out' })
+    if (progressFill) gsap.to(progressFill, { scaleY: (nextIndex + 1) / STEP_COUNT, duration: 0.5, ease: 'power2.out' })
     gsap.to(prev, {
       opacity: 0, y: -60, duration: 0.4, ease: 'power2.in',
       onComplete: () => {
@@ -174,7 +141,7 @@ export default function HostingMaintenance() {
 
   const startTimer = useCallback(() => {
     clearInterval(timerRef.current)
-    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % steps.length) }, 3500)
+    timerRef.current = setInterval(() => { goTo((currentRef.current + 1) % STEP_COUNT) }, 3500)
   }, [goTo])
 
   useEffect(() => {
@@ -184,7 +151,7 @@ export default function HostingMaintenance() {
     const ctx = gsap.context(() => {
       stepsRef.current.filter(Boolean).forEach((s, i) => gsap.set(s, { opacity: i === 0 ? 1 : 0, y: i === 0 ? 0 : 80 }))
       const progressFill = container.querySelector('.geo-process-fill')
-      if (progressFill) gsap.set(progressFill, { scaleY: 1 / steps.length })
+      if (progressFill) gsap.set(progressFill, { scaleY: 1 / STEP_COUNT })
       if (!mobile) {
         container.querySelectorAll('.geo-particle').forEach((p) => {
           gsap.to(p, { y: `${-100 - Math.random() * 200}`, x: `${(Math.random() - 0.5) * 100}`, opacity: 0, duration: 4 + Math.random() * 4, repeat: -1, delay: Math.random() * 3, ease: 'power1.out' })
@@ -205,8 +172,8 @@ export default function HostingMaintenance() {
     return () => { observer.disconnect(); clearInterval(timerRef.current) }
   }, [startTimer])
 
-  const handlePrev = () => { goTo((currentRef.current - 1 + steps.length) % steps.length); startTimer() }
-  const handleNext = () => { goTo((currentRef.current + 1) % steps.length); startTimer() }
+  const handlePrev = () => { goTo((currentRef.current - 1 + STEP_COUNT) % STEP_COUNT); startTimer() }
+  const handleNext = () => { goTo((currentRef.current + 1) % STEP_COUNT); startTimer() }
 
   useEffect(() => {
     if (window.innerWidth < 768) return
@@ -224,20 +191,25 @@ export default function HostingMaintenance() {
     if (window.innerWidth < 768) return
     const ctx = gsap.context(() => {
       gsap.from('.geo-cta-content', { y: 50, opacity: 0, duration: 0.8, scrollTrigger: { trigger: section, start: 'top 80%', toggleActions: 'play none none none' } })
-      if (window.innerWidth >= 768) {
-        section.querySelectorAll('.geo-particle').forEach((p) => {
-          gsap.to(p, { y: `${-60 - Math.random() * 100}`, x: `${(Math.random() - 0.5) * 60}`, opacity: 0, duration: 2 + Math.random() * 3, repeat: -1, delay: Math.random() * 2, ease: 'power1.out' })
-        })
-      }
+      section.querySelectorAll('.geo-particle').forEach((p) => {
+        gsap.to(p, { y: `${-60 - Math.random() * 100}`, x: `${(Math.random() - 0.5) * 60}`, opacity: 0, duration: 2 + Math.random() * 3, repeat: -1, delay: Math.random() * 2, ease: 'power1.out' })
+      })
     }, section)
     return () => ctx.revert()
   }, [])
 
+  const hero = t('hosting.hero')
+  const whyHosting = t('hosting.whyHosting')
+  const features = t('hosting.features')
+  const steps = t('hosting.steps')
+  const faqs = t('hosting.faqs')
+  const cta = t('hosting.cta')
+
   return (
     <ServicePageLayout
-      title="Website Hosting & Maintenance | Morfye"
-      description="Reliable, Secure, and Fast Hosting with Expert Maintenance. Keep Your Website Running 24/7."
-      navLinks={navLinks}
+      title={t('hosting.meta.title')}
+      description={t('hosting.meta.description')}
+      navLinks={t('hosting.navLinks')}
       slug="hosting-maintenance"
       faqs={faqs}
       defaultDark
@@ -252,13 +224,13 @@ export default function HostingMaintenance() {
             ))}
           </div>
           <div className="geo-hero-content">
-            <div className="geo-hero-label">ALWAYS ON, ALWAYS SECURE</div>
-            <h1 className="geo-hero-title">HOST</h1>
-            <p className="geo-hero-subtitle-line">Hosting & Maintenance</p>
-            <p className="geo-hero-subtitle-line geo-hero-desc">Reliable, secure, and fast hosting with expert maintenance. Zero downtime.</p>
+            <div className="geo-hero-label">{hero.label}</div>
+            <h1 className="geo-hero-title">{hero.title}</h1>
+            <p className="geo-hero-subtitle-line">{hero.subtitle}</p>
+            <p className="geo-hero-subtitle-line geo-hero-desc">{hero.desc}</p>
           </div>
           <div className="geo-hero-scroll">
-            <span>Scroll</span>
+            <span>{hero.scroll}</span>
             <div className="geo-hero-scroll-line" />
           </div>
         </section>
@@ -272,21 +244,21 @@ export default function HostingMaintenance() {
             </div>
             <div className="geo-explainer-text">
               <div className="geo-explainer-line" />
-              <h2 className="geo-explainer-heading">Why Professional Hosting & Maintenance Matter</h2>
-              <p>Building a website is just the beginning. To stay online, perform well, and remain secure, your website hosting needs a <strong>reliable foundation</strong> and <strong>ongoing maintenance</strong>. Think of hosting as the land your digital house sits on — if it&apos;s unstable or unsafe, everything falls apart.</p>
-              <p>Many businesses make the mistake of choosing the cheapest option from generic web hosting companies — only to find that shared web hosting or entry-level dedicated hosting plans can&apos;t keep up with real business demands. Slow load times, frequent downtime, security breaches, and no support. At Morfye, we provide enterprise-grade hosting combined with proactive maintenance.</p>
-              <p>Whether you&apos;re launching a new ecommerce store, migrating away from a website builder or site builder, or switching from an unreliable host — we offer the best web hosting solutions for Belgian businesses. From domain registration and domain names to free hosting trials on select packages, we handle everything.</p>
+              <h2 className="geo-explainer-heading">{whyHosting.heading}</h2>
+              <p dangerouslySetInnerHTML={{ __html: whyHosting.p1 }} />
+              <p dangerouslySetInnerHTML={{ __html: whyHosting.p2 }} />
+              <p dangerouslySetInnerHTML={{ __html: whyHosting.p3 }} />
             </div>
           </div>
         </section>
 
         {/* WHAT WE OFFER */}
         <section ref={featuresRef} className="geo-features" id="what-we-offer">
-          <h2 className="geo-features-heading">What&apos;s Included in Our Hosting & Maintenance</h2>
+          <h2 className="geo-features-heading">{t('hosting.featuresHeading')}</h2>
           <div className="geo-features-grid">
             {features.map((f, i) => (
               <motion.div
-                key={f.title}
+                key={i}
                 className="geo-feature-card"
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -294,7 +266,7 @@ export default function HostingMaintenance() {
                 transition={{ duration: 0.6, delay: i * 0.1, ease: 'easeOut' }}
                 whileHover={{ y: -8 }}
               >
-                <div className="geo-feature-icon">{f.icon}</div>
+                <div className="geo-feature-icon">{featureIcons[i]}</div>
                 <h3>{f.title}</h3>
                 <p>{f.description}</p>
               </motion.div>
@@ -329,10 +301,10 @@ export default function HostingMaintenance() {
 
         {/* FAQ */}
         <section ref={faqRef} className="geo-faq" id="faq">
-          <h2 className="geo-faq-heading">Frequently Asked Questions</h2>
+          <h2 className="geo-faq-heading">{t('hosting.faqHeading')}</h2>
           <div className="geo-faq-container">
             {faqs.map((f, i) => (
-              <FaqItem key={f.question} index={i} {...f} />
+              <FaqItem key={i} index={i} {...f} />
             ))}
           </div>
         </section>
@@ -345,10 +317,10 @@ export default function HostingMaintenance() {
             ))}
           </div>
           <div className="geo-cta-content">
-            <h2>Let Us Handle the Technical Stuff</h2>
-            <p>Focus on your business while we keep your website fast, secure, and always online.</p>
+            <h2>{cta.heading}</h2>
+            <p>{cta.text}</p>
             <motion.div whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.95 }}>
-              <Link href="/#contact" className="geo-cta-btn">Get Started Today</Link>
+              <Link href="/#contact" className="geo-cta-btn">{cta.btn}</Link>
             </motion.div>
           </div>
         </section>

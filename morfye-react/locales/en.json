@@ -1,0 +1,499 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "ourWork": "Our Work",
+    "contact": "Contact"
+  },
+  "hero": {
+    "words": ["attractive", "high-converting", "modern"],
+    "line1": "We create",
+    "line2": "websites for professionals",
+    "subtitle": "Modern, high-converting websites designed to attract, engage, and convert clients.",
+    "bookBtn": "Book Consultation",
+    "seeWorkBtn": "See Our Work",
+    "scroll": "Scroll"
+  },
+  "ourStory": {
+    "scenes": [
+      {
+        "title": "We saw a problem.",
+        "text": "Talented professionals with terrible websites. Losing clients — not because they weren't good, but because their online presence didn't show it."
+      },
+      {
+        "title": "So we built Morfye.",
+        "text": "A studio in Brussels, Belgium. One mission: make independent professionals look as good online as they are in person. No templates. No shortcuts."
+      },
+      {
+        "title": "Then AI changed everything.",
+        "text": "People stopped Googling. They started asking ChatGPT. We became one of the first in Belgium to master GEO — Generative Engine Optimization."
+      }
+    ]
+  },
+  "whoWeAre": {
+    "label": "WHO WE ARE",
+    "heading": ["We're not your", "agency. We're your", "partner."],
+    "desc1": "We're not just designers — we're strategists. Every pixel, every animation, every line of code serves one purpose: turning visitors into clients. Based in Brussels, Belgium, we combine creativity with data-driven thinking.",
+    "desc2": "We work with small businesses across Belgium — consultants, local shops, healthcare providers, and service businesses — who deserve a website that ranks on Google, gets found by AI, and converts visitors into paying clients.",
+    "stats": [
+      { "label": "Projects Delivered" },
+      { "label": "Client Satisfaction" },
+      { "label": "Support Available" }
+    ]
+  },
+  "serviceCart": {
+    "sectionTitle": "What We Offer",
+    "geo": {
+      "title": "GEO - Generative Engine Optimization",
+      "text": "Get recommended by ChatGPT, Google Gemini, and Claude. The future of online visibility is here — and we are one of the first agencies in Belgium offering it.",
+      "cta": "Learn More About GEO"
+    },
+    "cards": [
+      { "title": "Custom Website Design", "text": "Tailored, mobile-friendly websites built to fit your business and convert visitors into clients.", "cta": "Learn More →" },
+      { "title": "Hosting & Maintenance", "text": "Secure hosting, regular updates, and ongoing technical support to keep your site running smoothly.", "cta": "Learn More →" },
+      { "title": "SEO Optimization", "text": "Traditional search engine optimization to rank higher on Google and drive organic traffic to your website.", "cta": "Learn More →" },
+      { "title": "SEA Campaigns", "text": "Google Ads campaigns designed to bring instant traffic and maximize your online visibility.", "cta": "Learn More →" }
+    ]
+  },
+  "workShowcase": {
+    "title": "Our Work",
+    "subtitle": "Creativity meets code. Explore what we've built.",
+    "visitSite": "Visit Site →",
+    "projects": [
+      { "title": "Personal Portfolio", "category": "Web Design", "description": "Creative showcase of technical skills with modern animations and smooth interactions." },
+      { "title": "AV Signature Detailing", "category": "Business Website", "description": "Professional car detailing site with online booking system for a Belgian company." },
+      { "title": "Your Project?", "category": "Coming Next", "description": "We're ready to build something amazing for you. Let's talk." }
+    ]
+  },
+  "manifesto": {
+    "title": "The right website changes everything.",
+    "approachLabel": "Our approach",
+    "blocks": [
+      {
+        "title": "Design that works.",
+        "text": "Whether you need to create a website, make your website more effective, or do a full website redesign — professional web design and responsive website design are the foundation. Good web design and development delivers the best web design: visually strong, intuitive, built for usability and user experience. A responsive website and mobile-friendly website gets your business up and running, growing website traffic and attracting website visitors from day one."
+      },
+      {
+        "title": "From domain to launch.",
+        "text": "As a web design company, website design company, and digital agency, we handle the complete web design process and website development — from brand identity to launch. Our design process is thorough: our design team of web designers and website designers covers site design, copywriting, front-end development, and content management systems including WordPress websites, WooCommerce, Joomla, Drupal, and Magento. Whether you need ecommerce web design, a web application, or affordable website design — we are the development company and web design firm that delivers web solutions for every business need."
+      },
+      {
+        "title": "Built to grow.",
+        "text": "Beyond design, we are a digital marketing agency covering search engine optimization (SEO), SEO services, internet marketing, online marketing, web marketing, and GEO. We build marketing strategies and run every marketing campaign to outperform your competitor and reach your target audience on search engines. From inbound marketing and inbound strategies to paid search, we help your online business grow web presence consistently."
+      },
+      {
+        "title": "What we cover.",
+        "text": "Our web design services and web development services span everything: custom web design, ecommerce web design, graphic design, branding, logos, logo design, responsive design, mobile website, website maintenance, and copywriting. Our web designs and website designs include web design solutions built for every industry — with client testimonials that speak for themselves. Whether it is WordPress websites, WooCommerce, web application development, or ongoing design projects — we deliver professional web design & development, digital marketing, and design solutions that grow your business online."
+      }
+    ]
+  },
+  "homeFaq": {
+    "label": "FAQ",
+    "title": "Common Questions",
+    "subtitle": "Everything small businesses in Belgium want to know before getting started.",
+    "items": [
+      { "question": "How much does a professional website cost for a small business in Belgium?", "answer": "Every project is different, but a professional website typically starts from a few hundred euros. The price depends on the number of pages, features like booking systems or e-commerce, and the level of web development required. We always provide a clear quote before starting — no hidden fees." },
+      { "question": "How long does it take to build a website?", "answer": "A standard website takes 2 to 4 weeks from start to launch. More complex projects with e-commerce, a content management system (CMS), or custom features can take 4 to 8 weeks. We keep you updated throughout the entire process." },
+      { "question": "Can you build an e-commerce website or online store?", "answer": "Yes — we build custom e-commerce websites for businesses that want to sell online. Whether you need a simple shop or a full product catalogue with secure payments, we handle web development from start to finish — including Shopify and custom solutions." },
+      { "question": "What is the difference between SEO and Google Ads?", "answer": "SEO grows your organic search visibility over time — it helps potential customers find you on Google without paying per click. Google Ads (pay-per-click / PPC) gives you instant visibility for a budget. Both are valid strategies and we offer both. We will advise which fits your goals best." },
+      { "question": "Do I need web hosting and a domain name?", "answer": "Yes — every website needs web hosting and a domain name. We offer managed hosting plans from €29/month including daily backups, SSL, and 24/7 monitoring. We can also help you register your domain and get everything set up." },
+      { "question": "What is GEO and why should my business care?", "answer": "GEO stands for Generative Engine Optimization — it means optimizing your business to be recommended by AI assistants like ChatGPT, Google Gemini, and Claude. As more people search through AI instead of Google, GEO is becoming as important as SEO. Morfye is one of the first agencies in Belgium offering this service." }
+    ]
+  },
+  "contact": {
+    "title": "Let's build something great together",
+    "subtitle": "Tell us about your project. We'll review it and get back to you within 24 hours.",
+    "nameLbl": "Your Name",
+    "emailLbl": "Your Email",
+    "messageLbl": "Project Brief / Message",
+    "namePlaceholder": "John Doe",
+    "emailPlaceholder": "john@example.com",
+    "messagePlaceholder": "Tell us what you're looking for...",
+    "submitBtn": "Book Free Meeting",
+    "successMsg": "Thank you! Your message has been sent.",
+    "errorMsg": "Oops! Something went wrong. Please try again."
+  },
+  "cookie": {
+    "title": "We use cookies",
+    "desc": "We use cookies to enhance your experience, analyse site traffic, and personalise content. By clicking",
+    "strong": "Accept",
+    "desc2": ", you consent to our use of cookies.",
+    "privacyLink": "Privacy Policy",
+    "declineBtn": "Decline",
+    "acceptBtn": "Accept All"
+  },
+  "footer": {
+    "tagline": "We build modern, high-converting websites and digital strategies that turn visitors into clients.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "home": "Home",
+    "whoWeAre": "Who We Are",
+    "ourWork": "Our Work",
+    "rights": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  },
+  "webDesign": {
+    "meta": {
+      "title": "Professional Website Design | Morfye",
+      "description": "Beautiful, Responsive, and AI-Optimized Websites That Grow Your Business. Based in Brussels, Belgium."
+    },
+    "navLinks": [
+      { "id": "what-we-do", "label": "What We Do" },
+      { "id": "our-features", "label": "Features" },
+      { "id": "our-process", "label": "Our Process" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "YOUR DIGITAL FOUNDATION",
+      "title": "WEB",
+      "subtitle": "Professional Website Design",
+      "desc": "Beautiful, responsive, and AI-optimized websites that grow your business.",
+      "scroll": "Scroll"
+    },
+    "whatWeDo": {
+      "heading": "More Than Just a Pretty Website",
+      "p1": "In today's digital world, your website is your <strong>most important employee</strong> — working 24/7 so customers can find you online. Whether you're wondering how to create a website, how to build a website, or how to make a website that stands out from the competition, the answer starts with strategy. Building websites is a craft: website creation done right attracts visitors, earns trust, and converts. A slow, confusing, or outdated website doesn't just look bad — it actively loses you customers.",
+      "p2": "At Morfye, our web designers design your website as a beautiful, fully customizable strategic asset designed to attract, engage, and convert. From sleek one-page sites to complex e-commerce platforms, we deliver experiences that are fast, responsive, and built to rank.",
+      "p3": "Crucially, our websites are optimized from day one for both traditional <strong>SEO</strong> and the new <strong>GEO (Generative Engine Optimization)</strong>, ensuring you're recommended by AI assistants like ChatGPT and Gemini."
+    },
+    "featuresHeading": "Our Website Design Features",
+    "features": [
+      { "title": "Stunning Visual Design", "description": "We design your beautiful website with fully customizable visuals that capture your brand's unique identity and impress visitors from the first second." },
+      { "title": "Fully Responsive", "description": "Your site will look and work perfectly on all devices — desktops, tablets, and smartphones." },
+      { "title": "SEO-Optimized", "description": "Built from the ground up with SEO best practices to rank high on Google and attract organic traffic." },
+      { "title": "GEO Ready", "description": "We optimize your site for AI, ensuring you're recommended by ChatGPT, Gemini, and Claude." },
+      { "title": "E-Commerce Solutions", "description": "Ready to sell online? We build secure, easy-to-manage online stores that drive sales." },
+      { "title": "Easy to Manage", "description": "We provide intuitive, user-friendly CMS platforms with drag-and-drop editing, widgets, and sidebar management — no coding needed." }
+    ],
+    "steps": [
+      { "title": "Discovery & Strategy", "description": "We start by learning about your business, goals, and target audience. We define the project scope and create a strategic plan for your website." },
+      { "title": "Design & Prototyping", "description": "Our team creates wireframes and visual mockups. You'll see exactly how your site will look and feel before we write a single line of code." },
+      { "title": "Development", "description": "This is where the magic happens. We build your website using clean, modern code, ensuring it's fast, secure, and perfectly responsive." },
+      { "title": "Review & Launch", "description": "We test everything thoroughly on all browsers and devices. After your final approval, we deploy the site live to the world." },
+      { "title": "Training & Support", "description": "We show you how to manage your new site and provide ongoing support to keep it running smoothly." }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "How much does a new website cost?", "answer": "It depends on scope. Building a website ranges from a simple personal website or one-page business website to a full e-commerce platform. Creating a website with a professional agency is an investment — but it delivers the best website for your goals. To create your website properly and truly convert visitors, you need more than a generic website template. We build your website from scratch and provide a custom, no-obligation quote after a discovery call." },
+      { "question": "Should I use WordPress, Shopify, Squarespace, or a custom solution?", "answer": "It depends on your goals. WordPress is the most popular content management system (CMS) and is ideal for most business websites — using WordPress, you get a highly customizable platform with thousands of plugins, widgets, and themes, and the WordPress dashboard makes managing content simple. A WordPress website supports blogging, ecommerce, and more; you can install WordPress with one click through providers like Bluehost. Joomla and Drupal are also powerful CMS options worth considering. Site builders like Squarespace, Wix, and Weebly are easy-to-use drag and drop website builders — great for beginners who want to create your own website or build your own website quickly. While you can start a website for free with these tools, a free website builder has real limits. For a truly unique custom website, we recommend custom web design — solutions that rank far better on search engines and create your website with a lasting competitive advantage." },
+      { "question": "What is the difference between a web designer and a web developer?", "answer": "A web designer focuses on the visual and user-experience (UX) side — layout, branding, fonts, colors, call-to-action placement, and how web pages feel. A web developer writes the code that makes it all work. At Morfye, our team covers both: we design and develop your own website end-to-end, from concept to live, mobile-friendly, responsive design." },
+      { "question": "How do I make my website show up on Google?", "answer": "Every website we build includes search engine optimization (SEO) from day one — clean URLs, proper title tags, meta descriptions, fast load times, and mobile-friendly responsive design for all devices. We also help with ongoing SEO services so your web pages rank in search engine results and attract organic traffic without needing to advertise." },
+      { "question": "Will I be able to update the website myself?", "answer": "Yes. We build on intuitive platforms with a user-friendly CMS and provide full training, video tutorials, and documentation so you can manage web pages, add blog posts, update your sidebar, manage widgets, and make your website content changes yourself — no web developer needed for day-to-day updates." },
+      { "question": "Do you build ecommerce websites and online stores?", "answer": "Yes — we build ecommerce websites that sell products, services, and digital downloads. Whether you prefer Shopify or a custom solution, we design the online store, set up payments, and optimize it for mobile devices and search engines. Your ecommerce website will be your best sales tool." },
+      { "question": "What is web hosting and do I need a domain name?", "answer": "Web hosting is the server where your website files live — your web host determines your site's speed, uptime, and bandwidth. Domain names and a hosting service are the two essentials you need to set up a website and go live. We offer managed hosting plans starting from €29/month — every hosting plan includes SSL, daily backups, and 24/7 monitoring." },
+      { "question": "Do you provide website hosting and maintenance?", "answer": "Yes. We offer monthly hosting and maintenance plans from €29/month that include secure hosting, daily backups, security updates, plugin management, and technical support. We keep your website running so you can focus on your business." },
+      { "question": "Do I need to know HTML and CSS to get a website built?", "answer": "Not at all. You do not need to know HTML and CSS to create a website with us or to manage it after launch. We handle everything — from how to create your site structure to setting up your hosting and writing all the code. After launch, your CMS will be intuitive enough that you can create your own content updates without any technical knowledge." },
+      { "question": "What is the difference between SEO and GEO?", "answer": "SEO (search engine optimization) helps you rank on Google and other search engines. GEO (Generative Engine Optimization) helps you get recommended by AI assistants like ChatGPT and Google Gemini. We build every website to be optimized for both." }
+    ],
+    "cta": {
+      "heading": "Ready to Build Your New Website?",
+      "text": "Ready to build a website that converts? Let's create something that works as hard as you do. Contact us for a free, no-obligation consultation.",
+      "btn": "Get Your Free Quote"
+    }
+  },
+  "seo": {
+    "meta": {
+      "title": "SEO Optimization Services | Morfye - Rank Higher on Google",
+      "description": "Professional SEO services in Brussels, Belgium. Increase organic traffic, rank higher on Google, and get found by customers."
+    },
+    "navLinks": [
+      { "id": "what-is-seo", "label": "What is SEO" },
+      { "id": "our-services", "label": "Our Services" },
+      { "id": "our-process", "label": "Our Process" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "THE SCIENCE OF GOOGLE RANKINGS",
+      "title": "SEO",
+      "subtitle": "Search Engine Optimization",
+      "desc": "Rank higher on Google, drive more organic traffic, and grow your business.",
+      "scroll": "Scroll"
+    },
+    "whatIsSeo": {
+      "heading": "What is SEO and Why Does It Matter?",
+      "p1": "<strong>Search Engine Optimization (SEO)</strong> is the practice of optimizing your website to rank higher in results across Google, Bing, and other search engines. When people search for services you offer, your SEO ranking determines whether you appear on page 1 or buried on page 10.",
+      "p2": "Here's the harsh truth: <strong>75% of people never scroll past the first page of Google results.</strong> If your website isn't ranking well, you're invisible to potential customers actively searching for what you offer.",
+      "p3": "Good SEO doesn't just bring more traffic — it improves your conversion rate by attracting targeted visitors ready to buy. It's one of the most cost-effective marketing strategies available, because unlike paid ads you're not paying for every click. Traffic from organic SEO compounds over time.",
+      "p4": "At Morfye, we combine traditional SEO with modern <strong>GEO (Generative Engine Optimization)</strong> to ensure you're visible everywhere your customers are looking."
+    },
+    "featuresHeading": "Our SEO Services",
+    "features": [
+      { "title": "Keyword Research", "description": "We identify the exact terms your customers are searching for and target keywords with high traffic and low competition." },
+      { "title": "On-Page SEO", "description": "We optimize your content, meta tags, headers, images, and internal links to make your site irresistible to Google." },
+      { "title": "Technical SEO", "description": "We fix site speed, mobile responsiveness, crawling and indexing errors, robots.txt configuration, XML sitemaps, duplicate content issues, and structured data to ensure search engines can properly index your site." },
+      { "title": "Local SEO", "description": "Perfect for businesses in Belgium. We optimize your Google Business Profile, local citations, and business directories to dominate local search results." },
+      { "title": "Link Building", "description": "We conduct outreach to webmasters of authoritative websites to build high-quality backlinks that boost your domain authority and search rankings." },
+      { "title": "SEO Analytics & Reporting", "description": "Monthly reports show your ranking improvements, traffic growth, and ROI so you always know what's working." }
+    ],
+    "steps": [
+      { "title": "SEO Audit", "description": "We analyze your current website to identify technical issues, content gaps, and opportunities. You'll get a detailed report showing exactly what needs to be fixed." },
+      { "title": "Competitor Analysis", "description": "We research your top competitors to see what keywords they rank for, what backlinks they have, and where you can beat them." },
+      { "title": "Strategy Development", "description": "Based on our research, we create a custom SEO strategy with clear goals, target keywords, and an action plan." },
+      { "title": "Implementation", "description": "We optimize your website's technical foundation, content, and off-page factors. This includes keyword optimization, speed improvements, and link building." },
+      { "title": "Monitoring & Optimization", "description": "SEO is ongoing. We continuously monitor rankings, analyze performance, and make adjustments to keep you ahead of the competition." }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "How long does SEO take to show results?", "answer": "SEO is a long-term strategy. You'll typically see initial improvements in 3–6 months, with significant ranking gains after 6–12 months. Unlike PPC (pay-per-click), organic search results from SEO compound over time — you're not paying for every click." },
+      { "question": "What are the most important SEO tactics?", "answer": "An effective SEO strategy uses: keyword research to find what your customers search for; on-page SEO (title tags, meta descriptions, URLs); technical SEO to ensure your pages are indexed correctly; link building to earn high-quality backlinks; content marketing to target long-tail keywords; and local SEO for geographic targeting." },
+      { "question": "What is the difference between on-page and off-page SEO?", "answer": "On-page SEO covers what's on your web pages — title tags, headings, URLs, meta tags, keyword phrases, internal linking, and content quality. Off-page SEO is about your authority across the web — backlinks, inbound links, and external mentions. Both are essential for strong search engine rankings." },
+      { "question": "What SEO tools do you use?", "answer": "We use Google Search Console, Google Analytics, SEMrush, and Ahrefs to track search queries, monitor backlinks, analyze competitors, and measure your SEO performance. We provide monthly reports so you always know where you rank." },
+      { "question": "What's the difference between SEO and paid ads (Google Ads)?", "answer": "Paid search (Google Ads, PPC) gives instant visibility — you pay per click and appear at the top of results immediately. Organic search from SEO takes longer but delivers lasting, cost-effective results without paying per click. Ideally, use paid search for quick wins while SEO builds your long-term foundation." },
+      { "question": "Do you guarantee #1 rankings on Google?", "answer": "No ethical SEO company can guarantee specific rankings — Google's algorithm is too complex. We focus on data-driven techniques that consistently improve search rankings, grow organic traffic, and deliver measurable ROI. We track and report every improvement." },
+      { "question": "What is the difference between white-hat and black-hat SEO?", "answer": "White-hat SEO follows search engine guidelines — quality content, legitimate link building, proper technical optimization. Black-hat SEO uses manipulative tactics like keyword stuffing and link schemes. While black-hat tactics can show short-term gains, they risk Google penalties. We exclusively use white-hat techniques." },
+      { "question": "Is local SEO different from regular SEO?", "answer": "Yes. Local SEO focuses on ranking in specific geographic areas (like Brussels or Belgium) for location-based queries. It includes optimizing your Google Business Profile, building local citations, and targeting location-specific keywords. It's one of the most cost-effective strategies for small businesses." },
+      { "question": "How much does SEO cost?", "answer": "It varies based on competition, your niche, and scope. Basic local SEO starts around €299/month, while a comprehensive national campaign can be €1,000+/month. We provide custom quotes after an SEO audit." },
+      { "question": "What happens if I stop SEO services?", "answer": "Your rankings won't disappear overnight, but competitors who keep optimizing will eventually outrank you. SEO requires ongoing content marketing, link building, and technical maintenance to stay ahead as algorithms evolve." }
+    ],
+    "cta": {
+      "heading": "Ready to Rank #1 on Google?",
+      "text": "Stop losing customers to your competitors. Let's get your website the visibility it deserves.",
+      "btn": "Get Your Free SEO Audit"
+    }
+  },
+  "geo": {
+    "meta": {
+      "title": "GEO - Generative Engine Optimization | Morfye",
+      "description": "Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini. Professional GEO services in Belgium."
+    },
+    "navLinks": [
+      { "id": "what-is-geo", "label": "What is GEO" },
+      { "id": "why-geo", "label": "Why GEO" },
+      { "id": "how-it-works", "label": "How It Works" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "THE FUTURE OF ONLINE VISIBILITY",
+      "title": "GEO",
+      "subtitle": "Generative Engine Optimization",
+      "desc": "Get your business recommended by AI assistants like ChatGPT, Claude, and Google Gemini.",
+      "scroll": "Scroll"
+    },
+    "whatIsGeo": {
+      "heading": "What is GEO?",
+      "p1": "Online visibility has changed dramatically — organic search traffic from SERPs has shifted as traditional clicks from search engine results have fallen by over <strong>55% since 2022</strong>. Searchers now ask AI assistants instead of clicking through search engine rankings. Businesses relying only on Google search rankings are losing clients without even realizing it.",
+      "p2": "GEO is the evolution of optimizing for search in the AI era. While SEO focuses on ranking factors like title tags, meta descriptions, keywords, and backlinks to improve your Google ranking — GEO ensures AI chatbots like ChatGPT, Claude, Perplexity, and Google Gemini recommend YOUR business when people ask for help.",
+      "p3": "More people are now asking AI assistants instead of Google. If your content isn't optimized for AI indexing, you're invisible to this growing audience — even if your SEO ranking and organic traffic are strong.",
+      "p4": "Improve your competitive position now — GEO is not just the future, it's happening today. Businesses that adapt early see more conversions while competitors wonder where their clients went."
+    },
+    "featuresHeading": "Why Your Business Needs GEO",
+    "features": [
+      { "title": "Be Found by AI", "description": "When potential clients ask ChatGPT or Claude for recommendations, your business appears first." },
+      { "title": "Stay Ahead of Competition", "description": "Most businesses don't know about GEO yet. Get ahead while it's still early." },
+      { "title": "Future-Proof Your Business", "description": "AI search is growing 10x faster than traditional search. Be ready for tomorrow, today." },
+      { "title": "Increase Trust & Authority", "description": "AI recommendations carry immense weight. Being suggested by AI builds instant credibility." },
+      { "title": "Local & Global Reach", "description": "Optimize for local AI searches in Belgium while reaching international audiences." },
+      { "title": "Higher Quality Leads", "description": "People who get AI recommendations are ready to buy — they're not just browsing." }
+    ],
+    "steps": [
+      { "title": "AI Audit & Analysis", "description": "We test how AI engines currently see your business. We ask ChatGPT, Claude, and Perplexity about your industry and see if you're mentioned. Most businesses? Not even on the radar." },
+      { "title": "Content Optimization", "description": "We rewrite your website content in a way AI understands. This includes natural language, clear business information, FAQ sections, and structured data that AI engines love — all while delivering genuine value to human visitors." },
+      { "title": "Schema & Technical Setup", "description": "We add special code (schema markup) that tells AI exactly who you are, what you do, where you're located, and why you're the best choice. Think of it as a resume for AI engines." },
+      { "title": "Citation Building", "description": "We get your business mentioned on authoritative websites, directories, and platforms that AI engines trust. The more credible sources mention you, the more AI recommends you." },
+      { "title": "Monitoring & Improvement", "description": "GEO isn't 'set and forget.' We continuously monitor how AI engines respond to queries about your industry and adjust your strategy to stay on top." }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "How long does GEO take to show results?", "answer": "Initial improvements can be seen in 2–4 weeks. Full optimization typically takes 2–3 months as AI engines index and understand your updated content, structured data, and inbound authority signals." },
+      { "question": "How is GEO different from traditional SEO?", "answer": "Traditional SEO helps your web pages rank in organic results on Google through on-page SEO (title tags, meta descriptions, headers), technical work (crawl optimization, mobile-friendly design), and off-page signals (backlinks). GEO targets AI assistants directly — ChatGPT, Gemini, Perplexity — which don't use the same ranking factors as Google. A complete digital marketing strategy needs both." },
+      { "question": "Does GEO help with local search?", "answer": "Yes — local GEO is one of the most powerful tactics for local businesses. When searchers ask AI 'best web designer near me' or 'accountant in Brussels,' you want to be the answer. We optimize your local presence so AI engines know your niche, location, and services." },
+      { "question": "What is the role of content marketing in GEO?", "answer": "Content marketing is the backbone of GEO. AI engines are trained on text — the more high-quality, relevant content your web pages have, the better AI understands and recommends you. We focus on content that avoids duplicate text, targets long-tail queries, and uses proper meta descriptions and title tags." },
+      { "question": "Do you build backlinks for GEO?", "answer": "Yes — citation building, backlinks, and inbound links from authoritative websites are central to our GEO process. AI engines learn from the web — when trusted sources mention your business, you become more credible to AI. This work overlaps with traditional SEO and improves both your search rankings and AI recommendations." },
+      { "question": "Will GEO replace my current SEO efforts?", "answer": "No. GEO complements your SEO strategy — you still need traditional SEO for Google rankings, PPC for paid search, and content marketing for inbound traffic. GEO adds a new layer of visibility so that when AI assistants are asked about your niche, your business is recommended." },
+      { "question": "Which AI engines do you optimize for?", "answer": "We optimize for ChatGPT (OpenAI), Claude (Anthropic), Perplexity, Google Gemini, and Microsoft Copilot. Each has different signals — some rely on web crawling, others on their training data — so our tactics are tailored per platform." },
+      { "question": "Is GEO worth it for local businesses?", "answer": "Absolutely. Local GEO is incredibly powerful for small businesses. When someone in your niche asks an AI assistant for a recommendation, you want to be the answer for your city or region — whether that's Brussels, Ghent, Antwerp, or beyond." },
+      { "question": "How much does GEO cost?", "answer": "We offer one-time GEO setup starting at €499, or monthly GEO management from €199/month. Custom packages available for larger businesses or competitive niches." },
+      { "question": "What industries benefit most from GEO?", "answer": "All industries with search queries benefit, but especially: consultants, lawyers, accountants, healthcare providers, real estate agents, local services, and B2B businesses where potential clients use AI to search for and evaluate options before contacting a service provider." }
+    ],
+    "cta": {
+      "heading": "Ready to Dominate AI Search?",
+      "text": "Don't wait until your competitors figure out GEO. Get ahead now and own your market.",
+      "btn": "Schedule a Consultation"
+    }
+  },
+  "sea": {
+    "meta": {
+      "title": "SEA Campaigns & Google Ads | Morfye",
+      "description": "Drive Instant Traffic and Leads with Expert Google Ads Management. Get Results Today, Not Months From Now."
+    },
+    "navLinks": [
+      { "id": "what-is-sea", "label": "What is SEA" },
+      { "id": "our-services", "label": "Our Services" },
+      { "id": "our-process", "label": "How We Work" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "INSTANT RESULTS, MAXIMUM ROI",
+      "title": "ADS",
+      "subtitle": "SEA & Google Ads Campaigns",
+      "desc": "Drive instant traffic and leads with expert Google Ads management.",
+      "scroll": "Scroll"
+    },
+    "whatIsSea": {
+      "heading": "What is SEA?",
+      "p1": "<strong>SEA (Search Engine Advertising)</strong> — also called <strong>PPC (pay-per-click) advertising</strong>, or Google Ads — is paid search marketing on search engines. When someone searches for keywords related to your business, your ads appear at the top of Google, above all organic results.",
+      "p2": "Unlike SEO, pay-per-click delivers <strong>instant visibility</strong>. Launch a campaign today and start getting clicks, calls, and customers within hours — without waiting months for SEO results.",
+      "p3": "The catch? Successful ad campaigns require real expertise. Poorly managed PPC wastes money on irrelevant clicks. Every experienced marketer knows that click advertising without proper ad group structure, negative keywords, and conversion tracking burns budget fast. That's where we come in.",
+      "p4": "At Morfye, we design, launch, and optimize Google Ads campaigns for businesses across Belgium. Whether you want more website traffic, phone calls, form submissions, or ecommerce sales — our paid search expertise delivers campaigns engineered to maximize your return on investment."
+    },
+    "featuresHeading": "Our SEA Services",
+    "features": [
+      { "title": "Search Campaigns", "description": "Text search ads that appear when people search for keywords related to your business on Google. Pay-per-click advertising at its most direct — capturing high-intent customers the moment they search." },
+      { "title": "Display Campaigns", "description": "Visual banner ads shown across millions of websites in the Google Display Network. A key form of online advertising to build brand awareness and reach new audiences at scale." },
+      { "title": "Shopping Campaigns", "description": "Product ads with images and prices, perfect for ecommerce stores looking to drive online sales directly from search results." },
+      { "title": "Local Campaigns", "description": "Geo-targeted ads that bring customers to your physical location or service area in Belgium." },
+      { "title": "Remarketing & Retargeting", "description": "Re-engage visitors who left your site without converting. Show them targeted retargeting ads across the web — a proven tactic to bring back potential buyers and improve conversion rates." },
+      { "title": "Performance Tracking", "description": "Detailed analytics showing every key metric: clicks, conversion rates, cost-per-lead, and return on investment. See exactly how each stage of your sales funnel performs." }
+    ],
+    "steps": [
+      { "title": "Strategy & Goal Setting", "description": "We start by understanding your business goals, target audience, and budget. We define your campaign objectives, plan your advertising structure, and outline the ad campaigns to run — setting up everything for measurable results from day one." },
+      { "title": "Keyword Research & Targeting", "description": "We use the Google Keyword Planner and competitive analysis tools to build a comprehensive keyword list — including profitable long-tail keywords your customers search for. We analyze competitor bids and define a bid management approach to maximize every euro of your budget." },
+      { "title": "Ad Creation & Landing Pages", "description": "We write compelling ad copy for every PPC ad and ad group — crafting pay-per-click ads designed to get clicked. We also create or optimize landing pages that turn visitors into customers, making your advertising spend work harder." },
+      { "title": "Campaign Launch & Monitoring", "description": "We launch your campaigns with full tracking in place (conversion tracking, call tracking, etc.) and monitor performance daily. We track every click, measure costs against returns, and catch issues before they waste budget." },
+      { "title": "Optimization & Reporting", "description": "We continuously test ad copy, improve bid management, refine targeting, and eliminate wasted spend. Monthly reports cover every key metric so you always know your return on investment." }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "What is Google AdWords and how does it differ from Google Ads?", "answer": "Google AdWords was the original name for Google's paid search platform — it was rebranded to Google Ads in 2018. The platform is the same: advertisers bid on keywords, and ads appear at the top of search results when searchers use matching queries. It's the foundation of all paid search and search engine marketing (SEM)." },
+      { "question": "What is cost-per-click (CPC) and how does bidding work?", "answer": "Cost-per-click (CPC) is the amount an advertiser pays each time someone clicks their ad. Google Ads uses an auction system: advertisers set a maximum bid on keywords, and Google assigns a Quality Score based on ad relevance, landing page quality, and expected click-through rate (CTR). Advertisers with a high Quality Score can win top positions at a lower CPC." },
+      { "question": "What is a landing page and why does it matter for PPC?", "answer": "A landing page is the web page searchers arrive at after clicking your ad. A great landing page directly matches what the ad promised, loads fast, has a clear call to action, and is optimized for conversion rate. Poor landing pages kill PPC campaigns — you can pay for clicks but lose customers because the page doesn't convert. We create and optimize landing pages as part of every campaign we manage." },
+      { "question": "Do you manage Bing Ads and display ads too?", "answer": "Yes. Beyond Google Ads, we also manage Microsoft/Bing Ads campaigns. We also run Google Display Ads campaigns and remarketing campaigns to re-engage visitors who visited your site but didn't convert." },
+      { "question": "How much should I budget for Google Ads?", "answer": "We typically recommend starting with at least €500–1,000/month in ad spend for a PPC campaign, plus our management fee. In competitive niches, your cost-per-click may be higher, so a bigger budget is needed to gather enough data to optimize." },
+      { "question": "How quickly will I see results?", "answer": "Unlike SEO, Google Ads deliver instant traffic. You can start getting clicks and leads within hours of launching. However, optimizing for the best conversion rate, lowest CPC, and highest Quality Score takes 1–2 months of ongoing testing." },
+      { "question": "What's the difference between SEO and SEA?", "answer": "SEO (organic search) is free per click but takes 3–6 months to see results. SEA/PPC is paid search — you pay per click but get instant visibility. Ideally, use SEA for immediate results while SEO builds your long-term digital marketing foundation." },
+      { "question": "What are negative keywords and why do they matter?", "answer": "Negative keywords tell Google Ads NOT to show your ads for certain search queries. For example, if you sell premium web design services, you might add 'free' as a negative keyword to avoid paying for clicks from searchers who only want free tools. Proper negative keyword management is critical for reducing wasted ad spend." },
+      { "question": "Do I need to sign a long-term contract?", "answer": "No. We offer month-to-month contracts with no lock-in. However, we recommend at least 3 months for a PPC campaign to gather enough data to properly optimize bidding, ad copy, and landing pages for maximum ROI." },
+      { "question": "What's your management fee?", "answer": "Our management fee is typically 15–20% of your monthly ad spend, with a minimum of €299/month. This covers strategy, setup, ad campaign creation, optimizing bids and copy, reporting, and ongoing support." }
+    ],
+    "cta": {
+      "heading": "Ready to Get Instant Traffic?",
+      "text": "Stop waiting for SEO. Start getting customers today with expertly managed Google Ads campaigns.",
+      "btn": "Start Your Campaign"
+    }
+  },
+  "hosting": {
+    "meta": {
+      "title": "Website Hosting & Maintenance | Morfye",
+      "description": "Reliable, Secure, and Fast Hosting with Expert Maintenance. Keep Your Website Running 24/7."
+    },
+    "navLinks": [
+      { "id": "why-hosting", "label": "Why Hosting Matters" },
+      { "id": "what-we-offer", "label": "What We Offer" },
+      { "id": "our-process", "label": "How It Works" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "ALWAYS ON, ALWAYS SECURE",
+      "title": "HOST",
+      "subtitle": "Hosting & Maintenance",
+      "desc": "Reliable, secure, and fast hosting with expert maintenance. Zero downtime.",
+      "scroll": "Scroll"
+    },
+    "whyHosting": {
+      "heading": "Why Professional Hosting & Maintenance Matter",
+      "p1": "Building a website is just the beginning. To stay online, perform well, and remain secure, your website needs a <strong>reliable foundation</strong> and <strong>ongoing maintenance</strong>. Think of hosting as the land your digital house sits on — if it's unstable or unsafe, everything falls apart.",
+      "p2": "Many businesses make the mistake of choosing the cheapest option from generic web hosting companies — only to find that shared hosting plans can't keep up with real business demands. Slow load times, frequent downtime, security breaches, and no support. At Morfye, we provide enterprise-grade hosting combined with proactive maintenance.",
+      "p3": "Whether you're launching a new ecommerce store, migrating from a website builder, or switching from an unreliable host — we offer the best web hosting solutions for Belgian businesses. From domain registration to free hosting trials on select packages, we handle everything."
+    },
+    "featuresHeading": "What's Included in Our Hosting & Maintenance",
+    "features": [
+      { "title": "Lightning-Fast Performance", "description": "We use optimized cloud servers with SSD storage, CDN integration, and unlimited bandwidth to ensure your website loads in under 2 seconds — every time." },
+      { "title": "Maximum Security", "description": "Free SSL certificates, firewall protection, spam filtering, malware scanning, and automatic security updates keep hackers out. Server infrastructure is locked down and managed by our team." },
+      { "title": "Daily Automatic Backups", "description": "Your site is backed up every day to redundant storage. If anything goes wrong, we can restore it in minutes." },
+      { "title": "Regular Updates", "description": "We keep your CMS, plugins, and themes up to date — whether you run WordPress, Joomla, Drupal, or any PHP-based platform. Your site stays secure and compatible." },
+      { "title": "24/7 Monitoring", "description": "We monitor your site around the clock. If it goes down, we're notified instantly and fix it immediately — no relying on slow ticket systems." },
+      { "title": "Priority Support", "description": "Our team responds quickly to fix issues, make updates, or answer your questions — whether you're on a personal or business hosting plan." }
+    ],
+    "steps": [
+      { "title": "Easy Migration", "description": "Already with another hosting provider? We'll migrate your hosting infrastructure with zero downtime. You won't even notice the switch." },
+      { "title": "Secure Setup", "description": "We configure your hosting environment with SSL certificates, firewalls, and performance optimization from day one." },
+      { "title": "Proactive Monitoring", "description": "Our systems monitor your website 24/7. If we detect downtime, security threats, or performance issues, we act immediately." },
+      { "title": "Regular Maintenance", "description": "Every week, we check for updates, run security scans, optimize databases, and ensure everything runs smoothly." },
+      { "title": "Ongoing Support", "description": "Need a content update, new feature, or technical help? Just reach out. We're here to support you whenever you need us." }
+    ],
+    "faqHeading": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "What types of web hosting do you offer?", "answer": "We offer managed web hosting services tailored to small and medium businesses. Unlike generic hosting companies, our hosting plans are fully managed — meaning we handle server configuration, security, and maintenance for you. We use cloud hosting infrastructure with SSD storage, scalable bandwidth, and high uptime guarantees." },
+      { "question": "What is the difference between shared hosting, VPS, and cloud hosting?", "answer": "Shared hosting is the cheapest option — your website shares server resources with many others, which can hurt performance and uptime. VPS hosting gives you a dedicated slice of a server with more control. Cloud hosting distributes your site across multiple servers for maximum uptime and scalability. We use cloud hosting because it combines performance with scalability — without the high cost of dedicated servers." },
+      { "question": "Do you support WordPress, Joomla, and other CMS platforms?", "answer": "Yes — WordPress hosting is one of our specialties. We also fully support Joomla, Drupal, and any PHP-based CMS or ecommerce platform (WooCommerce, Magento, PrestaShop). We manage updates, plugin updates, theme updates, and security patches as part of our maintenance plans." },
+      { "question": "What uptime guarantee do you offer?", "answer": "We target 99.9% uptime for all hosting plans. Our 24/7 monitoring system alerts us the moment your site goes down, and we act immediately. Uptime is critical — every minute of downtime costs you potential customers." },
+      { "question": "What's the difference between hosting and maintenance?", "answer": "Web hosting is the server where your website files live — it's the foundation that keeps your site online. Maintenance covers everything else: plugin and CMS updates, security scans, daily backups, performance optimization, SSL renewal, and technical support. Our hosting packages include both." },
+      { "question": "Can I bring my own domain name?", "answer": "Absolutely. You can keep your existing domain names and point them to our hosting. We can also register new domains for you, or transfer your existing domain. Some hosting packages include a free domain name. We handle all DNS configuration to get your site up-and-running quickly." },
+      { "question": "Do you offer email hosting too?", "answer": "Yes — we can set up professional business email addresses (like you@yourbusiness.be) connected to your domain as part of our hosting services." },
+      { "question": "Can I cancel anytime?", "answer": "Yes. We offer flexible month-to-month hosting plans with no long-term contracts. Cancel anytime with 30 days' notice. No lock-in, no hidden fees." },
+      { "question": "How much do your hosting plans cost?", "answer": "Hosting plans start at €29/month for our standard managed hosting package, which includes SSL, daily backups, 24/7 monitoring, and basic maintenance. Higher-tier packages with more resources and priority support are available. Contact us for a custom quote." },
+      { "question": "Do you offer webmail and FTP access?", "answer": "Yes. All hosting plans include professional webmail so you can access your business email from any browser. FTP access is available for file transfers. We also provide SSH access for technical users — root access is managed by our team to keep infrastructure secure." }
+    ],
+    "cta": {
+      "heading": "Let Us Handle the Technical Stuff",
+      "text": "Focus on your business while we keep your website fast, secure, and always online.",
+      "btn": "Get Hosting Quote"
+    }
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy Policy — Morfye Web Design Agency",
+      "description": "Read the Morfye privacy policy. Learn how we collect, use, and protect your personal data in compliance with GDPR and Belgian law."
+    },
+    "pageTitle": "Privacy Policy",
+    "updated": "Last updated: March 2026",
+    "sections": [
+      {
+        "heading": "1. Who we are",
+        "content": "Morfye is a web design and digital marketing agency based in Belgium. We build professional websites, SEO strategies, and online marketing solutions for small businesses. You can contact us at hello@morfye.com."
+      },
+      {
+        "heading": "2. What data we collect",
+        "intro": "We may collect the following personal data when you use our website or contact us:",
+        "items": [
+          "Name and email address (via contact form)",
+          "Usage data and analytics (via Google Analytics, only with your consent)",
+          "IP address and browser information (collected automatically)"
+        ]
+      },
+      {
+        "heading": "3. How we use your data",
+        "intro": "We use your data to:",
+        "items": [
+          "Respond to your enquiries and provide our services",
+          "Improve our website and user experience",
+          "Analyse site traffic (only with cookie consent)"
+        ],
+        "outro": "We do not sell, rent, or share your personal data with third parties for marketing purposes."
+      },
+      {
+        "heading": "4. Cookies",
+        "content": "Our website uses cookies to enhance your experience and analyse traffic. We use Google Analytics only after you have given explicit consent via our cookie banner. You can withdraw consent at any time by clearing your browser cookies."
+      },
+      {
+        "heading": "5. Your rights (GDPR)",
+        "intro": "Under the General Data Protection Regulation (GDPR), you have the right to:",
+        "items": [
+          "Access the personal data we hold about you",
+          "Request correction or deletion of your data",
+          "Object to processing of your data",
+          "Withdraw consent at any time"
+        ],
+        "outro": "To exercise any of these rights, contact us at hello@morfye.com."
+      },
+      {
+        "heading": "6. Data retention",
+        "content": "We retain contact form submissions for a maximum of 12 months. Analytics data is retained as per Google Analytics default settings (26 months)."
+      },
+      {
+        "heading": "7. Security",
+        "content": "We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss, or misuse."
+      },
+      {
+        "heading": "8. Changes to this policy",
+        "content": "We may update this privacy policy from time to time. The latest version is always available on this page."
+      },
+      {
+        "heading": "9. Contact",
+        "content": "For any privacy-related questions, contact us at hello@morfye.com."
+      }
+    ]
+  }
+}
