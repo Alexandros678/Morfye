@@ -2,7 +2,6 @@
   "nav": {
     "about": "À propos",
     "services": "Services",
-    "ourWork": "Notre travail",
     "contact": "Contact"
   },
   "hero": {
@@ -11,7 +10,7 @@
     "line2": "pour les professionnels",
     "subtitle": "Des sites web modernes et performants, conçus pour attirer, engager et convertir vos clients.",
     "bookBtn": "Réserver une consultation",
-    "seeWorkBtn": "Voir nos réalisations",
+    "seeServicesBtn": "Voir nos services",
     "scroll": "Défiler"
   },
   "ourStory": {
@@ -33,7 +32,7 @@
   "whoWeAre": {
     "label": "QUI NOUS SOMMES",
     "heading": ["Nous ne sommes pas votre", "agence. Nous sommes votre", "partenaire."],
-    "desc1": "Nous ne sommes pas seulement des designers — nous sommes des stratèges. Chaque pixel, chaque animation, chaque ligne de code sert un seul objectif : transformer les visiteurs en clients. Basés à Bruxelles, en Belgique, nous combinons créativité et approche data-driven.",
+    "desc1": "Nous ne développons pas juste une stratégie — nous vous accompagnons tout au long de votre activité, bien au-delà d'un simple site internet. De votre première idée à votre prochaine étape de croissance, nous restons à vos côtés comme un véritable partenaire, pas un prestataire qu'on engage une fois et qu'on ne revoit jamais.",
     "desc2": "Nous travaillons avec des petites entreprises à travers la Belgique — consultants, commerces locaux, prestataires de soins de santé et entreprises de services — qui méritent un site web bien référencé sur Google, trouvable par l'IA, et qui convertit les visiteurs en clients payants.",
     "stats": [
       { "label": "Projets livrés" },
@@ -43,30 +42,20 @@
   },
   "serviceCart": {
     "sectionTitle": "Nos services",
-    "geo": {
-      "title": "GEO - Optimisation pour les Moteurs Génératifs",
-      "text": "Faites-vous recommander par ChatGPT, Google Gemini et Claude. Le futur de la visibilité en ligne est arrivé — et nous sommes l'une des premières agences en Belgique à l'offrir.",
-      "cta": "En savoir plus sur le GEO"
+    "seoGeo": {
+      "title": "Optimisation SEO & GEO",
+      "text": "Soyez mieux classé sur Google et recommandé par ChatGPT, Google Gemini et Claude — une stratégie unique pour votre visibilité sur les moteurs de recherche et l'IA. Nous sommes l'une des premières agences en Belgique à l'offrir.",
+      "cta": "En savoir plus sur le SEO & GEO"
     },
     "cards": [
       { "title": "Création de site web sur mesure", "text": "Des sites web adaptés et mobiles, conçus pour votre entreprise et qui convertissent les visiteurs en clients.", "cta": "En savoir plus →" },
       { "title": "Hébergement & Maintenance", "text": "Hébergement sécurisé, mises à jour régulières et support technique continu pour maintenir votre site en parfait état.", "cta": "En savoir plus →" },
-      { "title": "Optimisation SEO", "text": "Référencement naturel pour mieux se positionner sur Google et générer du trafic organique vers votre site.", "cta": "En savoir plus →" },
       { "title": "Campagnes SEA", "text": "Des campagnes Google Ads conçues pour générer du trafic instantané et maximiser votre visibilité en ligne.", "cta": "En savoir plus →" }
     ]
   },
-  "workShowcase": {
-    "title": "Notre travail",
-    "subtitle": "La créativité rencontre le code. Découvrez ce que nous avons créé.",
-    "visitSite": "Visiter le site →",
-    "projects": [
-      { "title": "Portfolio personnel", "category": "Web Design", "description": "Vitrine créative de compétences techniques avec des animations modernes et des interactions fluides." },
-      { "title": "AV Signature Detailing", "category": "Site d'entreprise", "description": "Site professionnel de detailing automobile avec système de réservation en ligne pour une entreprise belge." },
-      { "title": "Votre projet ?", "category": "À venir", "description": "Nous sommes prêts à créer quelque chose d'exceptionnel pour vous. Parlons-en." }
-    ]
-  },
   "manifesto": {
-    "title": "Le bon site web change tout.",
+    "title": "Le bon partenaire change tout.",
+    "subtitle": "Nous ne nous contentons pas de construire un site et de repartir — nous vous accompagnons tout au long de votre stratégie, pour vous assurer que vous restiez toujours au top sur votre marché. Et avec nos campagnes Google Ads, vous ne payez que pour un engagement réel — la facturation se fait au coût par clic, donc votre budget va vers de vrais visiteurs, pas de simples affichages. Une croissance mesurable pour votre entreprise, mois après mois.",
     "approachLabel": "Notre approche",
     "blocks": [
       {
@@ -92,11 +81,10 @@
     "title": "Questions fréquentes",
     "subtitle": "Tout ce que les petites entreprises en Belgique veulent savoir avant de se lancer.",
     "items": [
-      { "question": "Combien coûte un site web professionnel pour une petite entreprise en Belgique ?", "answer": "Chaque projet est différent, mais un site web professionnel commence généralement à quelques centaines d'euros. Le prix dépend du nombre de pages, des fonctionnalités comme les systèmes de réservation ou l'e-commerce, et du niveau de développement requis. Nous fournissons toujours un devis clair avant de commencer — sans frais cachés." },
-      { "question": "Combien de temps faut-il pour créer un site web ?", "answer": "Un site web standard prend 2 à 4 semaines du début au lancement. Des projets plus complexes avec de l'e-commerce, un CMS ou des fonctionnalités personnalisées peuvent prendre 4 à 8 semaines. Nous vous tenons informé tout au long du processus." },
-      { "question": "Pouvez-vous créer un site e-commerce ou une boutique en ligne ?", "answer": "Oui — nous créons des sites e-commerce sur mesure pour les entreprises qui souhaitent vendre en ligne. Que vous ayez besoin d'une boutique simple ou d'un catalogue complet avec paiements sécurisés, nous gérons le développement de bout en bout — y compris Shopify et les solutions personnalisées." },
-      { "question": "Quelle est la différence entre le SEO et Google Ads ?", "answer": "Le SEO développe votre visibilité organique dans le temps — il aide les clients potentiels à vous trouver sur Google sans payer par clic. Google Ads (pay-per-click / PPC) vous donne une visibilité instantanée pour un budget donné. Les deux sont des stratégies valables et nous proposons les deux. Nous vous conseillerons sur ce qui correspond le mieux à vos objectifs." },
-      { "question": "Ai-je besoin d'un hébergement web et d'un nom de domaine ?", "answer": "Oui — tout site web a besoin d'un hébergement web et d'un nom de domaine. Nous proposons des plans d'hébergement gérés à partir de 29€/mois incluant des sauvegardes quotidiennes, SSL et une surveillance 24h/24. Nous pouvons également vous aider à enregistrer votre domaine et tout configurer." },
+      { "question": "Combien coûte un site web professionnel pour une petite entreprise en Belgique ?", "answer": "Chaque projet est différent — le prix dépend du nombre de pages, des fonctionnalités comme les systèmes de réservation ou les formulaires de contact, et du niveau de développement requis. Nous fournissons toujours un devis clair et personnalisé avant de commencer — sans frais cachés." },
+      { "question": "Combien de temps faut-il pour créer un site web ?", "answer": "Un site web standard prend 2 à 4 semaines du début au lancement. Des projets plus complexes avec un CMS ou des fonctionnalités personnalisées peuvent prendre 4 à 8 semaines. Nous vous tenons informé tout au long du processus." },
+      { "question": "Quelle est la différence entre le SEO et Google Ads ?", "answer": "Le SEO développe votre visibilité organique dans le temps — il aide les clients potentiels à vous trouver sur Google sans payer par clic. Google Ads (pay-per-click / PPC) vous donne une visibilité instantanée, et vous ne payez que lorsque quelqu'un clique réellement sur votre annonce. Les deux sont des stratégies valables et nous proposons les deux. Nous vous conseillerons sur ce qui correspond le mieux à vos objectifs." },
+      { "question": "Ai-je besoin d'un hébergement web et d'un nom de domaine ?", "answer": "Oui — tout site web a besoin d'un hébergement web et d'un nom de domaine. Nous proposons des plans d'hébergement gérés incluant des sauvegardes quotidiennes, SSL et une surveillance 24h/24. Nous pouvons également vous aider à enregistrer votre domaine et tout configurer." },
       { "question": "Qu'est-ce que le GEO et pourquoi mon entreprise devrait-elle s'en préoccuper ?", "answer": "GEO signifie Optimisation pour les Moteurs Génératifs — cela signifie optimiser votre entreprise pour être recommandée par des assistants IA comme ChatGPT, Google Gemini et Claude. À mesure que de plus en plus de personnes cherchent via l'IA plutôt que sur Google, le GEO devient aussi important que le SEO. Morfye est l'une des premières agences en Belgique à offrir ce service." }
     ]
   },
@@ -129,7 +117,6 @@
     "contact": "Contact",
     "home": "Accueil",
     "whoWeAre": "Qui nous sommes",
-    "ourWork": "Notre travail",
     "rights": "Tous droits réservés.",
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions générales"
@@ -176,14 +163,13 @@
     ],
     "faqHeading": "Questions fréquemment posées",
     "faqs": [
-      { "question": "Combien coûte un nouveau site web ?", "answer": "Cela dépend du périmètre. La création d'un site web va d'un simple site personnel à une plateforme e-commerce complète. Travailler avec une agence professionnelle est un investissement — mais il livre le meilleur site web pour vos objectifs. Nous construisons votre site de zéro et fournissons un devis personnalisé sans engagement après un appel de découverte." },
-      { "question": "Dois-je utiliser WordPress, Shopify, Squarespace ou une solution personnalisée ?", "answer": "Cela dépend de vos objectifs. WordPress est le CMS le plus populaire et idéal pour la plupart des sites d'entreprise. Des constructeurs de sites comme Squarespace, Wix et Weebly sont faciles à utiliser mais ont des limites réelles. Pour un site vraiment unique, nous recommandons un design web sur mesure — des solutions qui se classent bien mieux sur les moteurs de recherche et offrent un avantage concurrentiel durable." },
+      { "question": "Combien coûte un nouveau site web ?", "answer": "Cela dépend du périmètre. La création d'un site web va d'un simple site personnel à un site multi-pages plus complet. Travailler avec une agence professionnelle est un investissement — mais il livre le meilleur site web pour vos objectifs. Nous construisons votre site de zéro et fournissons un devis personnalisé sans engagement après un appel de découverte." },
+      { "question": "Dois-je utiliser WordPress, Squarespace ou une solution personnalisée ?", "answer": "Cela dépend de vos objectifs. WordPress est le CMS le plus populaire et idéal pour la plupart des sites d'entreprise. Des constructeurs de sites comme Squarespace, Wix et Weebly sont faciles à utiliser mais ont des limites réelles. Pour un site vraiment unique, nous recommandons un design web sur mesure — des solutions qui se classent bien mieux sur les moteurs de recherche et offrent un avantage concurrentiel durable." },
       { "question": "Quelle est la différence entre un web designer et un développeur web ?", "answer": "Un web designer se concentre sur le côté visuel et UX — mise en page, branding, typographie, couleurs et ressenti des pages. Un développeur web écrit le code qui fait fonctionner le tout. Chez Morfye, notre équipe couvre les deux : nous designons et développons votre site de bout en bout, du concept au lancement." },
       { "question": "Comment faire apparaître mon site sur Google ?", "answer": "Chaque site que nous construisons inclut le SEO dès le premier jour — URLs propres, balises title, méta-descriptions, chargement rapide et design responsive. Nous proposons également des services SEO continus pour que vos pages se positionnent dans les résultats de recherche et attirent du trafic organique sans publicité." },
       { "question": "Pourrai-je mettre à jour le site moi-même ?", "answer": "Oui. Nous construisons sur des plateformes intuitives avec un CMS convivial et fournissons une formation complète, des tutoriels vidéo et de la documentation pour que vous puissiez gérer vos pages, ajouter des articles de blog et modifier le contenu — sans développeur web pour les mises à jour quotidiennes." },
-      { "question": "Créez-vous des sites e-commerce et des boutiques en ligne ?", "answer": "Oui — nous créons des sites e-commerce qui vendent des produits, services et téléchargements numériques. Que vous préfériez Shopify ou une solution personnalisée, nous concevons la boutique, configurons les paiements et l'optimisons pour les appareils mobiles et les moteurs de recherche." },
-      { "question": "Qu'est-ce que l'hébergement web et ai-je besoin d'un nom de domaine ?", "answer": "L'hébergement web est le serveur où se trouvent les fichiers de votre site. Les noms de domaine et l'hébergement sont les deux éléments essentiels pour mettre un site en ligne. Nous proposons des plans d'hébergement gérés à partir de 29€/mois — chaque plan inclut SSL, sauvegardes quotidiennes et surveillance 24h/24." },
-      { "question": "Proposez-vous l'hébergement et la maintenance du site web ?", "answer": "Oui. Nous proposons des plans mensuels d'hébergement et de maintenance à partir de 29€/mois incluant l'hébergement sécurisé, les sauvegardes quotidiennes, les mises à jour de sécurité, la gestion des plugins et le support technique." },
+      { "question": "Qu'est-ce que l'hébergement web et ai-je besoin d'un nom de domaine ?", "answer": "L'hébergement web est le serveur où se trouvent les fichiers de votre site. Les noms de domaine et l'hébergement sont les deux éléments essentiels pour mettre un site en ligne. Nous proposons des plans d'hébergement gérés — chaque plan inclut SSL, sauvegardes quotidiennes et surveillance 24h/24. Contactez-nous pour un devis personnalisé." },
+      { "question": "Proposez-vous l'hébergement et la maintenance du site web ?", "answer": "Oui. Nous proposons des plans d'hébergement et de maintenance incluant l'hébergement sécurisé, les sauvegardes quotidiennes, les mises à jour de sécurité, la gestion des plugins et le support technique, adaptés aux besoins de votre site." },
       { "question": "Dois-je connaître HTML et CSS pour faire créer un site web ?", "answer": "Pas du tout. Vous n'avez pas besoin de connaître HTML et CSS pour créer un site web avec nous ni pour le gérer après le lancement. Nous gérons tout — de la structure du site à la configuration de l'hébergement et l'écriture de tout le code." },
       { "question": "Quelle est la différence entre SEO et GEO ?", "answer": "Le SEO (optimisation pour les moteurs de recherche) vous aide à vous positionner sur Google. Le GEO (Optimisation pour les Moteurs Génératifs) vous aide à être recommandé par des assistants IA comme ChatGPT et Google Gemini. Nous construisons chaque site pour être optimisé pour les deux." }
     ],
@@ -244,7 +230,7 @@
       { "question": "Garantissez-vous la première position sur Google ?", "answer": "Aucune agence SEO éthique ne peut garantir des classements spécifiques — l'algorithme de Google est trop complexe. Nous nous concentrons sur des techniques basées sur les données qui améliorent constamment les classements, développent le trafic organique et génèrent un ROI mesurable. Nous suivons et rapportons chaque amélioration." },
       { "question": "Quelle est la différence entre le SEO white-hat et black-hat ?", "answer": "Le SEO white-hat suit les directives des moteurs de recherche — contenu de qualité, création de liens légitime, optimisation technique appropriée. Le SEO black-hat utilise des tactiques manipulatrices comme le bourrage de mots-clés et les schémas de liens. Bien que les tactiques black-hat puissent montrer des gains à court terme, elles risquent des pénalités Google. Nous utilisons exclusivement des techniques white-hat." },
       { "question": "Le SEO local est-il différent du SEO classique ?", "answer": "Oui. Le SEO local se concentre sur le classement dans des zones géographiques spécifiques (comme Bruxelles ou la Belgique) pour des requêtes basées sur la localisation. Il inclut l'optimisation de votre Profil d'Entreprise Google, la création de citations locales et le ciblage de mots-clés spécifiques à la localisation. C'est l'une des stratégies les plus rentables pour les petites entreprises." },
-      { "question": "Combien coûte le SEO ?", "answer": "Cela varie selon la concurrence, votre secteur et le périmètre. Le SEO local de base commence à environ 299€/mois, tandis qu'une campagne SEO nationale complète peut être de 1 000€+/mois. Nous fournissons des devis personnalisés après un audit SEO." },
+      { "question": "Combien coûte le SEO ?", "answer": "Cela varie selon la concurrence, votre secteur et le périmètre. Nous fournissons des devis personnalisés adaptés à vos objectifs après un audit SEO." },
       { "question": "Que se passe-t-il si j'arrête les services SEO ?", "answer": "Vos classements ne disparaîtront pas du jour au lendemain, mais les concurrents qui continuent à optimiser vous surpasseront éventuellement. Le SEO nécessite un marketing de contenu, une création de liens et une maintenance technique continus pour rester en tête à mesure que les algorithmes évoluent." }
     ],
     "cta": {
@@ -304,13 +290,38 @@
       { "question": "Le GEO remplacera-t-il mes efforts SEO actuels ?", "answer": "Non. Le GEO complète votre stratégie SEO — vous avez toujours besoin du SEO traditionnel pour les classements Google, du PPC pour la recherche payante et du marketing de contenu pour le trafic entrant. Le GEO ajoute une nouvelle couche de visibilité pour que lorsque des assistants IA sont interrogés sur votre secteur, votre entreprise soit recommandée." },
       { "question": "Pour quels moteurs IA optimisez-vous ?", "answer": "Nous optimisons pour ChatGPT (OpenAI), Claude (Anthropic), Perplexity, Google Gemini et Microsoft Copilot. Chacun a des signaux différents — certains s'appuient sur le crawl web, d'autres sur leurs données d'entraînement — donc nos tactiques sont adaptées par plateforme." },
       { "question": "Le GEO vaut-il la peine pour les entreprises locales ?", "answer": "Absolument. Le GEO local est incroyablement puissant pour les petites entreprises. Lorsque quelqu'un dans votre secteur demande à un assistant IA une recommandation, vous voulez être la réponse pour votre ville ou région — que ce soit Bruxelles, Gand, Anvers ou ailleurs." },
-      { "question": "Combien coûte le GEO ?", "answer": "Nous proposons une mise en place GEO unique à partir de 499€, ou une gestion GEO mensuelle à partir de 199€/mois. Des packages personnalisés sont disponibles pour les grandes entreprises ou les secteurs concurrentiels." },
+      { "question": "Combien coûte le GEO ?", "answer": "Cela dépend de votre secteur, de la concurrence et de vos objectifs. Nous proposons à la fois une mise en place GEO unique et une gestion mensuelle continue — contactez-nous pour un devis personnalisé adapté à votre entreprise." },
       { "question": "Quels secteurs bénéficient le plus du GEO ?", "answer": "Tous les secteurs avec des requêtes de recherche en bénéficient, mais surtout : consultants, avocats, comptables, prestataires de soins de santé, agents immobiliers, services locaux et entreprises B2B où les clients potentiels utilisent l'IA pour chercher et évaluer des options avant de contacter un prestataire." }
     ],
     "cta": {
       "heading": "Prêt à dominer la recherche IA ?",
       "text": "N'attendez pas que vos concurrents découvrent le GEO. Prenez de l'avance maintenant et devenez la référence de votre marché.",
       "btn": "Planifier une consultation"
+    }
+  },
+  "seoGeo": {
+    "meta": {
+      "title": "Services SEO & GEO | Morfye - Dominez Google et l'IA",
+      "description": "Services SEO et GEO (Optimisation pour les Moteurs Génératifs) professionnels à Bruxelles, Belgique. Positionnez-vous mieux sur Google et faites-vous recommander par ChatGPT, Claude et Gemini — une stratégie combinée."
+    },
+    "navLinks": [
+      { "id": "what-is-seo-geo", "label": "C'est quoi le SEO & GEO" },
+      { "id": "our-services", "label": "Nos services" },
+      { "id": "our-process", "label": "Notre processus" },
+      { "id": "faq", "label": "FAQ" }
+    ],
+    "hero": {
+      "label": "VISIBILITÉ RECHERCHE & IA, COMBINÉE",
+      "title": "SEO & GEO",
+      "subtitle": "Optimisation pour les moteurs de recherche et génératifs",
+      "desc": "Positionnez-vous mieux sur Google et faites-vous recommander par ChatGPT, Claude et Gemini — une seule stratégie, une visibilité totale.",
+      "scroll": "Défiler"
+    },
+    "featuresHeading": "Nos services SEO & GEO",
+    "cta": {
+      "heading": "Prêt à dominer Google & la recherche IA ?",
+      "text": "Arrêtez de perdre des clients au profit de vos concurrents sur les deux fronts. Donnons à votre entreprise la visibilité qu'elle mérite — sur Google et avec l'IA.",
+      "btn": "Obtenir votre audit SEO & GEO gratuit"
     }
   },
   "sea": {
@@ -360,12 +371,12 @@
       { "question": "Qu'est-ce que le coût par clic (CPC) et comment fonctionnent les enchères ?", "answer": "Le coût par clic (CPC) est le montant qu'un annonceur paie chaque fois que quelqu'un clique sur son annonce. Google Ads utilise un système d'enchères : les annonceurs fixent une enchère maximale sur les mots-clés, et Google attribue un Score de qualité basé sur la pertinence de l'annonce, la qualité de la page de destination et le taux de clics (CTR) attendu. Les annonceurs avec un Score de qualité élevé peuvent obtenir des positions de premier plan à un CPC inférieur." },
       { "question": "Qu'est-ce qu'une page de destination et pourquoi est-elle importante pour le PPC ?", "answer": "Une page de destination est la page web que les internautes atteignent après avoir cliqué sur votre annonce. Une excellente page de destination correspond directement à ce que l'annonce promettait, se charge rapidement, possède un appel à l'action clair et est optimisée pour le taux de conversion. Des pages de destination médiocres tuent les campagnes PPC. Nous créons et optimisons des pages de destination dans le cadre de chaque campagne que nous gérons." },
       { "question": "Gérez-vous aussi les Bing Ads et les annonces display ?", "answer": "Oui. Au-delà de Google Ads, nous gérons également les campagnes Microsoft/Bing Ads. Nous gérons aussi des campagnes Google Display Ads et des campagnes de remarketing pour réengager les visiteurs qui ont visité votre site sans convertir." },
-      { "question": "Quel budget dois-je prévoir pour Google Ads ?", "answer": "Nous recommandons généralement de commencer avec au moins 500 à 1 000€/mois en dépenses publicitaires, plus nos frais de gestion. Dans les secteurs concurrentiels, votre coût par clic peut être plus élevé, donc un budget plus important est nécessaire pour collecter suffisamment de données pour optimiser." },
+      { "question": "Quel budget dois-je prévoir pour Google Ads ?", "answer": "Google Ads fonctionne au coût par clic (CPC) — vous ne payez que lorsque quelqu'un clique réellement sur votre annonce, et c'est vous qui fixez le budget. Dans les secteurs concurrentiels, votre coût par clic peut être plus élevé, donc un budget plus important est nécessaire pour collecter suffisamment de données pour optimiser. Nous vous aiderons à fixer un budget adapté à votre marché." },
       { "question": "À quelle vitesse verrai-je des résultats ?", "answer": "Contrairement au SEO, Google Ads génère du trafic instantané. Vous pouvez commencer à obtenir des clics et des leads dans les heures suivant le lancement. Cependant, l'optimisation pour le meilleur taux de conversion, le CPC le plus bas et le Score de qualité le plus élevé prend 1 à 2 mois de tests continus." },
       { "question": "Quelle est la différence entre SEO et SEA ?", "answer": "Le SEO (recherche organique) est gratuit par clic mais prend 3 à 6 mois pour voir des résultats. Le SEA/PPC est de la recherche payante — vous payez par clic mais obtenez une visibilité instantanée. Idéalement, utilisez le SEA pour des résultats immédiats pendant que le SEO construit votre fondation de marketing digital à long terme." },
       { "question": "Que sont les mots-clés négatifs et pourquoi sont-ils importants ?", "answer": "Les mots-clés négatifs indiquent à Google Ads de NE PAS afficher vos annonces pour certaines requêtes de recherche. Par exemple, si vous vendez des services de web design premium, vous pourriez ajouter 'gratuit' comme mot-clé négatif pour éviter de payer pour des clics d'internautes qui ne veulent que des outils gratuits. Une bonne gestion des mots-clés négatifs est essentielle pour réduire les dépenses publicitaires gaspillées." },
       { "question": "Dois-je signer un contrat à long terme ?", "answer": "Non. Nous proposons des contrats mensuels sans engagement. Cependant, nous recommandons au moins 3 mois pour une campagne PPC afin de collecter suffisamment de données pour optimiser correctement les enchères, les textes publicitaires et les pages de destination pour un ROI maximal." },
-      { "question": "Quels sont vos frais de gestion ?", "answer": "Nos frais de gestion représentent généralement 15 à 20% de vos dépenses publicitaires mensuelles, avec un minimum de 299€/mois. Cela couvre la stratégie, la mise en place, la création de campagnes, l'optimisation des enchères et des textes, le reporting et le support continu." }
+      { "question": "Quels sont vos frais de gestion ?", "answer": "Nos frais de gestion dépendent de l'ampleur et de la portée de vos campagnes. Cela couvre la stratégie, la mise en place, la création de campagnes, l'optimisation des enchères et des textes, le reporting et le support continu — contactez-nous pour un devis personnalisé." }
     ],
     "cta": {
       "heading": "Prêt à obtenir du trafic instantané ?",
@@ -417,13 +428,13 @@
     "faqs": [
       { "question": "Quels types d'hébergement web proposez-vous ?", "answer": "Nous proposons des services d'hébergement web géré adaptés aux petites et moyennes entreprises. Contrairement aux hébergeurs génériques, nos plans d'hébergement sont entièrement gérés — ce qui signifie que nous gérons la configuration du serveur, la sécurité et la maintenance à votre place. Nous utilisons une infrastructure d'hébergement cloud avec stockage SSD, bande passante évolutive et garanties de disponibilité élevées." },
       { "question": "Quelle est la différence entre hébergement mutualisé, VPS et cloud ?", "answer": "L'hébergement mutualisé est l'option la moins chère — votre site partage les ressources serveur avec de nombreux autres, ce qui peut nuire aux performances et à la disponibilité. Le VPS donne une tranche dédiée d'un serveur avec plus de contrôle. L'hébergement cloud distribue votre site sur plusieurs serveurs pour une disponibilité et une évolutivité maximales. Nous utilisons l'hébergement cloud car il combine performances et évolutivité — sans le coût élevé des serveurs dédiés." },
-      { "question": "Supportez-vous WordPress, Joomla et d'autres plateformes CMS ?", "answer": "Oui — l'hébergement WordPress est l'une de nos spécialités. Nous supportons également entièrement Joomla, Drupal et toute plateforme CMS ou e-commerce PHP (WooCommerce, Magento, PrestaShop). Nous gérons les mises à jour, les mises à jour de plugins, les mises à jour de thèmes et les correctifs de sécurité dans le cadre de nos plans de maintenance." },
+      { "question": "Supportez-vous WordPress, Joomla et d'autres plateformes CMS ?", "answer": "Oui — l'hébergement WordPress est l'une de nos spécialités. Nous supportons également entièrement Joomla, Drupal et d'autres plateformes CMS basées sur PHP. Nous gérons les mises à jour, les mises à jour de plugins, les mises à jour de thèmes et les correctifs de sécurité dans le cadre de nos plans de maintenance." },
       { "question": "Quelle garantie de disponibilité offrez-vous ?", "answer": "Nous visons une disponibilité de 99,9% pour tous les plans d'hébergement. Notre système de surveillance 24h/24 nous alerte dès que votre site tombe, et nous agissons immédiatement. La disponibilité est critique — chaque minute d'indisponibilité vous coûte des clients potentiels." },
       { "question": "Quelle est la différence entre hébergement et maintenance ?", "answer": "L'hébergement web est le serveur où se trouvent les fichiers de votre site — c'est la fondation qui maintient votre site en ligne. La maintenance couvre tout le reste : mises à jour des plugins et du CMS, scans de sécurité, sauvegardes quotidiennes, optimisation des performances, renouvellement SSL et support technique. Nos packages d'hébergement incluent les deux." },
       { "question": "Puis-je apporter mon propre nom de domaine ?", "answer": "Absolument. Vous pouvez conserver vos noms de domaine existants et les pointer vers notre hébergement. Nous pouvons également enregistrer de nouveaux domaines pour vous, ou transférer votre domaine existant. Certains packages d'hébergement incluent un nom de domaine gratuit. Nous gérons toute la configuration DNS pour mettre votre site en ligne rapidement." },
       { "question": "Proposez-vous aussi l'hébergement d'e-mails ?", "answer": "Oui — nous pouvons configurer des adresses e-mail professionnelles (comme vous@votreentreprise.be) connectées à votre domaine dans le cadre de nos services d'hébergement." },
       { "question": "Puis-je annuler à tout moment ?", "answer": "Oui. Nous proposons des plans d'hébergement flexibles mois par mois sans contrats à long terme. Annulez à tout moment avec 30 jours de préavis. Aucun engagement, aucun frais cachés." },
-      { "question": "Combien coûtent vos plans d'hébergement ?", "answer": "Les plans d'hébergement commencent à 29€/mois pour notre package d'hébergement géré standard, qui inclut SSL, sauvegardes quotidiennes, surveillance 24h/24 et maintenance de base. Des packages de niveau supérieur avec plus de ressources et un support prioritaire sont disponibles. Contactez-nous pour un devis personnalisé." },
+      { "question": "Combien coûtent vos plans d'hébergement ?", "answer": "Le prix dépend des ressources, du niveau de support et des fonctionnalités dont vous avez besoin. Chaque plan inclut SSL, sauvegardes quotidiennes, surveillance 24h/24 et maintenance de base, avec des packages de niveau supérieur disponibles pour plus de ressources et un support prioritaire. Contactez-nous pour un devis personnalisé." },
       { "question": "Proposez-vous le webmail et l'accès FTP ?", "answer": "Oui. Tous les plans d'hébergement incluent un webmail professionnel pour accéder à votre e-mail d'entreprise depuis n'importe quel navigateur. L'accès FTP est disponible pour les transferts de fichiers. Nous fournissons également un accès SSH pour les utilisateurs techniques — l'accès root est géré par notre équipe pour maintenir l'infrastructure sécurisée." }
     ],
     "cta": {

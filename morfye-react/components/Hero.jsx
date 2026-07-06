@@ -254,11 +254,11 @@ export default function Hero() {
           </motion.button>
           <motion.button
             className="secondary-btn black"
-            onClick={() => scrollTo('work')}
+            onClick={() => scrollTo('services')}
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
           >
-            {t('hero.seeWorkBtn')}
+            {t('hero.seeServicesBtn')}
           </motion.button>
         </div>
       </div>

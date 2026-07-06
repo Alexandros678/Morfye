@@ -14,8 +14,6 @@ const stats = [
 export default function WhoWeAre() {
   const { t } = useLanguage()
   const sectionRef = useRef(null)
-  const imageColRef = useRef(null)
-  const overlayRef = useRef(null)
   const particlesRef = useRef(null)
 
   const [particles] = useState(() =>
@@ -28,8 +26,6 @@ export default function WhoWeAre() {
 
   useEffect(() => {
     const section = sectionRef.current
-    const imageCol = imageColRef.current
-    const overlay = overlayRef.current
     if (!section) return
 
     const ctx = gsap.context(() => {
@@ -115,17 +111,6 @@ export default function WhoWeAre() {
       })
     }, section)
 
-    // Hover: overlay fade only, no image movement
-    const onEnter = () => {
-      gsap.to(overlay, { opacity: 1, duration: 0.4, ease: 'power2.out' })
-    }
-    const onLeave = () => {
-      gsap.to(overlay, { opacity: 0, duration: 0.4, ease: 'power2.out' })
-    }
-
-    imageCol.addEventListener('mouseenter', onEnter)
-    imageCol.addEventListener('mouseleave', onLeave)
-
     // Particles
     const pContainer = particlesRef.current
     if (pContainer) {
@@ -144,8 +129,6 @@ export default function WhoWeAre() {
 
     return () => {
       ctx.revert()
-      imageCol.removeEventListener('mouseenter', onEnter)
-      imageCol.removeEventListener('mouseleave', onLeave)
     }
   }, [])
 
@@ -166,22 +149,6 @@ export default function WhoWeAre() {
       </div>
 
       <div className="wwa-grid">
-        {/* Left - Image */}
-        <div className="wwa-image-col" ref={imageColRef}>
-          <div className="wwa-image-wrapper">
-            <img
-              src="/morfye-team.webp"
-              alt="Alexandros Gkiorgkinis and Iason Moutevelis, founders of Morfye web design agency in Brussels"
-              title="Alex &amp; Iason — Morfye"
-              width="800" height="800" loading="lazy"
-            />
-            <div className="wwa-image-overlay" ref={overlayRef}>
-              <span className="wwa-overlay-names">Alexandros Gkiorgkinis &amp; Iason Moutevelis</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Right - Text content */}
         <div className="wwa-text-col">
           <div className="wwa-label">{t('whoWeAre.label')}</div>
           <div className="wwa-line" />

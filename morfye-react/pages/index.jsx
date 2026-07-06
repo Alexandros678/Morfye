@@ -5,7 +5,6 @@ import Hero from '../components/Hero'
 import OurStory from '../components/OurStory'
 import WhoWeAre from '../components/WhoWeAre'
 import ServiceCart from '../components/ServiceCart'
-import WorkShowcase from '../components/WorkShowcase'
 import HomeFaq from '../components/HomeFaq'
 import Manifesto from '../components/Manifesto'
 import Contact from '../components/Contact'
@@ -13,11 +12,11 @@ import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
 
   useEffect(() => {
-    if (localStorage.getItem('theme') === 'light') {
-      setDarkMode(false)
+    if (localStorage.getItem('theme') === 'dark') {
+      setDarkMode(true)
     }
   }, [])
 
@@ -133,15 +132,14 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "How much does a professional website cost for a small business in Belgium?", "acceptedAnswer": { "@type": "Answer", "text": "Every project is different, but a professional website for a small business in Belgium typically starts from a few hundred euros. The price depends on the number of web pages, features like booking systems or e-commerce, and the level of web development and branding required. We always provide a clear quote before starting — no hidden fees." } },
-              { "@type": "Question", "name": "How long does it take to build a website?", "acceptedAnswer": { "@type": "Answer", "text": "A standard small business website with responsive design takes 2 to 4 weeks from start to launch. More complex projects with e-commerce, a content management system (CMS), or custom landing pages can take 4 to 8 weeks." } },
-              { "@type": "Question", "name": "What is the difference between SEO and Google Ads (PPC)?", "acceptedAnswer": { "@type": "Answer", "text": "SEO grows your organic search visibility over time — it helps potential customers find you on Google without paying per click. Google Ads (PPC or pay-per-click, formerly AdWords) gives instant visibility by placing your business at the top of search engines for a budget. Both are part of a strong digital marketing strategy." } },
-              { "@type": "Question", "name": "Do you build e-commerce websites?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — we build custom e-commerce websites for businesses that want to sell online. Whether you need a simple online shop or a full product catalogue with secure payments, we handle the web development from start to finish." } },
+              { "@type": "Question", "name": "How much does a professional website cost for a small business in Belgium?", "acceptedAnswer": { "@type": "Answer", "text": "Every project is different. The price depends on the number of web pages, features like booking systems or contact forms, and the level of web development and branding required. We always provide a clear, custom quote before starting — no hidden fees." } },
+              { "@type": "Question", "name": "How long does it take to build a website?", "acceptedAnswer": { "@type": "Answer", "text": "A standard small business website with responsive design takes 2 to 4 weeks from start to launch. More complex projects with a content management system (CMS) or custom landing pages can take 4 to 8 weeks." } },
+              { "@type": "Question", "name": "What is the difference between SEO and Google Ads (PPC)?", "acceptedAnswer": { "@type": "Answer", "text": "SEO grows your organic search visibility over time — it helps potential customers find you on Google without paying per click. Google Ads (PPC or pay-per-click, formerly AdWords) gives instant visibility by placing your business at the top of search engines, and you only pay when someone clicks your ad. Both are part of a strong digital marketing strategy." } },
               { "@type": "Question", "name": "What is responsive web design and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "Responsive design means your website automatically adapts to any screen size — desktop, tablet, or smartphone. Every website we build is fully responsive. Search engines like Google rank mobile-friendly web pages higher in results." } },
-              { "@type": "Question", "name": "Do I need web hosting and a domain name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every website needs web hosting and a domain name. We offer managed web hosting plans from €29/month including daily backups, SSL, and 24/7 monitoring. We can also help you register your domain name." } },
+              { "@type": "Question", "name": "Do I need web hosting and a domain name?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — every website needs web hosting and a domain name. We offer managed web hosting plans including daily backups, SSL, and 24/7 monitoring. We can also help you register your domain name." } },
               { "@type": "Question", "name": "What is GEO and why does my business need it?", "acceptedAnswer": { "@type": "Answer", "text": "GEO stands for Generative Engine Optimization. It means optimizing your business to be recommended by AI assistants like ChatGPT, Google Gemini, and Claude. As more people use AI instead of traditional search engines, GEO is becoming essential for online marketing and web presence. Morfye is one of the first agencies in Belgium to offer this service." } },
               { "@type": "Question", "name": "Will my website rank on Google and attract potential customers?", "acceptedAnswer": { "@type": "Answer", "text": "Every website we build is search-engine optimized from day one. We also offer dedicated SEO and inbound marketing services to grow your organic search rankings, reach your target audience, and bring in potential customers consistently." } },
-              { "@type": "Question", "name": "What happens after my website is launched?", "acceptedAnswer": { "@type": "Answer", "text": "We offer hosting and maintenance plans from €29/month including daily backups, security monitoring, SSL certificates, and priority support. We help you grow your web presence with SEO, online marketing, and content updates." } }
+              { "@type": "Question", "name": "What happens after my website is launched?", "acceptedAnswer": { "@type": "Answer", "text": "We offer hosting and maintenance plans including daily backups, security monitoring, SSL certificates, and priority support. We help you grow your web presence with SEO, GEO, online marketing, and content updates." } }
             ]
           }) }}
         />
@@ -152,7 +150,6 @@ export default function Home() {
       <OurStory />
       <WhoWeAre />
       <ServiceCart />
-      <WorkShowcase />
       <Manifesto />
       <HomeFaq />
       <Contact />

@@ -36,7 +36,7 @@ export default function App({ Component, pageProps }) {
       <div className={poppins.variable}>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#0a0a0f" />
+          <meta name="theme-color" content="#ffffff" />
         </Head>
 
         <Script id="ga-consent-init" strategy="afterInteractive">{`

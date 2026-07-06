@@ -34,7 +34,6 @@ export default function Header({ darkMode, toggleTheme }) {
         <nav>
           <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">{t('nav.about')}</a>
           <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">{t('nav.services')}</a>
-          <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">{t('nav.ourWork')}</a>
           <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">{t('nav.contact')}</a>
           <LanguageSwitcher />
           <ThemeToggle darkMode={darkMode} toggleTheme={toggleTheme} />
@@ -54,7 +53,6 @@ export default function Header({ darkMode, toggleTheme }) {
       <div className={`mobile-nav ${menuOpen ? 'show' : ''}`}>
         <a href="#about" onClick={(e) => { e.preventDefault(); scrollTo('about') }} title="About Morfye web design agency">{t('nav.about')}</a>
         <a href="#services" onClick={(e) => { e.preventDefault(); scrollTo('services') }} title="Our web design and digital marketing services">{t('nav.services')}</a>
-        <a href="#work" onClick={(e) => { e.preventDefault(); scrollTo('work') }} title="Our web design portfolio">{t('nav.ourWork')}</a>
         <a href="#contact" onClick={(e) => { e.preventDefault(); scrollTo('contact') }} title="Contact Morfye">{t('nav.contact')}</a>
         <LanguageSwitcher />
         <div className="mobile-theme-toggle" onClick={toggleTheme}>

@@ -31,6 +31,7 @@ export default function Manifesto() {
     <section className="manifesto">
       <div className="manifesto-inner">
         <h2 className="manifesto-title">{t('manifesto.title')}</h2>
+        <p className="manifesto-subtitle">{t('manifesto.subtitle')}</p>
         <details className="manifesto-details">
           <summary className="manifesto-summary">
             <span className="manifesto-toggle">

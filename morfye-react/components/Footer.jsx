@@ -39,8 +39,7 @@ export default function Footer() {
             <h4 className="footer-col-title">{t('footer.services')}</h4>
             <ul className="footer-links">
               <li><Link href="/website-design" title="Website design services in Belgium">Website Design</Link></li>
-              <li><Link href="/seo-optimization" title="SEO optimization services in Belgium">SEO Optimization</Link></li>
-              <li><Link href="/geo-optimization" title="GEO - Generative Engine Optimization">GEO Optimization</Link></li>
+              <li><Link href="/seo-geo-optimization" title="SEO and GEO optimization services in Belgium">SEO & GEO Optimization</Link></li>
               <li><Link href="/sea-campaigns" title="Google Ads SEA campaigns in Belgium">SEA Campaigns</Link></li>
               <li><Link href="/hosting-maintenance" title="Website hosting and maintenance">Hosting & Maintenance</Link></li>
             </ul>
@@ -52,7 +51,6 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/#home" title="Morfye - Web design agency Belgium">{t('footer.home')}</Link></li>
               <li><Link href="/#about" title="About Morfye web design team">{t('footer.whoWeAre')}</Link></li>
-              <li><Link href="/#work" title="Morfye web design portfolio">{t('footer.ourWork')}</Link></li>
               <li><Link href="/#contact" title="Contact Morfye web design agency">{t('nav.contact')}</Link></li>
             </ul>
           </div>
